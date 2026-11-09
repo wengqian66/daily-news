@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ithome",
+    "url": "https://www.ithome.com/rss/",
+    "category": "tech",
+    "region": "cn",
+    "site": "IT之家"
+  },
+  {
+    "id": "geekpark",
+    "url": "https://www.geekpark.net/rss",
+    "category": "tech",
+    "region": "cn",
+    "site": "极客公园"
+  },
+  {
+    "id": "sspai",
+    "url": "https://sspai.com/feed",
+    "category": "tech",
+    "region": "cn",
+    "site": "少数派"
+  },
+  {
+    "id": "ftchinese",
+    "url": "https://www.ftchinese.com/rss/news",
+    "category": "markets",
+    "region": "cn",
+    "site": "FT中文网"
+  },
+  {
+    "id": "people-world",
+    "url": "http://www.people.com.cn/rss/world.xml",
+    "category": "general",
+    "region": "cn",
+    "site": "人民网"
+  },
+  {
+    "id": "xinhua-politics",
+    "url": "https://www.news.cn/politics/news_politics.xml",
+    "category": "general",
+    "region": "cn",
+    "site": "新华网"
+  },
+  {
+    "id": "bbc-world",
+    "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "category": "general",
+    "region": "global",
+    "site": "BBC"
+  },
+  {
+    "id": "bbc-business",
+    "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+    "category": "markets",
+    "region": "global",
+    "site": "BBC"
+  },
+  {
+    "id": "bbc-tech",
+    "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "category": "tech",
+    "region": "global",
+    "site": "BBC"
+  },
+  {
+    "id": "cnbc-top",
+    "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+    "category": "markets",
+    "region": "global",
+    "site": "CNBC"
+  },
+  {
+    "id": "cnbc-tech",
+    "url": "https://www.cnbc.com/id/19854910/device/rss/rss.html",
+    "category": "tech",
+    "region": "global",
+    "site": "CNBC"
+  }
+]
