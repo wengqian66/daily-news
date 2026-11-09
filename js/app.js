@@ -120,30 +120,35 @@
     const params = route.params || new URLSearchParams();
     const view = params.get("view") === "featured" ? "featured" : "all";
     const time = ["today", "week", "all"].includes(params.get("time")) ? params.get("time") : "all";
+    const region = params.get("region") === "cn" || params.get("region") === "global" ? params.get("region") : "all";
     return {
       ...route,
       q: params.get("q") || "",
       view,
       cat: params.get("cat") || "all",
       time,
+      region,
     };
   }
 
-  function exploreHash({ view, cat, time, q }) {
+  function exploreHash({ view, cat, time, region, q }) {
     const params = new URLSearchParams();
     if (view && view !== "all") params.set("view", view);
     if (cat && cat !== "all") params.set("cat", cat);
     if (time && time !== "all") params.set("time", time);
+    if (region === "cn" || region === "global") params.set("region", region);
     if (q) params.set("q", q);
     const query = params.toString();
     return query ? `#/explore?${query}` : "#/explore";
   }
 
-  function briefHash(id, q) {
+  function briefHash(id, q, region) {
     const base = id ? `#/brief/${encodeURIComponent(id)}` : "#/";
-    if (!q) return base;
-    const joiner = base.includes("?") ? "&" : "?";
-    return `${base}${joiner}q=${encodeURIComponent(q)}`;
+    const params = new URLSearchParams();
+    if (region === "cn" || region === "global") params.set("region", region);
+    if (q) params.set("q", q);
+    const query = params.toString();
+    return query ? `${base}?${query}` : base;
   }
 
   function sortedDigests(data) {
@@ -227,6 +232,7 @@
   function storyMatches(story, filters) {
     if (filters.view === "featured" && !story.featured) return false;
     if (filters.cat !== "all" && story.categoryId !== filters.cat) return false;
+    if (filters.region && filters.region !== "all" && story.region !== filters.region) return false;
     if (!matchesTime(story.digestId, filters.time, filters.today)) return false;
     return matchesQuery(story, filters.q);
   }
@@ -430,15 +436,15 @@
     return `<div class="empty"><h2>${esc(title)}</h2><p>${esc(message)}</p>${button}</div>`;
   }
 
-  function daySwitch(digest, digests, q, today) {
+  function daySwitch(digest, digests, q, today, region) {
     const index = digests.findIndex((item) => item.id === digest.id);
     const newer = index > 0 ? digests[index - 1] : null;
     const older = index >= 0 && index < digests.length - 1 ? digests[index + 1] : null;
     const olderControl = older
-      ? `<a class="day-btn" href="${esc(briefHash(older.id, q))}" aria-label="前一天，${esc(older.label || older.id)}">前一天</a>`
+      ? `<a class="day-btn" href="${esc(briefHash(older.id, q, region))}" aria-label="前一天，${esc(older.label || older.id)}">前一天</a>`
       : '<button type="button" class="day-btn" disabled aria-label="没有更早的一天">前一天</button>';
     const newerControl = newer
-      ? `<a class="day-btn" href="${esc(briefHash(newer.id, q))}" aria-label="后一天，${esc(newer.label || newer.id)}">后一天</a>`
+      ? `<a class="day-btn" href="${esc(briefHash(newer.id, q, region))}" aria-label="后一天，${esc(newer.label || newer.id)}">后一天</a>`
       : '<button type="button" class="day-btn" disabled aria-label="没有更晚的一天">后一天</button>';
     const options = digests.map((item) => {
       const mark = item.id === today ? " · 今天" : "";
@@ -467,6 +473,7 @@
     const blocks = [];
     (digest.categories || []).forEach((category) => {
       const stories = storiesInCategory(category, digest)
+        .filter((story) => route.region === "all" || story.region === route.region)
         .filter((story) => matchesQuery(story, route.q));
       if (stories.length) blocks.push({ category, stories });
     });
@@ -485,29 +492,50 @@
         <div class="grid">${block.stories.map((story) => cardHTML(story)).join("")}</div>
       </section>`).join("");
     const count = blocks.reduce((sum, block) => sum + block.stories.length, 0);
-    const countLine = route.q ? `匹配 ${count} 则` : `共 ${count} 则`;
+    const place = regionMeta(route.region).label;
+    let countLine = `共 ${count} 则`;
+    if (route.q && place) countLine = `${place} · 匹配 ${count} 则`;
+    else if (route.q) countLine = `匹配 ${count} 则`;
+    else if (place) countLine = `${place} ${count} 则`;
     const lede = digest.summary
       ? `<aside class="lede"><p class="lede-kicker">今日导读</p><p>${esc(digest.summary)}</p></aside>`
       : "";
-    const empty = blocks.length
-      ? ""
-      : emptyBlock(
-        "这一天没有匹配的故事",
-        route.q ? `没有标题、摘要、详述或来源包含「${route.q.trim()}」的故事。` : "这一天还没有故事。",
-        briefHash(digest.id, ""),
-        "清除搜索",
-      );
+    const regionChips = [["all", "全部"], ["cn", "国内"], ["global", "国外"]]
+      .map(([value, label]) => chip(briefHash(digest.id, route.q, value), label, route.region === value))
+      .join("");
+    const regionRow = `<div class="filters"><fieldset class="filter-row"><legend>地区</legend><div class="chips">${regionChips}</div></fieldset></div>`;
+    let empty = "";
+    if (!blocks.length) {
+      let message = "这一天还没有故事。";
+      let href = "";
+      let action = "";
+      if (route.q && place) {
+        message = `没有标题、摘要、详述或来源包含「${route.q.trim()}」的${place}故事。`;
+        href = briefHash(digest.id, "", route.region);
+        action = "清除搜索";
+      } else if (route.q) {
+        message = `没有标题、摘要、详述或来源包含「${route.q.trim()}」的故事。`;
+        href = briefHash(digest.id, "", "all");
+        action = "清除搜索";
+      } else if (place) {
+        message = `这一天没有${place}故事。`;
+        href = briefHash(digest.id, "", "all");
+        action = "显示全部";
+      }
+      empty = emptyBlock("这一天没有匹配的故事", message, href, action);
+    }
     const tagline = state.data?.site?.tagline || "";
     return `<div class="page">
       <header class="hero">
         <p class="eyebrow">每日早报</p>
         <div class="hero-top">
           <h1>${esc(digest.label || fmtMd(digest.id))}</h1>
-          ${daySwitch(digest, digests, route.q, today)}
+          ${daySwitch(digest, digests, route.q, today, route.region)}
         </div>
         <p class="dek">${esc(digest.coverage || "")}</p>
         <p class="subdek">${esc([tagline, countLine].filter(Boolean).join(" · "))}</p>
       </header>
+      ${regionRow}
       ${lede}
       ${jumps ? `<nav class="jump" aria-label="分类">${jumps}</nav>` : ""}
       ${sections}
@@ -519,15 +547,23 @@
   function filtersHTML(route, categories) {
     const row = (legend, items, key) => {
       const chips = items.map(([value, label]) => {
-        const next = { view: route.view, cat: route.cat, time: route.time, q: route.q, [key]: value };
+        const next = {
+          view: route.view,
+          cat: route.cat,
+          time: route.time,
+          region: route.region,
+          q: route.q,
+          [key]: value,
+        };
         return chip(exploreHash(next), label, route[key] === value);
       }).join("");
       return `<fieldset class="filter-row"><legend>${legend}</legend><div class="chips">${chips}</div></fieldset>`;
     };
     const views = [["featured", "精选"], ["all", "全部"]];
     const times = [["today", "今天"], ["week", "本周"], ["all", "全部"]];
+    const regions = [["all", "全部"], ["cn", "国内"], ["global", "国外"]];
     const cats = [["all", "全部"], ...categories.map((category) => [category.id, category.heading])];
-    return `<div class="filters">${row("视角", views, "view")}${row("分类", cats, "cat")}${row("时间", times, "time")}</div>`;
+    return `<div class="filters">${row("视角", views, "view")}${row("分类", cats, "cat")}${row("地区", regions, "region")}${row("时间", times, "time")}</div>`;
   }
 
   function viewExplore(route) {
@@ -543,19 +579,34 @@
       view: route.view,
       cat: route.cat,
       time: route.time,
+      region: route.region,
       q: route.q,
       today,
     }));
     const hero = matches.find((story) => story.featured) || null;
     const rest = hero ? matches.filter((story) => story !== hero) : matches;
-    const hasFilter = route.view !== "all" || route.cat !== "all" || route.time !== "all" || route.q;
+    const hasFilter = route.view !== "all" || route.cat !== "all" || route.time !== "all" || route.region !== "all" || route.q;
+    const place = regionMeta(route.region).label;
     let empty = "";
     if (!matches.length) {
       let message = "这一筛选下暂时没有故事。";
-      if (route.time === "today") message = `今天（${zoneLabel()}，${fmtMd(today)} · ${weekdayZh(today)}）还没有早报。`;
-      else if (route.time === "week") message = `本周（${fmtMd(start)}–${fmtMd(end)}，${zoneLabel()}）没有匹配的故事。`;
-      else if (route.q) message = `没有找到与「${route.q.trim()}」匹配的故事。`;
-      else if (route.view === "featured") message = "还没有标成精选的故事。";
+      if (route.time === "today" && !route.q && route.view === "all" && route.cat === "all") {
+        message = place
+          ? `今天（${zoneLabel()}，${fmtMd(today)} · ${weekdayZh(today)}）没有${place}故事。`
+          : `今天（${zoneLabel()}，${fmtMd(today)} · ${weekdayZh(today)}）还没有早报。`;
+      } else if (route.time === "week" && !route.q && route.view === "all" && route.cat === "all") {
+        message = place
+          ? `本周（${fmtMd(start)}–${fmtMd(end)}，${zoneLabel()}）没有${place}故事。`
+          : `本周（${fmtMd(start)}–${fmtMd(end)}，${zoneLabel()}）没有匹配的故事。`;
+      } else if (route.q) {
+        message = place
+          ? `没有找到与「${route.q.trim()}」匹配的${place}故事。`
+          : `没有找到与「${route.q.trim()}」匹配的故事。`;
+      } else if (route.view === "featured" && !place && route.cat === "all" && route.time === "all") {
+        message = "还没有标成精选的故事。";
+      } else if (place && route.view === "all" && route.cat === "all" && route.time === "all") {
+        message = `还没有标成${place}的故事。`;
+      }
       empty = emptyBlock("没有匹配的故事", message, hasFilter ? "#/explore" : "", hasFilter ? "清除筛选" : "");
     }
     const grid = rest.length
@@ -565,11 +616,11 @@
       <header class="hero">
         <p class="eyebrow">公共精选</p>
         <h1>内容广场</h1>
-        <p class="dek">把每一天的故事铺平。用视角、分类、时间和搜索收窄。</p>
+        <p class="dek">把每一天的故事铺平。用视角、分类、地区、时间和搜索收窄。</p>
       </header>
       ${filtersHTML(route, categories)}
       <p class="tz-note">时间按${esc(zoneLabel())}时区。今天是 ${esc(fmtMd(today))} · ${esc(weekdayZh(today))}，本周 ${esc(fmtMd(start))}–${esc(fmtMd(end))}。</p>
-      <p class="result-line" aria-live="polite">${matches.length} 则${route.q ? ` · 含「${esc(route.q.trim())}」` : ""}</p>
+      <p class="result-line" aria-live="polite">${matches.length} 则${place ? ` · ${esc(place)}` : ""}${route.q ? ` · 含「${esc(route.q.trim())}」` : ""}</p>
       ${hero ? featureHTML(hero) : ""}
       ${grid}
       ${empty}
@@ -719,7 +770,7 @@
       <div class="about-layout">
         <div class="about-copy">
           <p>每日资讯把一天里想读的公开报道收成三栏：科技与 AI、财经与市场、综合热点。每则留标题、短摘要和原文链接；有的故事另附一段中文详述，卡片上仍然只显示摘要。同一栏里，标了国内的故事排在国外前面，卡片和详情会显示「国内」或「国外」。</p>
-          <p>摘要和详述都是编者自己的话，用来判断要不要点开，不是通讯社稿，也不是原文全文。站点不转载原文，也不设账号或登录墙。搜索和筛选都在这台浏览器里完成。</p>
+          <p>摘要和详述都是编者自己的话，用来判断要不要点开，不是通讯社稿，也不是原文全文。站点不转载原文，也不设账号或登录墙。搜索和筛选都在这台浏览器里完成。早报和内容广场可以只看国内或国外。</p>
           <h2>三栏各自看什么</h2>
           <ul class="about-list">
             <li>科技与 AI：芯片、模型、算力和科技公司。</li>
@@ -790,7 +841,17 @@
 
   function render(options) {
     const fromHash = Boolean(options && options.fromHash);
-    const route = current();
+    let route = current();
+    if (route.name === "brief" || route.name === "explore") {
+      const rawRegion = route.params.get("region");
+      if (rawRegion && rawRegion !== "cn" && rawRegion !== "global") {
+        const hash = route.name === "explore"
+          ? exploreHash(route)
+          : briefHash(route.digestId, route.q, "all");
+        history.replaceState(null, "", `${location.pathname}${location.search}${hash}`);
+        route = current();
+      }
+    }
     const key = `${route.name}:${route.digestId || ""}:${route.id || ""}`;
     const routeChanged = key !== state.routeKey;
     state.routeKey = key;
@@ -834,9 +895,15 @@
     const input = document.getElementById("q");
     const route = current();
     let hash;
-    if (route.name === "brief") hash = briefHash(route.digestId, input.value);
+    if (route.name === "brief") hash = briefHash(route.digestId, input.value, route.region);
     else if (route.name === "explore") {
-      hash = exploreHash({ view: route.view, cat: route.cat, time: route.time, q: input.value });
+      hash = exploreHash({
+        view: route.view,
+        cat: route.cat,
+        time: route.time,
+        region: route.region,
+        q: input.value,
+      });
     } else {
       hash = exploreHash({ view: "all", cat: "all", time: "all", q: input.value });
       if ((location.hash || "#/") !== hash) {
@@ -1087,7 +1154,8 @@
     document.getElementById("q").addEventListener("input", onSearchInput);
     main.addEventListener("change", (event) => {
       if (event.target.id !== "day-select") return;
-      location.hash = briefHash(event.target.value, current().q);
+      const route = current();
+      location.hash = briefHash(event.target.value, route.q, route.region);
     });
     document.addEventListener("click", onClick);
     document.addEventListener("keydown", onKey);
