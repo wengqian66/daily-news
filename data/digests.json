@@ -13,74 +13,114 @@
     {
       "id": "2026-11-09",
       "label": "11月9日 · 周一",
-      "coverage": "过去约 24–48 小时（上海时区）",
-      "summary": "英伟达董事会就黄仁勋相关报道启动独立调查；Anthropic 的电力交易和 OpenAI 的融资同一天进入视野。亚洲科技股周一反弹，中国 10 月 PPI 同比升至 5.7%，美联储加息预期升温。综合热点包括艾森科特获授权组阁、胡塞宣称袭击沙特目标，以及埃及吉萨火车相撞。",
       "categories": [
         {
           "id": "tech",
           "heading": "科技与 AI",
           "stories": [
             {
-              "id": "nvidia-board-inquiry",
-              "title": "英伟达董事会启动独立调查",
-              "excerpt": "英伟达董事会发表声明，就报道所称首席执行官黄仁勋成为外国情报活动目标一事，启动独立调查。\n\n声明刊登在英伟达新闻稿中。CNBC 当天的市场实时动态，则提供了美股和科技股在同一时段的背景。调查范围、进展和结论，以公司后续披露为准。",
-              "bodyZh": "英伟达董事会在 2026 年 11 月 8 日的声明里说，鉴于近期报道称创始人兼首席执行官黄仁勋成为外国情报活动的目标，董事会启动独立调查。调查由独立董事组成的委员会负责，并有外部独立法律顾问协助。董事会把美国国家与经济安全放在优先位置，并称这关系到公司及其股东的利益。\n\n声明同时写明，目前没有理由认为国家安全或英伟达的商业秘密已经受损，但调查仍会审阅能够取得的全部信息。黄仁勋支持这次审查，并承诺配合。董事会表示对黄仁勋及其管理团队仍有信心，会在适当的时候提供进一步说明。\n\n财新同日的中文报道补充了公司内部的沟通：黄仁勋在给全体员工的邮件中承认对妻子不忠，并向同事道歉，表示辜负了他们的信任。公司公共政策传播负责人对外说，黄仁勋将继续担任首席执行官，今天的消息不会拖慢公司的步伐。报道还写到，特朗普被问及此事时表示，声明发布后他还没有和黄仁勋谈过，并称黄仁勋是个不错的人，可能有自己的解释。\n\n这篇详述只整理声明和公开报道里已经写明的内容，方便先用中文把事情读完，再决定要不要打开原文。调查进行到哪一步、是否涉及具体商业信息，以英伟达后续披露为准。",
+              "id": "nvidia-huang-board-investigation",
+              "title": "黄仁勋承认婚外情，英伟达董事会启动独立调查",
+              "excerpt": "英伟达首席执行官黄仁勋当地时间 11 月 8 日发布致全员信，承认婚外情，并确认董事会已就相关报道涉及的国家安全关切启动独立调查。\n\nCNBC 称，报道指与其有往来的女性被指为中国间谍；国会两党议员已要求就此事质询黄仁勋。极客公园援引《纽约时报》报道称，美方认为黄仁勋与新加坡科技公司 Megaspeed 前高管 Alice Huang 关系密切。调查进展以英伟达后续披露为准。",
+              "bodyZh": "英伟达首席执行官黄仁勋当地时间 11 月 8 日通过公司官网发布致全员信，就个人私事道歉，并确认董事会已就相关报道涉及的国家安全关切启动独立调查。他在信中承认对妻子不忠，表示伤害了家人、承担全部责任，并请求外界给家人隐私空间，同时称将配合调查、继续专注于公司。他表示家人不应为其个人选择负责，希望有机会重新赢回家人的信任；这封公开信同时面向员工和投资者，既致歉也试图稳定内部情绪。\n\n据 CNBC 报道，引发调查的报道称与黄仁勋有往来的女性被指为中国间谍；黄仁勋在邮件中承认婚外情。极客公园援引《纽约时报》报道称，美国政府认为黄仁勋与新加坡科技公司 Megaspeed 前高管 Alice Huang（黄乐）关系密切。CNBC 另一篇报道说，国会两党议员希望就相关报道质询黄仁勋。\n\n董事会声明说，目前没有理由认为国家安全或公司商业秘密已受损，但调查仍将审阅能够取得的全部信息。调查范围、进展和结论，以英伟达及董事会的后续披露为准。",
               "featured": true,
               "type": "文章",
-              "source": "NVIDIA/CNBC",
+              "source": "极客公园/CNBC",
               "date": "11-09",
               "links": [
                 {
-                  "title": "黄仁勋承认对妻子不忠，英伟达将启动独立调查",
-                  "site": "财新",
-                  "href": "https://international.caixin.com/2026-11-09/102502636.html",
+                  "title": "黄仁勋承认「婚外情」，英伟达启动调查",
+                  "site": "极客公园",
+                  "href": "http://www.geekpark.net/news/373687",
                   "lang": "zh"
                 },
                 {
-                  "title": "英伟达董事会声明",
-                  "site": "NVIDIA News",
-                  "href": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+                  "title": "Nvidia investigates CEO Jensen Huang's relationship with alleged Chinese spy",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-investigation-china-spy.html",
                   "lang": "en"
                 },
                 {
-                  "title": "美股市场实时动态",
+                  "title": "Nvidia CEO faces bipartisan congressional scrutiny over reported China spy link",
                   "site": "CNBC",
-                  "href": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html",
+                  "href": "https://www.cnbc.com/2026/11/08/jensen-huang-nvidia-china-spy-congress.html",
                   "lang": "en"
                 }
               ]
             },
             {
-              "id": "anthropic-generators",
-              "title": "Anthropic 砸约 34 亿美元买燃气发电机",
-              "excerpt": "据 CNBC 报道，Anthropic 以约 34 亿美元买下燃气发电机相关资产，规模约 1.7GW，用于 AI 数据中心供电。\n\n这则消息谈的是电力，不是新模型。金额、功率和交割进度，以 CNBC 原文为准。",
-              "featured": false,
-              "type": "文章",
-              "source": "CNBC",
+              "id": "china-ai-filing-system",
+              "title": "网信办上线新技术新应用备案系统，AI 与算法备案一体化",
+              "excerpt": "国家互联网信息办公室 11 月 9 日上线“互联网新技术新应用信息服务备案系统”，可一体化办理生成式人工智能、算法、深度合成、区块链等备案。原算法备案系统和区块链备案管理系统同日停止使用。\n\n系统支持按主体名称、备案名称、备案编号等查询备案信息。IT之家报道了这一公告，并给出工作日咨询电话。",
+              "type": "快讯",
+              "source": "IT之家",
               "date": "11-09",
               "links": [
                 {
-                  "title": "Anthropic 购入发电机，供给 AI 数据中心",
+                  "title": "网信办：互联网新技术新应用信息服务备案系统上线",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/024/332.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "tesla-cybertruck-production-end",
+              "title": "马斯克称 Cybertruck 产线约 8 个月后停产",
+              "excerpt": "特斯拉 CEO 马斯克 11 月 9 日在 X 发文称，Cybertruck 订单增速远超产能，但得州产线约 8 个月后仍将停产，届时需向大量客户退还定金。他把原因归结为这款车工艺复杂带来的机会成本，已高于增产 Cybercab 所能创造的价值，并否认“Cybertruck 不盈利”的报道。\n\n少数派早报和 CNBC 此前报道，特斯拉计划明年逐步收尾 Cybertruck 生产，为 Cybercab 扩产腾出产能。",
+              "type": "文章",
+              "source": "IT之家/少数派/CNBC",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "马斯克：Cybertruck 订单量远超产量，但生产该车的机会成本太高",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/024/337.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "派早报：特斯拉将停产 Cybertruck",
+                  "site": "少数派",
+                  "href": "https://sspai.com/post/118805",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Tesla to wind down Cybertruck production in Texas next year",
                   "site": "CNBC",
-                  "href": "https://www.cnbc.com/2026/11/08/anthropic-generator-deal-ai-data-centers.html",
+                  "href": "https://www.cnbc.com/2026/11/06/tesla-cybertruck-texas-musk.html",
                   "lang": "en"
                 }
               ]
             },
             {
-              "id": "openai-funding",
-              "title": "OpenAI 新一轮先到位约 110 亿美元",
-              "excerpt": "据 TechCrunch 报道，OpenAI 新一轮融资先到位约 110 亿美元，估值约 1.25 万亿美元。\n\n报道关注的是这一轮资金的到位情况和估值。投资方、资金用途以及是否还有后续交割，以原文为准。",
-              "featured": false,
+              "id": "samsung-etch-recipe-leak",
+              "title": "三星蚀刻工艺配方泄露，泛林韩国子公司被指违规传输",
+              "excerpt": "据 The Elec 11 月 9 日报道，三星电子的半导体蚀刻工艺配方泄露至美国设备厂商泛林半导体的韩国业务部门。泛林为三星供应蚀刻与沉积设备，按协议只能接收限定范围内的数据用于设备维护。\n\n调查发现，泛林韩国分公司通过不合规申请，多次将三星未授权对外移交的工艺配方以独立文件形式传回。三星今年下半年察觉此事。IT之家援引 The Elec 报道，并说明工艺配方涉及温度、压力、气体流量等生产参数。",
               "type": "文章",
-              "source": "TechCrunch",
+              "source": "IT之家/The Elec",
               "date": "11-09",
               "links": [
                 {
-                  "title": "OpenAI 据报再融资约 110 亿美元",
-                  "site": "TechCrunch",
-                  "href": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
-                  "lang": "en"
+                  "title": "三星电子蚀刻工艺配方泄露，泛林韩国子公司被曝违规传输",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/024/298.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "ai-data-center-gas-turbine-shortage",
+              "title": "AI 数据中心热潮推高燃气轮机需求，新设备交货排到 2030 年代",
+              "excerpt": "路透社 11 月 9 日报道，AI 数据中心建设热潮令燃气轮机供不应求，新设备交货期已排到 2030 年代。电力企业、项目开发商和数据中心供电商正四处寻找二手燃气轮机，重启长期封存机组，甚至把退役喷气发动机改造成发电设备。\n\n伍德麦肯兹分析师称，美国市场讨论的交货时间集中在 2030 至 2031 年。尽管 AI 概念股近期遭遇抛售，数据中心需求仍然旺盛，发电设备供应成为行业瓶颈。",
+              "type": "文章",
+              "source": "IT之家/路透社",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "数据中心火了、燃气轮机不够用了：新设备交货要到本世纪 30 年代",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/024/313.htm",
+                  "lang": "zh"
                 }
               ]
             }
@@ -91,46 +131,21 @@
           "heading": "财经与市场",
           "stories": [
             {
-              "id": "asia-tech-rebound",
-              "title": "亚洲科技股周一大幅反弹",
-              "excerpt": "亚洲科技股周一大幅反弹。法新社稿件的标题信息是：科技公司在中期选举后的下跌里收回部分失地，市场把目光转向英伟达。CNBC 当天的市场实时动态记录了同一个交易日。\n\n个股涨跌和收盘点位以两条原文为准。",
-              "featured": false,
+              "id": "china-october-cpi-ppi",
+              "title": "中国 10 月 CPI 小幅下降，PPI 涨幅高于预期",
+              "excerpt": "FT 中文网 11 月 9 日报道，中国 10 月 CPI 小幅下降，内需疲弱对消费者物价构成压力，即使能源价格上涨推高了生产者成本。\n\nCNBC 同日报道，中国 10 月 PPI 同比上涨 5.7%，高于路透调查经济学家预期的 5.3%，为四年多来最高。两组数据共同显示，上游价格压力与下游消费需求偏弱并存。",
               "type": "文章",
-              "source": "CNBC/AFP",
+              "source": "FT中文网/CNBC",
               "date": "11-09",
               "links": [
                 {
-                  "title": "美股与亚洲市场实时动态",
-                  "site": "CNBC",
-                  "href": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html",
-                  "lang": "en"
-                },
-                {
-                  "title": "科技公司收回部分跌幅",
-                  "site": "AFP",
-                  "href": "https://www.afp.com/en/tech-firms-claw-back-some-losses-after-midterms-rout-eyes-nvidia",
-                  "lang": "en"
-                }
-              ]
-            },
-            {
-              "id": "china-ppi-october",
-              "title": "中国 10 月 PPI 同比升至 5.7%",
-              "excerpt": "中国 10 月工业生产者出厂价格（PPI）同比升至 5.7%。CNBC 以批发通胀为题报道了这一变化，并提到消费端价格。\n\n5.7% 是同比读数。分项、环比以及和消费物价的对照，以 CNBC 原文和统计口径为准。",
-              "bodyZh": "国家统计局 11 月 9 日公布，2026 年 10 月全国工业生产者出厂价格同比上涨 5.7%，环比上涨 0.7%。工业生产者购进价格同比上涨 7.9%，环比上涨 1.1%。1 至 10 月平均，出厂价格比上年同期上涨 2.7%，购进价格上涨 4.0%。\n\n同比结构上，生产资料价格上涨 7.4%，大约拉动总水平 5.77 个百分点。其中采掘工业上涨 27.9%，原材料工业上涨 11.6%，加工工业上涨 3.5%。生活资料价格下降 0.1%，食品、衣着和一般日用品走低，耐用消费品上涨 1.4%。购进端则是燃料动力、化工原料和有色金属材料涨幅靠前，建筑材料及非金属、黑色金属材料价格下降。\n\n统计局城市司首席统计师的解读指出，出厂价格同比涨幅比上月扩大 0.7 个百分点，环比涨幅比上月回落 0.5 个百分点。环比上行主要来自能源及相关行业：国际能源价格带动石油和天然气开采、煤炭开采价格上涨，精炼石油、有机化学原料、煤炭加工、燃气生产和供应也随之上行。解读同时提到，产能有序调整，以及人工智能相关需求，带动部分原材料和装备制造价格略涨；消费品制造价格总体稳定。\n\n读这条时要把 5.7% 看成同比，而不是一个月里的环比变化。分项和统计口径以国家统计局公报为准。CNBC 当天的英文稿把同一组数字放进批发通胀和消费价格的市场叙述里，可以和中文公报对照着看。",
-              "featured": false,
-              "type": "文章",
-              "source": "CNBC",
-              "date": "11-09",
-              "links": [
-                {
-                  "title": "2026年10月份工业生产者出厂价格同比上涨5.7%",
-                  "site": "国家统计局",
-                  "href": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261109_1965794.html",
+                  "title": "中国10月CPI小幅降低",
+                  "site": "FT中文网",
+                  "href": "https://www.ftchinese.com/story/001111313",
                   "lang": "zh"
                 },
                 {
-                  "title": "中国批发通胀上升",
+                  "title": "China wholesale inflation hits highest in more than four years as consumer measure slows",
                   "site": "CNBC",
                   "href": "https://www.cnbc.com/2026/11/09/china-wholesale-inflation-rises-consumer.html",
                   "lang": "en"
@@ -138,18 +153,66 @@
               ]
             },
             {
-              "id": "fed-rate-bets",
-              "title": "美联储加息预期升温",
-              "excerpt": "市场对美联储加息的预期升温。Euronext 的市场新闻同时写到：亚洲股市在人工智能与中东紧张情绪缓和之后保持平稳，美元偏强。\n\n利率路径和资产价格以该报道及后续数据为准。",
-              "featured": false,
+              "id": "us-chip-stocks-post-midterm-selloff",
+              "title": "中期选举后美国芯片股重挫，纳指单日暴跌 5.52%",
+              "excerpt": "极客公园援引路透社报道称，美国民主党在中期选举中大胜后，投资者担忧 AI 监管加强和数据中心建设放缓，科技股遭遇大规模抛售。华尔街股票市值单日蒸发约 3.2 万亿美元，纳斯达克综合指数暴跌 5.52%，创 2025 年 4 月以来最大单日跌幅。\n\n费城半导体指数暴跌约 12.3%，英伟达下跌约 9.3%，闪迪暴跌约 22%，美光、西部数据和 AMD 跌幅均在 17% 左右。纳指较 10 月初历史高点累计下跌近 12%，进入技术性回调区间。",
               "type": "文章",
-              "source": "Euronext",
+              "source": "极客公园/路透社",
               "date": "11-09",
               "links": [
                 {
-                  "title": "亚洲股市持稳，美联储押注下美元偏强",
-                  "site": "Euronext",
-                  "href": "https://live.euronext.com/en/financial-news/asian-stocks-steady-ai-mideast-jitters-recede-dollar-firm-fed-bets",
+                  "title": "中期选举后美国芯片股重挫，纳指单日暴跌 5.52%",
+                  "site": "极客公园",
+                  "href": "http://www.geekpark.net/news/373554",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "anthropic-power-deal",
+              "title": "Anthropic 斥资 34 亿美元接手发电设备",
+              "excerpt": "FT 中文网 11 月 9 日报道，随着数据中心电力需求激增，AI 公司 Anthropic 与得州 OnePWR Solutions 达成协议，斥资 34 亿美元买下后者几年前订购的燃气发电设备。\n\n报道称，这笔交易凸显前沿 AI 公司正直接介入电力供应，以锁定数据中心所需的发电能力。交易的具体交付安排和项目细节，以 FT 原文为准。",
+              "type": "文章",
+              "source": "FT中文网",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "Anthropic斥资34亿美元接手发电设备",
+                  "site": "FT中文网",
+                  "href": "https://www.ftchinese.com/story/001111311",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "apple-overseas-tax",
+              "title": "苹果 2026 财年利用新加坡、爱尔兰各避税 27、26 亿美元",
+              "excerpt": "IT之家 11 月 9 日援引《金融时报》报道称，苹果 2026 财年缴纳 270 亿美元企业所得税，比按美国 21% 法定联邦税率计算的 330 亿美元少 50 至 60 亿美元。\n\n差额来自苹果将营业利润确认在税率较低的地区：公司文件显示，新加坡和爱尔兰分别帮其节省 27 亿和 26 亿美元税费。苹果在爱尔兰避税已属公开秘密，但新加坡节省的税额更高，仍令外界意外。",
+              "type": "文章",
+              "source": "IT之家/FT",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "苹果 2026 财年利用新加坡、爱尔兰各避税 27、26 亿美元",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/024/309.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "berkshire-q3-buybacks",
+              "title": "伯克希尔三季度回购规模翻倍以上，利润下滑",
+              "excerpt": "伯克希尔·哈撒韦 11 月 7 日披露的第三季度业绩显示，公司回购规模较此前增加一倍以上，但营业利润和整体利润均出现下降。\n\nCNBC 报道称，公司加快了股票回购步伐。回购加速与利润下滑同时出现，成为市场解读这份季报的焦点。具体回购金额、各业务板块表现和管理层说法，以伯克希尔季报及 CNBC 原文为准。",
+              "bodyZh": "伯克希尔·哈撒韦在周六披露的第三季度业绩中表示，公司加快了股票回购步伐，三季度回购规模较此前增加一倍以上；同期营业利润和整体利润均出现下降。\n\nCNBC 的报道把回购加速与利润下滑放在同一份季报中观察。对投资者而言，回购通常被视为管理层认为股价相对内在价值有吸引力、并愿意把多余现金返还股东的资本配置信号；但回购并不改变营业利润下降这一事实，二者需要分开看。伯克希尔长期以持有大量现金、只在价格合适时回购著称，因此回购节奏本身也是观察管理层估值判断的窗口。\n\n不过，季报同时显示利润承压，说明回购并不能掩盖经营层面的压力；保险、铁路和能源等主要板块的具体表现，需要看完整财报。报道摘要没有给出回购和利润的具体金额，也未展开各项业务的表现，不宜据此推算估值。回购更多是资本配置动作，不等于公司对未来经营前景作出乐观指引；CNBC 的报道也没有说明回购均价和回购股份数量。相关数字、分部业绩和管理层解释，以伯克希尔季报及 CNBC 原文为准。",
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "Berkshire Hathaway more than doubles buybacks in third quarter as earnings decline",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html",
                   "lang": "en"
                 }
               ]
@@ -161,70 +224,104 @@
           "heading": "综合热点",
           "stories": [
             {
-              "id": "israel-eisenkot",
-              "title": "以色列总统正式授权艾森科特组阁",
-              "excerpt": "以色列总统正式授权艾森科特组建政府。新华社中文、新华社英文和美联社都报道了这项授权。\n\n组阁期限、联盟谈判和政府能否组成，以原文的后续更新为准。",
-              "featured": false,
+              "id": "egypt-train-collision",
+              "title": "埃及吉萨附近两列火车相撞，至少 7 死 100 余伤",
+              "excerpt": "BBC 报道，埃及吉萨市郊外两列同向行驶的列车相撞，多节车厢脱轨，造成至少 7 人死亡、100 多人受伤。BBC Verify 核实的视频显示，脱轨车厢倾覆并滑下路基。\n\n报道称，两列列车当时朝同一方向行驶，相撞后发生脱轨。事故原因、涉事线路和伤亡者身份尚待埃及有关部门公布，后续数字可能随救援更新。",
+              "bodyZh": "BBC 报道，埃及吉萨市郊外两列同向行驶的列车发生相撞，多节车厢脱轨，事故造成至少 7 人死亡、100 多人受伤。BBC Verify 核实的现场视频显示，脱轨车厢倾覆并滑下路基，救援人员在现场处置。\n\n报道没有在摘要中说明事故的具体原因、涉事列车线路和伤亡者身份，相关调查与责任认定仍待埃及有关部门公布。从报道措辞看，两列列车是在同一方向行驶时相撞，随后多节车厢脱轨；这与对向相撞是不同情形，具体原因仍需调查。由于事发地点位于吉萨，紧邻首都开罗，外界关注这起事故对当地铁路运输的影响；但就目前公开信息看，能够确认的是死亡和受伤人数、列车同向相撞及车厢脱轨这些事实。\n\n对于这样一起造成大量伤亡的铁路事故，公众最关心的通常是信号、调度和线路维护是否存在问题，但这些在现有摘要中都没有答案。BBC 同时发布了现场视频，但视频本身不能解释事故原因；目前也没有看到埃及官方对事故原因的说明。后续伤亡数字可能随救援和医院统计更新，阅读时以 BBC 原文和埃及官方通报为准。",
+              "featured": true,
               "type": "文章",
-              "source": "新华社/AP",
+              "source": "BBC",
               "date": "11-09",
               "links": [
                 {
-                  "title": "以色列总统正式授权埃森科特组建新政府",
-                  "site": "新华网",
-                  "href": "https://www.xinhuanet.com/20261109/c7a18a18c3ba43259d238d929f654c9f/c.html",
+                  "title": "Seven dead and more than 100 injured after trains collide in Egypt",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cwvgr20mmmevo?at_medium=RSS&at_campaign=rss",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "krakow-shooting",
+              "title": "波兰克拉科夫枪击案嫌疑人死亡，至少 6 人遇害",
+              "excerpt": "BBC 报道，波兰克拉科夫市中心主广场发生枪击，至少 6 人死亡。嫌疑人随后在医院死亡，警方还在其家中发现三名家人的遗体。\n\n报道称，枪手向人群随机开枪，两名警察阻止其造成更多伤亡；一名在附近吃午饭的外科医生为受伤警官实施急救，同事称他无疑挽救了这名警官的生命。枪击动机和案件关联仍待波兰警方调查。",
+              "bodyZh": "波兰克拉科夫市中心主广场发生枪击事件。BBC 报道，至少 6 人在事件中死亡，嫌疑人随后在医院死亡；警方还在嫌疑人家中发现其三名家人的遗体。报道称，枪手当时向人群随机开枪，两名警察阻止其造成更多伤亡，其中一名警官受伤后获救。\n\nBBC 另一篇报道还原了救援细节：两名医生正在主广场附近吃午饭，听到枪声后上前施救。一名外科医生为受伤警官实施急救，同事称他无疑挽救了这名警官的生命。救治嫌疑人的医生则表示，他把所有伤者都当作受害者来治疗。BBC Verify 核实的视频记录了枪声在主广场响起的时刻。\n\n目前公开报道确认的是死亡人数、嫌疑人死亡及其家属遇害、警方和医生施救等事实。嫌疑人死亡意味着针对其本人的追责程序将受影响，但警方仍需查明作案动机、武器来源以及其家属遇害的经过。由于事件发生在市中心主广场，且嫌疑人向人群随机开枪，案件也引发对公共场所安保和警方反应速度的讨论。警方尚未公布其作案动机，媒体报道也没有给出更多背景，相关案情以波兰警方和检方后续通报为准。",
+              "type": "文章",
+              "source": "BBC",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "Krakow shooting suspect has died in hospital, police say",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/c6y434dw8319o?at_medium=RSS&at_campaign=rss",
+                  "lang": "en"
+                },
+                {
+                  "title": "Surgeon having lunch near Krakow shooting undoubtedly saved officer's life",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o?at_medium=RSS&at_campaign=rss",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "saudi-aramco-tower-strike",
+              "title": "胡塞武装袭击利雅得，阿美大厦被击中",
+              "excerpt": "BBC 报道，也门胡塞武装对沙特首都利雅得发动新一轮袭击，位于市中心金融区的阿美大厦被击中。BBC Verify 核实的画面显示大厦出现损坏。\n\n报道目前确认了袭击发生、阿美大厦受损和胡塞武装发动新一轮打击，但未在摘要中给出伤亡、所用武器及沙特方面回应的细节。损失评估和后续局势以 BBC 原文及各方通报为准。",
+              "bodyZh": "BBC 报道，也门胡塞武装向沙特首都利雅得发动新一轮袭击，位于市中心金融区的阿美大厦（Aramco Tower）被击中。BBC Verify 核实的画面显示，大厦外立面出现损坏。\n\n报道目前确认的是袭击发生、阿美大厦受损以及胡塞武装发动新一轮打击；伤亡情况、袭击所用武器和沙特方面的回应，在候选摘要中没有更多细节。阿美大厦是沙特阿美相关的地标建筑，位于利雅得核心金融区，此次被击中也让外界关注沙特能源与金融基础设施的安全。\n\nBBC 称其核查了相关画面，确认大厦受损；这类核查通常只能确认画面真实性及可见损坏，不能独立证明袭击方或武器类型。对沙特而言，首都金融区的地标建筑被击中，象征意义和安保影响都不容忽视；对胡塞武装而言，这是其新一轮跨境打击的一部分。由于现有摘要没有提供伤亡和拦截情况，无法判断袭击造成的实际破坏程度；沙特方面尚未在候选摘要中回应，袭击的战术细节也未见披露。相关损失评估和后续局势，以 BBC 原文及沙特、胡塞武装方面的通报为准。",
+              "type": "文章",
+              "source": "BBC",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "Aramco Tower hit in heart of Saudi capital as Houthis launch fresh strikes",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/c6ly3mjx958eo?at_medium=RSS&at_campaign=rss",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "russia-ukraine-power-strikes",
+              "title": "俄军空袭乌克兰能源设施致 9 伤，阿布扎比会谈前局势紧张",
+              "excerpt": "BBC 报道，俄罗斯对乌克兰发动空袭，造成至少 9 人受伤，并损坏乌克兰电力网络。袭击发生在乌克兰与俄罗斯代表团计划下周在阿布扎比参加三方会谈之前。\n\nFT 中文网分析称，美国对乌政策仍掌握在特朗普手中，但一些民主党议员希望利用国会拨款权和监督权加强对乌克兰的支持，并加大对俄制裁。具体袭击地点、武器和电网受损范围，候选摘要未提供。",
+              "bodyZh": "BBC 报道，俄罗斯对乌克兰发动空袭，造成至少 9 人受伤，并损坏乌克兰电力网络。袭击发生在乌克兰与俄罗斯代表团计划下周在阿布扎比参加三方会谈之前，时间点使外界关注袭击是否会干扰外交进程。\n\nFT 中文网的分析指出，美国对乌政策仍掌握在特朗普手中，但一些民主党议员希望利用国会的拨款权和监督权加强对乌克兰的支持，并加大对俄罗斯的制裁。民主党在中期选举中赢得国会控制权后，这一动向受到关注；不过，国会民主党人更多是通过拨款和监督施压，而非直接主导外交。\n\n目前可确认的是空袭造成的人员受伤和电力设施损坏，以及会谈安排；具体袭击地点、使用的武器和电网受损范围，候选摘要未提供。三方会谈的具体级别和议程，报道也没有展开；会谈能否如期举行、双方是否会在会谈前降低军事行动强度，目前都没有明确信息。报道只说明袭击发生在会谈前，并未证明两者存在直接因果关系。对乌克兰而言，电力网络反复受损意味着防空和抢修压力持续存在，但本次袭击的具体规模仍需以 BBC 和乌方通报为准。",
+              "type": "文章",
+              "source": "BBC/FT中文网",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "美国民主党控制国会对乌克兰意味着什么？",
+                  "site": "FT中文网",
+                  "href": "https://www.ftchinese.com/story/001111309",
                   "lang": "zh"
                 },
                 {
-                  "title": "新华社英文当日报道",
-                  "site": "新华社",
-                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html",
-                  "lang": "en"
-                },
-                {
-                  "title": "以色列选举与组阁授权",
-                  "site": "AP",
-                  "href": "https://apnews.com/article/israel-elections-netanyahu-eisenkot-bec07675825bee5895315e2ea1cb5751",
+                  "title": "Russian strikes wound nine and damage Ukraine's power network ahead of talks",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cm4g1nq8158po?at_medium=RSS&at_campaign=rss",
                   "lang": "en"
                 }
               ]
             },
             {
-              "id": "houthi-trump-iran",
-              "title": "胡塞宣称袭击沙特目标；特朗普称对伊再动手「极不可能」",
-              "excerpt": "胡塞武装宣称袭击了沙特目标。同一组中东消息里，特朗普表示再次对伊朗动手「极不可能」。\n\n新华社英文与美联社 11 月 8 日的中东新闻报道了相关局势。袭击后果和表态的完整语境，以原文为准。",
-              "featured": false,
-              "type": "文章",
-              "source": "新华社/AP",
+              "id": "europe-bomb-threats",
+              "title": "欧洲 20 个航班再遭“诈弹”威胁",
+              "excerpt": "FT 中文网报道，欧洲又有 20 个航班遭遇“诈弹”威胁，迄今所有威胁均被证实为欺骗之举。专家认为，此波威胁可能是一场蓄意扰乱航空旅行的协调行动。\n\nCNBC 同日报道称，从超市冰柜遭网络攻击到客运航班受威胁，一系列事件正在考验欧洲保护关键基础设施的能力。两篇报道均提示，威胁造成的主要是运营中断和社会恐慌，而非真实爆炸物。",
+              "type": "快讯",
+              "source": "FT中文网/CNBC",
               "date": "11-09",
               "links": [
                 {
-                  "title": "新华社英文当日报道",
-                  "site": "新华社",
-                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html",
-                  "lang": "en"
+                  "title": "20个欧洲航班再遭“诈弹”威胁",
+                  "site": "FT中文网",
+                  "href": "https://www.ftchinese.com/story/001111295",
+                  "lang": "zh"
                 },
                 {
-                  "title": "11 月 8 日中东新闻",
-                  "site": "AP",
-                  "href": "https://apnews.com/article/mideast-news-november-8-2026-090d96e25872f5c63e105b9dd3e5dc60",
-                  "lang": "en"
-                }
-              ]
-            },
-            {
-              "id": "giza-train-crash",
-              "title": "埃及吉萨两列火车相撞",
-              "excerpt": "埃及吉萨发生两列火车相撞。新华社英文在当日国际新闻里报道了这起事故。\n\n伤亡、原因和通车安排以原文为准。",
-              "featured": false,
-              "type": "文章",
-              "source": "新华社",
-              "date": "11-09",
-              "links": [
-                {
-                  "title": "新华社英文当日报道",
-                  "site": "新华社",
-                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html",
+                  "title": "From supermarket fridges to passenger flights, a wave of threats is testing Europe's defenses",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/09/europe-fridge-hacks-bomb-threats-cyberattack.html",
                   "lang": "en"
                 }
               ]
