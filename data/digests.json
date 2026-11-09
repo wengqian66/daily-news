@@ -1,0 +1,204 @@
+{
+  "site": {
+    "title": "每日资讯",
+    "english": "Daily News",
+    "tagline": "科技 · 财经 · 热点，每天一读",
+    "description": "个人维护的每日新闻早报。摘要用来决定要不要读原文，全文在来源网站。",
+    "timezone": "Asia/Shanghai",
+    "timezoneLabel": "上海",
+    "repo": "https://github.com/wengqian66/daily-news",
+    "url": "https://wengqian66.github.io/daily-news/"
+  },
+  "digests": [
+    {
+      "id": "2026-11-09",
+      "label": "11月9日 · 周一",
+      "coverage": "过去约 24–48 小时（上海时区）",
+      "summary": "英伟达董事会就黄仁勋相关报道启动独立调查；Anthropic 的电力交易和 OpenAI 的融资同一天进入视野。亚洲科技股周一反弹，中国 10 月 PPI 同比升至 5.7%，美联储加息预期升温。综合热点包括艾森科特获授权组阁、胡塞宣称袭击沙特目标，以及埃及吉萨火车相撞。",
+      "categories": [
+        {
+          "id": "tech",
+          "heading": "科技与 AI",
+          "stories": [
+            {
+              "id": "nvidia-board-inquiry",
+              "title": "英伟达董事会启动独立调查",
+              "excerpt": "英伟达董事会发表声明，就报道所称首席执行官黄仁勋成为外国情报活动目标一事，启动独立调查。\n\n声明刊登在英伟达新闻稿中。CNBC 当天的市场实时动态，则提供了美股和科技股在同一时段的背景。调查范围、进展和结论，以公司后续披露为准。",
+              "featured": true,
+              "type": "文章",
+              "source": "NVIDIA/CNBC",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "英伟达董事会声明",
+                  "site": "NVIDIA News",
+                  "href": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+                },
+                {
+                  "title": "美股市场实时动态",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html"
+                }
+              ]
+            },
+            {
+              "id": "anthropic-generators",
+              "title": "Anthropic 砸约 34 亿美元买燃气发电机",
+              "excerpt": "据 CNBC 报道，Anthropic 以约 34 亿美元买下燃气发电机相关资产，规模约 1.7GW，用于 AI 数据中心供电。\n\n这则消息谈的是电力，不是新模型。金额、功率和交割进度，以 CNBC 原文为准。",
+              "featured": false,
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "Anthropic 购入发电机，供给 AI 数据中心",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/08/anthropic-generator-deal-ai-data-centers.html"
+                }
+              ]
+            },
+            {
+              "id": "openai-funding",
+              "title": "OpenAI 新一轮先到位约 110 亿美元",
+              "excerpt": "据 TechCrunch 报道，OpenAI 新一轮融资先到位约 110 亿美元，估值约 1.25 万亿美元。\n\n报道关注的是这一轮资金的到位情况和估值。投资方、资金用途以及是否还有后续交割，以原文为准。",
+              "featured": false,
+              "type": "文章",
+              "source": "TechCrunch",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "OpenAI 据报再融资约 110 亿美元",
+                  "site": "TechCrunch",
+                  "href": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "markets",
+          "heading": "财经与市场",
+          "stories": [
+            {
+              "id": "asia-tech-rebound",
+              "title": "亚洲科技股周一大幅反弹",
+              "excerpt": "亚洲科技股周一大幅反弹。法新社稿件的标题信息是：科技公司在中期选举后的下跌里收回部分失地，市场把目光转向英伟达。CNBC 当天的市场实时动态记录了同一个交易日。\n\n个股涨跌和收盘点位以两条原文为准。",
+              "featured": false,
+              "type": "文章",
+              "source": "CNBC/AFP",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "美股与亚洲市场实时动态",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html"
+                },
+                {
+                  "title": "科技公司收回部分跌幅",
+                  "site": "AFP",
+                  "href": "https://www.afp.com/en/tech-firms-claw-back-some-losses-after-midterms-rout-eyes-nvidia"
+                }
+              ]
+            },
+            {
+              "id": "china-ppi-october",
+              "title": "中国 10 月 PPI 同比升至 5.7%",
+              "excerpt": "中国 10 月工业生产者出厂价格（PPI）同比升至 5.7%。CNBC 以批发通胀为题报道了这一变化，并提到消费端价格。\n\n5.7% 是同比读数。分项、环比以及和消费物价的对照，以 CNBC 原文和统计口径为准。",
+              "featured": false,
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "中国批发通胀上升",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/09/china-wholesale-inflation-rises-consumer.html"
+                }
+              ]
+            },
+            {
+              "id": "fed-rate-bets",
+              "title": "美联储加息预期升温",
+              "excerpt": "市场对美联储加息的预期升温。Euronext 的市场新闻同时写到：亚洲股市在人工智能与中东紧张情绪缓和之后保持平稳，美元偏强。\n\n利率路径和资产价格以该报道及后续数据为准。",
+              "featured": false,
+              "type": "文章",
+              "source": "Euronext",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "亚洲股市持稳，美联储押注下美元偏强",
+                  "site": "Euronext",
+                  "href": "https://live.euronext.com/en/financial-news/asian-stocks-steady-ai-mideast-jitters-recede-dollar-firm-fed-bets"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "general",
+          "heading": "综合热点",
+          "stories": [
+            {
+              "id": "israel-eisenkot",
+              "title": "以色列总统正式授权艾森科特组阁",
+              "excerpt": "以色列总统正式授权艾森科特组建政府。新华社英文和美联社都报道了这项授权。\n\n组阁期限、联盟谈判和政府能否组成，以两条原文的后续更新为准。",
+              "featured": false,
+              "type": "文章",
+              "source": "新华社/AP",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "新华社英文当日报道",
+                  "site": "新华社",
+                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html"
+                },
+                {
+                  "title": "以色列选举与组阁授权",
+                  "site": "AP",
+                  "href": "https://apnews.com/article/israel-elections-netanyahu-eisenkot-bec07675825bee5895315e2ea1cb5751"
+                }
+              ]
+            },
+            {
+              "id": "houthi-trump-iran",
+              "title": "胡塞宣称袭击沙特目标；特朗普称对伊再动手「极不可能」",
+              "excerpt": "胡塞武装宣称袭击了沙特目标。同一组中东消息里，特朗普表示再次对伊朗动手「极不可能」。\n\n新华社英文与美联社 11 月 8 日的中东新闻报道了相关局势。袭击后果和表态的完整语境，以原文为准。",
+              "featured": false,
+              "type": "文章",
+              "source": "新华社/AP",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "新华社英文当日报道",
+                  "site": "新华社",
+                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html"
+                },
+                {
+                  "title": "11 月 8 日中东新闻",
+                  "site": "AP",
+                  "href": "https://apnews.com/article/mideast-news-november-8-2026-090d96e25872f5c63e105b9dd3e5dc60"
+                }
+              ]
+            },
+            {
+              "id": "giza-train-crash",
+              "title": "埃及吉萨两列火车相撞",
+              "excerpt": "埃及吉萨发生两列火车相撞。新华社英文在当日国际新闻里报道了这起事故。\n\n伤亡、原因和通车安排以原文为准。",
+              "featured": false,
+              "type": "文章",
+              "source": "新华社",
+              "date": "11-09",
+              "links": [
+                {
+                  "title": "新华社英文当日报道",
+                  "site": "新华社",
+                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
