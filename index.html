@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日资讯</title>
+  <meta name="description" content="科技 · 财经 · 热点，每天一读。个人维护的每日新闻早报。">
+  <meta name="theme-color" content="#faf7f2">
+  <script>
+    (function () {
+      try {
+        if (location.pathname === '/daily-news') {
+          location.replace('/daily-news/' + location.search + location.hash);
+          return;
+        }
+      } catch (e) {}
+      try {
+        if (localStorage.getItem('dn-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    html { background: #f3efe6; }
+    html[data-theme="dark"] { background: #141311; }
+  </style>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+  <header class="topbar">
+    <button class="icon-btn menu-btn" type="button" data-action="menu" aria-expanded="false" aria-controls="sidenav" aria-label="打开导航">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="i"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+    </button>
+    <a class="brand" href="#/" id="brand-link">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect class="tile" width="32" height="32" rx="9" fill="#1c1915"/>
+        <path class="line" d="M9 11h14M9 16h9M9 21h11" stroke="#f6f1e8" stroke-width="1.7" stroke-linecap="round"/>
+        <circle cx="22.5" cy="21" r="2.3" fill="#c2410c"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">每日资讯</span>
+        <span class="brand-en">Daily News</span>
+      </span>
+    </a>
+    <form class="search" id="search-form" role="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="search-ico"><circle cx="11" cy="11" r="6.25" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 16.5L20 20.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <label class="visually-hidden" for="q">搜索标题、摘要或来源</label>
+      <input id="q" type="search" placeholder="搜索标题、摘要或来源" autocomplete="off" enterkeyhint="search">
+      <button class="icon-btn clear-btn" type="button" id="clear-q" data-action="clear-search" hidden aria-label="清除搜索">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="i"><path d="M7 7l10 10M17 7L7 17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+    </form>
+    <div class="tools">
+      <button class="icon-btn" type="button" data-action="theme" aria-label="切换为深色">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 3.5a8.2 8.2 0 1 0 5 12.2A7 7 0 0 1 15.5 3.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 3.5v2.2M12 18.3V20.5M3.5 12h2.2M18.3 12h2.2M6 6l1.6 1.6M16.4 16.4L18 18M18 6l-1.6 1.6M7.6 16.4L6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+  <button class="scrim" id="scrim" type="button" data-action="close-menu" hidden aria-label="关闭导航"></button>
+  <div class="shell">
+    <nav class="sidenav" id="sidenav" aria-label="主导航">
+      <p class="nav-label" id="nav-public">公共精选</p>
+      <ul class="nav-list" aria-labelledby="nav-public">
+        <li>
+          <a class="nav-link" href="#/" data-nav="brief">
+            <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M5 6.5h10.2A1.6 1.6 0 0 1 16.8 8.1V19H7.4A2.4 2.4 0 0 1 5 16.6V6.5z"/><path fill="none" stroke="currentColor" stroke-width="1.7" d="M16.8 10.2h2A1.3 1.3 0 0 1 20.1 11.5V17a2 2 0 0 1-2 2H7.4"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M8 10.2h6M8 13.6h6"/></svg>
+            每日早报
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#/explore" data-nav="explore">
+            <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+            内容广场
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#/about" data-nav="about">
+            <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.7"/><path stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 11v5"/><circle cx="12" cy="8.1" r="0.9" fill="currentColor"/></svg>
+            关于
+          </a>
+        </li>
+      </ul>
+      <p class="nav-foot">个人阅读清单<br>原文在来源网站打开</p>
+    </nav>
+    <main id="main" tabindex="-1">
+      <p class="loading">正在整理今天的早报…</p>
+      <noscript><p class="noscript">需要启用 JavaScript 才能阅读。内容在 data/digests.json。</p></noscript>
+    </main>
+  </div>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
