@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - cursor/daily-news-site-8206
   workflow_dispatch:
 
 permissions:
