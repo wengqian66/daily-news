@@ -5,6 +5,8 @@ story.bodyZh is optional and must be a string when present.
 story.region is optional and must be "cn" or "global" when present.
 link.lang is optional and must be "zh" or "en" when present.
 There is no cap on how many stories a category may hold.
+Target mix is about 3 cn + 3 global in each of tech, markets, and general
+(about 18 stories a day). That quota is not enforced.
 """
 
 import json
