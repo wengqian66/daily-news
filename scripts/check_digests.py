@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Validate data/digests.json before it is published."""
+"""Validate data/digests.json before it is published.
+
+story.bodyZh is optional and must be a string when present.
+link.lang is optional and must be "zh" or "en" when present.
+There is no cap on how many stories a category may hold.
+"""
 
 import json
 import sys
@@ -98,6 +103,8 @@ def main() -> int:
                       errors.append(f"{swhere}.{field} is required")
               if "featured" in story and not isinstance(story["featured"], bool):
                   errors.append(f"{swhere}.featured must be true or false")
+              if "bodyZh" in story and not isinstance(story.get("bodyZh"), str):
+                  errors.append(f"{swhere}.bodyZh must be a string")
               links = story.get("links", [])
               if not isinstance(links, list):
                   errors.append(f"{swhere}.links must be an array")
@@ -114,6 +121,8 @@ def main() -> int:
                       errors.append(f"{lwhere}.title is required")
                   if not str(link.get("site") or "").strip():
                       errors.append(f"{lwhere}.site is required")
+                  if "lang" in link and link.get("lang") not in ("zh", "en"):
+                      errors.append(f'{lwhere}.lang must be "zh" or "en" when present')
 
     if errors:
         print(f"{PATH} has {len(errors)} error(s):", file=sys.stderr)

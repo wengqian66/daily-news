@@ -24,20 +24,29 @@
               "id": "nvidia-board-inquiry",
               "title": "英伟达董事会启动独立调查",
               "excerpt": "英伟达董事会发表声明，就报道所称首席执行官黄仁勋成为外国情报活动目标一事，启动独立调查。\n\n声明刊登在英伟达新闻稿中。CNBC 当天的市场实时动态，则提供了美股和科技股在同一时段的背景。调查范围、进展和结论，以公司后续披露为准。",
+              "bodyZh": "英伟达董事会在 2026 年 11 月 8 日的声明里说，鉴于近期报道称创始人兼首席执行官黄仁勋成为外国情报活动的目标，董事会启动独立调查。调查由独立董事组成的委员会负责，并有外部独立法律顾问协助。董事会把美国国家与经济安全放在优先位置，并称这关系到公司及其股东的利益。\n\n声明同时写明，目前没有理由认为国家安全或英伟达的商业秘密已经受损，但调查仍会审阅能够取得的全部信息。黄仁勋支持这次审查，并承诺配合。董事会表示对黄仁勋及其管理团队仍有信心，会在适当的时候提供进一步说明。\n\n财新同日的中文报道补充了公司内部的沟通：黄仁勋在给全体员工的邮件中承认对妻子不忠，并向同事道歉，表示辜负了他们的信任。公司公共政策传播负责人对外说，黄仁勋将继续担任首席执行官，今天的消息不会拖慢公司的步伐。报道还写到，特朗普被问及此事时表示，声明发布后他还没有和黄仁勋谈过，并称黄仁勋是个不错的人，可能有自己的解释。\n\n这篇详述只整理声明和公开报道里已经写明的内容，方便先用中文把事情读完，再决定要不要打开原文。调查进行到哪一步、是否涉及具体商业信息，以英伟达后续披露为准。",
               "featured": true,
               "type": "文章",
               "source": "NVIDIA/CNBC",
               "date": "11-09",
               "links": [
                 {
+                  "title": "黄仁勋承认对妻子不忠，英伟达将启动独立调查",
+                  "site": "财新",
+                  "href": "https://international.caixin.com/2026-11-09/102502636.html",
+                  "lang": "zh"
+                },
+                {
                   "title": "英伟达董事会声明",
                   "site": "NVIDIA News",
-                  "href": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+                  "href": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+                  "lang": "en"
                 },
                 {
                   "title": "美股市场实时动态",
                   "site": "CNBC",
-                  "href": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html"
+                  "href": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html",
+                  "lang": "en"
                 }
               ]
             },
@@ -53,7 +62,8 @@
                 {
                   "title": "Anthropic 购入发电机，供给 AI 数据中心",
                   "site": "CNBC",
-                  "href": "https://www.cnbc.com/2026/11/08/anthropic-generator-deal-ai-data-centers.html"
+                  "href": "https://www.cnbc.com/2026/11/08/anthropic-generator-deal-ai-data-centers.html",
+                  "lang": "en"
                 }
               ]
             },
@@ -69,7 +79,8 @@
                 {
                   "title": "OpenAI 据报再融资约 110 亿美元",
                   "site": "TechCrunch",
-                  "href": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
+                  "href": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+                  "lang": "en"
                 }
               ]
             }
@@ -91,12 +102,14 @@
                 {
                   "title": "美股与亚洲市场实时动态",
                   "site": "CNBC",
-                  "href": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html"
+                  "href": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html",
+                  "lang": "en"
                 },
                 {
                   "title": "科技公司收回部分跌幅",
                   "site": "AFP",
-                  "href": "https://www.afp.com/en/tech-firms-claw-back-some-losses-after-midterms-rout-eyes-nvidia"
+                  "href": "https://www.afp.com/en/tech-firms-claw-back-some-losses-after-midterms-rout-eyes-nvidia",
+                  "lang": "en"
                 }
               ]
             },
@@ -104,15 +117,23 @@
               "id": "china-ppi-october",
               "title": "中国 10 月 PPI 同比升至 5.7%",
               "excerpt": "中国 10 月工业生产者出厂价格（PPI）同比升至 5.7%。CNBC 以批发通胀为题报道了这一变化，并提到消费端价格。\n\n5.7% 是同比读数。分项、环比以及和消费物价的对照，以 CNBC 原文和统计口径为准。",
+              "bodyZh": "国家统计局 11 月 9 日公布，2026 年 10 月全国工业生产者出厂价格同比上涨 5.7%，环比上涨 0.7%。工业生产者购进价格同比上涨 7.9%，环比上涨 1.1%。1 至 10 月平均，出厂价格比上年同期上涨 2.7%，购进价格上涨 4.0%。\n\n同比结构上，生产资料价格上涨 7.4%，大约拉动总水平 5.77 个百分点。其中采掘工业上涨 27.9%，原材料工业上涨 11.6%，加工工业上涨 3.5%。生活资料价格下降 0.1%，食品、衣着和一般日用品走低，耐用消费品上涨 1.4%。购进端则是燃料动力、化工原料和有色金属材料涨幅靠前，建筑材料及非金属、黑色金属材料价格下降。\n\n统计局城市司首席统计师的解读指出，出厂价格同比涨幅比上月扩大 0.7 个百分点，环比涨幅比上月回落 0.5 个百分点。环比上行主要来自能源及相关行业：国际能源价格带动石油和天然气开采、煤炭开采价格上涨，精炼石油、有机化学原料、煤炭加工、燃气生产和供应也随之上行。解读同时提到，产能有序调整，以及人工智能相关需求，带动部分原材料和装备制造价格略涨；消费品制造价格总体稳定。\n\n读这条时要把 5.7% 看成同比，而不是一个月里的环比变化。分项和统计口径以国家统计局公报为准。CNBC 当天的英文稿把同一组数字放进批发通胀和消费价格的市场叙述里，可以和中文公报对照着看。",
               "featured": false,
               "type": "文章",
               "source": "CNBC",
               "date": "11-09",
               "links": [
                 {
+                  "title": "2026年10月份工业生产者出厂价格同比上涨5.7%",
+                  "site": "国家统计局",
+                  "href": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261109_1965794.html",
+                  "lang": "zh"
+                },
+                {
                   "title": "中国批发通胀上升",
                   "site": "CNBC",
-                  "href": "https://www.cnbc.com/2026/11/09/china-wholesale-inflation-rises-consumer.html"
+                  "href": "https://www.cnbc.com/2026/11/09/china-wholesale-inflation-rises-consumer.html",
+                  "lang": "en"
                 }
               ]
             },
@@ -128,7 +149,8 @@
                 {
                   "title": "亚洲股市持稳，美联储押注下美元偏强",
                   "site": "Euronext",
-                  "href": "https://live.euronext.com/en/financial-news/asian-stocks-steady-ai-mideast-jitters-recede-dollar-firm-fed-bets"
+                  "href": "https://live.euronext.com/en/financial-news/asian-stocks-steady-ai-mideast-jitters-recede-dollar-firm-fed-bets",
+                  "lang": "en"
                 }
               ]
             }
@@ -141,21 +163,29 @@
             {
               "id": "israel-eisenkot",
               "title": "以色列总统正式授权艾森科特组阁",
-              "excerpt": "以色列总统正式授权艾森科特组建政府。新华社英文和美联社都报道了这项授权。\n\n组阁期限、联盟谈判和政府能否组成，以两条原文的后续更新为准。",
+              "excerpt": "以色列总统正式授权艾森科特组建政府。新华社中文、新华社英文和美联社都报道了这项授权。\n\n组阁期限、联盟谈判和政府能否组成，以原文的后续更新为准。",
               "featured": false,
               "type": "文章",
               "source": "新华社/AP",
               "date": "11-09",
               "links": [
                 {
+                  "title": "以色列总统正式授权埃森科特组建新政府",
+                  "site": "新华网",
+                  "href": "https://www.xinhuanet.com/20261109/c7a18a18c3ba43259d238d929f654c9f/c.html",
+                  "lang": "zh"
+                },
+                {
                   "title": "新华社英文当日报道",
                   "site": "新华社",
-                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html"
+                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html",
+                  "lang": "en"
                 },
                 {
                   "title": "以色列选举与组阁授权",
                   "site": "AP",
-                  "href": "https://apnews.com/article/israel-elections-netanyahu-eisenkot-bec07675825bee5895315e2ea1cb5751"
+                  "href": "https://apnews.com/article/israel-elections-netanyahu-eisenkot-bec07675825bee5895315e2ea1cb5751",
+                  "lang": "en"
                 }
               ]
             },
@@ -171,12 +201,14 @@
                 {
                   "title": "新华社英文当日报道",
                   "site": "新华社",
-                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html"
+                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html",
+                  "lang": "en"
                 },
                 {
                   "title": "11 月 8 日中东新闻",
                   "site": "AP",
-                  "href": "https://apnews.com/article/mideast-news-november-8-2026-090d96e25872f5c63e105b9dd3e5dc60"
+                  "href": "https://apnews.com/article/mideast-news-november-8-2026-090d96e25872f5c63e105b9dd3e5dc60",
+                  "lang": "en"
                 }
               ]
             },
@@ -192,7 +224,8 @@
                 {
                   "title": "新华社英文当日报道",
                   "site": "新华社",
-                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html"
+                  "href": "https://english.news.cn/20261109/e1d906afa36f4aa7b8e1eed37bad74d3/c.html",
+                  "lang": "en"
                 }
               ]
             }

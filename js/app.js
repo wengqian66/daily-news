@@ -14,6 +14,9 @@
 
   const PALETTE = ["#7c2d12", "#9f1239", "#1e3a8a", "#115e59", "#3f6212", "#92400e", "#1f2937"];
   const PREFERRED = ["tech", "markets", "general"];
+  const SITE_BASE = "https://wengqian66.github.io/daily-news/";
+  const SHARE_DESCRIPTION = "科技 · 财经 · 热点，每天一读。个人维护的每日新闻早报。";
+  let copyTimer = 0;
   const ICON_DOC = '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7l5 5V20a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 20V5A1.5 1.5 0 0 1 7 3.5z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M14 3.5V9h5.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
 
   function esc(value) {
@@ -193,7 +196,7 @@
   function matchesQuery(story, q) {
     const tokens = String(q || "").trim().toLowerCase().split(/\s+/).filter(Boolean);
     if (!tokens.length) return true;
-    const hay = [story.title, story.excerpt, story.source].join("\n").toLowerCase();
+    const hay = [story.title, story.excerpt, story.bodyZh, story.source].join("\n").toLowerCase();
     return tokens.every((token) => hay.includes(token));
   }
 
@@ -264,6 +267,79 @@
 
   function siteName() {
     return state.data?.site?.title || "每日资讯";
+  }
+
+  function canonicalBase() {
+    const configured = safeUrl(state.data?.site?.url || "");
+    if (!configured) return SITE_BASE;
+    return configured.endsWith("/") ? configured : `${configured}/`;
+  }
+
+  function storyPermalink(id) {
+    return `${canonicalBase()}#/story/${encodeURIComponent(id)}`;
+  }
+
+  function pagePermalink(route) {
+    const base = canonicalBase();
+    if (state.data && route && route.name === "story" && route.id) {
+      const story = allStories(state.data).find((item) => item.id === route.id);
+      if (story) return storyPermalink(story.id);
+    }
+    const hash = location.hash || "";
+    if (!hash || hash === "#" || hash === "#/") return base;
+    return `${base}${hash}`;
+  }
+
+  function setMeta(attr, key, content) {
+    const selector = `meta[${attr}="${key}"]`;
+    let el = document.head.querySelector(selector);
+    if (!el) {
+      el = document.createElement("meta");
+      el.setAttribute(attr, key);
+      document.head.appendChild(el);
+    }
+    el.setAttribute("content", content);
+  }
+
+  function clipShare(text, max) {
+    const value = oneLine(text);
+    if (!value) return "";
+    if (value.length <= max) return value;
+    return `${value.slice(0, max - 1)}…`;
+  }
+
+  function shareDescription(route) {
+    const tagline = String(state.data?.site?.tagline || "").trim();
+    const description = String(state.data?.site?.description || "").trim();
+    let fallback = SHARE_DESCRIPTION;
+    if (tagline && description) {
+      const lead = /[。！？]$/.test(tagline) ? tagline : `${tagline}。`;
+      fallback = description.startsWith(tagline) ? description : `${lead}${description}`;
+    } else {
+      fallback = description || tagline || SHARE_DESCRIPTION;
+    }
+    if (!state.data || !route || route.name !== "story") return fallback;
+    const story = allStories(state.data).find((item) => item.id === route.id);
+    if (!story) return fallback;
+    return clipShare(firstParagraph(story.excerpt) || story.excerpt, 140) || fallback;
+  }
+
+  function applyShareMeta(route) {
+    const title = pageTitle(route);
+    const description = shareDescription(route);
+    const url = pagePermalink(route);
+    const isStory = Boolean(
+      state.data && route.name === "story" && allStories(state.data).some((item) => item.id === route.id),
+    );
+    setMeta("property", "og:title", title);
+    setMeta("property", "og:description", description);
+    setMeta("property", "og:url", url);
+    setMeta("property", "og:type", isStory ? "article" : "website");
+    setMeta("name", "twitter:title", title);
+    setMeta("name", "twitter:description", description);
+    setMeta("name", "twitter:url", url);
+    const descriptionMeta = document.querySelector('meta[name="description"]');
+    if (descriptionMeta) descriptionMeta.setAttribute("content", description);
   }
 
   function zone() {
@@ -391,7 +467,7 @@
       ? ""
       : emptyBlock(
         "这一天没有匹配的故事",
-        route.q ? `没有标题、摘要或来源包含「${route.q.trim()}」的故事。` : "这一天还没有故事。",
+        route.q ? `没有标题、摘要、详述或来源包含「${route.q.trim()}」的故事。` : "这一天还没有故事。",
         briefHash(digest.id, ""),
         "清除搜索",
       );
@@ -475,23 +551,60 @@
     </div>`;
   }
 
+  function linkLang(link) {
+    const code = String(link?.lang || "").trim().toLowerCase();
+    if (code === "zh") return { code: "zh", label: "中文" };
+    if (code === "en") return { code: "en", label: "英文" };
+    return { code: "", label: "" };
+  }
+
+  function linkRank(link) {
+    const code = String(link?.lang || "").trim().toLowerCase();
+    if (code === "zh") return 0;
+    if (code === "en") return 2;
+    return 1;
+  }
+
   function linkCards(story) {
-    const cards = (story.links || []).map((link) => {
+    const links = [...(story.links || [])].sort((a, b) => linkRank(a) - linkRank(b));
+    const cards = [];
+    links.forEach((link) => {
       const href = safeUrl(link.href);
-      if (!href) return "";
+      if (!href) return;
       const host = hostOf(href);
       const site = link.site || host;
       const secondary = host && site && host.toLowerCase() !== String(site).toLowerCase()
         ? `${site} · ${host}`
         : (site || host);
-      return `<a class="link-card" href="${esc(href)}" target="_blank" rel="noopener noreferrer">
-        ${avatar(site || host)}
-        <span class="grow"><span class="link-title">${esc(link.title || site || "原文")}</span><span class="link-site">${esc(secondary)}</span></span>
-        <span class="newtab">新标签打开</span>
-      </a>`;
+      const lang = linkLang(link);
+      const badge = lang.label
+        ? `<span class="lang-badge" data-lang="${esc(lang.code)}">${esc(lang.label)}</span>`
+        : "";
+      cards.push({ href, site, host, secondary, title: link.title || site || "原文", badge });
+    });
+    if (!cards.length) return `<p class="fine">这条没有可用的原文链接。</p>`;
+    const items = cards.map((card, index) => {
+      const indexMark = cards.length > 1
+        ? `<span class="link-index" aria-hidden="true">${index + 1}</span>`
+        : "";
+      return `<li><a class="link-card" href="${esc(card.href)}" target="_blank" rel="noopener noreferrer">
+        <span class="link-mark">${indexMark}${avatar(card.site || card.host)}</span>
+        <span class="grow"><span class="link-title">${esc(card.title)}</span><span class="link-site">${esc(card.secondary)}</span></span>
+        <span class="link-actions">${card.badge}<span class="newtab">新标签打开</span></span>
+      </a></li>`;
     }).join("");
-    if (cards) return `<div class="link-list">${cards}</div>`;
-    return `<p class="fine">这条没有可用的原文链接。</p>`;
+    const note = cards.length > 1 ? `<p class="fine">共 ${cards.length} 条来源</p>` : "";
+    return `${note}<ol class="link-list">${items}</ol>`;
+  }
+
+  function bodyZhSection(story) {
+    const text = String(story.bodyZh || "").trim();
+    if (!text) return "";
+    return `<section class="body-zh" aria-labelledby="body-zh-title">
+      <h2 id="body-zh-title">中文详述</h2>
+      <div class="prose">${paragraphs(text)}</div>
+      <p class="fine">详述是编者整理的中文说明，不是原文转载。数字和引语以原文为准。</p>
+    </section>`;
   }
 
   function viewStory(route) {
@@ -512,6 +625,8 @@
     const pill = story.featured
       ? `<a class="pill" href="${esc(exploreHash({ view: "featured" }))}">精选</a>`
       : "";
+    const permalink = storyPermalink(story.id);
+    const readText = [story.excerpt, story.bodyZh].filter((part) => String(part || "").trim()).join("\n");
     return `<div class="page page-narrow">
       <p class="back"><a class="back-link" href="${esc(back)}">← ${backLabel}</a></p>
       <article>
@@ -525,11 +640,22 @@
             ${avatar(story.source, true)}
             <span>${esc(story.source)} · <time datetime="${esc(story.digestId)}">${esc(story.date || fmtMd(story.digestId))}</time></span>
             <a class="text-link" href="${esc(briefHash(story.digestId, ""))}">${esc(story.digestLabel || story.digestId)}</a>
-            <span>约 ${readingMinutes(story.excerpt)} 分钟</span>
+            <span>约 ${readingMinutes(readText)} 分钟</span>
           </p>
+          <div class="share-row">
+            <button class="copy-link" type="button" data-action="copy-link" data-url="${esc(permalink)}" aria-live="polite">复制链接</button>
+            <span class="copy-status" role="status" aria-live="polite"></span>
+            <p class="copy-manual" hidden>
+              <label>
+                <span class="visually-hidden">故事链接</span>
+                <input class="copy-field" type="text" readonly value="${esc(permalink)}">
+              </label>
+            </p>
+          </div>
           <p class="fine">个人摘要，用来决定要不要读原文。数字和引语以原文为准。</p>
         </header>
         <div class="prose">${paragraphs(story.excerpt)}</div>
+        ${bodyZhSection(story)}
         <section class="sources">
           <h2>原文</h2>
           ${linkCards(story)}
@@ -565,8 +691,8 @@
       </header>
       <div class="about-layout">
         <div class="about-copy">
-          <p>每日资讯把一天里想读的公开报道收成三栏：科技与 AI、财经与市场、综合热点。每则只留标题、短摘要和原文链接。</p>
-          <p>摘要是编者自己的话，用来判断要不要点开，不是通讯社稿，也不是原文全文。站点不托管文章正文，也不设账号或登录墙。搜索和筛选都在这台浏览器里完成。</p>
+          <p>每日资讯把一天里想读的公开报道收成三栏：科技与 AI、财经与市场、综合热点。每则留标题、短摘要和原文链接；有的故事另附一段中文详述，卡片上仍然只显示摘要。</p>
+          <p>摘要和详述都是编者自己的话，用来判断要不要点开，不是通讯社稿，也不是原文全文。站点不转载原文，也不设账号或登录墙。搜索和筛选都在这台浏览器里完成。</p>
           <h2>三栏各自看什么</h2>
           <ul class="about-list">
             <li>科技与 AI：芯片、模型、算力和科技公司。</li>
@@ -651,6 +777,7 @@
       } catch (err) { /* ignore */ }
     }
     document.title = pageTitle(route);
+    applyShareMeta(route);
     setActiveNav(route);
     main.setAttribute("aria-busy", state.data ? "false" : "true");
     if (!state.data) {
@@ -773,6 +900,114 @@
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
     } else if (action === "retry") load();
+    else if (action === "copy-link") copyStoryLink(el);
+  }
+
+  function copyWithInput(text) {
+    const input = document.createElement("input");
+    input.value = text;
+    input.setAttribute("aria-hidden", "true");
+    input.style.position = "fixed";
+    input.style.top = "0";
+    input.style.left = "-9999px";
+    input.style.fontSize = "16px";
+    document.body.appendChild(input);
+    input.focus();
+    input.select();
+    try { input.setSelectionRange(0, input.value.length); } catch (err) { /* ignore */ }
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
+    document.body.removeChild(input);
+    return ok;
+  }
+
+  function copyWithExec(text) {
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.setAttribute("aria-hidden", "true");
+    area.style.position = "fixed";
+    area.style.top = "0";
+    area.style.left = "-9999px";
+    area.style.width = "200px";
+    area.style.height = "80px";
+    area.style.padding = "0";
+    area.style.border = "0";
+    area.style.fontSize = "16px";
+    document.body.appendChild(area);
+    const previous = document.activeElement;
+    area.focus();
+    area.select();
+    try { area.setSelectionRange(0, area.value.length); } catch (err) { /* ignore */ }
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
+    document.body.removeChild(area);
+    if (previous && previous.focus) {
+      try { previous.focus(); } catch (err) { /* ignore */ }
+    }
+    return ok;
+  }
+
+  function copyFeedback(button, message, manual) {
+    const head = button.closest(".article-head") || button.parentElement;
+    const status = head.querySelector(".copy-status");
+    const manualBox = head.querySelector(".copy-manual");
+    if (manualBox) manualBox.hidden = !manual;
+    window.clearTimeout(copyTimer);
+    if (!button.dataset.idleLabel) button.dataset.idleLabel = "复制链接";
+    if (manual && manualBox) {
+      button.textContent = button.dataset.idleLabel;
+      button.classList.remove("is-done");
+      if (status) status.textContent = message || "";
+      const field = manualBox.querySelector(".copy-field");
+      if (field) {
+        field.focus();
+        try {
+          field.select();
+          field.setSelectionRange(0, field.value.length);
+        } catch (err) { /* ignore */ }
+      }
+      return;
+    }
+    if (message) {
+      button.textContent = message;
+      button.classList.add("is-done");
+      if (status) status.textContent = "";
+      copyTimer = window.setTimeout(() => {
+        if (!button.isConnected) return;
+        button.textContent = button.dataset.idleLabel || "复制链接";
+        button.classList.remove("is-done");
+      }, 2500);
+      return;
+    }
+    button.textContent = button.dataset.idleLabel || "复制链接";
+    button.classList.remove("is-done");
+    if (status) status.textContent = "";
+  }
+
+  function copyStoryLink(button) {
+    const text = button.getAttribute("data-url") || "";
+    if (!text) {
+      copyFeedback(button, "没有可复制的链接", false);
+      return;
+    }
+    const canClipboard = Boolean(
+      navigator.clipboard && window.isSecureContext && navigator.clipboard.writeText,
+    );
+    // Write during the click so WeChat WebView still has a user gesture.
+    const synced = copyWithExec(text) || copyWithInput(text);
+    if (canClipboard) {
+      navigator.clipboard.writeText(text).then(() => {
+        copyFeedback(button, "已复制", false);
+      }).catch(() => {
+        if (synced) copyFeedback(button, "已复制", false);
+        else copyFeedback(button, "请长按链接复制", true);
+      });
+      if (synced) copyFeedback(button, "已复制", false);
+      return;
+    }
+    if (synced) copyFeedback(button, "已复制", false);
+    else copyFeedback(button, "请长按链接复制", true);
   }
 
   function onKey(event) {
