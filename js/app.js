@@ -162,13 +162,29 @@
     };
   }
 
+  function regionMeta(region) {
+    if (region === "cn") return { code: "cn", label: "国内", rank: 0 };
+    if (region === "global") return { code: "global", label: "国外", rank: 1 };
+    return { code: "", label: "", rank: 2 };
+  }
+
+  function sortByRegion(stories) {
+    return stories
+      .map((story, index) => ({ story, index }))
+      .sort((a, b) => regionMeta(a.story.region).rank - regionMeta(b.story.region).rank || a.index - b.index)
+      .map((item) => item.story);
+  }
+
+  function storiesInCategory(category, digest) {
+    const items = (category.stories || []).map((story) => decorate(story, category, digest));
+    return sortByRegion(items);
+  }
+
   function allStories(data) {
     const stories = [];
     sortedDigests(data).forEach((digest) => {
       (digest.categories || []).forEach((category) => {
-        (category.stories || []).forEach((story) => {
-          stories.push(decorate(story, category, digest));
-        });
+        stories.push(...storiesInCategory(category, digest));
       });
     });
     return stories;
@@ -196,7 +212,7 @@
   function matchesQuery(story, q) {
     const tokens = String(q || "").trim().toLowerCase().split(/\s+/).filter(Boolean);
     if (!tokens.length) return true;
-    const hay = [story.title, story.excerpt, story.bodyZh, story.source].join("\n").toLowerCase();
+    const hay = [story.title, story.excerpt, story.bodyZh, story.source, regionMeta(story.region).label].join("\n").toLowerCase();
     return tokens.every((token) => hay.includes(token));
   }
 
@@ -354,6 +370,17 @@
     return `<a class="chip" href="${esc(href)}"${on ? ' aria-current="true"' : ""}>${esc(label)}</a>`;
   }
 
+  function regionBadge(region) {
+    const meta = regionMeta(region);
+    if (!meta.label) return "";
+    return `<span class="region-badge" data-region="${esc(meta.code)}">${esc(meta.label)}</span>`;
+  }
+
+  function cardMarks(story, pill) {
+    const marks = `${regionBadge(story.region)}${pill || ""}`;
+    return marks ? `<span class="card-marks">${marks}</span>` : "";
+  }
+
   function cardHTML(story, options) {
     const showCategory = options && options.showCategory;
     const typeLabel = showCategory && story.categoryHeading
@@ -363,7 +390,7 @@
     const pill = story.featured ? '<span class="pill">精选</span>' : "";
     return `<article class="card" data-story-id="${esc(story.id)}">
       <a class="card-link" href="#/story/${encodeURIComponent(story.id)}">
-        <div class="card-top"><span class="type">${ICON_DOC}<span>${esc(typeLabel)}</span></span>${pill}</div>
+        <div class="card-top"><span class="type">${ICON_DOC}<span>${esc(typeLabel)}</span></span>${cardMarks(story, pill)}</div>
         <h3 class="card-title">${esc(story.title)}</h3>
         <p class="card-excerpt">${esc(oneLine(story.excerpt))}</p>
         <p class="card-meta">${avatar(story.source)}<span>${esc(story.source)} · ${esc(metaDate)}</span></p>
@@ -376,7 +403,7 @@
     return `<article class="feature" data-story-id="${esc(story.id)}">
       <a class="feature-link" href="#/story/${encodeURIComponent(story.id)}">
         <div class="feature-copy">
-          <div class="card-top"><span class="type">${ICON_DOC}<span>${esc(story.type)} · ${esc(story.categoryHeading || "")}</span></span><span class="pill">精选</span></div>
+          <div class="card-top"><span class="type">${ICON_DOC}<span>${esc(story.type)} · ${esc(story.categoryHeading || "")}</span></span>${cardMarks(story, '<span class="pill">精选</span>')}</div>
           <h2 class="feature-title">${esc(story.title)}</h2>
           <p class="feature-excerpt">${esc(firstParagraph(story.excerpt))}</p>
           <p class="card-meta">${avatar(story.source)}<span>${esc(story.source)} · ${esc(date)}</span></p>
@@ -439,8 +466,7 @@
     }
     const blocks = [];
     (digest.categories || []).forEach((category) => {
-      const stories = (category.stories || [])
-        .map((story) => decorate(story, category, digest))
+      const stories = storiesInCategory(category, digest)
         .filter((story) => matchesQuery(story, route.q));
       if (stories.length) blocks.push({ category, stories });
     });
@@ -633,6 +659,7 @@
         <header class="article-head">
           <p class="kicker-row">
             <a class="kicker-link" href="${esc(exploreHash({ cat: story.categoryId }))}">${esc(story.categoryHeading || "")}</a>
+            ${regionBadge(story.region)}
             ${pill}
           </p>
           <h1>${esc(story.title)}</h1>
@@ -691,7 +718,7 @@
       </header>
       <div class="about-layout">
         <div class="about-copy">
-          <p>每日资讯把一天里想读的公开报道收成三栏：科技与 AI、财经与市场、综合热点。每则留标题、短摘要和原文链接；有的故事另附一段中文详述，卡片上仍然只显示摘要。</p>
+          <p>每日资讯把一天里想读的公开报道收成三栏：科技与 AI、财经与市场、综合热点。每则留标题、短摘要和原文链接；有的故事另附一段中文详述，卡片上仍然只显示摘要。同一栏里，标了国内的故事排在国外前面，卡片和详情会显示「国内」或「国外」。</p>
           <p>摘要和详述都是编者自己的话，用来判断要不要点开，不是通讯社稿，也不是原文全文。站点不转载原文，也不设账号或登录墙。搜索和筛选都在这台浏览器里完成。</p>
           <h2>三栏各自看什么</h2>
           <ul class="about-list">

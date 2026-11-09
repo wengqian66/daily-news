@@ -514,6 +514,14 @@ main h1:focus-visible { outline: none; }
   align-items: center;
   gap: 8px;
   min-height: 24px;
+  flex-wrap: wrap;
+}
+.card-marks {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  flex: none;
 }
 .type {
   display: inline-flex;
@@ -709,6 +717,25 @@ code {
   flex: none;
 }
 .lang-badge[data-lang="zh"] {
+  background: var(--tint);
+  border-color: transparent;
+  color: var(--accent-strong);
+}
+.region-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  flex: none;
+}
+.region-badge[data-region="cn"] {
   background: var(--tint);
   border-color: transparent;
   color: var(--accent-strong);
