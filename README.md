@@ -8,10 +8,10 @@
 
 - **每日早报**（首页）：一次看一天。顶栏可以换日期，下面分三栏：科技与 AI、财经与市场、综合热点。
 - **内容广场**：所有日期的故事铺成一页。可按视角（精选 / 全部）、分类、时间（今天 / 本周 / 全部）和关键词筛选。有精选时，第一则用大卡。
-- **详情**：标题、分类、日期、来源、摘要，以及原文链接。链接在新标签打开。
+- **详情**：标题、分类、日期、来源、摘要，以及原文链接。有 `bodyZh` 时，摘要下多一节「中文详述」。多条来源按列表展示，并标出中文或英文。链接在新标签打开。「复制链接」复制带 hash 的绝对地址，例如 `https://wengqian66.github.io/daily-news/#/story/…`。
 - **关于**：这份站是什么、内容从哪来。
 
-顶栏搜索会按标题、摘要、来源过滤，逻辑在浏览器里完成。「今天 / 本周」按上海时区。
+顶栏搜索会按标题、摘要、详述或来源过滤，逻辑在浏览器里完成。「今天 / 本周」按上海时区。
 
 ## 本地预览
 
@@ -30,6 +30,12 @@ python3 -m http.server 8080
 `stories[].id` 在全站必须唯一，并且不要包含空格、`#`、`?`、`&`、`/`。分类 `id` 用 `tech`、`markets`、`general`，内容广场的筛选才对得上；`heading` 是页面上看到的中文栏名。
 
 `featured: true` 的故事会在内容广场置顶成大卡，并显示「精选」。视角选「精选」时只留下这些故事。`excerpt` 里用一个空行分段，详情页会分成段落。
+
+每天大约 15 则，三栏各 5 则左右。这是采集时的软目标，不是上限。`scripts/check_digests.py` 不限制每栏条数。采集时优先找国内读者打得开的中文来源；同一件事可以并列中文和英文链接。
+
+`bodyZh` 可选。它是给中文读者的较长详述，一般 400–800 字，用一个空行分段，规则和 `excerpt` 一样。详情页在摘要后面以「中文详述」显示。没有这个字段时，详情仍只显示摘要。卡片、早报列表和内容广场只用 `excerpt`，不会把详述铺上去。
+
+`links` 可以有多条。每条仍要有 `title`、`site`、`href`。可选 `lang`：`zh` 或 `en`。详情页把 `zh` 标成「中文」、`en` 标成「英文」，并把中文链接排在前面。不写 `lang` 时链接照常显示，只是没有语言标记。不要为了标记去发明必填字段。
 
 提交前可以检查格式：
 
@@ -56,15 +62,23 @@ python3 scripts/check_digests.py
           "id": "example-story",
           "title": "标题",
           "excerpt": "第一段摘要。\n\n空行之后是第二段。",
+          "bodyZh": "可选。较长的中文详述，空行分段。没有就不要写这个字段。",
           "featured": true,
           "type": "文章",
           "source": "来源名",
           "date": "11-10",
           "links": [
             {
-              "title": "原文标题",
+              "title": "中文报道",
               "site": "来源名",
-              "href": "https://example.com/story"
+              "href": "https://example.com/zh",
+              "lang": "zh"
+            },
+            {
+              "title": "English report",
+              "site": "Source",
+              "href": "https://example.com/en",
+              "lang": "en"
             }
           ]
         }
@@ -103,6 +117,7 @@ gh api --method POST repos/wengqian66/daily-news/pages \
 
 - 无构建：`index.html` + `css/styles.css` + `js/app.js`，启动时读取 `data/digests.json`。
 - 路由在 hash 里（`#/explore`、`#/story/nvidia-board-inquiry`），刷新不会 404。
+- 分享：`index.html` 带 Open Graph 和 Twitter 卡片，图片是 [`assets/og.png`](assets/og.png)。打开某一则故事时，页面会改 `document.title`，并尽量更新 `og:title` 和 `og:description`。只读取首页 HTML、不跑脚本的爬虫，看到的仍是站点级卡片。
 - 仓库根目录有 `.nojekyll`，Pages 按原文件发布，不经过 Jekyll。
 - 深色模式记在这台浏览器的 `localStorage` 里。
 - 不收集账号，不做统计。
