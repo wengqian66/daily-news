@@ -78,6 +78,27 @@ python3 scripts/check_digests.py
 
 每天追加时，保留 `site` 对象，只改 `digests`。
 
+## 发布到 GitHub Pages
+
+线上地址：**https://wengqian66.github.io/daily-news/**
+
+`.github/workflows/pages.yml` 会在推送到 `main` 时，把静态文件交给 GitHub Actions 发布。仓库管理员需要先在 **Settings → Pages → Build and deployment → Source** 里选择 **GitHub Actions**（只需一次）。选好之后，工作流绿了站点就更新。
+
+有管理员权限时也可以用接口打开：
+
+```bash
+gh api --method POST repos/wengqian66/daily-news/pages -f build_type=workflow
+```
+
+不想用 Actions 的话，根目录已经有 `.nojekyll`，可以直接从 `main` 分支的 `/` 发布：
+
+```bash
+gh api --method POST repos/wengqian66/daily-news/pages \
+  -f build_type=legacy \
+  -f source[branch]=main \
+  -f source[path]=/
+```
+
 ## 技术说明
 
 - 无构建：`index.html` + `css/styles.css` + `js/app.js`，启动时读取 `data/digests.json`。
