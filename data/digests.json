@@ -11,6 +11,399 @@
   },
   "digests": [
     {
+      "id": "2026-11-10",
+      "label": "11月10日 · 周二",
+      "categories": [
+        {
+          "id": "tech",
+          "heading": "科技与 AI",
+          "stories": [
+            {
+              "id": "anthropic-ipo-valuation-cooling",
+              "title": "Anthropic 据称下周上市，估值预期遭遇降温",
+              "excerpt": "IT之家 11 月 9 日晚报道，Anthropic 正冲击“史上最大 IPO”，消息称其将于下周四或周五上市，但估值预期已遭遇市场降温。\n\nCNBC 同日刊出 Jim Cramer 的评论，称这场 IPO 可能决定 AI 交易的走向。发行价、最终估值与挂牌时间仍以公司公告为准。",
+              "type": "文章",
+              "source": "IT之家/CNBC",
+              "date": "11-10",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "冲击“史上最大 IPO”：消息称 Anthropic 下周四 / 五上市",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/024/576.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Jim Cramer says Anthropic's IPO could make or break the AI trade",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/09/anthropic-ipo-ai-trade-jim-cramer.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "anthropic-claude-fable-mythos-5-2",
+              "title": "Anthropic 发布 Claude Fable / Mythos 5.2，API 调用费降 20%",
+              "excerpt": "IT之家报道，Anthropic 推出被称为其最强的 Claude Fable / Mythos 5.2 模型，演示中 8 天从零构建出一个操作系统，API 调用费同步下降 20%。\n\nCNBC 称，这是 Amodei 呼吁“放缓”之后公司发布的首批前沿模型，IPO 预期正在升温。基准测试成绩与定价细节以官方文档为准。",
+              "type": "文章",
+              "source": "IT之家/CNBC",
+              "date": "11-10",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "8 天从零搓出操作系统：Claude Fable / Mythos 5.2 登场",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/024/573.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Anthropic releases first frontier models since Amodei's call for slowdown",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/09/anthropic-claude-fable-5-2-mythos-5-2.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "google-tpu-8tx-8i-max",
+              "title": "谷歌扩充 TPU 阵容，推出 8tx / 8i Max 两款新品",
+              "excerpt": "IT之家 11 月 9 日消息，谷歌扩充 TPU 芯片阵容，推出 8tx 与 8i Max 两款新品，直接挑战英伟达在 AI 加速器市场的主导地位。\n\n两款产品的规格、量产时间和客户情况，以谷歌后续公布为准。",
+              "type": "快讯",
+              "source": "IT之家",
+              "date": "11-10",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "谷歌扩充 TPU 芯片阵容，推出 8tx/8i Max 两款新品挑战英伟达",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/024/525.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "nvidia-huang-affair-scrutiny",
+              "title": "英伟达股价跌 4%，黄仁勋婚外情调查牵出国会与 FBI",
+              "excerpt": "CNBC 与 BBC 11 月 9 日报道，英伟达首席执行官黄仁勋的婚外情对象被指与中国情报活动有关，事件已从公司治理问题升级为华盛顿的关注对象。英伟达股价当日下跌约 4%。\n\n报道显示，两党议员要求彻查，特朗普称 FBI 正在调查；英伟达董事会已启动独立调查，黄仁勋仍留任 CEO。相关指控与调查结论均待官方披露。",
+              "bodyZh": "11 月 9 日，CNBC 与 BBC 的报道把英伟达首席执行官黄仁勋的私人关系推到公共议题的中心。报道称，与其有婚外情关系的女性被指为中国情报人员，事件因此不再只是公司治理问题，而牵动美国国会对华技术出口与国家安全监管。英伟达股价当天一度下跌约 4%，市场担心管理层分心会影响公司在 AI 芯片上的交付与客户关系。\n\n英伟达董事会已宣布启动独立调查，并由独立董事牵头、外部律师协助；公司同时确认黄仁勋继续担任首席执行官。黄仁勋在给员工的邮件中承认对妻子不忠并道歉。CNBC 报道，两党议员要求进一步说明，特朗普则表示 FBI 正在调查此事；预测市场显示黄仁勋短期内离职的概率不高。\n\n报道还提到，英伟达芯片采购方 Megaspeed 因这层关系受到关注，董事会中一位成员可能在调查中扮演重要角色。对英伟达而言，这类调查的直接影响首先体现在治理与信息披露，而不是产品线。公司需要在配合执法问询的同时，向客户和投资者说明管理层能否稳定履职；任何关于出口许可、芯片流向的追问，也可能把公司拖入更广泛的对华政策争论。上述内容均来自公开报道，调查范围、是否涉及商业机密或刑事责任，仍待公司和执法部门披露。",
+              "featured": true,
+              "type": "文章",
+              "source": "CNBC/BBC",
+              "date": "11-10",
+              "region": "global",
+              "links": [
+                {
+                  "title": "英伟达黄仁勋承认出轨，消息称其已聘请危机公关公司",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/024/565.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Nvidia stock falls 4% as scrutiny turns to Jensen Huang's affair",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/09/nvidia-jensen-huang-chinese-spy-investigation.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Trump says FBI investigating Nvidia boss's affair with alleged Chinese spy",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cqg7x7dpvym8o?at_medium=RSS&at_campaign=rss",
+                  "lang": "en"
+                },
+                {
+                  "title": "Nvidia CEO faces bipartisan congressional scrutiny over reported China spy link",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/08/jensen-huang-nvidia-china-spy-congress.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "coreweave-credit-risk-doom-cycle",
+              "title": "CoreWeave 面对“末日循环”叙事，云算力信用风险压过增长",
+              "excerpt": "CNBC 报道，AI 云服务商 CoreWeave 正面对“末日循环”叙事：在增长之外，市场开始审视 neocloud 的债务与信用风险。\n\n报道称，信用担忧已盖过公司的增长故事。具体财务指标与债务结构以公司披露为准。",
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-10",
+              "region": "global",
+              "links": [
+                {
+                  "title": "CoreWeave confronts 'doom cycle' narrative as neocloud credit risk overshadows growth",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/09/coreweave-debt-credit-risk-neoclouds.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "meta-wehner-joins-fireworks",
+              "title": "Meta 首席战略官 Dave Wehner 离职，出任 Fireworks CFO",
+              "excerpt": "CNBC 报道，Meta 首席战略官 Dave Wehner 将离职，加入 AI 基础设施初创公司 Fireworks 担任首席财务官。\n\n这是 Meta 高层又一次流向 AI 基础设施领域的人事变动，接任安排与生效时间以公司公告为准。",
+              "type": "快讯",
+              "source": "CNBC",
+              "date": "11-10",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Meta chief strategy officer Dave Wehner leaves to join Fireworks as CFO",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/07/dave-wehner-meta-fireworks-cfo.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "markets",
+          "heading": "财经与市场",
+          "stories": [
+            {
+              "id": "pboc-policy-rate-anchor-shift",
+              "title": "央行政策利率“换锚”平稳落地，调控精度持续提升",
+              "excerpt": "中国经济网 11 月 10 日报道，央行政策利率“换锚”平稳落地，调控精度持续提升。\n\n报道将隔夜逆回购置于新的利率框架中讨论。具体操作利率、传导机制与后续安排，以中国人民银行公告为准。",
+              "type": "文章",
+              "source": "中国经济网",
+              "date": "11-10",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "央行政策利率“换锚”平稳落地 调控精度持续提升",
+                  "site": "中国经济网",
+                  "href": "http://finance.ce.cn/bank12/scroll/202611/t20261110_3289091.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "china-october-cpi-0-7",
+              "title": "10 月 CPI 同比上涨 0.7%",
+              "excerpt": "新华社 11 月 9 日报道，10 月份我国居民消费价格指数（CPI）同比上涨 0.7%。\n\n报道标题未给出环比和核心 CPI 数据，完整分项以国家统计局发布为准。",
+              "type": "快讯",
+              "source": "新华网",
+              "date": "11-10",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "10月份我国CPI同比上涨0.7%",
+                  "site": "新华网",
+                  "href": "https://www.xinhuanet.com/fortune/20261109/6b891518f0f740a38d4cb6dd0433f8b1/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "china-us-tariff-adjustment",
+              "title": "国务院关税税则委员会调整对美加征关税措施",
+              "excerpt": "国务院关税税则委员会 11 月 9 日发布公告，调整对原产于美国的进口商品加征关税措施。\n\n新华社报道了这一调整。涉及商品范围、税率变化与实施时间，以公告原文为准。",
+              "type": "快讯",
+              "source": "新华网",
+              "date": "11-10",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "国务院关税税则委员会：调整对原产于美国的进口商品加征关税措施",
+                  "site": "新华网",
+                  "href": "https://www.xinhuanet.com/20261109/4c1b1c7913cb47f093fc2f65f41cf9e5/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "a-share-buyback-relending",
+              "title": "A 股回购升温，回购增持再贷款持续输血",
+              "excerpt": "中国经济网 11 月 10 日报道，A 股上市公司积极回购，有机构称市场底部构筑相对充分。\n\n同日另一篇报道称，再贷款政策持续发力，低成本资金正在助力上市公司回购增持。具体公司名单与贷款规模以公告为准。",
+              "type": "文章",
+              "source": "中国经济网",
+              "date": "11-10",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "A股上市公司积极回购 机构称市场底部构筑相对充分",
+                  "site": "中国经济网",
+                  "href": "http://www.ce.cn/xwzx/gnsz/gdxw/202611/t20261110_3289250.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "再贷款政策持续发力 低成本资金助力上市公司回购增持",
+                  "site": "中国经济网",
+                  "href": "http://finance.ce.cn/bank12/scroll/202611/t20261110_3289246.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "goldman-ai-financing-strong",
+              "title": "高盛 CEO：尽管市场紧张，AI 相关融资依然强劲",
+              "excerpt": "CNBC 报道，高盛首席执行官所罗门表示，尽管市场出现紧张情绪，AI 相关融资依然强劲。\n\n这一表态出现在科技股波动、AI 基础设施投资受到审视的背景下。具体业务数据以高盛披露为准。",
+              "type": "快讯",
+              "source": "CNBC",
+              "date": "11-10",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Goldman CEO Solomon says AI financing remains strong despite market jitters",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/09/goldman-ceo-ai-financing-market.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "boeing-commercial-layoffs",
+              "title": "波音将裁减 5% 商用飞机员工，增产进度慢于预期",
+              "excerpt": "CNBC 报道，波音将裁减约 5% 的商用飞机部门员工，原因是增产进度比预期更慢。\n\n裁员规模、涉及岗位与时间表，以波音官方说明为准。",
+              "type": "快讯",
+              "source": "CNBC",
+              "date": "11-10",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Boeing to cut 5% of commercial airplane workers as production increase takes longer",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/09/boeing-layoffs-commercial-airplane.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "pepsico-north-america-job-cuts",
+              "title": "百事北美业务承压，将裁减约 1000 个岗位",
+              "excerpt": "CNBC 报道，百事公司将在北美裁减约 1000 个岗位，以应对北美业务承压。\n\n公司同时面临消费者需求变化与成本压力，具体重组费用和节省目标以财报披露为准。",
+              "type": "快讯",
+              "source": "CNBC",
+              "date": "11-10",
+              "region": "global",
+              "links": [
+                {
+                  "title": "PepsiCo to cut about 1,000 jobs as North American business struggles",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/09/pepsico-north-america-job-cuts.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "general",
+          "heading": "综合热点",
+          "stories": [
+            {
+              "id": "china-satellite-internet-group-29",
+              "title": "我国成功发射卫星互联网低轨 29 组卫星",
+              "excerpt": "新华社 11 月 9 日报道，我国成功发射卫星互联网低轨 29 组卫星。\n\n报道标题未给出具体发射时间、火箭型号和轨道参数，相关细节以官方发布为准。",
+              "type": "快讯",
+              "source": "新华网",
+              "date": "11-10",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "我国成功发射卫星互联网低轨29组卫星",
+                  "site": "新华网",
+                  "href": "https://www.xinhuanet.com/tech/20261109/dc25f9a14d5a477ca8d5d1c96c7a5fdc/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "cuba-foreign-minister-china-visit",
+              "title": "古巴外交部长将访华",
+              "excerpt": "人民日报 11 月 10 日报道，古巴外交部长将访华。\n\n访问日程、会谈议题与相关安排，以中古双方后续发布为准。",
+              "type": "快讯",
+              "source": "人民日报",
+              "date": "11-10",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "古巴外交部长将访华",
+                  "site": "人民日报",
+                  "href": "https://paper.people.com.cn/rmrb/pc/layout/202611/10/node_01.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "second-domestic-cruise-ship-nansha",
+              "title": "第二艘国产大型邮轮试运营首航将抵南沙",
+              "excerpt": "新快报援引新华社消息，第二艘国产大型邮轮试运营首航将抵达广州南沙。\n\n首航航线、载客情况和后续商业运营计划，以船方与港口发布为准。",
+              "type": "快讯",
+              "source": "新快报/新华社",
+              "date": "11-10",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "第二艘国产大型邮轮试运营首航将抵南沙",
+                  "site": "新快报",
+                  "href": "https://ep.ycwb.com/epaper/xkb/html/2026-11/10/node_1510.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "turkey-steel-plant-blast",
+              "title": "土耳其一钢厂发生爆炸，至少 17 人死亡",
+              "excerpt": "BBC 11 月 9 日报道，土耳其一家钢厂发生爆炸，已造成至少 17 人死亡。\n\n爆炸原因、伤者人数和责任调查仍在进行，具体细节以土耳其官方通报为准。",
+              "bodyZh": "BBC 11 月 9 日报道，土耳其一家钢铁厂发生爆炸，至少 17 人死亡。这是当天最严重的工业事故之一，但报道在标题层面只确认了死亡人数和事发场所类型，爆炸原因、伤者数量、被困人员情况都还没有完整披露。\n\n接下来需要关注三条线：一是当地应急部门是否结束搜救、死亡人数是否继续上升；二是工厂是否存在设备、燃气或作业流程方面的违规；三是检方与劳动安全机构是否启动刑事或行政调查。土耳其官方通报和后续报道，将决定这起事故的责任归属与行业影响。\n\n报道同样没有提及爆炸发生时工厂的在岗人数，这使外界难以评估事故的总伤亡规模。截至 BBC 发稿，报道没有说明爆炸发生在高炉、转炉还是其他生产环节，也没有给出工厂名称与所属公司。这些信息的缺失意味着，外界暂时无法判断这是一起孤立的设备事故，还是与更广泛的安全生产问题有关。\n\n在信息尚不完整时，不宜对爆炸原因作推断。可以确认的是，事故发生在生产环节，钢厂属于高温、高压与重设备集中的场所，一旦发生爆炸，救援和事故调查通常需要数日。对读者而言，最有价值的信息是官方伤亡更新、调查结论，以及是否引发全国性的工业安全检查。",
+              "featured": true,
+              "type": "文章",
+              "source": "BBC",
+              "date": "11-10",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Turkey steel factory blast kills at least 17 people",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cq2d6d5z9y5jo?at_medium=RSS&at_campaign=rss",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "hegseth-impeachment-articles",
+              "title": "美国众议员提出对国防部长赫格塞思的弹劾条款",
+              "excerpt": "BBC 与 CNBC 报道，美国共和党众议员马西提出针对国防部长赫格塞思的弹劾条款，并推动在众议院进行表决。\n\n弹劾条款的具体指控、领导层是否安排表决，以国会程序为准。",
+              "type": "快讯",
+              "source": "BBC/CNBC",
+              "date": "11-10",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Republican congressman to force impeachment vote on Defence Secretary Hegseth",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cwr5y58jjp8ro?at_medium=RSS&at_campaign=rss",
+                  "lang": "en"
+                },
+                {
+                  "title": "Hegseth impeachment articles introduced by Rep. Massie",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/09/pete-hegseth-impeachment-articles-massie.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "senegal-migrant-boat-sinking",
+              "title": "塞内加尔附近移民船沉没，至少 39 人死亡",
+              "excerpt": "BBC 11 月 9 日报道，一艘驶向欧洲的移民船在塞内加尔附近海域沉没，至少 39 人死亡。\n\n船上人数、失踪者与救援进展，以当地海事和救援部门通报为准。",
+              "type": "快讯",
+              "source": "BBC",
+              "date": "11-10",
+              "region": "global",
+              "links": [
+                {
+                  "title": "At least 39 die after Europe-bound migrant boat sinks off Senegal",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cv2d6dpge65go?at_medium=RSS&at_campaign=rss",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-09",
       "label": "11月9日 · 周一",
       "categories": [
