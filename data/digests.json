@@ -11,6 +11,492 @@
   },
   "digests": [
     {
+      "id": "2026-11-11",
+      "label": "11月11日 · 周三",
+      "categories": [
+        {
+          "id": "tech",
+          "heading": "科技与 AI",
+          "stories": [
+            {
+              "id": "anthropic-ipo-roadshow-launch",
+              "title": "Anthropic 正式启动 IPO 路演，最高拟募资 643.5 亿美元",
+              "excerpt": "Anthropic 11 月 10 日发布 IPO 路演视频，正式启动上市进程。据 CNBC 引述消息人士，发行价区间为每股 70 至 78 美元，计划 11 月 19 日开始交易。\n\nIT之家称，此次最高募资约 643.5 亿美元，估值约在 1 万亿至 1.4 万亿美元；FT中文网标题给出的估值上限为 1.4 万亿美元。最终定价与募资额以招股书和后续公告为准。",
+              "featured": true,
+              "type": "文章",
+              "source": "IT之家/CNBC",
+              "date": "11-11",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "Anthropic 发布 IPO 路演视频，正式启动最高 643.5 亿美元募资计划",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/025/209.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Anthropic 寻求以 1.4 万亿美元估值上市",
+                  "site": "FT中文网",
+                  "href": "https://www.ftchinese.com/story/001111328",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Anthropic sets IPO price range of $70 to $78, looks to start trading Nov. 19",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Claude chatbot maker set for $1.3tn stock market debut",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/crpdgd723x2zo",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "google-gemini-4-carbon",
+              "title": "谷歌发布 Gemini 4 Carbon，主打编程与科研",
+              "excerpt": "谷歌推出迄今最强模型 Gemini 4 Carbon，重点面向复杂编程、科学研究和网络安全场景。\n\n谷歌还与 Artificial Analysis 联合推出 MKA 基准测试。IT之家称，Gemini 4 Carbon 在该项多模态知识工作测试中排名第二，任务成本仅为第一名模型的六分之一。",
+              "type": "文章",
+              "source": "IT之家",
+              "date": "11-11",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "谷歌迄今最强模型 Gemini 4 Carbon 登场",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/025/203.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "谷歌联合 Artificial Analysis 推出 MKA 基准测试",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/025/205.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "minimax-h3-image-open-source",
+              "title": "MiniMax 开源 H3-Image，10 秒生成 4K 图",
+              "excerpt": "MiniMax 开源生图模型 H3-Image。据 IT之家，该模型可在 10 秒内生成一张 4K 图像。\n\n开源意味着开发者可以自行部署和二次开发，具体许可条款、显存需求和实测效果以项目页与原文为准。",
+              "type": "快讯",
+              "source": "IT之家",
+              "date": "11-11",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "MiniMax 开源 H3-Image 生图模型，10 秒就能生成一张 4K 图像",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/025/191.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "nvidia-wachtell-lipton-probe",
+              "title": "英伟达聘 Wachtell Lipton 牵头调查，股价连跌两日",
+              "excerpt": "英伟达已聘请美国律所 Wachtell Lipton 牵头调查首席执行官黄仁勋与一名疑似中国情报人员的关系。BBC 与 CNBC 均报道了这一进展，董事会成员 Stephen Neal 可能在调查中承担重要角色。\n\nCNBC 称，参议院民主党领袖舒默批评特朗普以国家安全为代价为黄仁勋辩护；英伟达股价连续第二个交易日下跌。调查结论与股价走势以公司披露和市场收盘数据为准。",
+              "type": "文章",
+              "source": "CNBC/BBC",
+              "date": "11-11",
+              "region": "global",
+              "links": [
+                {
+                  "title": "英伟达董事会聘请前美国联邦检察官，调查 CEO 黄仁勋相关事件",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/025/201.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Nvidia hires law firm Wachtell Lipton to lead Jensen Huang affair probe",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/10/nvidia-wachtell-lipton-huang-affair.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Nvidia sells off for second day in fallout from Huang's affair",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/10/nvidia-nvda-jensen-huang-affair-chinese-spy.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Nvidia hires major US law firm to investigate alleged Chinese spy affair",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/ck1wvwwl3x0go",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "tsmc-october-sales-jump",
+              "title": "台积电 10 月营收跳升，芯片景气延续",
+              "excerpt": "台积电公布 10 月营收，同比明显增长。CNBC 把这份数据放在全球芯片景气仍在延续的背景下来解读。\n\n月度营收是观察先进制程和 AI 芯片需求的高频指标，具体金额与增幅以公司披露为准。",
+              "bodyZh": "台积电 10 月营收出现跳升，CNBC 的报道把它概括为全球芯片景气仍在延续。月度营收是台积电每月例行的经营披露，也是市场观察先进制程和 AI 加速卡需求的一个高频指标；数据公布后，外界关注的重点仍是高性能计算相关订单能否把增长延续到年底。\n\n公开报道没有在标题里给出具体金额，也没有给出同比和环比的精确幅度，这里因此不引用未经核对的数字。可以确定的是，报道没有把这次增长归因于某一家客户，而是放在整个半导体上行周期里解读。\n\n对中文读者来说，这条消息的意义在于时间点：同一周里，英伟达因高管调查事件震荡，AI 交易情绪反复，市场需要一个来自产业链上游的参照。代工端的月度数据不涉及估值故事，能相对直接地反映订单和出货节奏，因此常被当作 AI 资本开支是否见顶的对照指标。\n\n接下来可以继续看三个东西：台积电按月披露的营收、先进制程的产能利用率，以及下一场法说会给出的指引。如果 10 月的跳升只是客户提前拉货，后续月度数据会很快回落；如果产能利用率和指引同步上修，才能说明这轮芯片景气不是短期的补库存。具体数字和公司口径，仍以台积电的正式披露为准。",
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-11",
+              "region": "global",
+              "links": [
+                {
+                  "title": "TSMC's October sales jump as global chip boom rolls on",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/10/tsmcs-october-sales-.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "softbank-quarterly-loss-data-center-intel",
+              "title": "软银转亏 70 亿美元，数据中心与英特尔持股拖累",
+              "excerpt": "软银集团季度业绩由盈转亏，亏损约 70 亿美元。CNBC 称，美国数据中心相关资产减记和英特尔持股价值下跌是主要拖累。\n\n这是软银在 AI 基础设施上大举下注后的一次集中体现，具体分部数据和账面损益以财报为准。",
+              "bodyZh": "软银集团最新一季由盈转亏，CNBC 给出的亏损规模约为 70 亿美元。报道把原因指向两项：美国数据中心相关资产出现减记，以及所持英特尔股份的价值下跌。这两项都属于账面和估值层面的冲击，而非当季主营业务现金流突然断裂，但对重仓 AI 基础设施的软银来说，信号意义很强。\n\n软银近两年把资源集中到数据中心、算力平台和芯片资产上，逻辑是用巨额资本开支换取 AI 时代的基础设施位置。这类投资的特点是前期投入大、回报周期长，一旦市场对 AI 资本开支的持续性产生怀疑，资产估值就会先于经营数据调整。这次减记正好发生在英伟达高管调查搅动 AI 交易、CoreWeave 等算力公司债务结构被重新审视的同一周。\n\n英特尔持股的下跌则是另一条线。软银持有英特尔股份，而英特尔自身正处在制程推进和客户争取的艰难阶段，股价波动会直接进入软银的损益表。两项因素叠加，使这份财报看起来比主营业务的实际情况更差。\n\n目前可见的报道没有给出营收、愿景基金分部的具体损益，也没有给出减记的会计口径，因此这里不列这些数字。后续值得关注的是：软银会不会放慢新的数据中心承诺、如何为已开工项目融资，以及管理层在说明会上如何解释 AI 投资的回收周期。这些信息以软银正式财报和说明会记录为准。",
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-11",
+              "region": "global",
+              "links": [
+                {
+                  "title": "SoftBank swings to $7 billion loss after U.S. data center hit and Intel share decline",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/10/softbank-2q-earnings-tech-selloff.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "markets",
+          "heading": "财经与市场",
+          "stories": [
+            {
+              "id": "china-green-sovereign-bond-canada",
+              "title": "财政部在加拿大发行 40 亿元绿色主权债券",
+              "excerpt": "财政部代表中央政府于 11 月 9 日在加拿大发行 40 亿元人民币绿色主权债券：3 年期 20 亿元，利率 1.4%；5 年期 20 亿元，利率 1.5%。\n\n新华网称，总认购额达 540.4 亿元，为发行额的 13.5 倍。这是财政部首次在加拿大发行人民币绿色主权债券，债券将在港交所上市。",
+              "type": "文章",
+              "source": "新华网",
+              "date": "11-11",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "中国在加拿大成功发行人民币绿色主权债券",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/world/20261111/5dab29901a9d41f0ac6c98532c27d3e5/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "财政部：人民币绿色主权债券在加拿大发行",
+                  "site": "财政部",
+                  "href": "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/202611/t20261110_4004375.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "stock-etf-inflows-590-billion",
+              "title": "股票型 ETF 10 月以来净流入超 5900 亿元",
+              "excerpt": "中国证券报称，截至 11 月 9 日，股票型 ETF 自 10 月以来持续加仓 A 股，累计净流入超过 5900 亿元。有报道给出的口径是连续 23 个交易日净流入、累计 5907.68 亿元。\n\n同期港股 10 月以来累计回购超过 110 亿港元。不同口径的统计区间略有差异，引用时以原文为准。",
+              "type": "文章",
+              "source": "中国经济网",
+              "date": "11-11",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "ETF资金持续发力 中国资产吸引力增强",
+                  "site": "新浪财经",
+                  "href": "https://finance.sina.com.cn/jjxw/2026-11-11/doc-iniyiaum2145272.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "中国证券报当日版面",
+                  "site": "中国证券报",
+                  "href": "https://epaper.cs.com.cn/zgzqb/html/2026-11/11/nw.D110000zgzqb_20261111_1-A06.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "pboc-overnight-repo-cd-yield-low",
+              "title": "央行 1900 亿元隔夜逆回购，存单收益率创新低",
+              "excerpt": "人民银行 11 月 10 日开展 1900 亿元隔夜逆回购，利率 1.25%；因当日有 1820 亿元到期，净投放 80 亿元。\n\n上海证券报称，政策利率“换锚”后，1 年期 AAA 同业存单收益率一度降至 1.385%，创历史新低。这是换锚传导的新进展，而非政策框架本身的再次调整。",
+              "type": "文章",
+              "source": "凤凰网/上证报",
+              "date": "11-11",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "央行开展 1900 亿元隔夜逆回购；政策利率“换锚”传导效应显现",
+                  "site": "凤凰网",
+                  "href": "https://news.ifeng.com/c/8xxOVJVXDay",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "us-october-cpi-0-4",
+              "title": "美国 10 月 CPI 环比涨 0.4%，高于预期",
+              "excerpt": "美国 10 月季调后 CPI 环比上涨 0.4%，市场预期为 0.3%；核心 CPI 环比上涨 0.3%，预期为 0.2%。\n\n因 2025 年 10 月政府停摆缺少对比数据，美国劳工统计局未公布同比涨幅。分项上，能源涨 0.7%，食品涨 0.5%，住房涨 0.3%，住房对整体涨幅的贡献超过三成。",
+              "type": "文章",
+              "source": "中新网/CNBC",
+              "date": "11-11",
+              "region": "global",
+              "links": [
+                {
+                  "title": "美国 10 月 CPI 环比上涨 0.4%",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/gj/2026/11-11/10729875.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "美国 10 月环比通胀率放缓幅度不及预期",
+                  "site": "FT中文网",
+                  "href": "https://www.ftchinese.com/story/001111329",
+                  "lang": "zh"
+                },
+                {
+                  "title": "CPI inflation report October 2026",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "US inflation higher than expected in October",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "coreweave-q3-revenue-beat-guidance",
+              "title": "CoreWeave 三季度营收超预期，上调全年指引",
+              "excerpt": "CoreWeave 三季度营收高于市场预期，并上调业绩指引，CNBC 称这缓解了市场对 AI 需求放缓的担忧。\n\n另一方面，IT之家引述财报称，公司 2026 财年前三季度归母亏损 20.75 亿美元，同比亏损扩大 178.9%。增长与亏损同时存在，债务驱动的扩张仍是争议焦点。",
+              "bodyZh": "CoreWeave 的三季报给出了两个方向相反的信息。一方面，季度营收超过市场预期，公司还上调了业绩指引，CNBC 把这一点解读为对“AI 需求正在放缓”担忧的缓解；另一方面，亏损仍在扩大，IT之家引述财报称，2026 财年前三季度归母亏损为 20.75 亿美元，同比扩大 178.9%。\n\n这家公司是这轮 AI 算力扩张里最典型的杠杆型玩家：它靠长期合约锁定需求，再靠债务和租赁承诺提前建设数据中心。这种模式在需求向上时能把增长放大，但一旦客户放缓、租金或融资成本上升，压力也会集中出现在报表上。前一日本栏目已写过市场对其“末日循环”式信用风险的讨论，今天这份财报提供的则是经营层面的新数据，两者角度不同。\n\n需要区分的是营收超预期和盈利改善并不是一回事。收入增长可以来自新合约的上线，亏损扩大则可能同时反映折旧、利息和扩张开支。CNBC 的另一篇报道把这份财报放在“债务驱动的 AI 建设”下审视，说明市场关心的不只是这一季多收了多少，而是这套资本结构能不能撑到合约真正产生自由现金流。\n\n目前可见的报道没有同时给出经核对的营收金额、调整后 EBITDA 和全年指引精确区间，因此这里不列这些数字，避免与原文口径混淆。后续值得跟踪的是：新增合约的客户集中度、数据中心交付节奏、利息支出占收入的比例，以及公司会不会再一次进入资本市场融资。这些都以 CoreWeave 的正式财报和电话会记录为准。",
+              "type": "文章",
+              "source": "CNBC/IT之家",
+              "date": "11-11",
+              "region": "global",
+              "links": [
+                {
+                  "title": "CoreWeave 前三季度归母亏损 20.75 亿美元，同比扩大 178.9%",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/025/200.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "CoreWeave beats on revenue and lifts guidance",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "CoreWeave earnings put debt-fueled AI build-out under scrutiny",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/10/coreweave-earnings-preview-debt-capex.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "us-10y-yield-back-to-5",
+              "title": "10 年期美债收益率重回 5%，加息押注升温",
+              "excerpt": "美国 10 年期国债收益率重新升向 5%。CNBC 称，通胀数据与美联储理事沃勒的表态共同推高了市场对加息的预期。\n\n市场定价显示，交易员已基本押注 12 月加息 25 个基点。收益率与押注变化以盘中报价和利率期货为准。",
+              "bodyZh": "美国 10 年期国债收益率重新回到 5% 附近，CNBC 把这一波动归因于两项因素：当天公布的 10 月通胀数据，以及美联储理事沃勒的表态。报道的标题直接写到，收益率是在“通胀数据和沃勒讲话推动加息预期”之后快速上行的。\n\n通胀方面，美国 10 月季调后 CPI 环比上涨 0.4%，高于市场预期的 0.3%；核心 CPI 环比上涨 0.3%，也高于预期的 0.2%。由于 2025 年 10 月政府停摆导致对比数据缺失，劳工统计局这次没有公布同比涨幅，市场只能更多依赖环比和分项来判断价格压力。住房、能源和食品都出现了上行，其中住房一项对整体涨幅的贡献超过三成。\n\n目前可见的报道没有提供沃勒讲话的完整原文，因此这里不复述他的具体措辞。可以确认的是，CNBC 把他的话与通胀数据并列，视为加息预期升温的推手。市场定价则更直接：交易员已基本押注 12 月加息 25 个基点。对长期国债来说，这意味着此前“降息交易”积累的头寸需要重新评估。\n\n10 年期收益率触及 5% 之所以受关注，是因为它既是房贷、企业债等长期融资成本的锚，也是股票估值的折现率。收益率快速上行时，高久期的成长股通常先承压，这也被视为同一交易日科技股情绪偏弱的背景之一。后续要看的是月底的通胀和就业数据、美联储官员的公开表态，以及 12 月议息会议前的利率期货定价；具体点位以市场收盘数据为准。",
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-11",
+              "region": "global",
+              "links": [
+                {
+                  "title": "10-year Treasury yield races back to 5% as inflation data, Waller comments drive rate hike expectations",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/10/us-bonds-treasurys-yields.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Here's the inflation breakdown for October 2026",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/10/october-2026-cpi-inflation-breakdown.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "general",
+          "heading": "综合热点",
+          "stories": [
+            {
+              "id": "ciie-9th-closing-record-intent",
+              "title": "第九届进博会闭幕，意向成交 854.5 亿美元",
+              "excerpt": "第九届中国国际进口博览会 11 月 10 日在上海闭幕。按一年计意向成交金额 854.5 亿美元，比上届增长 2.3%，创历史新高。\n\n本届共有 162 个国家、地区和国际组织参与，参展企业 4142 家，世界 500 强和行业龙头企业超过 300 家，全球、亚洲和中国首发首秀首展展品 485 件。",
+              "featured": true,
+              "type": "文章",
+              "source": "新华网",
+              "date": "11-11",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "第九届进博会按年计意向成交额突破 854 亿美元",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/fortune/20261110/cc917ebf5859434eb35b4aa4276a7d98/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "进博会闭幕相关报道",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/world/20261110/be6f1ad7cdbe4c3295f8b9ad4e6314b0/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "进博会闭幕：意向成交创新高",
+                  "site": "光明日报",
+                  "href": "https://news.gmw.cn/2026-11/11/content_39095366.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "han-zheng-guterres-cop31",
+              "title": "韩正会见古特雷斯，出席 COP31 峰会",
+              "excerpt": "当地时间 11 月 10 日，国家副主席韩正在土耳其安塔利亚出席 COP31 领导人峰会期间会见联合国秘书长古特雷斯。\n\n会见相关报道见中新网。具体谈话内容和中方在气候峰会上的表态，以原文为准。",
+              "type": "文章",
+              "source": "中新网",
+              "date": "11-11",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "韩正会见联合国秘书长古特雷斯",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/gn/2026/11-11/10729886.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "taiyuan-fire-investigation-team",
+              "title": "太原公寓火灾追踪：省政府成立事故调查组",
+              "excerpt": "11 月 10 日，新华视点发布太原豪生国际公寓火灾追踪报道。山西省委召开专题会议，省政府已成立事故调查组；产权单位与物业负责人已被控制，起火原因仍在调查。\n\n报道指出，涉事建筑存在多业态混合、可燃装修、消防管理缺失等问题。11 月 8 日 16 时 59 分发生的这场火灾已致 14 人遇难、25 人受伤，其中危重 9 人、重伤 4 人。",
+              "type": "文章",
+              "source": "新华网",
+              "date": "11-11",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "新华视点丨山西太原豪生国际公寓火灾事故追踪",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261110/85ffed59fc09413c87cc341a55041d96/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "太原豪生国际公寓火灾初报",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261109/ac8c99339dd6433184a38d2095b31645/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "abu-dhabi-russia-us-ukraine-talks",
+              "title": "俄美乌阿布扎比首日会谈持续近 4 小时",
+              "excerpt": "俄美乌三方在阿布扎比的首日会谈持续近 4 小时。泽连斯基称会谈具有建设性，释放被俘人员和安全保障被列为优先议题。\n\n新华社称，俄乌之间的互相袭击在会谈期间仍在继续。后续日程与各方表态以原文更新为准。",
+              "type": "文章",
+              "source": "中新网/新华社",
+              "date": "11-11",
+              "region": "global",
+              "links": [
+                {
+                  "title": "阿布扎比首日会谈持续近 4 小时 俄美乌三方表态",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/gj/2026/11-11/10729881.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "俄美乌三方会谈首日：泽连斯基称建设性",
+                  "site": "新华网",
+                  "href": "https://www.xinhuanet.com/20261111/fb7fddb9800143049a87e50522c9b217/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "First day of Ukraine peace talks constructive, Zelensky says",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cqpvgvrpjvv8o",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "israel-26th-knesset-sworn-in",
+              "title": "以色列第 26 届议会宣誓就职",
+              "excerpt": "以色列第 26 届议会 11 月 10 日举行首次会议并宣誓就职。此前总统已于 8 日授权埃森科特组阁。\n\n新议会开幕后，各党派围绕组阁的竞争仍在继续。组阁结果与联盟构成以原文后续报道为准。",
+              "type": "文章",
+              "source": "新华网/BBC",
+              "date": "11-11",
+              "region": "global",
+              "links": [
+                {
+                  "title": "以色列新一届议会举行首次会议",
+                  "site": "新华网",
+                  "href": "https://www.xinhuanet.com/20261111/a32ee09224c74ec0a5affd0876778080/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Israel's new parliament sworn in as leaders compete to form government",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/crd939lpzjp9o",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "bulgaria-highway-pileup-mourning",
+              "title": "保加利亚连环车祸后宣布全国哀悼",
+              "excerpt": "保加利亚东部扬博尔附近高速公路发生两起连环车祸，涉及 86 辆车，50 人住院。浓雾被认为是重要因素。\n\n中新网和 BBC 均报道死亡人数为 12 人。保加利亚宣布 11 日为全国哀悼日。",
+              "type": "文章",
+              "source": "中新网/BBC",
+              "date": "11-11",
+              "region": "global",
+              "links": [
+                {
+                  "title": "保加利亚宣布 11 日全国哀悼 悼念连环车祸遇难者",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/gj/2026/11-11/10729883.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Twelve dead after motorway pile-ups in Bulgaria fog",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/ckx2q2velpjjo",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "hegseth-impeachment-blocked-house",
+              "title": "众议院阻止对赫格塞思的弹劾努力",
+              "excerpt": "美国众议院阻止了针对国防部长赫格塞思的弹劾努力。CNBC 在当地时间 11 月 10 日晚间的报道中用“被鱼雷击中”形容这项努力的下场。\n\n前一日众议院已有议员正式提出弹劾条款，今天的变化是众议院层面的处理结果。表决票数与程序细节以原文为准。",
+              "bodyZh": "美国众议院阻止了针对国防部长赫格塞思的弹劾努力。CNBC 在当地时间 11 月 10 日晚间发出的报道，标题用了“被鱼雷击中”（torpedoed）来形容这项努力在众议院的下场：它没有走完程序，也就没有把弹劾推进到参议院。\n\n这件事的前情是，众议院此前已有议员正式提出针对赫格塞思的弹劾条款，昨日的报道集中在“条款被提出”这一步；今天的进展则是众议院层面的处理结果，两者不是同一件事。按照众议院的常规路径，弹劾条款通常要先经过委员会审议，再交全院表决，任何一环没有过关，条款都会停在那里。\n\n目前可见的报道没有提供表决票数，也没有说明这次阻止是通过否决、撤回还是程序性动议完成的，更没有赫格塞思本人或白宫的回应，因此这里不写这些细节。可以确认的是，随着中期选举后政治版图变化，围绕国防部长的问责议题仍会被两党反复使用；这次受阻不等于争议结束。\n\n对市场和外交观察者来说，更实际的影响在国防预算、对外军事行动的授权，以及五角大楼人事的后续博弈。弹劾条款是否会被再次提出、以什么理由提出，要看众议院后续的议事安排和 CNBC 等媒体的更新。中文读者若想核对程序细节，可参考美国国会记录和原文报道，不宜只依据标题推断票数。",
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-11",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Hegseth impeachment effort torpedoed in House",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/10/pete-hegseth-impeachment-massie-iran.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-10",
       "label": "11月10日 · 周二",
       "categories": [
