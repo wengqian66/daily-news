@@ -11,6 +11,453 @@
   },
   "digests": [
     {
+      "id": "2026-11-12",
+      "label": "11月12日 · 周四",
+      "categories": [
+        {
+          "id": "tech",
+          "heading": "科技与 AI",
+          "stories": [
+            {
+              "id": "baidu-ernie-5-5-flash-preview",
+              "title": "百度发布文心 5.5 Flash Preview，11 月 25 日开源权重",
+              "excerpt": "百度 11 月 11 日发布文心 5.5 Flash Preview，总参数 2800 亿，每个 Token 激活 140 亿参数，支持最长 100 万 Token 上下文。\n\n模型已上线百度智能云千帆平台，权重定于 11 月 25 日面向全球开源社区发布。参数规模来自新华网转述的官方口径。",
+              "type": "文章",
+              "source": "新华网",
+              "date": "11-12",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "百度发布文心5.5 Flash Preview，权重将于11月25日开源",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/tech/20261111/183aa161e70b4942b622e10b5e3da605/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "tanyuan-pathfinder-satellite-launch",
+              "title": "探源计划探路者卫星在酒泉发射升空",
+              "excerpt": "11 月 11 日 19 时 41 分，长征二号丁运载火箭在酒泉卫星发射中心把探源计划探路者卫星送入预定轨道。\n\n这是长征系列运载火箭第 677 次飞行。卫星的科学目标与后续任务安排，新华网稿件未展开。",
+              "type": "快讯",
+              "source": "新华网",
+              "date": "11-12",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "我国成功发射探源计划探路者卫星",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/tech/20261111/cbae1c56013e4cda92f5eff9b013d251/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "长征二号丁发射探源计划探路者卫星",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/025/779.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "solar-uav-qingqibing-first-flight",
+              "title": "纯太阳能无人机“轻骑兵”首飞，设计续航 30 小时",
+              "excerpt": "中国航天科技集团十一院研制的“轻骑兵”11 月 11 日在西北某机场首飞成功，以太阳能为唯一动力源。\n\n机型长 3.2 米、翼展 8 米，最大设计续航 30 小时，可模块化搭载通信、遥感等任务载荷。官方称可采用车载起飞，地面准备约 20 分钟。",
+              "type": "文章",
+              "source": "新华社",
+              "date": "11-12",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "我国首款商用级中小型纯太阳能无人机“轻骑兵”首飞成功",
+                  "site": "新华社",
+                  "href": "https://www.news.cn/20261111/8904159687ce43458decefc8a4bd5cfc/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "纯太阳能无人机“轻骑兵”首飞成功",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/gn/2026/11-11/10730345.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "nvidia-board-oust-huang-report",
+              "title": "华尔街日报称英伟达董事会准备罢免黄仁勋，盘后股价再跌",
+              "excerpt": "华尔街日报 11 月 11 日报道，英伟达董事会正准备罢免首席执行官黄仁勋，并可能最快周三开会决定去留；纽约时报同日报道他与公司医疗健康业务副总裁 Kimberly Powell 存在婚外关系。\n\n公司股价常规交易时段一度随科技股反弹，罢免报道出现后盘后再跌。跌幅各家口径不一：CNBC 专稿写逾 9%，同站盘后直播在不同时点出现逾 7%、约 8%、逾 9%，路透写 8%。",
+              "bodyZh": "华尔街日报 11 月 11 日报道，英伟达董事会正准备罢免首席执行官黄仁勋，并可能最快在周三开会决定他的去留。CNBC 称，公司和 Powell 都没有立即回应置评请求。纽约时报同日报道，黄仁勋与公司医疗健康业务副总裁 Kimberly Powell 存在婚外关系。此前几天的争议集中在黄仁勋与一名疑似中国情报人员的关系，如今讨论已经推进到董事会是否换人的层面。\n\n市场反应分成两段。11 月 11 日常规交易时段，英伟达股价随科技股反弹，路透记录的涨幅为 2.9%。CNBC 另有报道写到，在罢免消息传出前，黄仁勋已回到办公室，试图对外显示业务照常。罢免报道出现后，盘后股价再度下跌。跌幅各家口径不一：CNBC 专稿写盘后跌逾 9%，同一站点的盘后直播在不同时间点先后出现过“逾 7%”“约 8%”“逾 9%”三种说法，路透的稿子写的是 8%。这些数字对应不同时点的盘后报价，本文不把它们合并成一个精确值。盘后纳指期货跌约 1%，标普 500 期货跌约 0.4%。\n\n公司层面的背景是董事会已经启动的独立调查，以及此前聘请 Wachtell Lipton 牵头调查，这两件事昨日已有报道，这里不再展开。CNBC 另一篇报道称，华盛顿出现了要求黄仁勋辞职的声音，也有收紧英伟达对华出口的动向。董事会是否真的投票、投票结果如何，仍要以公司披露为准；公司即将发布财报，市场也在等这份财报和调查进展。\n\n另一个值得留意的细节是，这些报道出现在英伟达发布财报之前，任何关于董事会程序的正式说法，都可能与财报电话会上的表态相互印证或冲突。到那时，盘后不同口径的跌幅也会有一个可对照的收盘基准。",
+              "featured": true,
+              "type": "文章",
+              "source": "CNBC/华尔街日报",
+              "date": "11-12",
+              "region": "global",
+              "links": [
+                {
+                  "title": "消息称英伟达正准备罢免 CEO 黄仁勋，公司股价盘后大跌",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/025/829.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Nvidia prepares to oust Jensen Huang, WSJ reports — stock sinks",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-affair-employee.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "美股与盘后实时动态",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/11/stock-market-today-live-updates.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "openai-businesses-in-chatgpt",
+              "title": "OpenAI 上线 Businesses in ChatGPT，商家可认领资料并开设商业智能体",
+              "excerpt": "OpenAI 11 月 10 日发布测试版 Businesses in ChatGPT，企业可通过 Business Hub 认领商家资料、验证后更新信息，并接入带价格与库存的产品数据源。\n\n符合条件的两类主体是美国电商与在线服务企业，可创建 Business Agent，在回答中与用户开启明确标识的独立对话，并赞助其作为广告落地页。官方称不会向企业共享用户对话内容。",
+              "bodyZh": "OpenAI 在 11 月 10 日的官方博客里介绍测试版产品 Businesses in ChatGPT，目标是让商家在 ChatGPT 里认领并维护自己的资料，而不是只靠模型从网上抓取信息。企业可以通过 Business Hub 认领商家页面，完成验证后更新营业信息等关键内容，也可以接入带价格和库存的产品数据源。\n\n后台提供的是汇总层面的洞察，例如品牌在 ChatGPT 里被提及的次数、带来的网站点击、用户通过哪些主题发现这家企业。OpenAI 明确说，平台不会把用户对话或 Business Agent 的聊天内容分享给企业，洞察也要达到一定数量门槛才会显示。这既是对商家的数据产品，也是在用户隐私上划一条线。\n\n符合条件的两类主体是美国电商和在线服务企业，它们可以创建 Business Agent，在 ChatGPT 的回答里与用户开启一段有明确标识的独立对话，并可以赞助这段对话，把它当作广告落地页。官方给出的规模数字是 ChatGPT 每周约 12 亿用户。Shopify 商家可以通过 Business Hub 或 Shopify 后台完成验证。博客没有给出更广的开放时间表，也没有提到美国以外市场何时可用。\n\n对商家来说，这意味着在 ChatGPT 里的品牌信息有了一个可申诉、可维护的入口；对 OpenAI 来说，则是在回答里加入可计量的商业位。测试版阶段，哪些企业能通过验证、洞察门槛具体是多少，官方都没有给出固定数字，实际体验仍要看 Business Hub 的审核结果。",
+              "type": "文章",
+              "source": "OpenAI",
+              "date": "11-12",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Introducing Businesses in ChatGPT",
+                  "site": "OpenAI",
+                  "href": "https://openai.com/index/introducing-businesses-chatgpt/",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "alphagenome-2-single-cell",
+              "title": "DeepMind 发布 AlphaGenome 2，变异识别能力接近翻倍",
+              "excerpt": "Google DeepMind 11 月 11 日发布新一代 DNA 序列模型 AlphaGenome 2，可预测遗传变异如何影响特定类型的人类细胞。\n\n官方称其识别出的、会改变基因表达的变异数量接近此前最先进模型的两倍，训练使用超过 1 亿个单细胞图谱、覆盖 68 种组织。模型目前仅供研究使用，尚未通过临床或诊断验证。",
+              "bodyZh": "Google DeepMind 在 11 月 11 日发布 AlphaGenome 2，把它定位为下一代 DNA 序列模型：输入一段序列，预测遗传变异会怎样影响特定类型的人类细胞。官方说，它能识别出的、会改变细胞中基因表达的变异数量，接近此前最先进模型的两倍。对研究来说，这类模型的价值在于把“这段 DNA 变了”与“这个细胞的基因表达会怎么变”连起来。\n\n训练数据方面，博客写到使用了超过 1 亿个单细胞图谱（文中另一处写作 over 107 million），覆盖 68 种组织。这让模型的分析粒度从组织层面下沉到单细胞层面，也是这一代和前代最主要的差别之一；IT之家 的报道把这一点概括为从组织预测深入单细胞分析。\n\n可用性上，AlphaGenome 2 已经通过 AlphaGenome API 向非商业研究开放，商业研究处于 private preview。DeepMind 同时提醒，这个模型只供研究使用，尚未经过临床或诊断用途验证。换句话说，识别致病变异能力提升近一倍是研究基准上的表述，不等于临床结论；实际用于疾病判断，还需要独立的验证流程。\n\n单细胞层面的预测尤其受关注，因为许多与疾病相关的变异并不改变蛋白编码，而是改变哪些细胞在什么条件下表达某个基因。DeepMind 没有在博客里给出这一代模型的参数规模或训练算力，也没有列出完整的基准对比表，因此“接近两倍”目前是官方口径。对希望复现结果的研究者，API 是最直接的入口；商业机构则要等 private preview 放开。",
+              "type": "文章",
+              "source": "Google DeepMind",
+              "date": "11-12",
+              "region": "global",
+              "links": [
+                {
+                  "title": "DeepMind 发布 AlphaGenome 2：识别致病变异能力提升近一倍",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/025/822.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "AlphaGenome 2 从组织预测深入单细胞分析",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/025/840.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
+                  "site": "Google DeepMind",
+                  "href": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "markets",
+          "heading": "财经与市场",
+          "stories": [
+            {
+              "id": "pboc-q3-report-capital-market-tools",
+              "title": "央行三季度报告：加力实施支持资本市场两项工具",
+              "excerpt": "人民银行 11 月 11 日发布 2026 年第三季度货币政策执行报告，提出加力实施支持资本市场的两项货币政策工具，用好债市非银大额赎回互换便利。\n\n报告还称要维护股票、债券、外汇等金融市场平稳运行，坚持实施好适度宽松的货币政策，加大逆周期调节力度。",
+              "type": "文章",
+              "source": "新华网",
+              "date": "11-12",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "央行报告：将加力实施支持资本市场两项货币政策工具",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261111/33b7f5c761d743518eb408fa6a58ce92/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "央行三季度货币政策执行报告快讯",
+                  "site": "第一财经",
+                  "href": "https://www.yicai.com/brief/103436609.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "icbc-abc-private-placement-approval",
+              "title": "工行、农行合计 2600 亿元定增获上交所审核通过",
+              "excerpt": "工行、农行 11 月 11 日晚间公告，向特定对象发行股票的申请获上交所审核通过，合计拟募资不超过 2600 亿元，其中工行不超过 1000 亿元、农行不超过 1600 亿元。\n\n募集资金扣除发行费用后全部用于补充核心一级资本。方案尚需证监会同意注册，时间和结果仍有不确定性。",
+              "type": "快讯",
+              "source": "第一财经",
+              "date": "11-12",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "工行、农行2600亿定增获上交所审核通过，财政部注资再进一步",
+                  "site": "第一财经",
+                  "href": "https://www.yicai.com/news/103437120.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "offshore-trust-tax-160-billion",
+              "title": "离岸信托收益征税过渡期结束，累计申报个税超 1600 亿元",
+              "excerpt": "国家税务总局 11 月 11 日公布，离岸信托收益征税政策过渡期已平稳结束，累计申报离岸信托个人所得税超过 1600 亿元，其中 10 月当月入库超过 1200 亿元。\n\n这带动全国 10 月个人所得税收入增长近 90%。税务总局称，对申报不实或仍未主动申报的，将督促申报并加收滞纳金。",
+              "type": "文章",
+              "source": "中新网",
+              "date": "11-12",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "税务总局：离岸信托收益征税过渡期结束，累计申报个税超1600亿元",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/cj/2026/11-11/10730412.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "离岸信托收益征税过渡期结束",
+                  "site": "新京报",
+                  "href": "https://www.bjnews.com.cn/detail/1794390238129152.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "goolsbee-inflation-borderline-disturbing",
+              "title": "美联储官员称通胀报告“近乎令人不安”，12 月加息押注升温",
+              "excerpt": "美国 10 月 CPI 环比涨 0.4%，连续第三个月偏高。芝加哥联储主席 Goolsbee 称这份报告“近乎令人不安”，但没有明确表态 12 月是否必须加息。\n\n理事 Waller 称若核心 CPI 在 0.3 左右，他可能倾向 12 月一次加息 50 个基点；达拉斯联储主席 Logan 称还需两次 25 个基点加息。市场几乎一致预期 12 月加息。",
+              "bodyZh": "美国 10 月 CPI 环比上涨 0.4%（季节调整），高于预期，也是连续第三个月偏高。报告出来当天，芝加哥联储主席 Goolsbee 用 borderline disturbing 来形容它，他没有明确说 12 月是否必须加息，只表示这份数据令人不安。\n\n其他官员的表态更靠前。理事 Waller 周二在伦敦说，如果核心 CPI 在 0.3 左右，他可能倾向于在 12 月一次加息 50 个基点；报告公布后，核心 CPI 正好是这个水平。达拉斯联储主席 Logan 称还需要两次 25 个基点的加息，并说今冬的行动可能比秋季更快。费城联储主席 Paulson 相对缓和，认为眼下进一步渐进收紧似乎是合适的。\n\n政策背景是：委员会 9 月加息 25 个基点，把利率带到 3.75%–4%，10 月按兵不动。CNBC 引用 CME FedWatch 的数据，市场几乎一致预期 12 月会加息，其中一次加 50 个基点的概率为 15%；到 1 月会议，利率升至 4.25%–4.5%（相当于一次 50 个基点或两次 25 个基点）的概率为 60%。这些都是市场押注，不是委员会的决定，官员接下来的讲话会继续影响这些概率。\n\n把点差换算一下，一次 50 个基点就是 0.5 个百分点，两次 25 个基点也是 0.5 个百分点，所以市场对 1 月的两种路径定价其实是同一个终点。分歧在于节奏：Waller 和 Logan 更担心通胀预期失锚，Paulson 更担心收紧过快。Goolsbee 的措辞强硬，但他没有把自己放进任何一方的票数里。\n\nGoolsbee 用的是 borderline 这个词，CNBC 在标题里把它与 disturbing、distressing 并列，语气介于“边缘”与“令人不安”之间。",
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-12",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Fed's Goolsbee calls inflation report 'borderline disturbing' as central bank weighs more hikes",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/11/goolsbee-october-inflation-fed-rates-disturbing-distressing.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "us-stocks-rally-nvidia-after-hours",
+              "title": "美股三大指数收涨，英伟达盘后因罢免报道转跌",
+              "excerpt": "11 月 11 日美国退伍军人节，美债市场休市，美股收涨：道指涨 254.60 点报 52486.49，标普 500 涨 1.31%，纳指涨 1.60%。\n\nCNBC 把上涨归因于 CoreWeave 财报和英伟达反弹，CoreWeave 收涨 24.7%；英伟达常规交易涨 2.9%，盘后因董事会可能罢免黄仁勋的报道再度下跌，纳指期货盘后跌约 1%。",
+              "bodyZh": "11 月 11 日是美国退伍军人节，美债市场休市，美股照常交易。三大指数收涨：道指涨 254.60 点、0.49%，报 52486.49；标普 500 涨 98.45 点、1.31%，报 7619.38；纳指涨 400.31 点、1.60%，报 25466.19。CNBC 的直播把上涨归因于 CoreWeave 财报和英伟达反弹，说明当天资金仍愿意回到 AI 相关股票；路透的收盘数据与这一口径基本一致。\n\nCoreWeave 收涨 24.7%，为 2025 年 4 月以来最好的一天，其强势也给 neocloud 同业带来一些缓和。它的财报数字昨日已写，这里只说股价反应。英伟达常规交易时段上涨 2.9%，但盘后因董事会可能罢免黄仁勋的报道再度下跌，具体跌幅各家口径不一，见科技条。\n\n盘后纳指期货跌约 1%，标普 500 期货跌约 0.4%。也就是说，常规时段的反弹和盘后的避险，发生在同一个交易日里。读收盘数字时要注意这个时间差：收盘价反映的是罢免报道之前的气氛，盘后报价才包含这条消息。\n\n从结构上看，纳指涨幅高于道指，说明领涨的仍是科技与 AI 相关权重股，而不是全面普涨。退伍军人节当天美债现货休市，缺少收益率这个变量，股市的注意力更集中在公司消息上。盘后出现的抛压是否会延续到下一个交易日，还要看英伟达方面的正式回应。\n\n收盘点位与点差来自路透经由 Investing.com 转载的数据，和 CNBC 直播的描述方向一致；英伟达财报临近，也是盘后情绪敏感的原因之一。",
+              "type": "文章",
+              "source": "CNBC/路透",
+              "date": "11-12",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Stocks rise on tech gains; Nvidia falls after hours",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/11/stock-market-today-live-updates.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "CoreWeave soars more than 24% for best day since April 2025",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/11/coreweave-crwv-outlook-earnings-ai.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "nissan-cuts-forecast-china-woes",
+              "title": "日产再次下调销售预期，中国区 10 月销量同比降 67%",
+              "excerpt": "日产再次下调销售预期，并把压力指向中国业务，首席执行官同时公布应对计划。\n\nIT之家 援引的数据称，日产中国区 10 月销量 22295 辆，同比下降 67.14%，为连续第 7 个月同比下滑。两处数字来源不同，全球销量与裁员等细节未在候选中出现。",
+              "type": "快讯",
+              "source": "CNBC/IT之家",
+              "date": "11-12",
+              "region": "global",
+              "links": [
+                {
+                  "title": "日产中国区10月销量22295辆，同比下降67.14%",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/025/791.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Nissan cuts sales forecast again on China woes as CEO outlines plan to fight back",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/11/nissan-sales-forecast-earnings-china.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "general",
+          "heading": "综合热点",
+          "stories": [
+            {
+              "id": "wang-yi-rubio-call",
+              "title": "王毅同美国国务卿鲁比奥通电话",
+              "excerpt": "中共中央政治局委员、外交部长王毅 11 日同美国国务卿鲁比奥通电话，双方就中美关系及两国元首互动深入交换意见，通话是积极和建设性的。\n\n王毅表示，中国对美政策保持稳定性和连续性，愿同美方妥善处理分歧和敏感问题，相互支持办好 2026 年亚太经合组织领导人非正式会议和二十国集团领导人峰会。",
+              "featured": true,
+              "type": "文章",
+              "source": "新华网",
+              "date": "11-12",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "王毅同美国国务卿鲁比奥通电话",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261111/a57be380d00b451d9621f04659bd6b46/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "王毅同美国国务卿鲁比奥通电话",
+                  "site": "人民网",
+                  "href": "http://politics.people.com.cn/n1/2026/1111/c1001-40832296.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "王毅同美国国务卿鲁比奥通电话",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/gn/2026/11-11/10730564.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "caam-october-nev-share-64-3",
+              "title": "10 月新能源车占新车销量 64.3%，出口同比增六成",
+              "excerpt": "中汽协 11 日数据显示，10 月新能源汽车产销分别完成 201.7 万辆和 194 万辆，同比分别增长 13.8% 和 13.1%，占月度新车销量的 64.3%。\n\n当月汽车出口 106.6 万辆，同比增长 60.2%，其中新能源汽车出口 60.6 万辆，同比增长 1.4 倍。前 10 个月新能源车累计销量占比升至 54.8%。",
+              "type": "快讯",
+              "source": "新华网",
+              "date": "11-12",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "10月新能源汽车月度新车销量占比达64.3%",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261111/2039d0ac6a7545df9c5d3ef0c94db367/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "中汽协10月新能源汽车销量数据",
+                  "site": "人民网",
+                  "href": "http://finance.people.com.cn/n1/2026/1111/c1004-40832072.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "foundation-management-regulation-revision",
+              "title": "修订后的《基金会管理条例》公布，2027 年起施行",
+              "excerpt": "李强签署国务院令，公布修订后的《基金会管理条例》，自 2027 年 1 月 1 日起施行。条例共 8 章 79 条，旨在加强基金会公信力建设。\n\n修订涉及登记管理、内部治理、募捐捐赠与互联网公开募捐、信息公开和综合监管等。稿件发布于 11 月 10 日，不是今日新公布。",
+              "type": "文章",
+              "source": "新华网",
+              "date": "11-12",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "李强签署国务院令 公布修订后的《基金会管理条例》",
+                  "site": "新华网",
+                  "href": "http://www.news.cn/politics/leaders/20261110/cd49bf7bda2a42bc8666218bcb2d4391/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "修订后的《基金会管理条例》全文",
+                  "site": "中国政府网",
+                  "href": "https://www.gov.cn/zhengce/zhengceku/202611/content_7085662.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "abu-dhabi-talks-prisoner-swap",
+              "title": "阿布扎比会谈结束，达成大规模换俘协议但仍有重大分歧",
+              "excerpt": "为期两天的俄美乌会谈 11 日在阿布扎比结束，各方就大规模交换被俘人员达成协议，但在结束冲突、领土争议、乌克兰安全保障等问题上仍存重大分歧。\n\n这是今年 2 月以来首次面对面谈判，首日近 4 小时，第二天不到两小时。库什纳与特使威特科夫 12 日将赴莫斯科会见普京，随后赴都柏林向泽连斯基通报。",
+              "type": "文章",
+              "source": "新华社",
+              "date": "11-12",
+              "region": "global",
+              "links": [
+                {
+                  "title": "综合消息｜俄美乌会谈达成换俘协议 仍存重大分歧",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/world/20261112/e9ed7534696e442a84cc3634c7161414/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "俄美乌阿布扎比会谈相关报道",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261111/58171de26b014ac5adfc2c83c8bf0702/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Russia-Ukraine talks turn to post-war security but end without breakthrough",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/ck792we7zrz4o",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "spain-general-strike-barcelona-clashes",
+              "title": "西班牙 14 年来首次总罢工，巴塞罗那发生冲突",
+              "excerpt": "西班牙 11 月 11 日举行 14 年来首次全国总罢工，诉求集中在住房和物价。BBC 报道，马德里约 12 万人、巴塞罗那超过 5 万人参加示威。\n\n巴塞罗那随后发生蒙面者与警察的冲突，有人焚烧垃圾桶、砸碎橱窗，警方使用催泪瓦斯，内政部称数十人被捕。议会选举定于 11 月 29 日。",
+              "bodyZh": "西班牙 11 月 11 日举行 14 年来首次全国总罢工，诉求集中在住房和物价。BBC 报道，马德里约 12 万人、巴塞罗那超过 5 万人参加示威；巴塞罗那随后出现蒙面者与警察的冲突，有人焚烧垃圾桶、砸碎橱窗，警方使用催泪瓦斯，内政部称有数十人被捕。罢工由主要工会发起，发生在 11 月 29 日议会选举前的竞选期。\n\n政治背景是：首相桑切斯上月在住房改革方案未获议会通过后宣布提前大选。桑切斯本人鼓励工人参加罢工；反对党人民党领袖费霍称罢工是 nonsense，并指责工会把罢工政治化。同一场罢工，被支持和反对双方分别当作动员与问责的工具。\n\n报道提到的导火索之一，是 87 岁的 Maricarmen Abascal 在马德里居住约 70 年后被驱逐，数周后在医院去世。Idealista 的数据显示，10 月马德里 50 平方米公寓的平均月租为 1170 欧元，而西班牙平均税前月薪约 2460 欧元。电力运营商 Red Eléctrica 称，周三早间用电量下降 7.5%；14 年前那次总罢工期间，降幅超过 15%；若以用电量衡量，这次参与度低于当年。\n\n按 1170 欧元与 2460 欧元这两组数字粗算，一间 50 平方米公寓的月租接近平均税前月薪的一半，这也是住房议题能迅速转化为街头动员的原因。罢工对经济的即时影响，目前只有用电量这一项公开指标，其他行业损失还没有统一统计。",
+              "type": "文章",
+              "source": "BBC",
+              "date": "11-12",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Clashes erupt in Barcelona after thousands join Spain general strike",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cwvg25nypmrvo",
+                  "lang": "en"
+                },
+                {
+                  "title": "General strikes to paralyze Spain as protesters clash with police",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/11/spain-protests-general-strikes-election.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "indonesia-vp-gibran-resigns",
+              "title": "印尼副总统提交辞呈，是否被接受尚不清楚",
+              "excerpt": "印尼副总统 Gibran Rakabuming Raka 已提交辞呈。BBC 报道，其助手证实辞呈于周三直接递交给总统普拉博沃，是否已被接受尚不清楚。\n\n此前印尼最高法院裁定，他 2024 年竞选时使用的高中学历认证文件无效，已有 100 多名议员支持一项可能通向弹劾的议会动议。",
+              "bodyZh": "印尼副总统 Gibran Rakabuming Raka 已提交辞呈。BBC 报道，他的助手 Budi Arie 证实，辞呈于周三直接递交给总统普拉博沃；是否已被接受，目前还不清楚，因此不能写成他已经正式离任。报道把这件事放在执政联盟出现裂痕的背景下。\n\n直接原因是学历问题。印尼最高法院裁定，他 2024 年竞选时使用的高中学历认证文件无效。法律要求副总统须完成高中或同等学历，法院表示没有发现可以证明其毕业的证据。报道称，已有 100 多名议员支持一项可能通向弹劾的议会动议，辞职发生在议会动议推进之际。\n\nGibran 是前总统佐科之子，2024 年因宪法法院一项有争议的年龄豁免才获得候选人资格；这项豁免当时就引发过争论。FT 中文网此前也以高中学历遭质疑为题报道了他有意辞职。后续要看普拉博沃是否接受辞呈、由谁接任，以及议会动议是否继续推进。\n\n值得注意的是，BBC 的措辞是“提交辞呈”，而不是“辞职生效”，两者的法律后果不同。总统府和议会接下来如何回应，将决定这是一次内阁人事变动，还是演变成对普拉博沃联盟的考验。FT 中文网 11 月 10 日的报道已提到他有意辞职，时间上早于周三的正式递交。\n\n目前公开信息只有辞呈已经递交这一事实，以及学历裁定和议会动议这两条背景，辞呈的具体内容和总统府的处理结果仍待印尼官方说明。",
+              "type": "文章",
+              "source": "BBC/FT中文网",
+              "date": "11-12",
+              "region": "global",
+              "links": [
+                {
+                  "title": "高中学历遭质疑 印尼副总统有意辞职",
+                  "site": "FT中文网",
+                  "href": "https://www.ftchinese.com/story/001111332",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Indonesia's vice president resigns amid signs ruling alliance is fraying",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cmvgxgz87qqro",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-11",
       "label": "11月11日 · 周三",
       "categories": [
