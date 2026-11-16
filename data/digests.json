@@ -11,6 +11,379 @@
   },
   "digests": [
     {
+      "id": "2026-11-16",
+      "label": "11月16日 · 周一",
+      "categories": [
+        {
+          "id": "tech",
+          "heading": "科技与 AI",
+          "stories": [
+            {
+              "id": "huawei-openpangu-21-pro",
+              "title": "开源盘古 openPangu-2.1-Pro 上线华为云，能写鸿蒙代码也能调工具",
+              "excerpt": "华为云宣布，MaaS 平台正式上线开源盘古模型 openPangu-2.1-Pro，围绕 Agent 开发、AI 编码、推理优化三个方向升级。Agent 部分基于 10 万余条专项数据，优化 Skills 触发、工具选择与调用；代码部分重点面向鸿蒙 App 开发（ArkTS）和昇腾算子生成。\n\nIT之家列出的价格是：推理输入 0.8 元/百万 tokens，输出 3.2 元/百万 tokens，缓存命中输入 0.016 元/百万 tokens。具体接入方式和计费以华为云页面为准。",
+              "type": "文章",
+              "source": "IT之家",
+              "date": "11-16",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "开源盘古模型 openPangu-2.1-Pro 上线华为云",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/027/450.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "anatrix-ax100-analog-chip",
+              "title": "国产模拟计算芯片 AX100 流片，矩阵方程求解不到 100 纳秒",
+              "excerpt": "科技日报从模拟计算芯片公司安纳智芯了解到，AX100 已于 10 月完成流片。报道称这是“世界首颗全集成一步求解矩阵方程模拟计算芯片”，这一表述来自报道和公司口径，尚未见到第三方权威认证。\n\n据公司介绍，单次矩阵方程求解时间小于 100 纳秒，单次计算功耗约 80 毫瓦。CEO 向锐说，矩阵方程被直接映射为电路，电路自平衡后一次读出结果，无需迭代。相关测试数据均为团队和公司介绍。",
+              "type": "文章",
+              "source": "科技日报",
+              "date": "11-16",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "矩阵方程求解速度快千倍 国产新型模拟计算芯片问世",
+                  "site": "科技日报",
+                  "href": "https://www.stdaily.com/web/gdxw/2026-11/15/content_613523.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "安纳智芯 AX100 模拟计算芯片报道",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/027/430.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "AX100 analog computing chip report",
+                  "site": "Global Times",
+                  "href": "https://www.globaltimes.cn/page/202611/1374333.shtml",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "harmonyos-users-99-8-million",
+              "title": "何刚：鸿蒙生态用户 9980 万，离 1 亿只差一点",
+              "excerpt": "华为终端 BG CEO 何刚 11 月 15 日在南京大学说，截至当天，鸿蒙生态用户数已达 9980 万，距 1 亿只差 20 万，他预计再过几天就能突破 1 亿。当天他出席 2026 中国高校计算机大赛人工智能创意赛全国总决赛。\n\n这是“生态用户数”，报道没有按手机用户或系统版本拆分。11 月 5 日华为擎云办公产业峰会上，官方曾称 HarmonyOS 终端用户数预计 11 月下旬破亿，可作背景。",
+              "type": "快讯",
+              "source": "IT之家",
+              "date": "11-16",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "华为何刚：鸿蒙生态用户数已达 9980 万",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/027/302.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "ula-vulcan-amazon-leo-failure",
+              "title": "火神火箭首次完全失败，亚马逊 40 颗卫星没能入轨",
+              "excerpt": "美国东部时间 11 月 15 日 12:40 许，ULA 火神火箭从佛罗里达州卡纳维拉尔角太空军基地 SLC-41 升空，执行亚马逊低轨卫星 Amazon Leo 任务。飞行约 10 分钟后出现异常，40 颗宽带通信卫星未能进入预定轨道。\n\nULA 称目前没有足够数据判断原因，将与客户及相关机构调查、制定纠正措施后再恢复发射。这是 ULA 自 2006 年成立以来首次发射任务完全失败。",
+              "bodyZh": "美国东部时间 11 月 15 日 12 时 40 分许，也就是北京时间 16 日凌晨 1 时 40 分许，联合发射联盟（ULA）的火神火箭从佛罗里达州卡纳维拉尔角太空军基地 SLC-41 工位升空，执行亚马逊低轨卫星 Amazon Leo 的发射任务。火箭飞行约 10 分钟后出现异常。ULA 说，发射主管收到的数据显示，火箭未能把 40 颗宽带通信卫星送入预定轨道。\n\nULA 在声明中表示，目前还没有足够数据判断具体原因，公司将与客户及相关机构一起调查、制定纠正措施，然后再恢复发射。新华社和 Spaceflight Now 都写到，这是 ULA 自 2006 年成立以来首次发射任务完全失败。这次任务是亚马逊向 ULA 采购的 38 次火神发射中的第一次，也是火神火箭第 5 次飞行，距离上一次飞行约 9 个月。\n\n发射前的几次推迟与失败原因无关。Spaceflight Now 报道，周五因外部气态氮工厂供电中断取消，周六因地空网络通信问题推迟，周日倒计时到 T-20 秒时还曾叫停，最后在窗口末段才起飞。该媒体根据转播和时间表观察到，固体助推器工作看起来正常，一级 BE-4 发动机点火时间似乎长于预告时间表，异常发生在半人马座上面级燃烧期间；但 ULA 并未公开确认具体故障点，这些只是媒体的观察，不是官方结论。\n\nSpaceflight Now 称，这次任务原本会让亚马逊 Leo 星座的已发射卫星总数达到 436 颗；建成星座需要 3300 多颗卫星。这次损失对亚马逊的组网进度意味着什么，目前还没有官方评估。ULA 表示，将在调查完成、采取纠正措施之后再恢复发射。",
+              "featured": true,
+              "type": "文章",
+              "source": "Spaceflight Now/新华社",
+              "date": "11-16",
+              "region": "global",
+              "links": [
+                {
+                  "title": "美国火神火箭发射失败 40 颗卫星未能入轨",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261116/426650c18f34407e8034cb7b312996c2/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "火神火箭发射失败，亚马逊 40 颗卫星丢失",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/027/462.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "ULA suffers first total mission failure with loss of Vulcan rocket",
+                  "site": "Spaceflight Now",
+                  "href": "https://spaceflightnow.com/2026/11/15/ula-suffers-first-total-mission-failure-with-loss-of-vulcan-rocket-carrying-40-amazon-leo-satellites/",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "megaspeed-alice-huang-probe",
+              "title": "Megaspeed 说 Alice Huang 去年已离职，并启动内部调查",
+              "excerpt": "新加坡云计算公司 Megaspeed 在给 CNBC 的声明中说，Alice Huang 已于 2025 年 8 月 30 日正式离职，目前与公司没有任何职务关系，公司对她的个人事务不予置评。\n\n公司称，有关其业务、供应链和全球运营的媒体报道缺乏可核实证据，已聘请外部法律顾问开展“彻底内部调查”，并称其运营与供应链框架旨在遵守包括美国出口管制在内的适用法规。",
+              "bodyZh": "新加坡云计算公司 Megaspeed 在给 CNBC 的声明中说，Alice Huang 已于 2025 年 8 月 30 日正式离职，目前与公司没有任何职务关系；公司对她的个人事务不予置评。这份声明是对近期媒体报道的回应。\n\nMegaspeed 表示，有关其业务、供应链和全球运营的媒体报道缺乏可核实证据，公司已聘请外部法律顾问开展“彻底内部调查”。公司还说，其运营与供应链框架旨在遵守包括美国出口管制在内的适用法规。CNBC 写到，Megaspeed 自称是英伟达在该地区算力云业务的“核心业务伙伴”。\n\n这件事受到关注，是因为报道把前英伟达首席执行官黄仁勋与前 Megaspeed 高管 Alice Huang 联系在一起。黄仁勋已于 11 月 12 日辞职，相关人事和大股东表态此前已有报道，这里不再展开。需要说明的是，《纽约时报》所称“美国情报部门认为 Alice Huang 是中国情报人员”属于媒体转述，不是已经证实的事实；Megaspeed 也没有对个人事务作出说明。公司目前启动的是内部调查，尚无调查结论，也没有任何指控被认定成立。\n\nBBC 同日也报道了 Megaspeed 的声明。两家媒体都提到，公司试图把个人问题与业务合规问题分开处理。对外界来说，能确认的只有离职时间、公司启动内部调查以及公司对报道真实性的否认；至于供应链是否违反出口管制，仍要看调查和监管部门的后续动作。",
+              "type": "文章",
+              "source": "CNBC/BBC",
+              "date": "11-16",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Megaspeed says Alice Huang left in 2025 as it launches internal probe",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/15/megaspeed-alice-huang-probe-nvidia-scandal.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Megaspeed launches internal investigation into reports about its business",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/cmdx1vpprk9vo",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "markets",
+          "heading": "财经与市场",
+          "stories": [
+            {
+              "id": "wingtech-nexperia-dutch-court-order",
+              "title": "闻泰科技：荷兰法庭临时措施罚金上限 3 亿欧元，将上诉",
+              "excerpt": "闻泰科技 11 月 15 日晚间公告，荷兰阿姆斯特丹上诉法院企业法庭于 11 月 11 日就安世境外追加临时措施申请作出裁定。公告强调，3 亿欧元是“违反各项禁令的罚金总额上限”，不是已经处以的罚款。\n\n裁定立即生效，要求闻泰、裕成控股、安世中国及相关人员配合管理人履职、撤回部分中国境内诉讼诉求，不得妨碍安世经营、资产处置及融资等。公司不认可裁定，将在法定期限内上诉，并认为该裁定在中国境内不产生法律效力。",
+              "type": "文章",
+              "source": "闻泰科技公告/IT之家",
+              "date": "11-16",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "闻泰科技遭荷兰企业法庭临时措施裁定：罚金上限 3 亿欧元",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/027/473.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "闻泰科技披露荷兰企业法庭临时措施裁定",
+                  "site": "每日经济新闻",
+                  "href": "https://www.nbd.com.cn/articles/2026-11-15/4648063.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "闻泰科技关于境外子公司相关事项的公告",
+                  "site": "巨潮资讯",
+                  "href": "https://static.cninfo.com.cn/finalpage/2026-11-16/1225672404.PDF",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "japan-q3-gdp-contraction",
+              "title": "日本三季度经济意外收缩，年化下降 0.1%",
+              "excerpt": "日本内阁府周一公布 2026 年三季度初步 GDP。日经亚洲写环比持平、按年化计算下降 0.1%；CNBC 同样写年化下降 0.1%，并称路透访查的经济学家原本预计年化增长 0.3%。\n\nCNBC 还提到，上季度年化增速为 1.4%，净出口因能源进口增加拖累增长 0.6 个百分点。不同媒体对上季度增速的写法并不完全一致，本文按各自出处保留，不自行调和。",
+              "bodyZh": "日本内阁府周一公布 2026 年三季度初步国内生产总值数据。日经亚洲的表述是，环比持平，按年化计算下降 0.1%。CNBC 同样写年化下降 0.1%，并提到路透访查的经济学家原本预计年化增长 0.3%。两家媒体引用的都是内阁府的初步数据。\n\n按 CNBC 的梳理，上季度年化增速为 1.4%，净出口因能源进口增加拖累增长 0.6 个百分点。这里要区分两个口径：环比是 0%，年化是下降 0.1%，不能混为一谈。FXStreet 写环比为 0%、市场预期为环比增长 0.1%，并称上季度环比增长 0.4%、年化增长 1.4%。关于上季度增速，日经标题导语出现过 1.7% 的数字，与 CNBC、FXStreet 的 1.4% 并不一致，本文不替媒体做调和，只按各自出处保留。\n\n数据发布后，CNBC 记录到日经 225 指数上涨 0.4%，10 年期国债收益率报 2.885%，日元兑美元约 159.76。这些是稿件中的即时行情，不是收盘数据。报道把三季度收缩与能源价格高企、进口成本上升联系起来，但具体分项仍以内阁府完整数据为准。\n\n报道提到，能源价格高企推高了日本的进口成本。日本大部分能源依赖进口，进口账单变大，会在净出口项上直接体现为拖累。这也是本次数据低于市场预期的主要背景之一。至于消费、投资等分项表现，还需看内阁府完整表格和后续修正数据。\n\n需要强调的是，这是初步估算，后续还可能修正。本文不据此推断日本央行下次会议会做什么决定。",
+              "type": "文章",
+              "source": "CNBC/日经亚洲",
+              "date": "11-16",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Japan's economy unexpectedly contracts in third-quarter as elevated energy costs bite",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/16/japan-q3-gdp-energy-oil-prices.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Japan's Q3 GDP dropped an annualized 0.1%",
+                  "site": "Nikkei Asia",
+                  "href": "https://asia.nikkei.com/economy/japan-s-q3-gdp-dropped-an-annualized-0.1",
+                  "lang": "en"
+                },
+                {
+                  "title": "Japan GDP arrives at 0% QoQ in Q3 2026 vs 0.1% expected",
+                  "site": "FXStreet",
+                  "href": "https://www.fxstreet.com/news/japans-gdp-arrives-at-0-qoq-in-q3-2026-vs-01-expected-202611152353",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "bessent-nvidia-outside-ceo",
+              "title": "贝森特呼吁英伟达大幅改组，从外部选 CEO",
+              "excerpt": "美国财政部长贝森特周日接受福克斯新闻采访时，呼吁英伟达进行“大幅改组”，并建议董事会从公司外部选聘新 CEO。他质疑英伟达是否为推高营收和利润而进行“看似违规”的芯片销售。\n\n贝森特还说，如果是银行出现类似合规问题，货币监理署会介入、不少高管会被撤换。他提到关注英伟达在中国销售下降的同时新加坡收入明显上升。这些是他的说法，英伟达尚未在本篇报道中逐条回应。",
+              "bodyZh": "美国财政部长贝森特周日接受福克斯新闻采访时，呼吁英伟达进行“大幅改组”，并建议董事会从公司外部选聘新的首席执行官。CNBC 报道了这段采访。\n\n贝森特质疑英伟达是否为推高营收和利润而进行“看似违规”的芯片销售。他说，如果是银行出现类似的合规问题，货币监理署会介入，不少高管会被撤换。他还表示关注英伟达在中国销售下降的同时，新加坡收入明显上升。CNBC 补充，英伟达从 2025 年 11 月起不再单独披露新加坡收入，称改为按客户总部而不是账单地址统计。这些是贝森特和媒体的说法，英伟达尚未在本篇报道中逐条回应。\n\n这番表态出现在贝森特与商务部长拉特尼克争执的背景下。Semafor 称两人都预计将随特朗普本周访华；白宫官员周四对路透表示，总统对拉特尼克“完全信任”。贝森特此前还对 CNBC 说，多个联邦机构数月来支持将 Megaspeed 列入出口黑名单，但“笔在商务部”。Axios 曾报道两人在白宫战情室发生对质，商务部否认了这一说法。\n\nCNBC 周五还报道，拉特尼克儿子现在掌管的 Cantor Fitzgerald 曾为英伟达业务伙伴安排数十亿美元融资。Cantor 称相关英伟达股票头寸六个月内减少近 50%，且属于客户互换而非自营。报道没有说拉特尼克向儿子泄露信息，不能据此下结论。\n\n人事背景只交代一句：黄仁勋已辞职，首席财务官科莱特·克雷斯任临时首席执行官；大股东此前已致信董事会，要求保留黄仁勋回归的可能。",
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-16",
+              "region": "global",
+              "links": [
+                {
+                  "title": "贝森特呼吁英伟达大幅改组并从外部选 CEO",
+                  "site": "格隆汇",
+                  "href": "https://www.gelonghui.com/live/2762050",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Bessent calls for 'dramatic shakeup' at Nvidia, urges outside CEO",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/15/bessent-nvidia-ceo-lutnick-megaspeed.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "general",
+          "heading": "综合热点",
+          "stories": [
+            {
+              "id": "li-qiang-arrives-manila-asean",
+              "title": "李强抵达马尼拉，将出席中国—东盟领导人会议",
+              "excerpt": "新华社马尼拉 11 月 15 日电，应东盟轮值主席国菲律宾总统马科斯邀请，李强乘包机于 15 日晚抵达马尼拉尼诺伊·阿基诺国际机场，将出席中国—东盟领导人会议。\n\n菲财政部长吴诗泽、中国驻菲律宾大使井泉、驻东盟大使王擎到机场迎接。李强是在结束对泰国正式访问后赴马尼拉的。截至早报发稿，公开通稿只有抵达信息，没有会见马科斯或会议成果的内容。",
+              "type": "快讯",
+              "source": "新华社",
+              "date": "11-16",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "李强抵马尼拉出席中国－东盟领导人会议",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/world/20261115/630b02639f0649b0a8f4fd53884aa21f/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "李强抵达马尼拉出席第 29 次中国—东盟领导人会议",
+                  "site": "中国外交部",
+                  "href": "https://www.mfa.gov.cn/wjdt_674879/gjldrhd_674881/202611/t20261115_12059614.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "chengdu-station-structure-complete",
+              "title": "成渝中线高铁成都站主体结构完工，站场扩到 10 台 18 线",
+              "excerpt": "新华社成都 11 月 15 日电，15 日 10 时许，最后一块屋面钢结构网架完成安装，成渝中线高铁成都站主体结构完工。成都站 1952 年启用，是成渝铁路始发站，此次在老站原址扩能改造。\n\n中国铁路成都局集团客站建设指挥部相关负责人介绍，改造完成后站场由原 6 台 12 线扩至 10 台 18 线，采用高架式候车结构，建筑面积 8 万平方米。中新社同日稿称，工程已转入装饰装修和设备安装阶段。",
+              "type": "快讯",
+              "source": "新华社",
+              "date": "11-16",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "成渝中线高铁成都站主体结构完工",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/local/20261115/c13e7a4582634f3e9fa17803f2ac638b/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "成渝中线高铁成都站主体结构完工，转入装饰装修阶段",
+                  "site": "中国新闻网",
+                  "href": "https://www.chinanews.com.cn/cj/2026/11-15/10732395.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "apec-ceo-summit-fortune-500",
+              "title": "115 家世界 500 强企业代表将参加 APEC 工商领导人峰会",
+              "excerpt": "新华社深圳 11 月 15 日电，在 2026 年 APEC 工商界活动专题新闻发布会上，中国贸促会副会长李庆霜介绍，115 家世界 500 强企业代表将参加 APEC 工商领导人峰会。\n\n她说，美国参会企业数量居外方经济体之首，占比近 20%；多位国际组织负责人及美国、俄罗斯、日本等经济体商协会负责人也将到场。这是工商界活动，与领导人非正式会议不是同一个会。",
+              "type": "快讯",
+              "source": "新华社",
+              "date": "11-16",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "超百家世界 500 强企业代表将参加 APEC 工商领导人峰会",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261115/40c99fcb17744b7eba46c7780b23e0d7/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "iran-bahrain-drone-attack",
+              "title": "伊朗称打击巴林境内美军基地，巴林说无人机已被拦截",
+              "excerpt": "巴林国防军总司令部 11 月 15 日说，伊朗继续对巴林发动袭击，巴林防空系统当天拦截并摧毁多架伊朗无人机。巴林内政部当天两次发布安全警报，呼吁民众保持冷静、前往最近安全地点。\n\n伊朗外交部发言人巴加埃称，打击在巴林的美军基地是“回应美国侵略”。革命卫队称，无人机打击了位于巴林里法直升机基地的美军防空雷达，并称使用了 6 架无人机。双方说法不同，本文分别标注来源。",
+              "bodyZh": "巴林国防军总司令部 11 月 15 日说，伊朗继续对巴林发动袭击，巴林防空系统当天拦截并摧毁了多架伊朗无人机。巴林内政部当天两次发布安全警报，呼吁民众保持冷静、前往最近的安全地点；巴林外交部谴责袭击，称将采取必要措施维护主权和安全。国防军表示处于最高戒备。\n\n伊朗方面的说法不同。伊朗外交部发言人巴加埃称，打击在巴林的美军基地是“回应美国侵略”。伊朗革命卫队公关部门声明称，无人机打击了位于巴林里法直升机基地的美军防空雷达。BBC 报道，革命卫队称这次使用了 6 架无人机，并称这是三天内第二次向巴林发射无人机；声明还称“霍尔木兹海峡已经关闭”，对美国“侵略”将予以更严厉回应。这些是伊方单方面表态。\n\n周五那次袭击中，革命卫队曾称击中预警雷达，美军否认，称两架单向攻击无人机被美军击落，没有人员伤亡和设施损坏。这是周五事件的美军口径，不能直接套到周日这一轮。就周日这轮，目前以巴林“拦截并摧毁、未达成目标”的声明为主，美军没有公布伤亡数字，本文也不编造。\n\n背景上，美国近日对伊朗格什姆岛等目标实施打击。美方对 CBS 和 BBC 称行动有限、属防御性质，伊朗媒体报道了爆炸。特朗普近日称美方不再寻求与伊朗达成结束战争的协议。革命卫队同日还称霍尔木兹海峡有两艘油轮触雷、一艘超级油轮沉没，《卫报》写暂无独立核实，这一说法只能视为伊方声称。",
+              "featured": true,
+              "type": "文章",
+              "source": "BBC/新华社",
+              "date": "11-16",
+              "region": "global",
+              "links": [
+                {
+                  "title": "巴林称拦截多架伊朗无人机",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261115/63e1049b749e4b049e902e15c123ca05/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Iran targets US military base in Bahrain with drone attack",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/cqn4e2py48kwo",
+                  "lang": "en"
+                },
+                {
+                  "title": "Iran launches drone attacks against US military base in Bahrain",
+                  "site": "The Guardian",
+                  "href": "https://www.theguardian.com/world/2026/nov/15/iran-launches-drone-attacks-against-us-military-base-in-bahrain",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "zelensky-starshield-restrictions",
+              "title": "泽连斯基呼吁解除 Starshield 限速，说拦截无人机追不上目标",
+              "excerpt": "乌克兰总统泽连斯基周日表示，前线和临时占领区的 Starshield 终端速度限制仍在。他说，拦截无人机在时速 161 公里时就会与操作员失联，追不上俄方喷气推进的“沙海德”无人机。\n\n他呼吁与美国政府和马斯克的公司尽可能密切沟通，称“重要的是站在历史正确的一边”。这里说的是军用级 Starshield，不是乌克兰战场普遍使用的普通 Starlink。",
+              "bodyZh": "乌克兰总统泽连斯基周日表示，前线和临时占领区的 Starshield 终端运行速度限制仍在。他说，拦截无人机在时速 161 公里、也就是 100 英里时就会与操作员失去联系，追不上俄方喷气推进的“沙海德”无人机。BBC 报道了他的表态。\n\n这里需要区分两套系统：乌克兰战场通信大多使用普通 Starlink，而拦截导弹和无人机使用的是美国政府提供、马斯克公司所有的军用级 Starshield。泽连斯基说，生命安全和入冬前的能源设施防护，直接取决于限制能否解除。他呼吁与美国政府和马斯克的公司尽可能密切沟通，并称“重要的是站在历史正确的一边”。\n\n泽连斯基周五还说过，约每小时 100 英里的限速从本周一开始实施，而且是在俄占区而非整个乌克兰。《纽约时报》引述他说，这已经有政治含义，在那些地方设限，等于部分不把临时占领区视为乌克兰的。限制问题在 10 月就出现过，马斯克曾称 Starshield 由美国政府控制，特朗普则否认，并称已让马斯克“恢复”。这些是此前的说法，不能当成当前状态。\n\nBBC 表示已向白宫和 Starlink 求证，但稿中没有新的官方回应，因此不能说公司或白宫周日已经确认或否认。SpaceX 此前有过否认或归因于技术故障的说法，也还没有针对这次表态给出新说明。\n\n同日，乌克兰方面称俄军袭击了多地能源和铁路设施，乌方则称袭击了俄罗斯鞑靼斯坦下卡姆斯克的石化和炼油设施。相关损失和伤亡仍以双方后续通报为准。",
+              "type": "文章",
+              "source": "BBC",
+              "date": "11-16",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Zelensky urges US and Musk to lift Starlink restrictions",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/c6m25zg88k45o",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "south-china-sea-coc-80-percent",
+              "title": "菲外长称南海行为准则谈完约八成，剩下交给新加坡",
+              "excerpt": "菲律宾外长拉扎罗 11 月 15 日在马尼拉东盟峰会首日结束后的记者会上说，各方已就《南海行为准则》谈判文本约 80% 的内容达成初步共识，但谈判今年尚未完成，将交给 2027 年接任主席国的新加坡继续推进。\n\n这是菲方单方面表述，不是联合公报，截至发稿未见中国外交部或新华社的对等正式回应。拉扎罗称，在敏感条款上仍有分歧，准则是否具有法律约束力等问题也未解决。",
+              "bodyZh": "菲律宾外长拉扎罗 11 月 15 日在马尼拉第 49 届东盟峰会首日结束后的记者会上说，各方已就《南海行为准则》谈判文本约 80% 的内容达成初步共识，但谈判今年尚未完成。这是菲方在记者会上的单方面表述，不是中菲或东盟与中国的联合公报；截至发稿，还没有看到中国外交部或新华社就这场记者会作对等正式回应。\n\n拉扎罗说，将把这份“近八成完成”的文件交给 2027 年接任东盟主席国的新加坡继续推进，各方同意继续建设性工作，争取尽早达成一份“有效且实质性”的行为准则。她估计，如果再有五至六个月可能完成，并承认在敏感条款上仍有分歧。\n\n据菲律宾通讯社和海峡时报等转述，四项主要争议议题中，各方已就准则与 2002 年《南海各方行为宣言》的关系达成共识：宣言为准则提供基础，准则与宣言原则相一致，并在其基础上发展。各方还同意，准则将作为务实海上合作的平台，合作活动在自愿基础上、依照《联合国海洋法公约》进行，目的是管理海上分歧，而不是解决领土争端。\n\n拉扎罗确认，准则是否具有法律约束力等问题仍未解决；据海峡时报等媒体报道，地理范围也仍待解决。分析人士关于协议可能“薄弱”的评论，属于个人观点，不是官方立场。\n\n这条消息与李强抵达马尼拉是两条线，不能据此预判 16 日中国—东盟领导人会议的结果。八成只是谈判文本的初步共识比例，不等于准则已经谈成，也不等于各方已经正式签署。",
+              "type": "文章",
+              "source": "菲律宾通讯社/海峡时报",
+              "date": "11-16",
+              "region": "global",
+              "links": [
+                {
+                  "title": "东盟与中国就南海行为准则八成内容达成初步共识",
+                  "site": "海峡时报中文",
+                  "href": "https://www.straitstimes.com/zh-hans/asia/se-asia/asean-china-reach-provisional-agreement-on-80-of-south-china-sea-code",
+                  "lang": "zh"
+                },
+                {
+                  "title": "菲外长称南海行为准则谈判约八成完成",
+                  "site": "香港电台",
+                  "href": "https://news.rthk.hk/rthk/ch/component/k2/1877900-20261115.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Code of Conduct talks 80% finished; negotiations to continue through 2027",
+                  "site": "Philippine News Agency",
+                  "href": "https://www.pna.gov.ph/article/code-of-conduct-talks-80-finished-negotiations-to-continue-through-2027",
+                  "lang": "en"
+                },
+                {
+                  "title": "ASEAN, Philippines, South China Sea talks",
+                  "site": "CNA",
+                  "href": "https://www.channelnewsasia.com/asia/asean-philippines-south-china-sea-myanmar-haze-6553056",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-15",
       "label": "11月15日 · 周日",
       "categories": [
