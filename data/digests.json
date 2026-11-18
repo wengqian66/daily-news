@@ -11,6 +11,545 @@
   },
   "digests": [
     {
+      "id": "2026-11-18",
+      "label": "11月18日 · 周三",
+      "categories": [
+        {
+          "id": "tech",
+          "heading": "科技与 AI",
+          "stories": [
+            {
+              "id": "sensenova-loop-9b-cambricon",
+              "title": "商汤发布 SenseNova Loop-9B，寒武纪称已完成首日适配",
+              "excerpt": "商汤昨晚发布 SenseNova Loop-9B。按官方介绍，模型用 Loop 结构复用层参数，把 32 个物理解码层扩展为 56 次层计算；4bit 量化后权重约 4.9GB，部署显存需求可压到 10GB 以内。\n\n寒武纪宣布已完成 Day 0 适配，基于 vllm_mlu 打通 MLU 平台推理链路。相关能力和适配情况来自双方披露，尚无独立评测复核。",
+              "type": "文章",
+              "source": "IT之家",
+              "date": "11-18",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "商汤发布 SenseNova Loop-9B",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/028/534.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "寒武纪完成 SenseNova Loop-9B Day 0 适配",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/028/568.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "商汤发布新模型，寒武纪完成适配",
+                  "site": "每日经济新闻",
+                  "href": "https://www.nbd.com.cn/articles/2026-11-17/4650764.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "kling-image-4-launch",
+              "title": "可灵上线 Kling Image 4.0，称支持原生 8K 出图",
+              "excerpt": "快手可灵 11 月 17 日深夜上线 Kling Image 4.0，同时面向企业客户和开发者开放 API。\n\n按官方介绍，新模型采用理解与生成统一的架构，首次支持原生 8K 图像，单张图内可生成 2000 字，一次描述最多生成 10 张系列图，并内置 70 多种商用字体和 110 多种影调风格。这些均为公司口径。",
+              "type": "文章",
+              "source": "IT之家",
+              "date": "11-18",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "可灵上线 Kling Image 4.0",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/028/563.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "可灵发布 Kling Image 4.0",
+                  "site": "每日经济新闻",
+                  "href": "https://www.nbd.com.cn/articles/2026-11-17/4650739.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Kling Image 4.0 官方介绍",
+                  "site": "Kling AI",
+                  "href": "https://kling.ai/blog/kling-image-4-stunningly-realistic-sharp-precise",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "xiaomi-18-pro-international",
+              "title": "小米 18 Pro 国际版发布，起售价 1399 欧元",
+              "excerpt": "小米 18 Pro 系列国际版 11 月 17 日发布，起售价 1399 欧元，国际版首次把背屏带到海外市场。\n\n具体规格以小米国际发布页为准，本条只写已确认的售价和背屏卖点。",
+              "type": "文章",
+              "source": "IT之家",
+              "date": "11-18",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "小米 18 Pro 系列国际版发布",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/028/564.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "小米 11 月全球发布会",
+                  "site": "Xiaomi Global",
+                  "href": "https://www.mi.com/global/launch/xiaomi-launch-november-2026/",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "nvidia-q3-fy27-earnings",
+              "title": "英伟达发布黄仁勋离职后首份财报",
+              "excerpt": "英伟达 11 月 17 日发布 2027 财年第三季度财报，营收 1158 亿美元，同比增长 103%；数据中心营收 1076 亿美元，同比增长 110%。\n\n第四季度营收指引为 1300 亿美元上下 3%，公司明确该展望不含来自中国的数据中心计算收入。这是黄仁勋辞任首席执行官后的首份季报。",
+              "bodyZh": "英伟达 11 月 17 日发布截至 2026 年 10 月 25 日的 2027 财年第三季度财报。这是黄仁勋辞去首席执行官后，公司交出的第一份季报。财报显示，季度营收 1158 亿美元，同比增长 103%，环比增长 20%；数据中心营收 1076 亿美元，同比增长 110%，环比增长 21%。公司新闻稿列出的 GAAP 毛利率为 74.8%，非 GAAP 毛利率 74.9%；GAAP 摊薄每股收益 2.70 美元，非 GAAP 为 2.68 美元；GAAP 净利润 653 亿美元，同比增长 105%。上一季度营收为 962 亿美元，去年同期为 570 亿美元。\n\n公司对第四季度的营收指引为 1300 亿美元，上下浮动 3%。新闻稿明确说，这一展望不考虑来自中国的数据中心计算收入。GAAP 与非 GAAP 毛利率预期均为 71% 至 72%。界面新闻的报道提到，市场此前预计本季营收约 1091 亿美元，第四季度指引高于市场预期的 1253 亿美元；这是媒体转述的市场预期，不是公司口径。\n\n资本回报方面，公司称 2026 年 9 月董事会批准新增 1500 亿美元股票回购授权，没有到期日；第三季度通过回购和现金股息向股东返还 281 亿美元，季末回购授权剩余约 2273 亿美元。下一季度现金股息为每股 0.25 美元，12 月 23 日支付，股权登记日为 12 月 2 日。\n\n临时首席执行官兼首席财务官 Colette Kress 在新闻稿中说，公司的势头是真实的，并称 Vera Rubin 开局强劲、路线图按计划推进。新闻稿还称 Vera Rubin NVL72 已经开始出货，并列举了合作的云厂商，这些都属于公司说法。黄仁勋同日另有一份书面声明，称自己给董事会制造了麻烦并深感遗憾，承诺配合独立调查；他表示如果董事会认为他回归符合股东、员工、公司和美国利益，他愿意回来。此前有报道称董事会目前不考虑请他回归，这一背景不宜写成今天财报会上的新消息。本季财报未提供可靠的盘后股价信息，因此不写涨跌幅。",
+              "featured": true,
+              "type": "文章",
+              "source": "NVIDIA/界面新闻",
+              "date": "11-18",
+              "region": "global",
+              "links": [
+                {
+                  "title": "英伟达第三财季营收 1158 亿美元，第四季度指引 1300 亿美元",
+                  "site": "界面新闻",
+                  "href": "https://m.jiemian.com/article/15343707.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "英伟达发布 2027 财年第三季度财报",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/028/575.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "NVIDIA Announces Financial Results for Third Quarter Fiscal 2027",
+                  "site": "NVIDIA Newsroom",
+                  "href": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+                  "lang": "en"
+                },
+                {
+                  "title": "黄仁勋书面声明",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-statement.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "apple-services-outage-internal-update",
+              "title": "苹果多项服务因内部更新中断，当晚已恢复",
+              "excerpt": "苹果 11 月 17 日出现大范围服务中断，iCloud 账户与登录、App Store、Apple Music 等受影响。公司称原因是内部更新，并非网络攻击。\n\n到美东时间当天下午 6 点，状态页显示中断均已解决。",
+              "bodyZh": "苹果的系统状态页在 11 月 17 日显示多项服务出现故障，受影响范围一度覆盖 iCloud 账户与登录、App Store、AppleCare on Device 和 Apple Music，随后又列入 Apple School Manager、iCloud Mail、iCloud Web Apps、Schoolwork 和 Volume Purchase Program。TechCrunch 报道说，iCloud 账户与登录服务的故障影响“所有用户”。\n\n苹果在给媒体的回应中把原因归结为内部更新，而不是网络攻击。公司声明说，当天早上一次内部更新导致部分服务中断，许多系统已经恢复运行，其余系统正在尽快恢复。TechCrunch 当晚更新称，到美东时间周二下午 6 点，状态页显示所有中断都已解决。CBS 等媒体也报道服务已经恢复，因此不应再写成仍在中断。\n\n这次故障发生在多家机构系统接连出问题的背景下。CNBC 把微软、美国联邦航空局、摩根大通以及国家安全局等近几日的故障放在一起报道，有关方面排除了网络攻击，把原因归为软件缺陷或升级。联邦航空局仍在调查根因，并部分指向 L3Harris 在阿肯色州南部的路由器升级；摩根大通称周一服务变慢是本地硬件系统的软件缺陷。这些是不同机构、不同原因的事件，不能写成同一次攻击或同一个根因。\n\n美国有议员呼吁就相关情况作出说明，这属于议员表态，并不等于已有调查结论。IT之家 的中文报道还提到 Apple Pay、iCloud 和 App Store 受到影响；对谷歌 Gmail 故障的传闻，谷歌回应称服务运行正常。整理时以各家公司自己的说明为准，不把猜测当成已核实的事实。",
+              "type": "文章",
+              "source": "TechCrunch/苹果",
+              "date": "11-18",
+              "region": "global",
+              "links": [
+                {
+                  "title": "苹果多项服务出现故障，晚间恢复",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/028/589.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Apple services hit by outage",
+                  "site": "TechCrunch",
+                  "href": "https://techcrunch.com/2026/11/17/apple-services-including-icloud-app-store-and-apple-music-hit-by-outage/",
+                  "lang": "en"
+                },
+                {
+                  "title": "苹果、微软、FAA 与摩根大通系统故障综述",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/17/apple-microsoft-faa-jpmorgan-outages.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "isomorphic-labs-5b-series-c",
+              "title": "Isomorphic Labs 完成 50 亿美元 C 轮融资",
+              "excerpt": "Isomorphic Labs 11 月 17 日宣布完成 50 亿美元 C 轮融资，由 Greenoaks 与 Sequoia Capital 联合领投，Alphabet 继续大额投资。\n\n公司称资金将用于扩大药物设计引擎 IsoDDE 并推进 AI 设计的候选管线，目前尚无药物进入上市阶段。",
+              "bodyZh": "Isomorphic Labs 在 11 月 17 日宣布完成 50 亿美元 C 轮融资。公司公告说，本轮由 Greenoaks 与 Sequoia Capital 联合领投，Andreessen Horowitz 及其他新投资者参与，Alphabet 继续大额投资；此前的投资方也全部跟投，包括 Thrive Capital、MGX、GV、CapitalG、Temasek 和英国主权人工智能基金。公告列出的投资方既有新加入的基金，也有从早期轮次一路跟投的老股东。\n\n公司表示，新资金将用于扩大其专有的药物设计引擎 IsoDDE，并推进由人工智能设计的候选药物管线。公告没有说任何药物已经上市，也没有说临床试验已经成功，这些进展仍需后续验证。\n\nCNBC 报道提到，公司首席执行官德米斯·哈萨比斯此前担任 Google DeepMind 首席执行官，约三个半月前卸任；自 2021 年 Isomorphic 从 DeepMind 分拆以来，他一直担任这家公司的首席执行官。哈萨比斯在报道中回顾说，创办公司时相信生物学可以在分子层面被理解和建模，人工智能可以显著加快这一过程。他表示，本轮融资将用于加速基础生物学模型、加深对系统性疾病的理解，并推动首批治疗项目走向临床试验。这些话是他在采访中的表述。\n\n报道还提到，Isomorphic 上一次融资是今年 5 月的 21 亿美元 B 轮。数据机构 Dealroom 的统计显示，2026 年药物发现初创公司已合计募集 232 亿美元，创下纪录；这是数据机构的口径，不是公司披露的数字。人工智能制药仍处在早期阶段，融资规模反映的是市场预期，不等于研发结果。",
+              "type": "文章",
+              "source": "Isomorphic Labs/CNBC",
+              "date": "11-18",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Isomorphic Labs 完成 50 亿美元 C 轮融资",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/028/533.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Isomorphic Labs Announces Series C Investment Round",
+                  "site": "Isomorphic Labs",
+                  "href": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round",
+                  "lang": "en"
+                },
+                {
+                  "title": "AI drug discovery startup raises $5 billion",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/17/isomorphic-labs-series-c-ai-drug-discovery-.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Isomorphic Labs raises $5B for clinical trials push",
+                  "site": "TechCrunch",
+                  "href": "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "markets",
+          "heading": "财经与市场",
+          "stories": [
+            {
+              "id": "a-share-close-nov-17",
+              "title": "A 股冲高回落，沪指跌 0.50%",
+              "excerpt": "A 股 11 月 17 日冲高回落，尾盘小幅回升。上证指数收报 3584.58 点，跌 0.50%，成交额 6905.15 亿元；深证成指收报 10638.52 点，跌 0.49%；创业板指收报 2292.20 点，跌 1.20%。\n\n贵金属、小家电、电子化学品涨幅居前，影视院线、文化传媒、游戏跌幅居前。",
+              "type": "快讯",
+              "source": "中国经济网",
+              "date": "11-18",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "A 股三大指数冲高回落，沪指跌 0.50%",
+                  "site": "中国经济网",
+                  "href": "http://finance.ce.cn/stock/gsgdbd/202611/t20261117_3297163.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "safe-october-fx-market",
+              "title": "外汇局：10 月跨境资金净流入 769 亿美元",
+              "excerpt": "国家外汇管理局 11 月 16 日发布 10 月外汇市场形势答问。10 月非银行部门跨境收支合计 1.45 万亿美元，较 9 月日均增长 10%；外汇市场交易量 3.77 万亿美元，日均增长 7%。\n\n10 月跨境资金净流入 769 亿美元，较 9 月有所增加。外汇局副局长、新闻发言人李斌称，我国外汇市场保持平稳运行。",
+              "type": "快讯",
+              "source": "国家外汇管理局",
+              "date": "11-18",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "国家外汇管理局副局长、新闻发言人李斌就 2026 年 10 月外汇市场形势答记者问",
+                  "site": "国家外汇管理局",
+                  "href": "https://www.safe.gov.cn/safe/2026/1116/28098.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "10 月外汇市场保持平稳",
+                  "site": "中国经济网",
+                  "href": "https://www.ce.cn/xwzx/gnsz/gdxw/202611/t20261117_3296986.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "nbs-october-70-city-housing",
+              "title": "10 月各线城市房价同比降幅继续收窄",
+              "excerpt": "国家统计局 11 月 16 日发布 10 月 70 个大中城市商品住宅销售价格变动情况。一线城市新建商品住宅价格同比下降 0.1%，二、三线城市分别下降 2.0% 和 3.6%。\n\n二手住宅一线城市同比下降 0.4%，二、三线城市分别下降 4.1% 和 5.0%。各线城市同比降幅继续收窄。",
+              "type": "文章",
+              "source": "国家统计局",
+              "date": "11-18",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "10 月份各线城市商品住宅销售价格同比降幅继续收窄",
+                  "site": "国家统计局",
+                  "href": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965838.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "10 月 70 个大中城市商品住宅销售价格变动情况",
+                  "site": "国家统计局",
+                  "href": "https://www.stats.gov.cn/zwfwck/sjfb/202611/t20261116_1965836.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "10 月房价同比降幅继续收窄",
+                  "site": "经济参考报",
+                  "href": "http://jjckb.xinhuanet.com/20261117/65a398052fab49bd823c6f360ccf355d/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "统计局解读 10 月房价数据",
+                  "site": "中国经济网",
+                  "href": "http://www.ce.cn/xwzx/gnsz/gdxw/202611/t20261116_3295302.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "us-stocks-close-nov-17",
+              "title": "美股周二收跌，道指跌 1.64%",
+              "excerpt": "美股 11 月 17 日收跌。道指跌 848.75 点至 50759.42 点，跌幅 1.64%；标普 500 跌 76.06 点至 7340.53 点，跌幅 1.03%；纳指跌 181.37 点至 24328.38 点，跌幅 0.74%。\n\n标普 500 十一大板块全线下跌，金融和公用事业领跌，能源跌幅最小。市场当天在等待英伟达盘后财报。",
+              "bodyZh": "新华社纽约 11 月 17 日电，美股三大指数当天显著下跌。道琼斯工业平均指数下跌 848.75 点，收于 50759.42 点，跌幅 1.64%；标普 500 指数下跌 76.06 点，收于 7340.53 点，跌幅 1.03%；纳斯达克综合指数下跌 181.37 点，收于 24328.38 点，跌幅 0.74%。\n\n标普 500 的十一个板块全线下跌。金融板块和公用事业板块领跌，跌幅分别为 1.87% 和 1.60%；能源板块跌幅最小，为 0.53%。这是北京时间 11 月 18 日凌晨收盘的表现，属于今天早报应当覆盖的前一个交易日。\n\n市场当天在等待英伟达盘后发布季度财报，人工智能相关股票的波动受到关注。不过，三大指数的收盘跌幅来自常规交易时段，不能把盘后财报的反应写成当天收盘的原因；财报发布时，现货市场已经收盘。报道也没有给出个股对指数点位的具体贡献，因此不写权重股拖累了多少点。\n\n需要区分的是，11 月 16 日周一已有一次收盘报道，当时纳斯达克综合指数收于 24509.76 点，跌幅 2.49%。今天这条是 11 月 17 日周二的新收盘数据，两个交易日的点位和跌幅不能混用。周二的跌幅小于周一，但三大指数仍全部收低，标普 500 连续走弱。\n\n从板块表现看，金融和公用事业跌幅居前，能源相对抗跌，说明抛压并不集中在单一行业。新华社稿件没有给出成交量、北向资金或个股涨跌的细节，这些内容不在本条中补充。后续市场如何解读英伟达的业绩和指引，要看下一个交易日的实际交易情况。",
+              "type": "文章",
+              "source": "新华社",
+              "date": "11-18",
+              "region": "global",
+              "links": [
+                {
+                  "title": "美股三大指数 17 日显著下跌",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261118/1bb866d90ab74052a44867ba6187043a/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Stock market today: live updates",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/16/stock-market-today-live-updates.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "fed-musalem-rate-hike-remarks",
+              "title": "圣路易斯联储行长：通胀偏高，利率可能还要上调",
+              "excerpt": "圣路易斯联储行长穆萨勒姆 11 月 17 日表示，通胀可能继续高于 2% 目标，政策利率或许还需上调。他称更高的实际政策利率最好通过通胀下降和名义利率上升共同实现，但名义利率可能要承担大部分工作。\n\n这是他的个人表态，不是美联储的决议。",
+              "bodyZh": "圣路易斯联储行长阿尔贝托·穆萨勒姆（Alberto Musalem）11 月 17 日就利率前景发表看法。CNBC 报道说，他认为通胀可能继续高于 2% 的目标，政策利率或许还需要上调。需要强调的是，这是他一人的表态，不是联邦公开市场委员会的决议，也不代表美联储已经决定加息。\n\n按 CNBC 的转述，穆萨勒姆认为更可能的情形是，需求持续强劲、供应压力仍在，使通胀难以下降到目标水平，从而需要把联邦基金利率从当时的 3.75% 至 4% 区间进一步提高。他在讲话中说，更高的实际政策利率最好以平衡的方式实现，既靠通胀下降，也靠名义政策利率上升；但他同时表示，名义政策利率可能需要承担大部分工作。\n\nCNBC 的标题用了“可能还需要加息四次”的概括，这是媒体对讲话的归纳，不应直接写成他的原话。他也提到另一种可能：如果人工智能相关开支放缓，需求可能随之减速，通胀压力也会减轻。这种情形下，政策路径会不同。\n\n报道没有提供点阵图，也没有说明下一次会议的具体表决安排，更没有确认他今年是否拥有投票权，因此这些内容都不写。对读者来说，更稳妥的理解是：一位地区联储行长倾向于更紧的政策，但最终决定仍要看后续数据以及委员会的集体判断。官方讲话材料已由圣路易斯联储网站公布，详细措辞可以对照原文。",
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-18",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Fed's Musalem says more rate hikes may be needed",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/17/alberto-musalem-fed-interest-rates.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "穆萨勒姆在阿根廷央行会议上的讲稿",
+                  "site": "St. Louis Fed",
+                  "href": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/musalem/2026/musalem-central-bank-of-argentina-remarks-17-nov-2026.pdf",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "nahb-builder-sentiment-14-year-low",
+              "title": "美国营造商信心降至约 14 年来最低",
+              "excerpt": "NAHB/富国银行住房市场指数 11 月下降 4 点至 25，为 2012 年 4 月以来最低。协会称营造商信心降至 14 年低点。\n\n高抵押贷款利率、通胀、能源和材料成本、劳动力短缺以及买家犹豫共同拖累。11 月有 46% 的营造商降价，平均降幅连续第八个月为 6%。",
+              "bodyZh": "全美住宅建造商协会（NAHB）11 月 17 日发布的调查显示，NAHB/富国银行住房市场指数 11 月下降 4 点至 25，为 2012 年 4 月以来最低。协会新闻稿称，营造商信心已降到 14 年低点。指数高于 50 表示认为市况良好的营造商多于认为糟糕的，因此 25 的水平说明悲观情绪明显占上风。\n\n新闻稿把拖累因素列为高抵押贷款利率、持续的通胀压力、能源和材料成本高企、劳动力短缺以及购房者犹豫。协会主席、来自俄亥俄州沃辛顿的营造商比尔·欧文斯说，加强移民执法使合法工人无法到岗，加深了劳动力短缺并推高成本；燃料价格上涨促使分包商大幅提价；买家减少后，更多营造商选择缩减开工。这些是协会人士的判断。\n\n首席经济学家罗伯特·迪茨提到，关税推高建材成本、建筑工人短缺、过度管制影响可负担性；抵押贷款利率高于 7%、消费者信心偏弱和前景不确定，也让买家迟迟不下手。这些同样属于协会方面的观点。\n\n调查还显示，11 月有 46% 的营造商降价，为疫情后最高占比；平均降价幅度连续第八个月为 6%；68% 的营造商提供销售激励，也是疫情后高点，并且是连续第 20 个月至少有 60% 的营造商使用激励。分项指数中，当前销售状况下降 6 点至 28，未来六个月预期下降 2 点至 30，潜在买家流量下降 2 点至 16，新闻稿称后者除 2020 年疫情初期外为 15 年最低。三个月移动平均的地区指数为东北 34、中西部 35、南部 27、西部 23，均较上月下降。",
+              "type": "文章",
+              "source": "NAHB",
+              "date": "11-18",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Builder Sentiment Continues to Fall on Affordability Concerns",
+                  "site": "NAHB",
+                  "href": "https://www.nahb.org/news-and-economics/press-releases/2026/11/builder-sentiment-continues-to-fall-on-affordability-concerns",
+                  "lang": "en"
+                },
+                {
+                  "title": "Homebuilder sentiment plunges to 14-year low",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/17/homebuilder-sentiment-plunges-to-14-year-low-leading-more-builders-to-drop-prices.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "general",
+          "heading": "综合热点",
+          "stories": [
+            {
+              "id": "xi-apec-six-meetings-shenzhen",
+              "title": "习近平在深圳一天会见六位 APEC 经济体领导人",
+              "excerpt": "APEC 第三十三次领导人非正式会议 11 月 18 日至 19 日在深圳举行。17 日，习近平在深圳先后会见加拿大总理卡尼、巴布亚新几内亚总理马拉佩、越共中央总书记兼国家主席苏林、墨西哥总统辛鲍姆、秘鲁总统藤森庆子和智利总统卡斯特六位经济体领导人。\n\n中方在会见中谈到相互尊重、平等互利，也提到中越“同志加兄弟”的关系。",
+              "type": "文章",
+              "source": "新华社",
+              "date": "11-18",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "第一观察：习近平在深圳会见六位 APEC 经济体领导人",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/politics/leaders/20261118/2e1d6befaef349a1b77f40bddc72cb4d/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "习近平会见苏林",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261117/d56de43508ea4774bc002ca026f78085/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "习近平会见辛鲍姆",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/politics/leaders/20261117/951b72ecbe27408fbf33d0042f26dfdc/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "习近平会见卡尼",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/politics/leaders/20261117/129c1d4c66c6414ebaad2ea229803f8e/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "shenzhou-24-transfer-launch-area",
+              "title": "神舟二十四号船箭组合体转运至发射区",
+              "excerpt": "中国载人航天工程网 11 月 17 日发布，神舟二十四号载人飞船与长征二号 F 遥二十四运载火箭组合体已转运至发射区。\n\n发射场设施设备状态良好，后续将按计划开展功能检查和联合测试，计划近日择机实施发射。具体日期尚未公布。",
+              "type": "快讯",
+              "source": "中国载人航天工程网",
+              "date": "11-18",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "神舟二十四号船箭组合体转运至发射区",
+                  "site": "中国载人航天工程网",
+                  "href": "https://www.cmse.gov.cn/xwzx/202611/t20261117_57861.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "神舟二十四号船箭组合体转运至发射区",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261117/b3fb7204b4a949a28b020cd9f4170c05/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "China transfers Shenzhou-24 spaceship to launch area",
+                  "site": "CGTN",
+                  "href": "https://news.cgtn.com/news/2026-11-17/China-transfers-Shenzhou-24-spaceship-to-launch-area-1S9fLaxutUs/p.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "xi-courts-important-instruction",
+              "title": "习近平对人民法院工作作出重要指示",
+              "excerpt": "习近平近日对人民法院工作作出重要指示，强调加快建设公正高效权威的社会主义司法制度，以高质量司法更好保障高质量发展和高水平安全。\n\n第二十三次全国法院工作会议 11 月 16 日至 17 日在京召开，会上传达了这一指示。陈文清出席会议并讲话，张军主持会议并讲话。",
+              "type": "文章",
+              "source": "中国政府网",
+              "date": "11-18",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "习近平对人民法院工作作出重要指示",
+                  "site": "中国政府网",
+                  "href": "https://www.gov.cn/yaowen/liebiao/202611/content_7086312.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "习近平对人民法院工作作出重要指示",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261117/df44d5968c79406aab2cefba29d362b7/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "第二十三次全国法院工作会议在京召开",
+                  "site": "人民网",
+                  "href": "http://politics.people.com.cn/n1/2026/1117/c1024-40835548.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "kerch-crimean-bridge-attack",
+              "title": "乌克兰袭击克里米亚大桥，公路桥部分坍塌",
+              "excerpt": "乌克兰 11 月 17 日袭击克里米亚大桥，公路桥部分坍塌。泽连斯基称这是筹划数周的行动，乌方官员分享的图像显示桥有区段落入水中。\n\n克里姆林宫称将把桥修得“比之前更好”。俄方称公路已无法通行，铁路桥拱结构受损，部分铁路运行随后恢复。战况仍在变化。",
+              "bodyZh": "乌克兰 11 月 17 日袭击克里米亚大桥，公路桥部分坍塌。BBC 报道说，乌克兰总统泽连斯基称这是一次筹划数周的行动，并称之为“前所未有的行动”；乌方官员分享的图像显示，大桥有区段落入水中。克里姆林宫则表示，会把桥修得“比之前更好”。报道没有说大桥已被彻底摧毁，也没有说战事因此接近结束。\n\n这座大桥是俄罗斯 2014 年吞并克里米亚后修建的公路和铁路通道。BBC 写建设耗资约 36 亿美元，2018 年 5 月由普京驾车通车；在俄罗斯和乌克兰双方，它都被视为具有象征意义的基础设施。正因如此，这次袭击的象征意义和政治影响都很大。\n\n泽连斯基说，这是军方和安全部门的一次七阶段行动，逐步摧毁沿途的防空、雷达和电子战目标；关键阶段在夜间动用了多种无人机，以及乌克兰的“火烈鸟”和“海王星”巡航导弹。乌克兰国家安全局称，过去一个多月一直在系统性压制防空。乌克兰军方称，公路路面已经“无法使用”，车辆不能通行；铁路桥的拱仍在，但拱结构受损。俄罗斯交通部后来表示，部分铁路运行已经恢复。\n\n克里姆林宫发言人佩斯科夫说，普京已听取汇报，并不排除袭击与普京访华行程有关。俄罗斯侦查委员会确认结构受损，并以“恐怖主义”指控立案，这是俄方司法口径。俄罗斯国防部称，连续第二天录得开战以来最大规模的乌军无人机袭击，并称击落 2256 架无人机；这是俄方数字，不能当成已核实的战果。\n\n基辅市长克利奇科说，第聂伯河上的北桥和南桥在俄方过夜打击后一度关闭，交通已部分恢复；泽连斯基称有四枚弹道导弹瞄准南桥。会晤前夕，乌方也曾警告会有重大袭击。相关战况仍在变化，后续以各方最新通报为准。",
+              "featured": true,
+              "type": "文章",
+              "source": "BBC",
+              "date": "11-18",
+              "region": "global",
+              "links": [
+                {
+                  "title": "乌克兰袭击克里米亚大桥，公路桥部分坍塌",
+                  "site": "新京报",
+                  "href": "https://www.bjnews.com.cn/detail/1794918106129976.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Ukraine attacks Crimean Bridge, road section collapses",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/cw772jk4rvmxo",
+                  "lang": "en"
+                },
+                {
+                  "title": "Kerch Bridge attack: what we know",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/17/kerch-bridge-ukraine-russia-putin-kyiv.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "russia-an12-siberia-crash",
+              "title": "俄罗斯一架安-12 运输机在西伯利亚坠毁，19 人遇难",
+              "excerpt": "俄罗斯一架安-12 军用运输机 11 月 17 日在西伯利亚克麦罗沃州亚古诺沃附近坠毁，机上 19 人全部遇难。\n\n俄国防部称初步调查显示为技术故障，调查人员已以可能违反飞行安全规则立案。事故原因仍待最终调查。",
+              "bodyZh": "俄罗斯一架安-12 军用运输机 11 月 17 日在西伯利亚克麦罗沃州亚古诺沃附近坠毁，机上 19 人全部遇难。BBC 和美联社报道说，飞机坠落在无人居住的区域，因此地面没有其他人员伤亡的报告。俄罗斯国防部称，初步调查显示原因是技术故障。\n\n俄罗斯调查人员已以可能违反飞行安全规则立案。报道没有说明这架飞机的具体改装情况，也没有确认它当时是否在执行对乌克兰的任务；飞行员姓名和具体故障零件同样没有公布，这些内容都不应自行补充。所谓“技术故障”目前只是国防部的初步判断，不是最终调查结论，事故原因仍要等待调查机构公布。\n\n这起事故与同一天发生的克里米亚大桥袭击在时间上接近，但目前没有证据表明两者存在因果关系，报道也没有建立这种联系，因此不能把两件事写成同一事件的一部分。\n\n安-12 是苏联时期设计的四发涡桨军用运输机，服役时间普遍较长，常用于货运和人员运输。此次事故造成 19 人死亡，是俄罗斯军方近期较严重的一起航空事故。克麦罗沃州位于西伯利亚西部，坠机地点附近人烟稀少。对这类事故，通常需要等待飞行数据记录器解读和调查结论，才能判断是机械、维护还是操作原因。现阶段可以确认的是机上人员全部遇难、国防部的初步说法以及调查已经启动，其余细节以俄方后续通报为准。",
+              "type": "文章",
+              "source": "BBC/AP",
+              "date": "11-18",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Russian military plane crashes in Siberia, killing 19",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/cw8085rykkmgo",
+                  "lang": "en"
+                },
+                {
+                  "title": "Russian An-12 military transport crashes in Siberia",
+                  "site": "AP",
+                  "href": "https://apnews.com/article/russia-military-air-crash-siberia-an12-bb68e35e985a5e72786d813cf0ce598d",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "trump-asia-ahead-of-shenzhen-talks",
+              "title": "特朗普抵达亚洲，深圳会晤安排排到 18、19 日",
+              "excerpt": "特朗普 11 月 17 日已抵达亚洲，为与中国、俄罗斯领导人的会谈做准备。公开行程显示，他计划 18 日下午从马尼拉抵达深圳，19 日中午先与习近平双边会晤，随后举行中美俄三方会晤。\n\n会晤尚未举行，具体安排仍可能调整。",
+              "bodyZh": "美国总统特朗普 11 月 17 日已抵达亚洲，为与中国和俄罗斯领导人的会谈做准备。BBC 报道说，他此行重点之一就是即将在深圳举行的中美以及中美俄会晤。需要先说明：截至这篇报道发出，会晤尚未举行，不能写成双方已经见面或已经发表联合声明。\n\n中国政府网此前发布消息说，习近平将同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。公开的行程报道显示，特朗普计划 11 月 18 日下午从马尼拉抵达深圳；11 月 19 日中午先与习近平举行双边会晤，随后再举行中美俄三方会晤。这些是行程安排，不是已经发生的事实，具体时间和形式仍可能调整。\n\nCNBC 的报道还提到，特朗普此行谈及伊朗以及德意志银行等话题。这些是他在公开场合的表态，报道没有给出已经核实的银行或情报结论，因此只能按“他说了什么”来理解，不能扩展成对相关机构的定论。\n\n此前一天，媒体已就深圳会晤做过预告。本条的新信息是特朗普已经动身并在亚洲，以及公开行程把抵达和会谈时间排到了 18 日和 19 日。会谈能否如期举行、谈出什么结果，目前都没有官方发布。读者可以把这条当作行程进展来看，而不是结果报道。\n\n中方和美方此前都表示将就共同关心的问题交换意见，但具体议题、是否会后发表文件，暂无公开信息。涉及俄乌冲突、贸易和科技限制等议题，外界有很多猜测，在会谈结束前都不宜当成已定事项。",
+              "type": "文章",
+              "source": "BBC/中国政府网",
+              "date": "11-18",
+              "region": "global",
+              "links": [
+                {
+                  "title": "习近平将同普京、特朗普举行中俄美元首会晤",
+                  "site": "中国政府网",
+                  "href": "https://www.gov.cn/yaowen/liebiao/202611/content_7086137.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "特朗普抵达亚洲，为深圳会晤做准备",
+                  "site": "BBC 中文",
+                  "href": "https://www.bbc.com/zhongwen/articles/c6lym29v7nr0o/trad",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Trump in Asia ahead of talks with Xi and Putin",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/crq5vlxxx32no",
+                  "lang": "en"
+                },
+                {
+                  "title": "Trump's Asia trip and the Shenzhen talks",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/17/trump-iran-asia-trip-china.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-17",
       "label": "11月17日 · 周二",
       "categories": [
