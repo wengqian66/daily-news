@@ -11,6 +11,501 @@
   },
   "digests": [
     {
+      "id": "2026-11-19",
+      "label": "11月19日 · 周四",
+      "categories": [
+        {
+          "id": "tech",
+          "heading": "科技与 AI",
+          "stories": [
+            {
+              "id": "lantu-zhijie-independent-license",
+              "title": "岚图、智界拿到独立生产资质",
+              "excerpt": "工信部《道路机动车辆生产企业及产品》（第412批）目录同意东风集团增加成员企业岚图汽车科技股份有限公司，同意奇瑞集团增加成员企业安徽智界新能源汽车有限公司。钛媒体转述北京日报客户端的报道把这一变化解读为：两家取得独立的道路机动车辆生产企业准入资格，今后可以以各自企业名义申请车型产品准入。\n\n岚图已在港交所发布自愿公告确认取得该资格，并称这有利于完善研发、生产、质量管理和产品体系——这是公司口径。报道说，两家此次都是以大型汽车集团成员企业身份获批。",
+              "featured": false,
+              "type": "文章",
+              "source": "钛媒体/北京日报",
+              "date": "11-19",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "岚图、智界获道路机动车辆独立生产资质",
+                  "site": "钛媒体",
+                  "href": "https://www.tmtpost.com/8210131.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "道路机动车辆生产企业及产品（第412批）",
+                  "site": "工业和信息化部",
+                  "href": "https://wap.miit.gov.cn/jgsj/zbys/wjfb/art/2026/art_6c589314fe0447e1a46424540edd62f6.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "shijian-24-satellite-launch",
+              "title": "长征二号丁送实践二十四号入轨",
+              "excerpt": "11月19日6时51分，我国在太原卫星发射中心使用长征二号丁运载火箭，成功将实践二十四号卫星发射升空，卫星顺利进入预定轨道，发射任务取得圆满成功。\n\n这是长征系列运载火箭的第678次飞行。官方短讯没有写卫星用途、载荷和轨道高度。",
+              "featured": false,
+              "type": "快讯",
+              "source": "新华社",
+              "date": "11-19",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "我国成功发射实践二十四号卫星",
+                  "site": "新华网",
+                  "href": "http://www.news.cn/20261119/402c57b6e99d489a932493ea03bf13c0/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "我国成功发射实践二十四号卫星",
+                  "site": "人民网",
+                  "href": "http://finance.people.com.cn/n1/2026/1119/c1004-40836642.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "长征二号丁成功发射实践二十四号卫星",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/029/138.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "horizon-loft-video-geometry",
+              "title": "地平线发布 LoFT 视频几何模型",
+              "excerpt": "地平线机器人实验室11月18日发布原生视频几何基础模型 LoFT。官方称，模型能从 RGB 视频中联合预测相机位姿、内参和逐帧深度，恢复场景三维结构，为机器人空间感知和具身学习提供几何基础。架构采用双循环 Transformer。\n\n官方数字是约297万条有效训练序列、9.62亿帧图像记录；官方还称在 SpatialBench、ClassicBench 和 VRBench 等评测的多项指标上领先。这些能力和评测都是公司口径，新闻稿没有给出逐项分数。",
+              "featured": false,
+              "type": "文章",
+              "source": "地平线",
+              "date": "11-19",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "地平线发布 LoFT 原生视频几何基础模型",
+                  "site": "地平线",
+                  "href": "https://www.horizon.auto/news/technology/487",
+                  "lang": "zh"
+                },
+                {
+                  "title": "地平线发布 LoFT 模型",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/029/140.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "LoFT 项目主页",
+                  "site": "Horizon Robotics",
+                  "href": "https://horizonrobotics.github.io/robot_lab/loft",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "anthropic-ipo-priced-83",
+              "title": "Anthropic 定价 83 美元，周四纳斯达克挂牌",
+              "excerpt": "Anthropic 把 Class A 普通股的 IPO 价格定为每股 83 美元，共发行 9.8 亿股，其中约 9.56 亿股由公司出售。按发行股数乘定价计算，规模约 813 亿美元。\n\n股票预计11月19日在纳斯达克全球精选市场开始交易，代码 ANT，发行预计11月20日交割。定价高于此前每股 70 至 78 美元的区间。截稿时尚未开盘。",
+              "bodyZh": "Anthropic 在 11 月 18 日的公告里说，公司把 Class A 普通股的首次公开募股价格定为每股 83.00 美元。此次共发行 9.8 亿股 Class A 股票，其中 956,351,354 股由公司自己出售，23,648,646 股由部分售股股东出售；公告明确，公司不会从售股股东的这部分出售中获得任何所得。按发行股数乘以定价计算，规模约 813 亿美元；CNBC 也写的是 813 亿美元，并称这超过了 SpaceX 今年 6 月的 IPO 纪录。SpaceX 那次最初募资 750 亿美元、承销商行使超额配售后总计 857 亿美元，这是 CNBC 的口径，不是 Anthropic 公告里的数字。\n\n定价高于此前给出的区间。CNBC 报道说，公司上周更新招股文件时，预期区间是每股 70 至 78 美元，原计划出售 8.25 亿股。公告还说，公司授予承销商 30 天期权，可额外购买最多 1.47 亿股；相关登记声明已在 11 月 18 日获美国证交会宣布生效；股票预计 11 月 19 日在纳斯达克全球精选市场开始交易，代码 ANT，发行预计 11 月 20 日交割，前提是满足惯常的交割条件。截稿时交易还没开始，所以不写开盘表现。\n\nCNBC 转述招股文件说，截至 9 月 30 日的九个月，公司营收 332.4 亿美元，同比增长约 1200%；同期净亏损 1040 亿美元，其中大部分来自可转债和衍生负债的公允价值变动，2025 年同期亏损为 251 亿美元。文件还称，10 月底的年化营收约为 810 亿美元，比上个月增加 100 亿美元。这些是招股文件和报道口径。另有报道说，包括谷歌、微软、英伟达和 AMD 在内的科技公司同意按 IPO 价格合计投资 260 亿美元，这属于私募与投资安排，应与公开发行分开看。\n\n首席执行官 Dario Amodei 在路演视频里说，如果做对了，可以开创一个人类解决千年难题的“奇迹时代”，同时必须认真对待风险——这是 CNBC 引述的他本人的话。公司没有公布总股本，因此这里不给出精确总市值；CNBC 只说这样的股价会让估值高于公司此前瞄准的 1.4 万亿美元，属于媒体测算。",
+              "featured": true,
+              "type": "文章",
+              "source": "Anthropic/CNBC",
+              "date": "11-19",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Anthropic IPO 定价每股 83 美元",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/029/132.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Anthropic Prices Initial Public Offering",
+                  "site": "Anthropic",
+                  "href": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+                  "lang": "en"
+                },
+                {
+                  "title": "Anthropic prices IPO at $83 a share",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Anthropic sets record IPO price",
+                  "site": "NPR",
+                  "href": "https://www.npr.org/2026/11/18/nx-s1-6046212/anthropic-record-ipo-price",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "nvidia-kress-all-hands-stock",
+              "title": "英伟达临时 CEO 开全员会，股价再跌",
+              "excerpt": "黄仁勋离职后，临时 CEO Colette Kress 周三首次召开全员会。CNBC 报道说，她对员工讲“let's move forward”，并提到通常在 3 月进行的年度评估、加薪和股票授予将提前到 12 月。董事会主席 Harvey Jones 在会上谈了下一任 CEO 的遴选。\n\nCNBC 另一篇报道写英伟达周三再跌 2.89%，过去一周跌幅超过 13%。员工情绪的说法来自知情人士和匿名员工，口径并不一致。",
+              "bodyZh": "英伟达临时首席执行官、首席财务官 Colette Kress 在 11 月 18 日召开了黄仁勋离职后的第一次全员会。CNBC 报道说，她对员工讲的一句话是“let's move forward”，意思是往前看。会议大约一小时，在现场举行，并通过 Microsoft Teams 向员工直播。报道称，她在会上提到加薪，并解释说通常在 3 月进行的年度评估——包括员工加薪和授予更多股票——将提前到 12 月。董事会主席 Harvey Jones 在会上谈了下一任首席执行官的遴选。这些内容来自 CNBC 对会议的报道，公司没有公布完整记录。\n\n会场情绪的说法并不一致。CNBC 援引知情人士和匿名员工称，有人希望黄仁勋回归，也有人对管理层的表态和更高的透明度表示欢迎。这些都属于消息源转述，不能写成“全体员工要求请回黄仁勋”这样的已核实事实。相关背景是：黄仁勋在 11 月 17 日曾表示，如果董事会希望，他愿意回来；Jones 在周二的财报电话会上说，董事会一致接受了他的辞呈，不打算恢复他的首席执行官职务。周二公布的季度业绩和指引都超出市场预期，但那已经是前一天的消息。\n\n股价方面，CNBC 另一篇报道写英伟达周三再跌 2.89%，过去一周累计下跌超过 13%。这里只写报道给出的跌幅，不写具体收盘价。\n\n国会方面的安排也在推进，但都还没有发生。参议院银行委员会主席 Tim Scott 周三对 CNBC 说，黄仁勋和商务部长 Lutnick 已同意 12 月出席该委员会；黄仁勋还与三个众议院委员会达成安排，将于 12 月 1 日接受闭门问询。众议院能源与商务委员会周三致函，要求 Lutnick 出席讨论芯片出口管制，并要求临时首席执行官 Kress 在 12 月 2 日前做简报。这些都是日程和邀约，不能写成已经作证或已经有了结论。",
+              "featured": false,
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-19",
+              "region": "global",
+              "links": [
+                {
+                  "title": "英伟达临时 CEO 首次全员会",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/029/134.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Nvidia interim CEO Kress addresses staff after Huang exit",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/18/nvidia-interim-ceo-kress-addresses-staff-after-jensen-huang-exit-.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Nvidia stock falls again after earnings",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "google-gemini-4-neon",
+              "title": "谷歌发 Gemini 4 Neon，主打编程和知识工作",
+              "excerpt": "谷歌11月18日发布 Gemini 4 Neon，称在复杂软件工程、知识工作和科学工作流上兼顾前沿能力与较快的端到端任务完成。定价为每百万输入 token 3 美元、每百万输出 token 15 美元，缓存输入 0.15 美元，上下文窗口 100 万 token。\n\n即日起在 Gemini API、企业版 Gemini、Antigravity 和 Gemini 应用的部分付费订阅档上线。博客列出的评测名次来自谷歌援引的榜单或内部测试，尚待第三方复核。",
+              "bodyZh": "谷歌在 11 月 18 日的官方博客里发布 Gemini 4 Neon，署名作者是 Google DeepMind 高级副总裁兼首席 AI 架构师 Koray Kavukcuoglu。博客给它的定位是：在复杂软件工程、知识工作和科学工作流上，把前沿智能和较快的端到端任务完成结合起来。价格方面，每百万输入 token 3 美元，缓存输入每百万 token 0.15 美元，谷歌称相当于 95% 的折扣；每百万输出 token 15 美元。上下文窗口为 100 万 token。\n\n上线范围是即日起在 Google AI Studio 的 Gemini API、面向企业的 Gemini（API 和模型下拉菜单）、付费的 Google AI Pro 和 Ultra 订阅用户在 Google Antigravity 中，以及 Gemini 应用里的 Pro 和 Ultra 订阅用户。思考档位方面，博客明确提到默认是 high，另有 xhigh 等级；具体档位名称以博客为准。\n\n评测部分需要看清口径。谷歌称，在 Artificial Analysis Intelligence Index 的 xhigh 档得到 61 分，总体排第 3；Vals Index 排第 2，为 70.9%；Agent Arena Index 的可引导性排第 2；Artificial Analysis Coding Agent Index 总体第 1，为 58.6；Terminal-Bench 4.1 为 65.2%；FrontierCode 2.0 在默认 high 档为 46.2%。谷歌还说，默认 high 档在相关测试中的单任务成本比 Carbon 低 32%，并在 Legal Research Bench 和 Tax Agent Bench 上排第 1，Zapier AutomationBench 为 56.3%、排第 1，Andon Labs Vending-Bench 2 的成绩是 16,843 美元。这些都是谷歌援引评测机构结果或自家测试的说法，博客没有给出逐项分数的完整表格，也没有说明第三方是否独立复现；因此这里只当公司口径看，不当成已经验证的排名。\n\n博客没有写地区限制，也没有给出与具体竞品的正面对比结论。价格和上下文窗口是这次发布里最具体的两项参数，其余规格以谷歌的开发者文档为准。上线首日的实际表现、以及不同档位在真实任务里的成本，还需要使用者自己验证。",
+              "featured": false,
+              "type": "文章",
+              "source": "Google Blog",
+              "date": "11-19",
+              "region": "global",
+              "links": [
+                {
+                  "title": "谷歌发布 Gemini 4 Neon",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/029/144.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Introducing Gemini 4 Neon",
+                  "site": "Google Blog",
+                  "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "markets",
+          "heading": "财经与市场",
+          "stories": [
+            {
+              "id": "a-share-close-nov-18",
+              "title": "A 股周三收涨，创业板指涨 0.85%",
+              "excerpt": "11月18日收盘，上证指数涨 0.09%，报 3587.83 点，成交额 6502.32 亿元；深证成指涨 0.20%，报 10659.41 点，成交额 7194.71 亿元；创业板指涨 0.85%，报 2311.62 点，成交额 3368.31 亿元。\n\n通信服务、元件、港口航运等板块涨幅居前；影视院线、贵金属、游戏等板块跌幅居前。",
+              "featured": false,
+              "type": "快讯",
+              "source": "中国经济网",
+              "date": "11-19",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "A 股三大指数收涨，沪指涨 0.09%",
+                  "site": "中国经济网",
+                  "href": "http://finance.ce.cn/stock/gsgdbd/202611/t20261118_3298459.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Chinese shares close higher Wednesday",
+                  "site": "Xinhua",
+                  "href": "https://english.news.cn/20261118/d64bc157665b4731a4e67b26b21b08e7/c.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "csrc-denies-fund-ai-exposure-report",
+              "title": "证监会：基金上报 AI 敞口传闻不实",
+              "excerpt": "针对近日互联网上传播的“监管要求基金公司上报全部产品 AI 敞口”的信息，中国证监会新闻发言人11月18日表示，该信息不属实。\n\n发言人说，公募基金投资运作依照证券投资基金法等法律法规和基金合同约定进行，投资标的、投资比例由基金管理人按照基金合同和内部投资决策程序自主确定；证监会依法履行监管职责，未向基金管理人提出相关数据报送要求。",
+              "featured": false,
+              "type": "快讯",
+              "source": "新华社",
+              "date": "11-19",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "证监会新闻发言人就网传信息答记者问",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261118/d8c65a4ad4254991a8e2de983e80f528/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "证监会：相关传闻不属实",
+                  "site": "中国经济网",
+                  "href": "http://www.ce.cn/xwzx/gnsz/gdxw/202611/t20261118_3298347.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "pboc-canada-financial-working-group",
+              "title": "中加签署金融工作组工作规范",
+              "excerpt": "中国人民银行与加拿大财政部、加拿大央行近期共同签署《中加金融工作组工作规范》，明确了双方参与部门、合作领域与交流方式，将推动工作组制度化、常态化运作。\n\n双方同意就测试并讨论使用近期续签的双边本币互换协议、探索扩大贸易投资中的本币使用等加强合作。加方对中方有意在加拿大市场发行人民币绿色主权债券表示欢迎和支持。",
+              "featured": false,
+              "type": "文章",
+              "source": "新华社",
+              "date": "11-19",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "央行：与加拿大财政部、央行签署金融工作组工作规范",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261118/7ae75e479e2245ac9ab8e1ac4aaf3c5e/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "us-stocks-close-nov-18",
+              "title": "美股周三涨跌互现，道指跌 1.1%",
+              "excerpt": "标普500指数跌 0.2%，报 7323.63 点；道琼斯工业平均指数跌 1.1%，报 50198.17 点；纳斯达克综合指数涨 0.4%，报 24429.88 点；罗素2000涨 0.5%，报 2714.31 点。\n\n美联社写，标普500已是连续第 5 个交易日下跌，为 6 月以来最长；英伟达盘初因好于预期的季度利润跳涨，随后抹去涨幅转跌，油价下跌后国债收益率有所回落。",
+              "bodyZh": "美联社 11 月 18 日的收盘综述显示，周三美股三大指数涨跌互现。标普 500 指数跌 16.90 点，跌幅 0.2%，报 7323.63 点；道琼斯工业平均指数跌 561.25 点，跌幅 1.1%，报 50198.17 点；纳斯达克综合指数涨 101.50 点，涨幅 0.4%，报 24429.88 点；罗素 2000 指数涨 12.44 点，涨幅 0.5%，报 2714.31 点。涨跌幅按美联社稿件四舍五入的表述，不另外换算更精确的百分比。\n\n把时间拉长看，美联社给出的当周迄今数字是：标普 500 跌 238.04 点，跌幅 3.1%；道指跌 2149.38 点，跌幅 4.1%；纳指跌 706.39 点，跌幅 2.8%；罗素 2000 跌 76.18 点，跌幅 2.7%。年内至今则是：标普 500 涨 478.13 点，涨幅 7%；道指涨 2134.88 点，涨幅 4.4%；纳指涨 1187.89 点，涨幅 5.1%；罗素 2000 涨 232.40 点，涨幅 9.4%。这组数字说明，尽管最近几个交易日回吐明显，主要指数今年仍是上涨的。\n\n美联社把当天的波动归因于市场对 AI 热潮还能持续多强的不确定：华尔街在涨跌之间来回切换，英伟达和其他 AI 相关股票波动较大，标普 500 最终收跌，这是它连续第 5 个交易日下跌，也是 6 月以来最长的一轮连跌。报道说，英伟达盘初因为好于预期的季度利润跳涨，随后很快抹去涨幅转为下跌；油价下跌之后，国债收益率有所回落。\n\nCNBC 的补充报道称，英伟达周三收跌 2.89%，过去一周跌幅超过 13%。这是 CNBC 的口径，与美联社的指数数据分开看。财报的具体数字前一天已经写过，这里不再重复。\n\n同一天里，道指的跌幅明显大于纳指：道指单日下跌 561.25 点，纳指仍小幅收涨 101.50 点。美联社的稿件只给出指数层面的数据，没有逐一解释个股表现，提到的驱动因素就是 AI 交易的不确定，以及油价和国债收益率的变化。上面的当周和年内变动，都是以对应基准日收盘计算的累计数字，接下来的交易日还会继续改变它们。",
+              "featured": false,
+              "type": "文章",
+              "source": "AP/CNBC",
+              "date": "11-19",
+              "region": "global",
+              "links": [
+                {
+                  "title": "How major U.S. stock indexes fared Wednesday",
+                  "site": "AP",
+                  "href": "https://wtop.com/national/2026/11/how-major-us-stock-indexes-fared-wednesday-11-18-2026/",
+                  "lang": "en"
+                },
+                {
+                  "title": "Wall Street stocks close mixed as AI trade wobbles",
+                  "site": "AP",
+                  "href": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-990749d3d269f7ef05b9f6c089713a58",
+                  "lang": "en"
+                },
+                {
+                  "title": "Nvidia stock falls after earnings",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "fed-minutes-october-2026",
+              "title": "美联储纪要：多数委员认为还可能加息",
+              "excerpt": "美联储11月18日公布10月27日至28日会议纪要。委员会以 10 比 2 维持联邦基金利率目标区间 3.75% 至 4%，两位反对者希望在本次会议上就加息 25 个基点。\n\n纪要写，几乎所有与会者判断，按其基准预测，进一步上调目标区间很可能是合适的。少数与会者提到，若通胀数据不利，下次会议可考虑超过 25 个基点的加息。下次会议在12月8日至9日。",
+              "bodyZh": "美联储在 11 月 18 日公布了 10 月 27 日至 28 日联邦公开市场委员会会议的纪要。那次会议以 10 比 2 决定维持联邦基金利率目标区间在 3.75% 至 4%。投赞成票的是 Kevin Warsh、John C. Williams、Michael S. Barr、Michelle W. Bowman、Philip N. Jefferson、Neel Kashkari、Lorie K. Logan、Anna Paulson、Jerome H. Powell 和 Christopher J. Waller；投反对票的是 Lisa D. Cook 和 Beth M. Hammack，她们希望在这次会议上就把目标区间上调 25 个基点。下次会议定在 12 月 8 日至 9 日。\n\n关于后续政策，纪要的表述是：几乎所有与会者判断，按照他们对通胀和劳动力市场的基准预测，进一步上调联邦基金利率目标区间——大体与 9 月的经济预测摘要一致——很可能是合适的，以确保通胀及时回到 2% 的目标。还有少数与会者提到，如果接下来的通胀数据不利，下次会议可以考虑超过 25 个基点的加息幅度。这是纪要里的讨论，不是已经做出的决定。\n\n纪要中关于人工智能与金融稳定的段落也值得注意。工作人员提到，与 AI 扩张相关的债务增长很快；AI 相关企业之间的表外租赁承诺和“循环融资”安排，如果 AI 投资回报令人失望，可能会放大损失。多数与会者注意到 AI 相关债务增长迅速，而且很大一部分通过复杂、不透明的融资结构完成；少数与会者说，AI 相关风险敞口正越来越集中在少数公司身上；许多与会者把 AI 相关建设视为通胀风险的一个重要来源。这些是对风险的讨论，不应写成金融危机已经发生。\n\n另外，CNBC 在 11 月 18 日采访了美联储理事 Waller。他重申，他认为委员会应当考虑在 12 月加息 50 个基点。需要说明的是，这是他在会议之后的采访表态，与纪要内容要分开看；而且在 10 月那次会议上，他是投票赞成维持利率的委员之一，并不是反对者。",
+              "featured": false,
+              "type": "文章",
+              "source": "Federal Reserve/CNBC",
+              "date": "11-19",
+              "region": "global",
+              "links": [
+                {
+                  "title": "FOMC minutes, October 27-28, 2026",
+                  "site": "Federal Reserve",
+                  "href": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm",
+                  "lang": "en"
+                },
+                {
+                  "title": "Fed minutes show most officials see more hikes ahead",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "palo-alto-applied-compute-deal",
+              "title": "Palo Alto 45 亿美元收购 Applied Compute",
+              "excerpt": "Palo Alto Networks 宣布以 45 亿美元全股票交易收购 AI 初创公司 Applied Compute。CEO Nikesh Arora 说，随着企业采用开源权重模型增多，这笔交易能帮助它们做好安全，并称这是公司在网络安全之外的一项重大投入。\n\n同日公布的 2027 财年第一季度业绩高于 LSEG 预期：调整后每股收益 1.05 美元，营收 34.4 亿美元。公司上调全年指引，CNBC 称消息后股价上涨超过 7%。",
+              "bodyZh": "Palo Alto Networks 在 11 月 18 日公布 2027 财年第一季度业绩，并宣布一笔收购。先看财报：调整后每股收益 1.05 美元，高于 LSEG 分析师预期的 97 美分；营收 34.4 亿美元，高于预期的 33.1 亿美元，比去年同期的 24.7 亿美元增长 39%。按 GAAP 口径，净利润 4.82 亿美元，合每股 57 美分，去年同期是 3.34 亿美元、每股 47 美分。下一代安全业务的年度经常性收入同比增长 66%，达到 97.3 亿美元。首席执行官 Nikesh Arora 称，这是公司历史上超出预期幅度最大的季度之一——这是他的说法。\n\n公司同时上调 2027 财年指引：调整后每股收益 4.26 至 4.30 美元，营收 145.2 亿至 145.7 亿美元。CNBC 写，分析师此前预期每股 4.18 美元、营收 141.6 亿美元。指引高于预期，是当天股价反应的主要背景之一。\n\n交易方面，公司达成一笔 45 亿美元的全股票交易，收购 AI 初创公司 Applied Compute。Arora 说，随着企业采用开源权重模型的情况增多，这笔交易能帮助它们做好安全；他还说，这家初创公司帮助企业运行和定制自己的 AI 模型，是 Palo Alto 在网络安全之外的一项重大投入。他在财报电话会上说：“If it works, I think this will dwarf the ability that we have in cybersecurity.” 以及 “This could be bigger than what we do.” 这两句是展望，不是已经实现的业绩。\n\nCNBC 写，消息公布后公司股价上涨超过 7%。这里只写报道给出的涨幅，不写具体收盘价，也不把 45 亿美元交易写成已经完成交割——交易仍需满足惯常条件。\n\n财报和收购在同一天公布，CNBC 的报道把股价反应放在这两件事之后；至于业绩和交易各自贡献了多少，报道没有拆分，这里也不做推断。对比时要注意口径：1.05 美元和 4.26 至 4.30 美元都是调整后每股收益，4.82 亿美元和每股 57 美分则是 GAAP 口径，两者不能混着算。",
+              "featured": false,
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-19",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Palo Alto Networks to buy Applied Compute for $4.5 billion",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/18/palo-alto-networks-panw-q1-2027-earnings-.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "general",
+          "heading": "综合热点",
+          "stories": [
+            {
+              "id": "xi-welcomes-trump-shenzhen",
+              "title": "习近平宝安机场迎接特朗普",
+              "excerpt": "11月18日下午，国家主席习近平在深圳宝安国际机场迎接来华出席亚太经合组织领导人非正式会议的美国总统特朗普。迎宾曲中两人亲切握手，三军仪仗队行举枪礼，少年儿童向特朗普献花，军乐团奏两国国歌，战机飞越致敬。\n\n习近平说，中国是礼仪之邦，有礼尚往来的传统，期待同特朗普就中美关系、亚太合作和世界格局的重大问题深入交换意见。特朗普感谢习近平主席亲赴机场迎接和中方的特殊安排。",
+              "featured": true,
+              "type": "文章",
+              "source": "新华社",
+              "date": "11-19",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "习近平在深圳宝安机场迎接美国总统特朗普",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/politics/leaders/20261118/93c2a37d68014d6684d28da11fa90e99/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "习近平在深圳宝安机场迎接美国总统特朗普",
+                  "site": "中国政府网",
+                  "href": "https://www.gov.cn/yaowen/liebiao/202611/content_7086538.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "习近平在深圳宝安机场迎接美国总统特朗普",
+                  "site": "央视新闻",
+                  "href": "https://news.cctv.cn/2026/11/18/ARTIuTo390G7bDXF04g9PRGw261118.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "xi-meets-putin-shenzhen",
+              "title": "习近平在深圳会见普京",
+              "excerpt": "11月18日，习近平在深圳会见来华出席亚太经合组织领导人非正式会议的俄罗斯总统普京。习近平说，今年是中俄战略协作伙伴关系建立30周年，也是《中俄睦邻友好合作条约》签署25周年。\n\n普京说，今年以来同习近平已举行 4 次卓有成效的会晤，双边贸易额再上新高，双方在贸易、能源、教育等领域合作取得进展，免签政策促进了人员往来。",
+              "featured": false,
+              "type": "文章",
+              "source": "新华社",
+              "date": "11-19",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "习近平在深圳会见俄罗斯总统普京",
+                  "site": "新华网",
+                  "href": "http://www.news.cn/politics/leaders/20261118/6224f18184d04b3f8867a5c134b06702/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "习近平在深圳会见俄罗斯总统普京",
+                  "site": "中国政府网",
+                  "href": "https://www.gov.cn/yaowen/liebiao/202611/content_7086507.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "xi-meets-lee-jae-myung-fta",
+              "title": "中韩自贸协定第二阶段谈判实质性完成",
+              "excerpt": "11月18日上午，习近平在深圳会见韩国总统李在明，提到中韩实质性完成自贸协定第二阶段谈判。商务部负责人说，谈判历经 8 年多，对投资、服务贸易、金融服务和经济合作等章节作了升级，并采用负面清单模式作出开放承诺。\n\n下一步还要梳理确认最终文本、完成翻译和法律审核，才谈正式签署。李在明表示，韩方坚持一个中国的政策没有也不会改变。",
+              "featured": false,
+              "type": "文章",
+              "source": "新华社/商务部",
+              "date": "11-19",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "习近平会见韩国总统李在明",
+                  "site": "新华网",
+                  "href": "http://www.news.cn/politics/leaders/20261118/434474b9b54b48efac6b1ac240075daf/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "商务部国际司负责人谈中韩自贸协定第二阶段谈判",
+                  "site": "新华网",
+                  "href": "https://www2.xinhuanet.com/20261119/d57794b84b5d454a94ca1abba667a17d/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "israel-gaza-yellow-line-incursion",
+              "title": "以军越过“黄线”进入加沙中部",
+              "excerpt": "以色列地面部队在加沙地带中部、其控制范围以外展开一次少见行动，并向努塞拉特、布雷杰难民营以北居民发出撤离警告。以军称目标是拆除“黄线”以西一条“恐怖隧道”，并称部队部署符合停火协议。\n\n哈马斯称这是对 2025年10月停火协议的“公然违反”。加沙卫生部门称停火以来至少 1658 人死亡，以军称同期 6 名士兵死亡，均为各方口径。",
+              "bodyZh": "BBC 在 11 月 18 日至 19 日报道，以色列地面部队在加沙地带中部、其控制范围以外展开了一次少见的行动，并向当地居民发出撤离命令。目击者说，坦克在努塞拉特难民营以东推进，并在炮火掩护下开上南北向主干道。以军称这是一次“有针对性的”行动，目标是拆除“黄线”以西的一条“恐怖隧道”。报道说，黄线标志着加沙 60% 以上被以色列占领的领土。\n\n当天午后，以色列军方机构 Cogat 的阿拉伯语发言人宣布部队开始进入，并警告努塞拉特和布雷杰难民营以北地区的巴勒斯坦人远离；还说该地区一段萨拉赫丁公路将对交通关闭。随后以色列国防军说，已与国内安全机构辛贝特开始联合行动，以拆除黄线以西一条对以军构成“直接和立即威胁”的恐怖隧道，并称部队部署符合停火协议，将继续消除直接威胁。控制加沙其余地区的哈马斯则发表声明，称以军车辆越过黄线、疏散居民是“危险事态发展”，是对 2025 年 10 月停火协议的“公然违反”。双方说法明显不同，这里分别列出，不代表已有国际裁定。\n\nBBC Verify 核实的一段视频显示，一名男子在萨拉赫丁公路上、黄线以西约 1.5 公里处听到炮火后奔跑。努塞拉特的居民对 BBC 描述情况极其严峻，说来不及带走行李；第二名居民说有“大量伤亡，包括死亡”。被问及死亡报道时，以军向 BBC 发了一份关于此次行动的一般性声明。加沙哈马斯运营的民防机构称，周三在三起以色列无人机袭击中有 3 人死亡、另有人受伤，地点分别在努塞拉特、加沙城以北和中部的代尔拜拉赫；以军对 BBC 说，其“打击了数名军事人员”。\n\n停火以来的累计伤亡是各方统计：加沙卫生部门（哈马斯运营，BBC 称联合国认为其数字可靠）称，停火以来至少 1658 人在以方袭击中死亡；以军称同期有 6 名士兵死亡。联合国称仍有超过 190 万人、约 90% 的人口流离失所，其中 140 万人住在帐篷或临时住所。",
+              "featured": false,
+              "type": "文章",
+              "source": "BBC",
+              "date": "11-19",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Israeli forces move beyond Yellow Line in central Gaza",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/cw8r7510degno",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "jeffries-democratic-speaker-nominee",
+              "title": "杰弗里赢得民主党议长提名",
+              "excerpt": "众议院少数党领袖、纽约州民主党人 Hakeem Jeffries 赢得党内提名，成为下一任众议院议长的民主党人选。他仍须在 1 月新一届国会召开时经正式选举才能就职。\n\nCNBC 援引一名要求匿名的知情人士称，民主党人以 251 比 11 投票提名他。报道说，如果他在 1 月当选，将成为美国历史上第一位黑人众议院议长。",
+              "bodyZh": "CNBC 在 11 月 18 日报道，众议院少数党领袖、纽约州民主党人 Hakeem Jeffries 赢得了党内提名，将成为下一任众议院议长的民主党人选。需要注意的是，这只是党内提名；他还必须在 1 月新一届国会召开时经众议院正式选举，才能就任议长。报道没有写他已经当选。\n\nCNBC 援引一名知情人士的说法：由于会议不公开，这名人士要求匿名。据其转述，民主党人以 251 比 11 的投票结果提名 Jeffries。报道据此认为，他通往议长席位的道路比较顺畅。这个票数是消息源转述，不是官方公布的唱票记录。\n\n报道还写，如果他在 1 月正式选举中当选，将成为美国历史上第一位黑人众议院议长。这是媒体在描述一种可能的结果，应当带着“如果当选”的前提来读，不能写成已经就任。\n\n从背景看，这次提名发生在中期选举之后、民主党即将掌控众议院的形势下。报道的标题和导语都指向下一届国会，但没有给出具体议席数字，这里也不补。关于他上任后的政策清单、班子安排和与其他党团的交易，这篇报道没有提供细节，因此不写。\n\n这篇报道也没有给出提名的更多程序细节，例如出席人数、是否还有其他候选人，以及他准备在 1 月院会表决前做哪些安排。按照美国国会惯例，议长由众议院全体议员投票产生，党内提名只是第一步。接下来值得关注的时间点是 1 月新一届国会开幕后的正式选举，以及在此之前党内是否还有变数。",
+              "featured": false,
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-19",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Jeffries wins Democratic nomination for House speaker",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/18/jeffries-house-speaker-congress.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Jeffries nominated by Democrats for speaker",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/cmy49873dn95o",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "trump-putin-xi-trilateral-thursday",
+              "title": "特朗普与普京握手，三方会晤排在周四",
+              "excerpt": "特朗普与普京11月18日在深圳见面并握手寒暄，是一年多来两人首次当面见面。克里姆林宫发言人佩斯科夫说，两人尚未举行实质性会晤，周三只是互致问候。\n\n佩斯科夫说，周四普京、特朗普与习近平的三方会谈“不超过一小时”。截稿时会晤尚未举行，完整议程也没有公布，报道提到的一对一会谈和可能议题都还是安排或猜测。",
+              "bodyZh": "BBC 在 11 月 19 日凌晨的报道里写，特朗普与普京 11 月 18 日在深圳见了面，这是两人一年多来第一次当面见面。特朗普抵达深圳时由习近平在机场迎接，随后在招待会前与普京握手寒暄。报道把这次握手放在三方峰会的前夜来看，但强调它本身只是问候，不是谈判。\n\n克里姆林宫发言人佩斯科夫说，普京和特朗普还没有举行实质性会晤，周三只是互致问候；他还说，周四普京、特朗普与习近平的三方会谈“不超过一小时”。BBC 写，这将是三人第一次当面举行三方会晤。报道还说，特朗普与普京预计周四在峰会间隙举行一对一会谈，乌克兰战争可能被讨论。完整议程尚未公布。\n\n关于可能谈什么，报道提到外界有各种猜测，涉及乌克兰和伊朗冲突、核扩散、贸易紧张和人工智能等。这些是“各种暗示和猜测”，不是已经公布的议程，不能当成确定内容。乌克兰总统泽连斯基对在基辅或欧洲代表缺席的情况下讨论结束战争的方案表示担忧。中方更笼统地谈到需要讨论“维护世界和平、促进战略稳定”；BBC 写，尚不清楚中方是否希望乌克兰问题出现在深圳的议程上。\n\n这次握手也是 2025 年 8 月阿拉斯加会谈以来两人首次当面见面，那次会谈未能在乌克兰问题上取得突破。报道认为，习近平在机场迎接的安排，对应的是特朗普 9 月在华盛顿迎接习近平。截稿时，19 日的会晤还没有举行，也没有任何协议或联合声明；后续以各方通报为准。",
+              "featured": false,
+              "type": "文章",
+              "source": "BBC/新华社",
+              "date": "11-19",
+              "region": "global",
+              "links": [
+                {
+                  "title": "习近平在深圳宝安机场迎接美国总统特朗普",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/politics/leaders/20261118/93c2a37d68014d6684d28da11fa90e99/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "习近平在深圳会见俄罗斯总统普京",
+                  "site": "新华网",
+                  "href": "http://www.news.cn/politics/leaders/20261118/6224f18184d04b3f8867a5c134b06702/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Trump and Putin shake hands ahead of trilateral talks",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/ck9d75x5wwwwo",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-18",
       "label": "11月18日 · 周三",
       "categories": [
