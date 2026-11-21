@@ -11,6 +11,477 @@
   },
   "digests": [
     {
+      "id": "2026-11-21",
+      "label": "11月21日 · 周六",
+      "categories": [
+        {
+          "id": "tech",
+          "heading": "科技与 AI",
+          "stories": [
+            {
+              "id": "deepseek-round2-financing",
+              "title": "DeepSeek 又融一轮，梁文锋仍握控制权",
+              "excerpt": "工商信息显示，杭州深度求索近日完成股东和注册资本变更，新增杭州程砚企业管理咨询合伙企业为股东，注册资本由 1644.7496 万元增至 1991.8707 万元。\n\n证券时报援引知情交易人士称，本轮募资规模在 1000 亿至 1055 亿元之间，投后估值约 6155 亿元；梁文锋直接及间接持股合计约 67.42%，控制权仍在创始人一侧。融资与持股数字均非公司公告。",
+              "featured": false,
+              "type": "文章",
+              "source": "IT之家/证券时报",
+              "date": "11-21",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "DeepSeek 新一轮千亿级融资落地，梁文锋保留绝对控制权",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/030/199.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "界面新闻相关报道",
+                  "site": "界面新闻",
+                  "href": "https://www.jiemian.com/article/15352239.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "每经网相关报道",
+                  "site": "每经网",
+                  "href": "https://www.nbd.com.cn/articles/2026-11-20/4653521.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "财新相关报道",
+                  "site": "财新",
+                  "href": "https://companies.caixin.com/m/2026-11-19/102506636.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "huawei-osta-o1-pro-launch",
+              "title": "华为星芒首款手机 O1 Pro 发布，5499 元起",
+              "excerpt": "华为全新子品牌星芒（OSTA）在 11 月 20 日的鸿蒙智行享界 V8 及星芒品牌发布会上发布首款手机 O1 Pro，12GB+256GB 售价 5699 元，首发价 5499 元。\n\n新机搭载麒麟 9030S、7000mAh 电池和 6.39 英寸 1.5K 直屏，首发 HarmonyOS 7 AI 先锋版。华为称这是“首款为 AI 而生的鸿蒙手机”，属于发布会口径。",
+              "featured": false,
+              "type": "文章",
+              "source": "IT之家/第一财经",
+              "date": "11-21",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "5499 元起，华为星芒 OSTA O1 Pro 正式发布",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/030/120.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "第一财经相关报道",
+                  "site": "第一财经",
+                  "href": "https://www.yicai.com/news/103448313.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "星芒 O1 Pro 产品页",
+                  "site": "华为官网",
+                  "href": "https://consumer.huawei.com/cn/osta/phones/o1-pro/",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "leapmotor-opel-c-suv",
+              "title": "零跑与欧宝合作开发 C 级 SUV，2028 年开售",
+              "excerpt": "零跑科技与欧宝签署合作协议，将共同开发一款全新 C 级 SUV，计划 2028 年开售，生产放在西班牙萨拉戈萨工厂。\n\n双方项目团队已分别在杭州和德国吕塞尔斯海姆的联合项目中心工作。官方称，这是零跑与 Stellantis 合作的重要组成部分，也是 Stellantis FaSTLane 2030 战略中的一项举措。",
+              "featured": false,
+              "type": "文章",
+              "source": "IT之家",
+              "date": "11-21",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "零跑与欧宝签署合作协议，共同开发全新 C 级 SUV",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/030/234.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "anthropic-stock-drop-nov-20",
+              "title": "Anthropic 首个完整交易日跌 8.5%",
+              "excerpt": "Anthropic 11 月 20 日收跌 8.5%，这是公司上市后的第一个完整交易日。CNBC 标题写作“跌近 9%”，正文数字为 8.5%。\n\n同日英伟达、AMD 均跌逾 13%，亚马逊、谷歌、微软也收跌。美国财长贝森特对 CNBC 称，Anthropic 是“only in America story”，并称公司在向政府预测试模型方面“非常配合”。",
+              "bodyZh": "Anthropic 的股票在 11 月 20 日度过上市后的第一个完整交易日，当天收跌 8.5%。CNBC 的标题写作“跌近 9%”，正文给出的收盘跌幅是 8.5%。前一天的开盘价约 111.50 美元、收盘价 97.17 美元，都是 11 月 19 日的数字，不能拿来当作周五的收盘价。CNBC 还写到，公司这次 IPO 募资 813 亿美元。市面上流传的其他募资和市值口径互相打架，这里不采用。\n\n这一天整个科技板块都在挨打。据 CNBC，英伟达和 AMD 同日都跌逾 13%，亚马逊、谷歌、微软也收跌。新股没有走出独立行情，说明资金对高估值 AI 资产的态度仍在收缩，而不是只针对某一家公司。\n\n美国财长贝森特当天对 CNBC 说，Anthropic 是一个“only in America story”，并称公司在向特朗普政府预测试模型方面“非常配合”。这是财长本人的评价，不是监管结论。CNBC 还引述不愿具名的消息源说，一位联合创始人将向 Trump Accounts 大额捐赠，并称此人是首席算力官 Tom Brown；捐赠细节尚未公开，不能写成已经完成的官宣。\n\n卖方观点也分成两派。Seaport Research 给出中性评级，理由是当前估值需要“incredible leap of faith”；William Blair 给出跑赢大盘评级。两家都是分析师判断，读者不必当成定价事实。\n\n对普通读者来说，首日之后的回撤更多反映市场情绪和估值消化，而不是公司基本面在这两天发生了突变。接下来值得盯的是首份财报、算力采购合同，以及监管方面的新进展。",
+              "featured": false,
+              "type": "文章",
+              "source": "CNBC/IT之家",
+              "date": "11-21",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Anthropic 上市次日股价大跌",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/030/246.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Anthropic falls nearly 9% in first full day of trading as tech stocks get shellacked",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/20/anthropic-stock-ai-amd-nvidia.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "trump-overseas-data-center-tax",
+              "title": "特朗普称要拦美国公司去海外建数据中心",
+              "excerpt": "特朗普 11 月 20 日在白宫记者会上说，将不允许美国公司在其他国家建设数据中心，若坚持在海外建，将面临“tremendous tax”。\n\n这是总统的口头表态，目前没有立法或税则文本。他当场还说，自己尚未先对幕僚通气。CNBC 指出，多家美国科技巨头已在海外建有数据中心。",
+              "bodyZh": "特朗普 11 月 20 日在白宫记者会上说，美国公司将被禁止在其他国家建设数据中心；如果仍然要在海外建，就要面对“tremendous tax”。这段话来自 CNBC 的现场报道，属于总统的口头表态，目前没有对应的立法、行政令或税则文本，不能写成政策已经生效。\n\n报道里还有一个细节：特朗普当场说，他还没有跟自己的人说过这件事，但现在就告诉他们。也就是说，这个说法是他临时抛出的，连幕僚都还没有事先通气。具体税率、适用对象、生效时间，报道都没有给出，这里也不替它补。\n\nCNBC 提醒，Alphabet、亚马逊、微软、Meta、甲骨文等美国公司已经在其他国家建有数据中心。上述公司代表没有立即回应置评请求。若真要执行，涉及已建成项目和在建项目的处理，难度不小。\n\n同一场记者会上，特朗普还引用民调说，64% 的登记选民反对在自家 10 英里内建设 AI 数据中心，13% 表示支持。这是 All-America Economic Survey 的调查结果，不是投票或公投。\n\n他还说，习近平祝贺美国在人工智能上“做得好”，并用了特朗普偏好的“super intelligence”一词。这是特朗普的转述，中方没有发布对应的官方表述，读者不宜当作双边共识。\n\n把这条放在当天的市场背景里看：英伟达等芯片股大跌，AI 基础设施的投资回报正被重新审视。此时抛出“海外建数据中心要交重税”的说法，更像是政治信号，距离可执行的政策还有距离。",
+              "featured": false,
+              "type": "文章",
+              "source": "CNBC/BBC",
+              "date": "11-21",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Trump threatens tax on US firms building data centres abroad",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "gta6-day-one-sales",
+              "title": "《GTA 6》首日卖出约 38 亿美元",
+              "excerpt": "Take-Two 宣布，《GTA 6》上市首日销售收入约 38 亿美元。BBC 写 38 亿美元并称这是史上最大娱乐作品发行，IT之家转述公司口径为 37.9 亿美元。\n\n这是公司公布的首日收入，不是经审计财报，也不等于利润。公告没有披露玩家人数或分区销量。",
+              "bodyZh": "Take-Two 在 11 月 20 日宣布，《GTA 6》上市首日的销售收入约为 38 亿美元。BBC 的标题写的是 38 亿美元，并称这是史上最大的娱乐作品发行；IT之家转述公司口径写的是 37.9 亿美元。两个数字来自不同表述，这里分别标明，不替公司做四舍五入，也不补玩家人数、分区销量或利润，因为这些都没有随公告披露。\n\n需要强调的是，这是公司自己公布的首日销售收入，不是经审计的财报数字，也不等于利润。不同公司对“首日收入”的统计口径并不完全一致，跨作品比较时要留意这一点。\n\nBBC 把这一成绩称为史上最大的娱乐作品发行。IT之家则把它和《复仇者联盟 4》的总票房作对比，说首日收入已远超后者。这类横向比较容易吸引眼球，但电影票房和游戏流水的统计方式并不相同，读者可以把它当作量级参考，而不是严格的可比数据。\n\n对 Take-Two 来说，真正的考验在后面：游戏能否留住玩家、后续内容和线上模式能否持续带来收入，都要看未来几个季度的财报。首日数字证明的是需求端的热度，还证明不了长期盈利能力。\n\n另外，围绕这款游戏的流媒体、直播和二创经济，已经被媒体拿来做延伸讨论。这些属于后续可能发生的收入，不是今天已经实现的数字，不能混在一起写。",
+              "featured": false,
+              "type": "文章",
+              "source": "BBC/IT之家",
+              "date": "11-21",
+              "region": "global",
+              "links": [
+                {
+                  "title": "《GTA 6》首日收入 37.9 亿美元",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/030/289.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o",
+                  "lang": "en"
+                },
+                {
+                  "title": "GTA VI launch and the streaming content economy",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/20/gta-vi-launch-streaming-content-economy.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "markets",
+          "heading": "财经与市场",
+          "stories": [
+            {
+              "id": "a-share-close-nov-20",
+              "title": "沪指跌 1.23%，创业板指跌 3.54%",
+              "excerpt": "11 月 20 日 A 股收跌。上证指数跌 1.23%，报 3533.79 点；深证成指跌 3.09%，报 10256.39 点；创业板指跌 3.54%，报 2212.13 点；上证 50 涨 0.45%。\n\n沪深京三市成交 1.43 万亿元，较前一交易日放量 1165 亿元，全市场超 5200 只个股下跌。红利股尾盘拉升，半导体链条调整。",
+              "featured": false,
+              "type": "快讯",
+              "source": "新华财经",
+              "date": "11-21",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "收评：沪指跌超 1%，深成指、创业板指跌超 3%",
+                  "site": "新华财经",
+                  "href": "https://www.cnfin.com/gs-lb/detail/20261120/4498149_1.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "pboc-overnight-repo-nov-20",
+              "title": "央行开展 3795 亿元隔夜逆回购",
+              "excerpt": "中国人民银行 11 月 20 日以固定利率、数量招标方式开展 3795 亿元隔夜逆回购操作，全额满足一级交易商需求。\n\n新华财经根据到期量计算，当日有 7675 亿元隔夜逆回购和 3000 亿元 7 天期逆回购到期，公开市场净回笼 6880 亿元；报道并称操作利率为 1.25%。",
+              "featured": false,
+              "type": "快讯",
+              "source": "中新网/新华财经",
+              "date": "11-21",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "11 月 20 日央行开展 3795 亿元隔夜逆回购操作",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/cj/2026/11-20/10735064.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "新华财经货币市场日报",
+                  "site": "新华财经",
+                  "href": "https://www.cnfin.com/yw-lb/detail/20261120/4498436_1.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "每经网相关报道",
+                  "site": "每经网",
+                  "href": "https://www.nbd.com.cn/articles/2026-11-20/4653445.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "mof-hong-kong-usd-sovereign-bond",
+              "title": "财政部在香港发行 20 亿美元主权债券",
+              "excerpt": "财政部 11 月 19 日代表中央政府在香港发行 20 亿美元 3 年期主权债券，发行利率 4.821%。\n\n总认购金额 723 亿美元，为发行金额的 36 倍。投资者中，亚洲、欧洲和中东、美洲分别占 52%、34%、14%。债券将在香港联合交易所上市。",
+              "featured": false,
+              "type": "快讯",
+              "source": "财政部",
+              "date": "11-21",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "财政部在香港成功发行 20 亿美元三年期主权债券",
+                  "site": "财政部",
+                  "href": "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/202611/t20261120_4005035.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "nvidia-seven-week-losing-streak",
+              "title": "英伟达周五跌 14%，七周连跌为 2008 年以来最长",
+              "excerpt": "英伟达 11 月 20 日跌 14%，连续第七个交易日下跌，并连续第七周收跌。CNBC 称这是 2008 年金融危机以来最长的周线连跌。\n\nCNBC 口径：七周累计跌约 46%，市值减少约 2.6 万亿美元，目前市值约 3 万亿美元。路透报道 SEC 正在探查其潜在会计问题，报道强调这是监管探查，不是造假认定。",
+              "bodyZh": "英伟达股价 11 月 20 日下跌 14%，连续第七个交易日走低，也连续第七周收跌。CNBC 说，这是 2008 年金融危机以来最长的一次周线连跌。把七周放在一起算，CNBC 给出的累计跌幅约为 46%，市值减少约 2.6 万亿美元；目前市值约 3 万亿美元，排在苹果、微软、Alphabet 之后，位列第四。上述数字都是 CNBC 这一篇的口径，换一家媒体可能会有出入，这里不另行换算。\n\n估值也随之压了下来。CNBC 写道，英伟达的远期市盈率约为 8.4 倍，AMD 约为 29 倍。这个对比很直观：市场愿意给 AMD 的增长预期付更高的价，而对英伟达的定价明显保守了许多。需要说明的是，市盈率会随股价和盈利预期每天变化，8.4 倍只是报道当日的数字。\n\n消息面上，路透报道美国证券交易委员会正在探查英伟达潜在的会计问题，CNBC 说这让股价进一步承压。这里要分清楚：这是“报道称正在探查”，不是监管机构已认定财务造假，也不是已经作出处罚。调查进展和结论应以公司披露和监管文件为准。\n\n人事方面，黄仁勋已于 11 月 12 日辞去首席执行官职务，这是此前已经确认的事实。新任董事长 Harvey Jones 本周表示，黄仁勋辞职是因为披露了与公司行为准则不符的个人行为。这条也不宜再和婚外情细节混在一起当作今天的新料。\n\n把这一周串起来看，英伟达面对的是估值回调、会计疑问和领导层变动三件事叠加。股价的跌幅很醒目，但真正决定后面走势的，还是下一份财报和监管调查的进展。",
+              "featured": true,
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-21",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/20/nvidias-7-week-losing-streak-is-longest-since-2008-financial-crisis.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "us-stocks-close-nov-20",
+              "title": "美股三大指数收跌，纳指跌 5.28%",
+              "excerpt": "11 月 20 日美股收跌。道指跌 949.73 点，跌幅 1.93%，报 48147.33 点；标普 500 跌 3.70%，报 6910.39 点；纳指跌 5.28%，报 22617.733 点。\n\n11 个主要板块中 10 个收跌，科技板块跌 7.11%，必需消费涨 0.68%。英伟达跌 14%，Anthropic 收跌 8.5%。",
+              "bodyZh": "11 月 20 日美股三大指数全线收跌。新华社英文 11 月 21 日电（中文稿数字一致）给出的收盘数据是：道琼斯工业平均指数跌 949.73 点，跌幅 1.93%，报 48147.33 点；标普 500 指数跌 265.44 点，跌幅 3.70%，报 6910.39 点；纳斯达克综合指数跌 1261.466 点，跌幅 5.28%，报 22617.733 点。三大指数里，科技股集中的纳指跌幅最大。\n\n板块层面，11 个主要行业板块中有 10 个收跌。科技板块跌 7.11%，非必需消费跌 3.50%，必需消费是唯一上涨的板块，涨 0.68%。这种结构说明卖压主要集中在成长股，防御性板块反而获得资金。\n\n个股方面，英伟达跌 14%，是权重股里最显眼的一个；Anthropic 当天收跌 8.5%，是上市后的第一个完整交易日。两只股票的细节分别写在科技和财经条目里，这里不重复展开。\n\n从盘面结构看，跌幅主要集中在权重科技股，其他板块相对抗跌。这种分化说明，当天的抛售更像是针对 AI 交易的一次集中减仓，而不是所有资产一起被无差别卖出。\n\n需要提醒的是，单日大跌之后，媒体上容易出现“纳指抹平今年以来涨幅”之类的说法。这类结论依赖具体的起点和口径，本稿没有核对到对应数据源，就不写进正文。\n\n对普通投资者来说，这一天更像是一次集中降风险：AI 相关资产被卖出，资金转向消费必需品等防守方向。后续要看的是这轮调整是持续几天，还是演变成更大级别的回撤，以及政策面会不会出现新的变量。",
+              "featured": false,
+              "type": "文章",
+              "source": "新华社/CNBC",
+              "date": "11-21",
+              "region": "global",
+              "links": [
+                {
+                  "title": "美股三大指数 11 月 20 日收跌",
+                  "site": "新华网",
+                  "href": "http://www.news.cn/20261121/24b3c54236d74859a6628022b9044653/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "U.S. stocks close lower",
+                  "site": "新华社英文",
+                  "href": "https://english.news.cn/20261121/ceb60b5e161b462a9aa02301c75544ea/c.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "Stock market today: live updates",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "huang-senate-public-testimony",
+              "title": "黄仁勋将到参议院银行委员会公开作证",
+              "excerpt": "美国参议院银行委员会主席 Tim Scott 的办公室表示，黄仁勋将在该委员会公开作证，具体日期尚未宣布。\n\n黄仁勋还已与三个众议院委员会达成协议，于 12 月 1 日接受闭门、有记录的问询。Scott 称希望在圣诞节前听到黄仁勋和商务部长 Lutnick 作证。",
+              "bodyZh": "美国参议院银行委员会主席、南卡罗来纳州共和党参议员 Tim Scott 的办公室表示，英伟达首席执行官黄仁勋将在该委员会公开作证。CNBC 在 11 月 20 日报道了这一安排。公开作证的具体日期尚未宣布，Scott 最初曾要求黄仁勋 12 月 3 日出席。\n\n本周早些时候，Scott 已经确认黄仁勋同意出席，但当时没有说明是公开作证还是闭门问询。现在形式确定为公开，意味着问答过程会有媒体在场，关注度也会更高。Scott 周三对 CNBC 说，希望在圣诞节前听到黄仁勋和商务部长 Howard Lutnick 的作证。\n\n另一条线是众议院。黄仁勋已经与三个众议院委员会达成协议，于 12 月 1 日接受闭门、有记录的问询。闭门问询和公开听证是两种不同的程序：前者通常涉及更具体的信息，后者更偏向公开表态。\n\n程序上还有时间压力。新一届国会将在 1 月 3 日开议，届时参议员 Elizabeth Warren 预计接任银行委员会主席。换句话说，Scott 安排这场听证的窗口只剩下几周。\n\n需要说明的是，这些都是“将作证”的安排，不是已经出席，也不代表已经宣誓作证。日期没有官宣之前，随时可能调整。至于外界流传的各种指控，目前仍是指控，不能写成已经证实的事实。\n\n对读者来说，这场听证值得关注的地方在于：议员会问什么、黄仁勋如何回应，以及证词会不会牵动英伟达的股价和监管预期。",
+              "featured": false,
+              "type": "文章",
+              "source": "CNBC",
+              "date": "11-21",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Jensen Huang to testify publicly before Senate banking panel, Chairman Scott says",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/20/jensen-huang-nvidia-senate-testimony.html",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "general",
+          "heading": "综合热点",
+          "stories": [
+            {
+              "id": "xi-meets-prabowo-cepa-talks",
+              "title": "习近平会见普拉博沃，中印尼启动 CEPA 谈判",
+              "excerpt": "11 月 20 日，习近平在深圳会见来华出席 APEC 领导人非正式会议的印尼总统普拉博沃，双方宣布启动中国—印尼全面经济伙伴关系协定（CEPA）谈判。\n\n这是启动谈判，不是协定已经签署。同日习近平还在深圳会见了新加坡总理黄循财、马来西亚总理安瓦尔和泰国总理阿努廷。",
+              "featured": false,
+              "type": "文章",
+              "source": "新华社",
+              "date": "11-21",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "习近平会见印度尼西亚总统普拉博沃",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/politics/leaders/20261120/39f7d1ad23f3469f9d9b5003a9cda75b/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "习近平会见新加坡总理黄循财",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261120/d8c405dd7130455e8ca3edd10aca4e2d/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "wang-yi-briefs-apec-shenzhen-outlook",
+              "title": "王毅盘点 APEC 中国年成果",
+              "excerpt": "外交部发布王毅介绍 APEC 第三十三次领导人非正式会议成果。王毅称今年是 APEC“中国年”，中方举办 321 场会议和活动，全年共 75 项主要成果。\n\n他把《亚太经合组织领导人深圳展望》称为最重要成果，并提到贸易部长会《苏州声明》、数字和人工智能部长会《成都声明》等 10 余份专业部长会成果。",
+              "featured": false,
+              "type": "文章",
+              "source": "外交部/新华社",
+              "date": "11-21",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "王毅介绍亚太经合组织第三十三次领导人非正式会议及相关活动成果",
+                  "site": "外交部",
+                  "href": "https://www.fmprc.gov.cn/web/wjdt_674879/gjldrhd_674881/202611/t20261120_12063407.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "新华网相关报道",
+                  "site": "新华网",
+                  "href": "http://www.news.cn/20261120/c30047b57d88444293e23ebac7e29131/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "china-leo-internet-sat-group-30",
+              "title": "长征八号甲发射卫星互联网低轨 30 组卫星",
+              "excerpt": "11 月 20 日 19 时 59 分，我国在海南商业航天发射场使用长征八号甲运载火箭，成功将卫星互联网低轨 30 组卫星发射升空，卫星进入预定轨道。\n\n发射任务获得圆满成功。官方电讯没有披露卫星数量、轨道高度等细节。",
+              "featured": false,
+              "type": "快讯",
+              "source": "新华社",
+              "date": "11-21",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "我国成功发射卫星互联网低轨 30 组卫星",
+                  "site": "新华网",
+                  "href": "http://www.xinhuanet.com/20261120/da600aa6b4e94c90a93b2dd59f9081f3/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "人民网相关报道",
+                  "site": "人民网",
+                  "href": "http://finance.people.com.cn/n1/2026/1120/c1004-40837938.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "中新网相关报道",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/gn/2026/11-20/10735563.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "russia-missile-hits-poland",
+              "title": "一枚俄罗斯导弹落入波兰，图斯克称像蓄意挑衅",
+              "excerpt": "波兰政府称，11 月 20 日一枚俄罗斯 Kh-101 巡航导弹坠入波兰东南部 Nowy Lipowiec 附近，另有两件物体进入波兰领空，暂无人员伤亡报告。\n\n总理图斯克称，事件发生在“志愿者联盟”军事演习附近，看起来像是俄方蓄意挑衅而非意外。这是波兰政府的判断，独立调查尚未给出最终定性。",
+              "bodyZh": "波兰政府说，11 月 20 日有一枚俄罗斯 Kh-101 巡航导弹坠入波兰东南部 Nowy Lipowiec 附近。另有两件物体进入波兰领空，报道称很可能是一枚导弹和一架喷气动力无人机。目前没有人员伤亡和财产损失的报告。以上是波兰方面的说法，独立调查还没有给出最终定性。\n\n波兰总理图斯克（Donald Tusk）说，这件事发生在“志愿者联盟”（Coalition of the Willing）军事演习附近，看起来像是俄罗斯的蓄意挑衅，而不是意外。\n\n欧洲方面迅速表态。英国国防大臣 Wes Streeting 称，这是又一次旨在分裂欧洲的挑衅；英国首相 Andy Burnham 说事件“完全不可接受”；欧洲理事会主席 António Costa 对波兰表示声援。摩尔多瓦官员说，当天也有无人机短暂进入其领空。\n\n背景上，今年 7 月曾有巡航导弹落入波兰，留下约 10 米弹坑。那是另一起事件，不能和今天这次混为一谈。波兰和北约如何回应，目前还没有看到启动集体防御或军事回应的宣布，报道里也没有这样的内容。\n\n这类事件最容易被误读的地方，是把“政府指控”当成“调查结论”。导弹型号、发射来源、是否故意，都需要技术调查和各方核对。读者可以把图斯克的“看起来像”理解为政治判断，而不是法庭上的事实认定。\n\n接下来值得关注的是北约的磋商级别、波兰是否援引相关条款，以及俄方是否回应。截至报道发出时，这些都没有确定答案。",
+              "featured": true,
+              "type": "文章",
+              "source": "BBC/AP",
+              "date": "11-21",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro",
+                  "lang": "en"
+                },
+                {
+                  "title": "Poland says Russian missile struck its territory",
+                  "site": "AP",
+                  "href": "https://apnews.com/article/poland-airspace-violation-ukraine-63386266cef90907913df2b456808a4d",
+                  "lang": "en"
+                },
+                {
+                  "title": "波兰总理府声明",
+                  "site": "波兰总理府",
+                  "href": "https://www.gov.pl/web/premier/rosyjskie-obiekty-naruszyly-polska-przestrzen-powietrzna-kolejna-odslona-rosyjskiej-eskalacji",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "russia-strikes-kyiv-bridges",
+              "title": "俄军大规模打击基辅，三座桥梁关闭",
+              "excerpt": "乌克兰方面称，俄军 11 月 20 日对基辅发动大规模打击，泽连斯基称俄方发射逾 110 枚导弹和 400 多架攻击无人机，基辅三座桥梁被列为目标并关闭交通。\n\n伤亡数字各方通报不一：泽连斯基称至少 9 人死亡，基辅市长称至少 7 人死亡、17 人受伤，利沃夫市长称至少 2 人死亡。BBC 汇总为 9 人遇难、至少 28 人受伤。",
+              "bodyZh": "乌克兰方面说，俄罗斯在 11 月 20 日对基辅发动了大规模打击。泽连斯基称，这是战争以来“最猛烈打击之一”，俄方发射了逾 110 枚导弹和 400 多架攻击无人机，并以每 20 至 30 分钟一轮的方式实施，增加了灭火和抢修的难度。这些数字来自乌方和 BBC 的报道。\n\n基辅的三座桥梁被列为目标并关闭交通，分别是 Podilsko-Voskresensky、Darnytskyi 和 Southern 桥。桥梁是城市交通的节点，关闭会直接影响通勤和物资运输。报道没有给出桥梁结构受损程度的完整评估。\n\n伤亡数字需要分开看，不能自行加总。泽连斯基称至少 9 人死亡；基辅市长克利奇科称至少 7 人死亡、17 人受伤；利沃夫 Sknyliv 火车站遭到严重破坏，该市市长称至少 2 人死亡。BBC 汇总的写法是：目前确认的 9 名遇难者中，7 人在基辅、2 人在利沃夫，至少 28 人受伤。不同来源的统计时间和范围不同，数字会继续更新。\n\n时间点上，这次袭击发生在乌克兰本周早些时候打击克里米亚大桥之后。公路桥部分受损，那是此前已经报道过的事件。普京曾威胁报复将“更加痛苦”，这是既有表态，不是今天的新说法。\n\n外交层面，柏林正在举行“志愿者联盟”会谈，讨论对乌克兰的安全保障。报道没有说会谈已经变成停火谈判，也没有说俄罗斯已经接受某种安全保障安排，读者不宜把这些当成既成事实。\n\n这类大规模袭击的新闻里，最需要耐心的是数字。不同官员在不同时点通报的伤亡数会有差异，最终数字通常要等救援结束和官方确认。",
+              "featured": false,
+              "type": "文章",
+              "source": "BBC",
+              "date": "11-21",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Russia targets Kyiv crossings days after Ukraine hits Crimean Bridge",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/c6x29gn4pdn9o",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "denmark-russia-assassination-plot",
+              "title": "丹麦指俄罗斯策划暗杀，俄方否认",
+              "excerpt": "丹麦安全情报局（PET）称，已阻止一起在哥本哈根附近暗杀一名乌克兰裔美国人的图谋，丹麦媒体指认目标为说唱歌手 Kyivstoner。\n\nPET 称 9 月 25 日拦下一辆汽车，车内有三人及枪支刀具，两人被控谋杀未遂和协助外国情报机构，均不认罪。俄方称指控“缺乏证据”，案件尚未判决。",
+              "bodyZh": "丹麦安全情报局（PET）说，已经阻止了一起在哥本哈根附近杀害一名乌克兰裔美国人的图谋。丹麦媒体指认目标为说唱歌手 Kyivstoner，真名 Albert Vasiliev。这是丹麦方面的指控，俄罗斯否认，案件也还没有走完司法程序。\n\nPET 说，9 月 25 日在其演唱会场地附近拦下一辆汽车，车内有三人，并发现枪支和刀具。两人已被控谋杀未遂和协助外国情报机构，均不认罪。PET 还说，涉事者与被禁帮派 Loyal to Familia 有关联。这些都属于检方和情报机构的说法，法庭尚未定罪。\n\n外交上，丹麦外长 Lars Løkke Rasmussen 表示将驱逐俄罗斯防务武官，限其 7 日内离境，并希望欧盟收紧俄罗斯公民在申根区的旅行安排。这是丹麦政府的决定和主张，欧盟层面是否会跟进，报道没有给出结论。\n\n俄罗斯驻丹麦使馆称，相关指控“缺乏证据”，并指责丹麦进行宣传。俄官方媒体援引莫斯科外交部说，俄方将“相应回应”。双方各说各话，独立核实目前有限。\n\n背景上，今年 7 月俄罗斯安全局曾指控 Vasiliev 和乌克兰当局策划对俄军事设施的“恐怖袭击”，他本人在社交平台否认。那是另一组相互指控，和今天的暗杀图谋不是同一件事，但能说明双方的对立已经延伸到司法和情报领域。\n\n对读者来说，这条新闻的关键词是“指控”和“阻止”：案件还在审理，暗杀并没有实施成功，也没有法庭定罪。后续要看的是庭审进展、丹麦与俄罗斯的互驱行动，以及欧盟会不会调整签证政策。",
+              "featured": false,
+              "type": "文章",
+              "source": "BBC",
+              "date": "11-21",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
+                  "site": "BBC",
+                  "href": "https://www.bbc.co.uk/news/articles/cmde1lj4yjxno",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-20",
       "label": "11月20日 · 周五",
       "categories": [
