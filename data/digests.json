@@ -11,6 +11,374 @@
   },
   "digests": [
     {
+      "id": "2026-11-23",
+      "label": "11月23日 · 周一",
+      "categories": [
+        {
+          "id": "tech",
+          "heading": "科技与 AI",
+          "stories": [
+            {
+              "id": "minimax-cryptanalysis-challenge",
+              "title": "MiniMax 用内部模型做密码分析，刷新多项国际挑战赛纪录",
+              "excerpt": "MiniMax 11 月 22 日说，研究团队用最新内部模型对现代密码方案做自动化密码分析，把多项原本停留在论文里的攻击推进到秒级到分钟级可执行。\n\n官方强调，这次聚焦的是学术前沿方案、历史竞赛候选和公开参数挑战，不影响 AES、RSA、SHA-256 这类正在用的主流标准；分析结果已提前同步给相关方案作者，技术报告和代码也会公开。",
+              "type": "文章",
+              "source": "IT之家 / MiniMax",
+              "date": "11-23",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "MiniMax 利用最新内部模型破解多个密码学前沿方案，刷新国际挑战赛纪录",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/030/711.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "评估 MiniMax 内部模型的密码分析能力",
+                  "site": "MiniMax",
+                  "href": "https://www.minimax.cn/blog/practical-cryptanalysis-with-minimaxs-latest-internal-model",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Practical cryptanalysis with MiniMax's latest Internal Model",
+                  "site": "MiniMax",
+                  "href": "https://www.minimax.io/blog/practical-cryptanalysis-with-minimaxs-latest-internal-model",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "beijing-crypto-pyramid-case",
+              "title": "北京查处首例区块链虚拟货币协助传销案，涉案超 3 亿元",
+              "excerpt": "北京查处了首例利用区块链、虚拟货币技术为传销活动提供协助的案件，涉案金额超过 3 亿元。\n\n涉案公司是一家公链外包服务商，负责运营、推广、交易所对接和维护。该公链以高额收益为诱饵卖理财，实际模式是交钱入门、拉人头按层级返利。公司被罚没合计 93 万余元，涉嫌组织传销的人员已被刑事拘留，链上资产已锁定冻结。",
+              "type": "文章",
+              "source": "IT之家（央视新闻）",
+              "date": "11-23",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "涉案金额超 3 亿元，北京查处首例区块链虚拟货币新型协助传销案",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/030/723.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "mofcom-fcc-telecom-numbers",
+              "title": "商务部回应 FCC 拟限制中国运营商获取美国互联网电话号码资源",
+              "excerpt": "美东时间 11 月 19 日，美国联邦通信委员会投票通过有关规则，拟禁止中国电信、中国联通、中国移动等被列入「覆盖清单」的运营商直接获取美国互联网电话号码资源。\n\n商务部 11 月 22 日回应称，这是滥用监管权力、泛化国家安全风险，中方坚决反对，敦促美方立即撤销，并表示将采取必要措施维护自身利益。目前这是拟议规则加中方表态，不是已经落地生效的禁令。",
+              "type": "文章",
+              "source": "商务部 / 新华社",
+              "date": "11-23",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "商务部新闻发言人就美国联邦通信委员会拟禁止中国电信运营商直接获取美国互联网电话号码资源答记者问",
+                  "site": "商务部",
+                  "href": "https://www.mofcom.gov.cn/xwfb/sjfzrfb/art/2026/art_a8a703480a3a4720a247c584d9f77eeb.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "China urges U.S. to revoke proposed telecom restrictions: commerce ministry",
+                  "site": "新华社",
+                  "href": "https://english.news.cn/20261122/fff5b757f41d4e22a9addc21c4caf2bd/c.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "apple-siri-settlement-payout",
+              "title": "苹果 Siri 集体诉讼和解：每台 iPhone 或赔 61 至 95 美元",
+              "excerpt": "苹果与 Siri、Apple Intelligence 宣传相关的集体诉讼和解有了新进展：律师按目前申报情况估算，符合条件的 iPhone 每台可能获赔至少 61 美元，上限约 95 美元。\n\n申报截止 2026 年 12 月 21 日，最终批准听证会在 2027 年 2 月 24 日，赔偿预计 2027 年才开始发放。仅限美国居民和指定机型，不是全球 iPhone 用户都能领。",
+              "type": "文章",
+              "source": "The Verge / MacRumors / IT之家",
+              "date": "11-23",
+              "region": "global",
+              "links": [
+                {
+                  "title": "苹果 Siri AI 集体诉讼案和解：符合条件的 iPhone 预计每台可获赔至少 61 美元",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/030/729.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Siri AI settlement could pay out $61 per iPhone",
+                  "site": "The Verge",
+                  "href": "https://www.theverge.com/tech/1039730/siri-ai-settlement-could-pay-out-61-per-iphone",
+                  "lang": "en"
+                },
+                {
+                  "title": "Siri AI Settlement: Here's How Much Apple Will Pay You",
+                  "site": "MacRumors",
+                  "href": "https://www.macrumors.com/2026/11/21/apple-siri-ai-settlement-payment-amount/",
+                  "lang": "en"
+                }
+              ],
+              "bodyZh": "苹果因为 Siri 和 Apple Intelligence 的宣传被用户告上法庭，这起集体诉讼目前已经进入和解阶段。据 The Verge 和 MacRumors 报道，律师根据眼下的申报情况估算，符合条件的 iPhone 每台预计能拿到至少 61 美元，上限大约 95 美元，最终金额会随有效申报数量等因素上下浮动。\n\n事情的起因要回到 2024 年 6 月。苹果当时预览了基于 Apple Intelligence 的新版 Siri 能力，包括理解个人语境、感知屏幕内容、在应用内部执行更深的操作等，并在发布会、官网和电视广告中做了展示。2025 年 3 月，苹果宣布推迟个性化 Siri，随后被用户起诉虚假宣传。苹果否认全部指控，称同意和解只是为了避免诉讼成本和风险，好继续专注于产品。\n\n谁有资格申报？需要同时满足几条：是美国居民；在 2024 年 6 月 10 日到 2025 年 3 月 29 日之间在美国境内购买指定机型；买来不是用于转售。IT之家列出的七款是 iPhone 15 Pro、15 Pro Max、16、16e、16 Plus、16 Pro 和 16 Pro Max。MacRumors 还提到，符合条件的用户通常会收到带索赔编号和 PIN 的邮件，也可以在和解网站上自行申报。\n\n时间线上还有几个节点要记：申报截止日是 2026 年 12 月 21 日，最终批准听证会安排在 2027 年 2 月 24 日，赔偿预计要到 2027 年才开始发放。也就是说，现在还谈不上打款，别把它当成已经到账的钱。\n\n另外提醒一句，这是针对美国用户的集体诉讼和解，不是全球所有 iPhone 用户都能领，具体能拿多少也要看最后有效申报的数量。"
+            },
+            {
+              "id": "delta-atlanta-system-outage",
+              "title": "达美系统故障，亚特兰大机场数百航班延误",
+              "excerpt": "达美航空的重量与平衡自动化系统出故障，22 日进出亚特兰大国际机场的数百个航班延误。FAA 说，达美飞往该机场的航班平均延误近一小时，涉及约 20 个航线控制中心。\n\n达美称当天上午一度改用人工方式安排起飞，同时抢修系统。航班追踪数据显示，截至美东时间 22 日 11 时，该机场进出港延误 681 个航班，其中达美 591 个。",
+              "type": "文章",
+              "source": "新华社 / The Verge / IT之家",
+              "date": "11-23",
+              "region": "global",
+              "links": [
+                {
+                  "title": "美国达美航空系统故障，致亚特兰大机场数百航班延误",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/030/728.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Delta flights in and out of Atlanta delayed due to system outage",
+                  "site": "The Verge",
+                  "href": "https://www.theverge.com/transportation/1039779/delta-flights-delayed-system-outage",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "markets",
+          "heading": "财经与市场",
+          "stories": [
+            {
+              "id": "a-share-stability-package",
+              "title": "稳市组合拳来了：融资保证金比例降至 80%，还有降费与做市",
+              "excerpt": "11 月 22 日公布三项稳市措施。最受关注的是融资保证金比例：经证监会批准，沪深北交易所把投资者融资买入证券的最低保证金比例从 100% 调到 80%，2026 年 11 月 30 日起施行。新华社称，据测算理论上可带来近 4000 亿元增量资金。\n\n另外两项是深交所就创业板做市交易业务细则公开征求意见，以及沪深交易所推出新一批降费、并把今年年初的免收上市费等措施再延长两年至 2028 年。中国结算也明确继续暂免部分债券的发行人服务费和结算费。",
+              "type": "文章",
+              "source": "央视网 / 上交所 / 新华社",
+              "date": "11-23",
+              "region": "cn",
+              "featured": true,
+              "links": [
+                {
+                  "title": "「稳股市」组合拳来了 三项新政发布",
+                  "site": "央视网",
+                  "href": "https://jingji.cctv.cn/2026/11/23/ARTIVw5EXARW5XFo0FrhufC0261122.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "关于调整融资保证金比例等相关安排的通知",
+                  "site": "上海证券交易所",
+                  "href": "https://www.sse.com.cn/lawandrules/sselawsrules2025/trade/specific/margin/c/c_20261122_10838633.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "新华财经早报：11月23日",
+                  "site": "新华社（新浪转载）",
+                  "href": "https://finance.sina.com.cn/jjxw/2026-11-23/doc-inizskhq8478843.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "first-active-etfs-list",
+              "title": "首批 18 只主动 ETF 今日上市，合计募集 360 亿元",
+              "excerpt": "首批 18 只主动 ETF 11 月 23 日正式上市，沪市深市各 9 只，这是境内第一次把主动管理装进 ETF 这个标准化载体。\n\n18 只产品全部触及 20 亿元募集上限并提前结束募集，合计 360 亿元，其中 17 只启动比例配售，有效认购户数超 30 万户。截至 11 月 16 日平均股票仓位 56.71%，持仓偏制造、金融、采矿，风格多数偏均衡价值。基金经理提醒，封闭期内每周五才披露净值，样本太少，别急着判断阿尔法能力。",
+              "type": "文章",
+              "source": "证券日报 / 中国经济网",
+              "date": "11-23",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "首批18只主动ETF正式上市",
+                  "site": "中国经济网（证券日报）",
+                  "href": "https://www.ce.cn/xwzx/gnsz/gdxw/202611/t20261123_3302099.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "关于A股，三项新政来了；首批18只主动ETF今日上市｜21早新闻",
+                  "site": "21经济网",
+                  "href": "https://www.21jingji.com/article/20261123/herald/862c36a0a44d346c4de9660ba3885f31.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "korea-stock-stabilization-fund",
+              "title": "韩股急跌后，韩国着手准备启动股市稳定基金",
+              "excerpt": "韩国副总理兼财政经济部长官李炯逸 11 月 22 日主持紧急市场情况检查会议，决定着手准备让证券市场稳定基金可按市场情况立即投入——目前是准备阶段，还没实际动用。\n\n基金规模 10.76 万亿韩元，由金融机构在需要时出资；若真动用，将是 2008 年金融危机后 18 年来首次。上周五 KOSPI 跌 5.21%，收于 4869.96 点。会上还决定从 11 月 24 日起放宽上市公司每日回购订单数量限制三个月，但没有推出限制卖空。",
+              "type": "文章",
+              "source": "香港01 / 联合新闻 / SBS",
+              "date": "11-23",
+              "region": "global",
+              "links": [
+                {
+                  "title": "韩股｜忧「黑色星期一」 韩国急开会救市：准备启动股市稳定基金",
+                  "site": "香港01",
+                  "href": "https://global.hk01.com/%E5%8D%B3%E6%97%B6%E5%9B%BD%E9%99%85/60413762/%E9%9F%A9%E8%82%A1-%E5%BF%A7-%E9%BB%91%E8%89%B2%E6%98%9F%E6%9C%9F%E4%B8%80-%E9%9F%A9%E5%9B%BD%E6%80%A5%E5%BC%80%E4%BC%9A%E6%95%91%E5%B8%82-%E5%87%86%E5%A4%87%E5%90%AF%E5%8A%A8%E8%82%A1%E5%B8%82%E7%A8%B3%E5%AE%9A%E5%9F%BA%E9%87%91",
+                  "lang": "zh"
+                },
+                {
+                  "title": "블랙먼데이 우려에 증안펀드 18년만에 가동되나…F4 \"준비 착수\"(종합)",
+                  "site": "联合新闻",
+                  "href": "https://www.yna.co.kr/view/AKR20261122044351002"
+                },
+                {
+                  "title": "Preparations Underway to Deploy Stock Market Stabilization Fund Amid Fears of 'Black Monday'",
+                  "site": "SBS",
+                  "href": "https://news.sbs.co.kr/english/article.do?news_id=N1008858085",
+                  "lang": "en"
+                }
+              ],
+              "bodyZh": "韩国股市上周五刚经历一轮急跌，政府和央行周末就坐到了同一张桌子前。11 月 22 日，韩国副总理兼财政经济部长官李炯逸在政府首尔厅舍主持紧急市场情况检查会议，参加者是常被称作「F4」的四个人：副总理、韩国银行总裁、金融委员会委员长、金融监督院院长。\n\n会议的决定是着手准备，让证券市场稳定基金可以按照市场情况立即投入。注意，这里的关键词是准备：目前还没有实际动用。据 SBS 报道，这只基金规模为 10.76 万亿韩元，由金融机构在需要时出资。如果真的动用，将是 2008 年全球金融危机之后 18 年来首次。2008 年那次曾组建约 5150 亿韩元资金，并在当年 11 月到次年 3 月之间数次投入市场。韩国总统李在明 11 月 13 日曾指示重新检视基金的运用方式和适当规模，因此日后如果动用，投入规模仍可能再作调整。\n\n触发这场紧急会议的是 11 月 20 日的行情：KOSPI 收跌 267.93 点，跌幅 5.21%，收在 4869.96 点，时隔三个交易日再次跌破 5000 点。\n\n除了稳市基金，会上还定了另一项安排：从 11 月 24 日起，放宽上市公司每日回购自家股票的订单数量限制，为期三个月。至于市场关心的卖空，这套措施里并没有包含限制卖空，而是改由金融监督院和韩国交易所对非法卖空进行为期三个月的特别集中监控。SBS 的说法是，限制卖空的议题被排除在这套措施之外。"
+            }
+          ]
+        },
+        {
+          "id": "general",
+          "heading": "综合热点",
+          "stories": [
+            {
+              "id": "hk-election-committee-2026",
+              "title": "香港选委会界别分组选举结果揭晓，723 席全部产生",
+              "excerpt": "2026 年香港特区选举委员会界别分组一般选举结果 22 日晚揭晓：856 名候选人竞逐的 31 个界别分组中，723 席选委会委员全部产生。\n\n选委会负责选举行政长官候任人、立法会部分议员，以及提名行政长官和立法会候选人。另有 341 人获裁定有效登记为当然委员，156 人获有效提名，259 名候选人自动当选。新一届任期五年，从 2027 年 2 月 1 日到 2032 年 1 月 31 日。",
+              "type": "文章",
+              "source": "新华网 / 香港政府新闻公报",
+              "date": "11-23",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "2026年香港特区选举委员会界别分组一般选举结果揭晓",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261123/9d1b810c37c24394bc0eadfb12b26212/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "選舉委員會界別分組一般選舉圓滿舉行",
+                  "site": "香港政府新闻公报",
+                  "href": "https://www.info.gov.hk/gia/general/202611/22/P2026112200679.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "jiangxi-yin-hong-party-secretary",
+              "title": "尹弘当选中共江西省委书记",
+              "excerpt": "中共江西省第十六届委员会第一次全体会议 11 月 22 日选举尹弘为省委书记，陈永奇、庄兆林为省委副书记。\n\n当选省委常委的还有黄喜忠、时玉宝、盛秋平、陈敏、张莹（女）、刘金波、杨勇、许南吉、严允、陈克龙。省纪委十六届一次全会选举时玉宝为省纪委书记，许朝杰、饶华东、郭素芳（女）、熊明为副书记。",
+              "type": "文章",
+              "source": "新华网",
+              "date": "11-23",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "尹弘当选中共江西省委书记",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261122/5c52c32ebc2944f3bce7f451c55b51cd/c.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "zhengzhou-76-fire-report",
+              "title": "郑州「7·6」火灾调查报告公布：非法改装电摩入户充电致 5 人死亡",
+              "excerpt": "郑州市消防救援支队 11 月 20 日晚发布惠济区和昌珑悦小区「7·6」较大火灾事故调查报告，认定这是一起电摩非法改装、违规进楼入户充电、锂电池热失控爆燃直接引发的责任事故，造成 5 人死亡、1 人受伤，过火面积约 15 平方米。\n\n报告指出，起火楼层自动喷水灭火系统管道内无水，喷头没能压住初期火势；涉事小区物业、旅馆、改装门店等相关 6 人涉嫌刑事犯罪将被追责。调查报告还建议惠济区委、区政府向郑州市委、市政府作深刻检查。",
+              "type": "文章",
+              "source": "IT之家",
+              "date": "11-23",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "郑州「7·6」火灾调查报告公布：非法改装电摩入户充电，锂电池爆燃引发事故致 5 人死亡",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/030/721.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "netanyahu-iran-unilateral-strike",
+              "title": "内塔尼亚胡被曝正考虑单独对伊朗动武",
+              "excerpt": "当地时间 22 日，据以色列方面消息，以色列看守政府总理内塔尼亚胡正考虑在未经美国批准的情况下单独对伊朗发动袭击。\n\n以军军事情报局在近日一场闭门会议中警告，这么做可能波及黎巴嫩、叙利亚和加沙，引发多战线冲突，和「只打几天定点」的设想并不一致。目前是「被曝正在考虑」，不是已决定或已动手。",
+              "type": "文章",
+              "source": "央视网 / 中新网",
+              "date": "11-23",
+              "region": "global",
+              "featured": true,
+              "links": [
+                {
+                  "title": "内塔尼亚胡被曝正考虑单独对伊朗动武",
+                  "site": "央视网",
+                  "href": "https://news.cctv.com/2026/11/23/ARTI0B2eGX2sMuxecPci0Axu261123.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "内塔尼亚胡被曝正考虑单独对伊朗动武",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/gj/2026/11-23/10736221.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "libya-benghazi-russian-ship-attack",
+              "title": "利比亚班加西海军基地一艘俄罗斯船只遭疑似无人机袭击",
+              "excerpt": "据利比亚媒体 22 日报道，一艘停泊在班加西海军基地的俄罗斯船只当天凌晨遭无人机袭击，利比亚东部政府称爆炸由疑似无人机袭击造成。\n\n卫星图像显示，周六停泊的是俄海军 20380 型轻型护卫舰「梅尔库里」号，周日图像里该舰已大部倾覆沉没。当地卫生部还说另一艘商船在班加西沿海遇袭，伤者伤势轻微。责任认定尚未获俄乌官方确认。",
+              "type": "文章",
+              "source": "新华网 / BBC / AP",
+              "date": "11-23",
+              "region": "global",
+              "links": [
+                {
+                  "title": "一艘俄罗斯船只在利比亚一海军基地遭无人机袭击",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/world/20261122/ba03687126e642f3b6fd5f84c046605f/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Explosion on Russian ship at Libya port caused by suspected drone attack, officials say",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/cr894gjz0j0yo",
+                  "lang": "en"
+                },
+                {
+                  "title": "Suspected Ukrainian sea drones hit Russian warship at Benghazi naval base, Libyan officials say",
+                  "site": "AP",
+                  "href": "https://apnews.com/article/libya-russia-vessel-drone-benghazi-59f6f304f3053c69c8cc890138a94d1b",
+                  "lang": "en"
+                }
+              ],
+              "bodyZh": "利比亚班加西海军基地里的一艘俄罗斯船只，11 月 22 日凌晨发生爆炸。新华社从突尼斯发出的电讯转述利比亚媒体称，该船当天凌晨遭无人机袭击；利比亚东部政府随后表示，爆炸由疑似无人机袭击造成，但没有在声明里点名是哪一艘舰只。\n\n舰只的身份来自卫星图像。美国情报公司 Vantor 的高分辨率图像显示，周六停泊在港内的是俄罗斯海军 20380 型（Steregushchiy 级）轻型护卫舰「梅尔库里」号；周日的图像显示，这艘舰大部分已经倾覆沉没，只有舰首还露在水面上。Planet Labs 的卫星图像则显示，格林尼治时间 5 时 47 分，班加西港内有船只起火。BBC Verify 还对社交媒体上的视频做了地理定位，画面里上午被击中的船只燃起大火和浓烟。\n\n利比亚东部「民族稳定政府」称，这艘俄罗斯船只是依据既有的海事协议使用班加西港。周日晚些时候，当地卫生部又说，另有一艘商船在班加西沿海遭到袭击，伤者伤势轻微、情况稳定。\n\n需要说清楚的是责任认定。目前俄乌双方都没有官方确认，报道多用「疑似无人机袭击」这样的表述；即使部分英文标题写了疑似乌克兰海上无人机，正文层面仍属于未获官方证实的说法，不宜当成定论。后续怎么定性，还要看相关方的正式表态和进一步调查。"
+            },
+            {
+              "id": "indonesia-serang-factory-fire",
+              "title": "印尼万丹省糖果厂火灾：确认 3 人死亡，现场运出 24 个尸袋",
+              "excerpt": "印尼万丹省一家糖果厂 21 日起火。新华社较早报道说，警方确认 3 人死亡、仍有 30 余人失联；到 22 日晚，BBC 称现场已运出 24 个尸袋，搜救仍在继续，死亡人数预计还会上升。\n\n需要分清口径：24 个尸袋是现场运出、尚待鉴定的数量，不等于已确认 24 人死亡。省长说起火时厂内约有 60 人，火灾原因尚未确定。",
+              "type": "文章",
+              "source": "新华网 / 香港电台 / BBC",
+              "date": "11-23",
+              "region": "global",
+              "links": [
+                {
+                  "title": "印尼糖果厂火灾已造成3人死亡",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261122/c5b06e025aca419fb0da42effebcdcdb/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "印尼糖果廠火災整理出24個屍袋　警方採失蹤者家屬DNA助鑒定",
+                  "site": "香港电台",
+                  "href": "https://news.rthk.hk/rthk/ch/component/k2/1878856-20261123.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Three killed and dozens missing after fire at Indonesian factory",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/cw8dvg5pgm0eo",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-22",
       "label": "11月22日 · 周日",
       "categories": [
