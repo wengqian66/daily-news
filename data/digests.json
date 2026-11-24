@@ -11,6 +11,385 @@
   },
   "digests": [
     {
+      "id": "2026-11-24",
+      "label": "11月24日 · 周二",
+      "categories": [
+        {
+          "id": "tech",
+          "heading": "科技与 AI",
+          "stories": [
+            {
+              "id": "zhipu-glm-54-release",
+              "title": "智谱 GLM-5.4 上线：首款 Loop Transformer，Coding Plan 全量开放",
+              "excerpt": "智谱 11 月 23 日发布新一代大模型 GLM-5.4，向 GLM Coding Plan 全量用户开放，同步上线 ZCode、Trae、WorkBuddy、Qoder 等编码平台。\n\n官方文档说，这是智谱首款采用 Loop Transformer 架构的旗舰模型，新增视觉理解，上下文窗口 1M、最大输出 128K，把编程从写代码拓展到视频制作、游戏开发、3D 建模和机械设计，公司称之为“泛 Coding”。API 将在完成安全评估后开放，模型权重计划以负责任的方式开源——目前只是计划。Coding Plan V2/V3/团队版的 GLM-5.4 额度提升到 1.5 倍。",
+              "type": "文章",
+              "source": "第一财经 / 智谱",
+              "date": "11-24",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "智谱：GLM-5.4向GLM Coding Plan全量用户开放",
+                  "site": "第一财经",
+                  "href": "https://www.yicai.com/news/103450622.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "GLM-5.4 文档",
+                  "site": "智谱",
+                  "href": "https://docs.bigmodel.cn/cn/guide/models/glm-5.4",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "wingless-flying-car-maiden-flight",
+              "title": "“无翼飞车”原型机在长沙首飞，设计航程 300 公里",
+              "excerpt": "IT之家 11 月 23 日援引央视新闻称，我国“无翼飞车”原型机首飞成功；新华社英文稿说，这架单人座飞行器 11 月 21 日在湖南长沙完成首飞。\n\n它采用多级矢量涵道风扇、没有外露桨叶，可垂直起降，落地后能直接上路。设计数据：航程 300 公里，最大起飞重量 280 公斤，有效载荷 120 公斤，设计最大飞行高度 3000 米、常规作业高度 100 米，地面最高时速 80 公里、空中 180 公里。团队已完成 5.5 吨起飞重量、2 吨载重机型的技术设计，后续计划做 2 至 4 人、6 至 8 人、12 至 15 人系列。这是原型机首飞，不是量产或开卖；路线与常见飞行汽车不同。",
+              "type": "文章",
+              "source": "IT之家 / 新华社",
+              "date": "11-24",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "能地上跑天上飞！我国“无翼飞车”原型机首飞成功",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/031/201.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Wingless flying car completes maiden flight in China's Changsha",
+                  "site": "新华社",
+                  "href": "https://english.news.cn/20261122/073a9cf8dd8b44a3913acf22aaa14cfa/c.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "mps-ai-rumor-typical-cases",
+              "title": "公安部网安局公布 10 起 AI 造谣典型案例",
+              "excerpt": "中新网 11 月 24 日报道，公安部网安局公布 2026 年度使用 AI 工具编造传播网络谣言 10 起典型案例。\n\n类型包括用 AI 编造虚假走私案件、伪造艺人社交帖、编造高考试卷被调包、生成“人造毒大米”虚假视频、编造多地诺如病毒停课疫情、虚构校服质量问题视频，以及未经授权用 AI 冒用公众人物形象直播带货。涉事人员已分别被属地公安机关依法行政处罚或采取刑事强制措施，其中部分是行政处罚，不是 10 起全部刑事立案。法律依据提到《治安管理处罚法》第二十九条，以及刑法中编造、故意传播虚假信息罪。",
+              "type": "文章",
+              "source": "中新网",
+              "date": "11-24",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "净网专项行动 | 公安部网安局公布2026年度使用AI工具编造传播网络谣言10起典型案例",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/gn/2026/11-24/10736747.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "nvidia-huang-ceo-reinstated",
+              "title": "英伟达董事会恢复黄仁勋 CEO 职务，股价收涨 31.48%",
+              "excerpt": "当地时间 11 月 23 日，英伟达宣布董事会一致投票决定，即日起恢复联合创始人黄仁勋担任总裁、首席执行官及董事会成员。他于 11 月 12 日在有关婚外情的报道曝光后辞去上述职务；其中一宗报道涉及疑似为中国从事间谍活动的人，这部分目前仅为报道说法。\n\n董事会主席哈维·琼斯说，董事会认为黄仁勋是领导英伟达的合适人选，复职符合股东、员工、合作伙伴和客户的最大利益；声明称董事会在决策中听取了美国政府高层意见，并据此确信复职不构成国家安全风险。此前担任临时首席执行官的科莱特·克雷斯继续任首席财务官。英伟达表示将继续配合正在进行的政府调查和问询；中新社称，黄仁勋仍需接受美国国会众议院相关委员会的闭门问询，就出口管制合规作出说明。美国总统特朗普称这是“正确且恰当的决定”。消息公布后美股开盘，英伟达收涨 31.48%。",
+              "type": "文章",
+              "source": "新华网 / 中新网 / CNBC",
+              "date": "11-24",
+              "region": "global",
+              "featured": true,
+              "links": [
+                {
+                  "title": "英伟达重新任命黄仁勋为总裁、首席执行官、董事",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261123/d37450ad9d49443ba09ef0b39a94941f/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "英伟达恢复黄仁勋总裁、CEO及董事职务",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/gj/2026/11-24/10736726.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "NVIDIA Board Reinstates Jensen Huang as President, CEO and Board Director",
+                  "site": "NVIDIA",
+                  "href": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+                  "lang": "en"
+                },
+                {
+                  "title": "Jensen Huang reinstated as Nvidia CEO. Stock skyrockets 31%",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "anthropic-claude-ship",
+              "title": "Anthropic 推出 Claude Ship 测试版，让 AI 智能体审查并批准代码",
+              "excerpt": "IT之家 11 月 24 日援引 TechCrunch 11 月 23 日报道，Anthropic 推出 Claude Ship 测试版，由一组 AI 智能体自动完成代码审查、修复和批准。\n\n三项功能里，Code Review 已正式开放，PR Steward 和 Claude Approvals 仍在 Beta。前者处理 CI 检查失败、合并冲突和 Code Review 提出的反馈，每次推送后会在评论里说明改了什么、必要时怎么撤销；后者按团队写在代码仓库里的审批政策执行审批，政策可用自然语言编写，还能综合 Code Review 结果和企业自研分类器等信息。因为还是 Beta，官方建议先用观察模式（不实际执行审批）、先在单个仓库试点，并设置每月支出上限。",
+              "type": "文章",
+              "source": "IT之家 / TechCrunch",
+              "date": "11-24",
+              "region": "global",
+              "links": [
+                {
+                  "title": "Anthropic 推出 Claude Ship 测试版：AI 可自动审查、修复及批准代码",
+                  "site": "IT之家",
+                  "href": "https://www.ithome.com/1/031/257.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+                  "site": "TechCrunch",
+                  "href": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "markets",
+          "heading": "财经与市场",
+          "stories": [
+            {
+              "id": "buyback-loan-commitments-111",
+              "title": "11 月已有 111 家公司拿到回购增持贷款承诺函，额度上限 229.56 亿元",
+              "excerpt": "中国证券报/中国金融信息网 11 月 24 日报道，股票回购增持专项贷款加快落地。据 Wind 统计，截至 11 月 23 日，本月已有 111 家上市公司披露相关主体取得银行贷款承诺函，数量是上个月的 3 倍还要多，也远超今年前 10 个月各个月份；111 家披露的额度上限合计 229.56 亿元。\n\n洛阳钼业拟取得招商银行上海分行最高不超过 18 亿元、期限 3 年的贷款承诺，专项用于回购 A 股；青鸟智控取得中国银行张家口分行不超过 12 亿元的股票回购专项贷款承诺函。行业上，电子元件、集成电路、工业机械、生物医药等先进制造和科技创新领域企业占比近七成。背景是央行加力实施股票回购增持再贷款，利率 1%，支持对象在 21 家全国性银行基础上增加 5 家系统重要性城商行；银行向央行报送的再贷款申请额度超 2000 亿元，这是申请额度，不等于已经放贷或入市。承诺函也不代表回购已经完成。",
+              "type": "文章",
+              "source": "中国证券报 / 中国金融信息网",
+              "date": "11-24",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "一纸承诺函“贷”动超200亿元回购增持潮",
+                  "site": "中国金融信息网",
+                  "href": "https://www.cnfin.com/gs-lb/detail/20261124/4499353_1.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "真金白银稳市护盘 多家上市公司实施股份回购",
+                  "site": "中国证券报",
+                  "href": "https://finance.eastmoney.com/news/1344,202611243937739257.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "us-stocks-rally-after-huang",
+              "title": "道指涨 1450 点、纳指涨 6.51%，英伟达收涨 31.48%",
+              "excerpt": "第一财经 11 月 24 日报道，周一（11 月 23 日）美股三大股指大幅上涨，直接催化剂是英伟达宣布黄仁勋复职。\n\n截至收盘：道指涨 1450.39 点，涨幅 3.01%，报 49597.72 点；纳指涨 1471.82 点，涨幅 6.51%，报 24089.56 点；标普 500 指数涨 327.34 点，涨幅 4.74%，报 7237.73 点。纳指和标普 500 均创下 2025 年 4 月以来最佳单日表现。英伟达收涨 31.48%，特斯拉涨 11.46%，Meta 涨 6.55%，谷歌涨 6.34%，亚马逊涨 3.47%，苹果涨 1.90%，微软涨 1.65%。费城半导体指数收涨 14.03%，SK 海力士涨 20.00%，美光涨 19.04%，AMD 涨 6.85%，CoreWeave 涨 22%。上周五三大股指还都处于技术性回调中。",
+              "type": "文章",
+              "source": "第一财经 / 新华财经",
+              "date": "11-24",
+              "region": "global",
+              "links": [
+                {
+                  "title": "英伟达暴涨31.48%，“黄仁勋行情”引爆美股，纳指狂飙6.5%，道指涨近1500点",
+                  "site": "第一财经",
+                  "href": "https://www.yicai.com/news/103451160.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "新华财经早报：11月24日",
+                  "site": "中国金融信息网",
+                  "href": "https://www.cnfin.com/zs-lb/detail/20261124/4499344_1.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Tech stocks see monster rally after Jensen Huang returns as Nvidia CEO",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/23/anthropic-nvidia-shares.html",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "crowdstrike-zscaler-44b",
+              "title": "CrowdStrike 拟 439 亿美元全股票收购 Zscaler",
+              "excerpt": "当地时间 11 月 23 日，CrowdStrike 宣布与 Zscaler 达成最终协议，拟以全股票交易收购 Zscaler，企业价值约 439 亿美元。\n\nZscaler 股东每 1 股将获得 1.135 股 CrowdStrike 股票；按 CrowdStrike 11 月 20 日收盘价 229.44 美元计算，隐含 Zscaler 每股约 260.41 美元，较 Zscaler 当日收盘价 194.82 美元溢价约 34%。完成后 CrowdStrike 现有股东预计持股约 84.1%，Zscaler 现有股东约 15.9%。交易预计于 CrowdStrike 2028 财年下半年完成，尚需 Zscaler 股东批准和相关监管审批，不是已经交割。Zscaler 创始人兼 CEO Jay Chaudhry 将在完成后继续领导 Zscaler 业务并加入 CrowdStrike 董事会，其关联方合计持有约 34% 流通股，已签署投票协议支持交易。公司预计合并后初始年度经常性收入超过 100 亿美元，完成后 30 个月内约 10 亿美元年化收入协同、18 至 24 个月内约 5 亿美元年化成本协同——这是公司预期。",
+              "type": "文章",
+              "source": "财联社 / 澎湃新闻 / CrowdStrike",
+              "date": "11-24",
+              "region": "global",
+              "links": [
+                {
+                  "title": "CrowdStrike拟以439亿美元全股票收购Zscaler",
+                  "site": "财联社",
+                  "href": "https://m.cls.cn/detail/2541973",
+                  "lang": "zh"
+                },
+                {
+                  "title": "439亿美元！网络安全行业史上最大并购有望诞生",
+                  "site": "澎湃新闻",
+                  "href": "https://www.thepaper.cn/newsDetail_forward_34540984",
+                  "lang": "zh"
+                },
+                {
+                  "title": "CrowdStrike to Acquire Zscaler, Bringing Network Security and Zero Trust to the Falcon Platform",
+                  "site": "CrowdStrike",
+                  "href": "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-acquire-zscaler-bringing-network-security-and-zero",
+                  "lang": "en"
+                }
+              ]
+            },
+            {
+              "id": "fed-williams-higher-rates",
+              "title": "纽约联储主席威廉姆斯：抗通胀还没完，不排除连续加息",
+              "excerpt": "11 月 23 日，纽约联储主席约翰·威廉姆斯表示，尽管美国经济依然强劲，通胀仍持续处于过高水平，美联储在确保通胀及时、持续回到 2% 目标方面“仍有工作要做”。\n\n他预计通胀率应在 2026 年底降至 3.5%、2028 年回落至 2%，并称 2027 年将是通胀率较低的一年。政策路径上，他说未来货币政策行动的步伐“不排除任何选项”，如有必要将在连续多次会议上加息，同时强调必须保持前瞻性，不要过度关注过去的通胀路径。这是官员公开讲话，不是美联储正式决议，也没有给出具体利率点位。",
+              "type": "文章",
+              "source": "中国金融信息网 / CNBC",
+              "date": "11-24",
+              "region": "global",
+              "bodyZh": "纽约联储主席约翰·威廉姆斯（John Williams）11 月 23 日就通胀和利率路径表态。据中国金融信息网报道，他表示美国经济依然强劲，但通胀仍持续处于过高水平，美联储在确保通胀及时、持续回到 2% 目标方面仍有工作要做。换句话说，在他看来这轮抗通胀还没有收尾。\n\n对通胀走势，他给出的是一条偏慢的回落路径：预计通胀率应在 2026 年底降至 3.5%，2028 年回落至 2%，并称 2027 年将是通胀率较低的一年。这些是预测，不是已经实现的数据，距离 2% 目标还隔着两三年。\n\n政策路径上，他的措辞留了很大余地。他说在未来货币政策行动的步伐方面不排除任何选项；如有必要，美联储将在连续多次会议上加息。同时他强调必须保持前瞻性，不要过度关注过去的通胀路径——大意是别把已经发生的通胀数据当成唯一依据，要看往前走的趋势。\n\n需要分清边界：这是纽约联储主席的公开发言，不是联邦公开市场委员会的正式决议，也没有宣布加息，更没有给出具体的联邦基金利率点位或“下次会议必加”的承诺。威廉姆斯在美联储体系里属于核心官员之一，讲话常被当作政策风向的参考，但真正决定利率的是委员会的表决，单个官员的表态只是其中一块拼图。\n\n还有一点，他没有说明加息的幅度和终点利率，把细节留给了后续会议和数据。对市场来说，这类表态会被拿来判断后续政策路径的松紧，但具体怎么走仍要看数据。\n\n想读全文，可以看纽约联储官网的讲话稿，标题是《The Economic Mixdown》；英文报道可参考 CNBC 的整理。",
+              "links": [
+                {
+                  "title": "纽约联储主席威廉姆斯：抗通胀工作尚未完成 不排除连续加息",
+                  "site": "中国金融信息网",
+                  "href": "https://www.cnfin.com/yw-lb/detail/20261124/4499362_1.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Fed's John Williams indicates higher interest rates likely 'over time' to address inflation",
+                  "site": "CNBC",
+                  "href": "https://www.cnbc.com/2026/11/23/john-williams-fed-inflation-rate-hikes.html",
+                  "lang": "en"
+                },
+                {
+                  "title": "The Economic Mixdown",
+                  "site": "纽约联储",
+                  "href": "https://www.newyorkfed.org/newsevents/speeches/2026/wil261123",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "general",
+          "heading": "综合热点",
+          "stories": [
+            {
+              "id": "elderly-childcare-service-plan",
+              "title": "“一老一小”服务体系建设方案发布，定下 2030 年目标",
+              "excerpt": "新华社 11 月 23 日报道，经国务院同意，国家发展改革委、民政部、国家卫生健康委、教育部印发《“一老一小”服务体系建设实施方案》。\n\n到 2030 年的目标包括：养老、托育服务设施布局更加合理、条件明显改善，医养结合持续深化；养老机构护理型床位占比达到 73%，社区养老服务机构和设施覆盖率达到 70%，3 岁以下婴幼儿入托率较 2025 年提高 6 个百分点，形成覆盖城乡、布局合理、价格可接受、质量有保障的普惠养老和托育供给格局。任务还包括推动医养结合设施有序扩容、加快智能技术落地、探索城乡养老服务联合体，以及加大资金、土地、人才等要素支撑。这是方案发布，上述比例是目标，不是已经实现。",
+              "type": "文章",
+              "source": "新华网 / 中国政府网",
+              "date": "11-24",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "《“一老一小”服务体系建设实施方案》发布",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261123/19ba04169f4342e9a18b61e7527f59b6/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "《“一老一小”服务体系建设实施方案》发布",
+                  "site": "中国政府网",
+                  "href": "https://www.gov.cn/lianbo/202611/content_7087028.htm",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "social-insurance-fund-supervision-draft",
+              "title": "社保基金监督条例征求意见，欺诈骗保情形细化",
+              "excerpt": "人社部 11 月 23 日发布《社会保险基金监督条例（征求意见稿）》，即日起至 12 月 23 日向社会公开征求意见。\n\n适用范围在基金种类上包括基本养老保险、工伤保险、失业保险基金，环节上包括基金支付、管理、投资运营；对基本医疗保险（含生育保险）基金、长期护理保险基金的监督，以及社会保险费征缴情况的监督，不在该征求意见稿适用范围内，依照其他法律法规执行。监督框架包括向本级人大常委会报告、明确人社/财政/审计职责并建立部门协同，任何组织和个人有权举报，查证属实按规定奖励。征求意见稿还对欺诈骗保作出细化，列明伪造变造证明材料、冒用他人身份或证件、隐瞒丧失待遇领取条件等情形，对组织骗保设专门罚则，并明确基金损失发生后的追回、归集和赔偿责任。这是公开征求意见，不是条例已经生效。",
+              "type": "文章",
+              "source": "中国经济网（经济参考报/新华社）",
+              "date": "11-24",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "守护“养老钱”“保命钱” 社保基金新规征求意见",
+                  "site": "中国经济网",
+                  "href": "https://www.ce.cn/xwzx/gnsz/gdxw/202611/t20261124_3303599.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "新华财经早报：11月24日",
+                  "site": "中国金融信息网",
+                  "href": "https://www.cnfin.com/zs-lb/detail/20261124/4499344_1.html",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "shanghai-metro-fare-adjustment",
+              "title": "上海地铁票价 12 月 1 日起调整，起乘价仍 3 元",
+              "excerpt": "上海市发展改革委公布优化后的轨道交通票价机制，这是上海地铁票价时隔 21 年首次调整，2026 年 12 月 1 日起执行。起乘价保持 3 元不变，起乘间距由 0–6 公里缩短为 0–4 公里；后续按 4、4、4、7、7、10、10 公里加 1 元，50 公里以上每 15 公里加 1 元。适用范围为全市常规轨道交通，不含磁浮线、金山铁路、市域机场线及以后开通的市域线。\n\n同步推出计次票和满额优惠：计次票四档为 35 次 190 元、45 次 210 元、60 次 270 元、90 次 390 元，自激活日起 30 个自然日运营时段内有效、仅限本人实名，11 月 26 日起在 Metro 大都会、上海交通卡、随申行 App 开售。使用同一支付渠道，每自然月票款累计满 90 元后，后续票价 9 折；计次票不与满额优惠同享。据官方测算，叠加计次票及满额优惠等政策后，平均每人次票价提高 0.9 元，涨幅 21.3%。",
+              "type": "文章",
+              "source": "新华网 / 中新网 / 央视网",
+              "date": "11-24",
+              "region": "cn",
+              "links": [
+                {
+                  "title": "上海地铁调价：起乘价不变、票价“递远递减”",
+                  "site": "新华网",
+                  "href": "https://www.news.cn/20261123/a4ce9cbab7054903926812ab28ab3f0f/c.html",
+                  "lang": "zh"
+                },
+                {
+                  "title": "上海地铁新票价方案落地 12月1日起执行",
+                  "site": "中新网",
+                  "href": "https://www.chinanews.com.cn/cj/2026/11-23/10736582.shtml",
+                  "lang": "zh"
+                },
+                {
+                  "title": "上海轨道交通12月1日起实施新票价 配套优惠同步调整",
+                  "site": "央视网",
+                  "href": "https://news.cctv.cn/2026/11/24/ARTIuPMU5Dx9EBBOs6OV1QI3261124.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "hormuz-tankers-mine-explosions",
+              "title": "伊朗方面称三艘油轮在霍尔木兹海峡触雷爆炸",
+              "excerpt": "央视新闻客户端消息（京报网 11 月 24 日转载），当地时间 24 日凌晨，伊朗伊斯兰革命卫队海军表示，在过去几个小时内，三艘油轮在霍尔木兹海峡触雷，引发爆炸并燃起大火。\n\n伊方称，其中一艘在该海峡南部海岸附近触雷，另外两艘在东部触雷；事发时这些船只正处于美军的严密空中掩护和护航之下。以上是伊朗方面的单方面表述，尚未见美国、船东或独立机构确认，水雷由谁布设也没有定论，不宜自行推断是否构成冲突升级。",
+              "type": "文章",
+              "source": "央视新闻（京报网转载）",
+              "date": "11-24",
+              "region": "global",
+              "links": [
+                {
+                  "title": "伊朗称三艘油轮在霍尔木兹海峡发生爆炸",
+                  "site": "京报网（央视新闻）",
+                  "href": "https://news.bjd.com.cn/2026/11/24/12041307.shtml",
+                  "lang": "zh"
+                }
+              ]
+            },
+            {
+              "id": "us-house-democrats-majority",
+              "title": "民主党翻转北卡席位，众议院至少 258 席",
+              "excerpt": "BBC、AP 报道，民主党候选人查克·哈伯德（Chuck Hubbard）在北卡罗来纳州第 5 选区击败共和党众议员弗吉尼亚·福克斯（Virginia Foxx），计票和重新计票后以 330 票的边际获胜。\n\n这一结果使民主党在众议院获得至少 258 席，为 1992 年以来最大多数优势。不同报道在席位统计上可能有细微差别，这里按“至少 258 席”表述，而非已确认 259 席。这是中期选举后该选区结果落地、多数优势进一步明确，不是新一轮全国大选刚开始。",
+              "type": "文章",
+              "source": "BBC / AP / 香港电台",
+              "date": "11-24",
+              "region": "global",
+              "bodyZh": "美国众议院多数优势又有新进展。据 BBC 和 AP 报道，民主党候选人查克·哈伯德（Chuck Hubbard）在北卡罗来纳州第 5 选区击败共和党众议员弗吉尼亚·福克斯（Virginia Foxx），经过计票和重新计票后，以 330 票的边际获胜。\n\n这一席落定后，民主党在众议院至少握有 258 席，为 1992 年以来最大的多数优势。需要注意数字口径：不同报道在席位统计上可能有细微差别，这里采用“至少 258 席”的说法，而不是写成已确认 259 席。\n\n时间点也容易误读。这不是一场新的全国大选刚刚开始，而是中期选举之后，这个选区的结果最终落地，把民主党的多数优势进一步明确下来。北卡第 5 选区被翻转本身就说明边际有多窄：330 票，重新计票才定下来。这种量级的差距在美国众议院选区里并非没有先例，但对多数优势的数字表述影响很直接，多一席少一席，说法就不一样。\n\n至于这意味着什么样的立法议程、参议院那边情况如何，材料里没有涉及，也不宜顺着推。目前能确认的是：一个共和党席位被翻转，民主党在众议院的多数扩大到 1992 年以来最大。\n\n另外要提醒一句，这类席位数通常还会随着后续个别选区的计票和认证继续更新，报道给出的“至少 258 席”是当下口径。想跟进可以看 BBC 和 AP 的报道，港台中文导读可参考香港电台的稿件。",
+              "links": [
+                {
+                  "title": "美國民主黨取得自1992年以來在國會眾議院的最大優勢席位",
+                  "site": "香港电台",
+                  "href": "https://news.rthk.hk/rthk/ch/component/k2/1878935-20261123.htm",
+                  "lang": "zh"
+                },
+                {
+                  "title": "Democrats win largest House majority since 1992 after flipping North Carolina seat",
+                  "site": "BBC",
+                  "href": "https://www.bbc.com/news/articles/c6vg29g7dlyno",
+                  "lang": "en"
+                },
+                {
+                  "title": "Democrats clinch a historic House majority of at least 258 seats, the largest since 1992",
+                  "site": "AP",
+                  "href": "https://apnews.com/article/democrats-house-majority-election-2026-congress-721096a4d9ba2cd68683692361798cdb",
+                  "lang": "en"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-23",
       "label": "11月23日 · 周一",
       "categories": [
