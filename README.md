@@ -9,9 +9,10 @@
 - **每日早报**（首页）：一次看一天。顶栏可以换日期，下面分三栏：科技与 AI、财经与市场、综合热点。日期下面可以按地区看这一天：全部、国内、国外。选中项写在 hash 查询里，例如 `#/?region=cn` 或 `#/brief/2026-11-09?region=global`。搜索和地区可以一起用。选「全部」时，同一栏里国内故事仍排在国外前面。
 - **内容广场**：所有日期的故事铺成一页。可按视角（精选 / 全部）、分类、地区（全部 / 国内 / 国外）、时间（今天 / 本周 / 全部）和关键词筛选。地区对应 `region=cn` 或 `region=global`，例如 `#/explore?region=cn&q=芯片`。有精选时，第一则用大卡。选「全部」时，同一天、同一栏里国内仍在国外前面。
 - **详情**：标题、分类、日期、来源、摘要，以及原文链接。有 `region` 时，标题旁显示「国内」或「国外」。有 `bodyZh` 时，摘要下多一节「中文详述」。多条来源按列表展示，并标出中文或英文。链接在新标签打开。「复制链接」复制带 hash 的绝对地址，例如 `https://wengqian66.github.io/daily-news/#/story/…`。
+- **近 30 天**（`#/last30days`）：主题综述清单，和每日早报分开。点进一篇是 `#/last30days/{slug}`，例如 `#/last30days/2026-11-24-ai`。在这一栏里，顶栏搜索只筛这些综述；回到早报或内容广场后，搜索仍只看每日故事。
 - **关于**：这份站是什么、内容从哪来。
 
-顶栏搜索会按标题、摘要、详述或来源过滤，逻辑在浏览器里完成。「今天 / 本周」按上海时区。
+顶栏搜索会按标题、摘要、详述或来源过滤每日故事，逻辑在浏览器里完成。「今天 / 本周」按上海时区。在「近 30 天」里，搜索改为匹配主题、标题、窗口和综述正文。
 
 ## 本地预览
 
@@ -95,6 +96,29 @@ python3 scripts/check_digests.py
 
 每天追加时，保留 `site` 对象，只改 `digests`。
 
+## 近 30 天
+
+「近 30 天」不是早报的一天。它按主题放一份时间窗口里的社区综述，数据在 [`data/last30days/`](data/last30days/)，不要写进 `data/digests.json`，也不要改 `scripts/feeds.json`、`scripts/fetch_candidates.py` 或 `scripts/check_digests.py`。
+
+清单是 [`data/last30days/index.json`](data/last30days/index.json)。`reports` 里一条对应一篇。站点按 `windowEnd`、再按 `generated` 从新到旧排，所以新报告放在数组开头或末尾都可以。
+
+一篇报告是同目录下的 `{slug}.json`。`slug` 用小写 ASCII、数字和连字符，不要空格、`#`、`?`、`&`、`/`，并和文件名一致，例如 `2026-11-24-ai`。列表项的 `file` 写这个文件名。
+
+### 怎样加一篇
+
+1. 把新的 `{slug}.json` 放到 `data/last30days/`。
+2. 在 `index.json` 的 `reports` 里加一条列表信息：`slug`、`file`、`topic`、`title`、`windowStart`、`windowEnd`、`timezone`、`coverageLabel`、`generated`、`skill`、`skillVersion`、`lede`。可选 `searchText`：综述的纯文本，顶栏搜索用它匹配正文。不写时，搜索只用主题、标题、导语和窗口。
+
+报告文件自己要能打开，建议带上同一套元数据，外加：
+
+- `window`：`start`、`end`、`timezone`、`label`
+- `masthead`：页眉那一行
+- `body`：正文。一段一个空行。小节写成 `**标题** - 段落`，段落里的链接写成 `[文字](https://…)`。引用行以 `> ` 开头；含 Polymarket 或 📊 的引用会画成预测市场行，其余是拉引。`KEY PATTERNS` 开头的一块会变成有序列表，行首用 `1. ` 这种编号。
+- `coverageNote`：这次实际搜过、失败或没搜的来源。失败要写明原因，不要写成“该来源没有讨论”。
+- `sourceFooter`：字符串数组，一行一个来源统计。
+
+正文只收录这次运行里已经写好的句子、引语、数字和链接，不要为了填页面另编。
+
 ## 候选来源（RSS）
 
 RSS 是网站发布更新用的订阅格式，常见文件是 RSS 2.0 或 Atom 的 XML。脚本请求这个地址，就能拿到一批标题、链接和发布时间，不用去解析新闻首页。
@@ -135,8 +159,8 @@ gh api --method POST repos/wengqian66/daily-news/pages \
 
 ## 技术说明
 
-- 无构建：`index.html` + `css/styles.css` + `js/app.js`，启动时读取 `data/digests.json`。
-- 路由在 hash 里（`#/explore`、`#/story/nvidia-board-inquiry`），刷新不会 404。
+- 无构建：`index.html` + `css/styles.css` + `js/app.js`。启动时读取 `data/digests.json`；近 30 天另读 `data/last30days/index.json`，打开一篇再读对应的报告文件。
+- 路由在 hash 里（`#/explore`、`#/story/nvidia-board-inquiry`、`#/last30days`、`#/last30days/2026-11-24-ai`），刷新不会 404。
 - 分享：`index.html` 带 Open Graph 和 Twitter 卡片，图片是 [`assets/og.png`](assets/og.png)。打开某一则故事时，页面会改 `document.title`，并尽量更新 `og:title` 和 `og:description`。只读取首页 HTML、不跑脚本的爬虫，看到的仍是站点级卡片。
 - 仓库根目录有 `.nojekyll`，Pages 按原文件发布，不经过 Jekyll。
 - 深色模式记在这台浏览器的 `localStorage` 里。

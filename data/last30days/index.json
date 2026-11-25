@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "last30days",
+  "title": "近 30 天",
+  "dek": "按主题回看一个时间窗口里的社区讨论。每篇是一次 last30days 综述，和每日早报分开存放。",
+  "reports": [
+    {
+      "slug": "2026-11-24-ai",
+      "file": "2026-11-24-ai.json",
+      "topic": "人工智能",
+      "title": "人工智能 · 近 30 天社区综述",
+      "windowStart": "2026-10-25",
+      "windowEnd": "2026-11-24",
+      "timezone": "Asia/Shanghai",
+      "coverageLabel": "2026年10月25日–11月24日",
+      "generated": "2026-11-24",
+      "skill": "last30days",
+      "skillVersion": "4.6.0",
+      "lede": "近 30 天讨论量最大的帖子，是 r/singularity 里把 Yann LeCun 和 Elon Musk 的争论压成一句话：模型在单一任务上超过顶尖人类，并不等于 ASI，而只是“参差不齐的前沿”。有人把它和本月“千年难题被模型解开”的说法放在一起看，认为现在更像狭窄领域的超强能力，而不是全面超越。",
+      "searchText": "人工智能\n人工智能 · 近 30 天社区综述\n🌐 last30days · 人工智能 · Oct 25 to Nov 24, 2026 · v4.6.0\nWhat I learned: 社区把“会做题”和超级智能拆开了 - 近 30 天讨论量最大的帖子，是 r/singularity 里把 Yann LeCun 和 Elon Musk 的争论压成一句话：模型在单一任务上超过顶尖人类，并不等于 ASI，而只是“参差不齐的前沿”。有人把它和本月“千年难题被模型解开”的说法放在一起看，认为现在更像狭窄领域的超强能力，而不是全面超越。 \"An AI narrowly being superior to the best humans at a given task isn't ASI. It's just the jagged frontier.\" 🟠 u/RevolutionaryJob2409 on r/singularity · 881 upvotes 📊 Polymarket · How many more Millennium Prize Problems will AI solve in 2026: 1 at 60% (up 52.5 pts this week) · 0 at 22% (down 66 pts this week) · 2 at 14% (up 12.1 pts this month) Gemini 4 Neon 成了英文圈的模型主线 - Hacker News 上讨论最集中的，是 Google 在 11 月 19 日前后推出的 Gemini 4 Neon。有人把它排到 Models Engineering Index 第一，也有人拿它和 Opus 5.5 比，觉得在长时间代码移植这类活上，Neon 的 “high” 档更便宜、也更快。同一时期，预测市场 把“2026 年底谁有最强模型”大幅转向 Google。 \"Neon is a contender. Neon \"high\" appears faster and cheaper than Opus 5.5 \"medium\" with similar results on long-running language porting work in a large monorepo.\" 🟡 largbae on HN 📊 Polymarket · Which company has best AI model end of 2026: Google at 84% (up 45 pts this month) · Anthropic at 14% (down 36 pts this month) 黄仁勋去而复返，把算力股和政治绑在了一起 - r/ArtificialInteligence 在讨论 Nvidia 董事会恢复黄仁勋 CEO 职务，以及股价随即大涨。联合早报 把它写成“短短 11 天”的权力反转。另一些帖子则更冲，认为这不是基本面修复，而是周末政策托市后的齐涨，芯片管制和“国家冠军”名单也一起被卷进来。 \"When the entire Nasdaq and Bitcoin suddenly snap back in lockstep just because Washington stepped in over the weekend you know fundamentals stopped mattering a long time ago.\" 🟠 u/Sakshambaranwal25 on r/artificial · 43 upvotes 📊 Polymarket · AI bubble burst by: AI bubble burst by June 30, 2027 at 39% (up 21 pts this week) · AI bubble burst in 2026 at 14% (down 18.8 pts today) 开源中文模型仍是本地部署圈的主叙事，但也撞上了“开源到底”的疑云 - r/LocalLLaMA 里呼声很高的判断很直白：开源中文模型最好用。紧接着，r/artificial 指出通义千问团队刚强调“开源到底”，随后推出的 Qwen4-Max 却是闭源 API。同社区还在辩 Maxwell-V1-Flash 是不是套了马甲的微调，有人核对架构和词表后认为不是。中文信息源里，腾讯混元 Hy4 在 11 月发布并走向开源，商汤则在 11 月 24 日开源了带图像自修正的 SenseNova U1.6。 \"Different architecture, different vocab size (200k vs 151k), and new attention type vs qwen 3.5/3.6 35b. Definitely not a fine tune but I had to check when I saw the param size lol\" 🟠 u/JaredsBored on r/LocalLLaMA · 178 upvotes 智能体从“会聊天”转向“能接活”，用户的门槛其实更朴素 - r/singularity 在传 Claude Fable 5.2 用三行提示在 Unreal 里做出可玩的 Gears of War 风格演示。@cryptolinda777 则说，以后评判标准可能变成“有没有人愿意花钱找它干活”。中文用户这边更接地气：@HumanErrorCN 提到豆包出了能办事的个人助理“小豆”，但真正的要求已经降到“新开对话别失忆就行”。同一时期，Sam Altman 那句“不想让人活得像拉布拉多”在 r/singularity 得到共鸣，也有人直接不信他。 \"I also agree with the sentiment. I just don’t believe him when he says it\" 🟠 u/LikeItRight on r/singularity · 204 upvotes 中国政策侧仍在把“人工智能+”往产业和标准上推 - 11 月 24 日的官方发布会上，工信部称 2026 年上半年中国人工智能核心产业规模预计超 7500 亿元，核心企业超 6600 家，智算规模超 2592 EFLOPS，见 中国网转述。稍早则有政府网报道，“十五五”将深化拓展 “人工智能+”行动，优先落地高危、高难场景并健全治理规则。这些是政策与产业口径，和上面社区里的模型榜、开源争议、算力股争吵，不在同一条情绪线上。 KEY PATTERNS from the research: 英文技术圈本月的注意力明显集中到 Gemini 4 Neon，预测市场也同步把“最强模型”筹码转向 Google - per HN 本地部署用户继续把开源中文模型当成最能用的选项，但旗舰型号一闭源，信任就会立刻回潮 - per r/LocalLLaMA 算力巨头的人事反复、芯片管制和市场暴涨暴跌，被很多人看成同一件事，而不是彼此独立的新闻 - per r/artificial 即使出现很强的单项演示和“解题”传闻，社区仍在争这到底是参差前沿，还是走向超级智能 - per r/singularity 产品叙事已经从“更会聊天”转到“能否记住上下文、替人把事做完”，用户的验收标准比发布会朴素得多 - per @HumanErrorCN\n这次检索纳入了 Reddit、X（经由 Grok Bot X）、Hacker News、dev.to 和 Polymarket。GitHub 尝试过，但因 SSL/网络错误失败，这次没有收录，并不是因为 GitHub 上没有讨论。YouTube 未配置，本次没有搜索。arXiv 和 Techmeme 对该主题没有结果。Digg 因未点名该主题而被排除。\nReddit: 32 threads, 5,938 upvotes, 1,927 comments X: 32 posts, 431 likes, 142 reposts, via Grok Bot X HN: 12 stories, 1,414 points, 1,018 comments dev.to: 12 articles, 199 reactions, 79 comments Polymarket: 12 markets; notable: NVIDIA largest company by market cap on Dec 31 14%; AI bubble burst by Jun 30, 2027 39%; Perplexity AI acquired before 2027 8.5% Top voices mentioned by the engine: @GameFiLabs, @cryptolinda777, @bbcchinese; r/artificial, r/ArtificialInteligence, r/MachineLearning\n近 30 天讨论量最大的帖子，是 r/singularity 里把 Yann LeCun 和 Elon Musk 的争论压成一句话：模型在单一任务上超过顶尖人类，并不等于 ASI，而只是“参差不齐的前沿”。有人把它和本月“千年难题被模型解开”的说法放在一起看，认为现在更像狭窄领域的超强能力，而不是全面超越。\n2026年10月25日–11月24日"
+    }
+  ]
+}
