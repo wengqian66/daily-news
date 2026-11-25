@@ -1,4 +1,5 @@
-/* 每日资讯 — static hash router. Content: data/digests.json */
+/* 每日资讯 — static hash router.
+   Content: data/digests.json and data/last30days/. */
 (function () {
   "use strict";
 
@@ -6,6 +7,11 @@
   const state = {
     data: null,
     error: null,
+    last30: null,
+    last30Error: null,
+    reports: new Map(),
+    reportErrors: new Map(),
+    reportPending: new Set(),
     backHash: "#/",
     listName: "brief",
     routeKey: "",
@@ -112,6 +118,11 @@
     if (head === "explore") return { name: "explore", params };
     if (head === "about") return { name: "about", params };
     if (head === "story") return { name: "story", id: parts[1] || "", params };
+    if (head === "last30days") {
+      if (parts.length > 2) return { name: "missing", params };
+      if (parts.length === 2) return { name: "last30report", slug: parts[1] || "", params };
+      return { name: "last30", slug: "", params };
+    }
     return { name: "missing", params };
   }
 
@@ -339,6 +350,11 @@
       fallback = description.startsWith(tagline) ? description : `${lead}${description}`;
     } else {
       fallback = description || tagline || SHARE_DESCRIPTION;
+    }
+    if (route && route.name === "last30") return state.last30?.dek || fallback;
+    if (route && route.name === "last30report") {
+      const entry = last30Entry(route.slug);
+      return clipShare(entry && entry.lede, 140) || fallback;
     }
     if (!state.data || !route || route.name !== "story") return fallback;
     const story = allStories(state.data).find((item) => item.id === route.id);
@@ -744,6 +760,327 @@
     </div>`;
   }
 
+  function isReportSlug(slug) {
+    return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(String(slug || "")) && String(slug).length <= 80;
+  }
+
+  function reportFileName(entry) {
+    const slug = entry && entry.slug ? entry.slug : "";
+    const name = String((entry && entry.file) || (slug ? `${slug}.json` : ""));
+    if (!/^[a-z0-9][a-z0-9.-]*\.json$/.test(name) || name.includes("..")) return "";
+    return name;
+  }
+
+  function sortedReports(index) {
+    return [...(index?.reports || [])].sort((a, b) => {
+      const byEnd = String(b.windowEnd || "").localeCompare(String(a.windowEnd || ""));
+      if (byEnd) return byEnd;
+      const byGenerated = String(b.generated || "").localeCompare(String(a.generated || ""));
+      if (byGenerated) return byGenerated;
+      return String(b.slug || "").localeCompare(String(a.slug || ""));
+    });
+  }
+
+  function last30Entry(slug) {
+    return sortedReports(state.last30).find((item) => item.slug === slug) || null;
+  }
+
+  function last30ListHash(q) {
+    const params = new URLSearchParams();
+    if (q) params.set("q", q);
+    const query = params.toString();
+    return query ? `#/last30days?${query}` : "#/last30days";
+  }
+
+  function reportMatches(report, q) {
+    const tokens = String(q || "").trim().toLowerCase().split(/\s+/).filter(Boolean);
+    if (!tokens.length) return true;
+    const hay = [
+      report.topic,
+      report.title,
+      report.lede,
+      report.searchText,
+      report.coverageLabel,
+      report.skill,
+      report.skillVersion,
+      report.windowStart,
+      report.windowEnd,
+      report.timezone,
+      report.generated,
+    ].join("\n").toLowerCase();
+    return tokens.every((token) => hay.includes(token));
+  }
+
+  function renderInlines(text) {
+    const source = String(text || "");
+    const re = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
+    let html = "";
+    let last = 0;
+    let match;
+    while ((match = re.exec(source))) {
+      html += esc(source.slice(last, match.index));
+      const href = safeUrl(match[2]);
+      const label = esc(match[1]);
+      html += href
+        ? `<a class="text-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">${label}</a>`
+        : label;
+      last = match.index + match[0].length;
+    }
+    html += esc(source.slice(last));
+    return html;
+  }
+
+  function parseReportBody(body) {
+    const chunks = String(body || "").split(/\n{2,}/).map((part) => part.trim()).filter(Boolean);
+    const blocks = [];
+    const pushChunk = (chunk) => {
+      if (!chunk) return;
+      if (chunk === "What I learned:" || chunk.startsWith("What I learned:")) {
+        blocks.push({ type: "kicker", text: "What I learned" });
+        const rest = chunk.slice("What I learned:".length).trim();
+        if (rest) pushChunk(rest);
+        return;
+      }
+      if (chunk.startsWith(">")) {
+        const text = chunk.split("\n").map((line) => line.replace(/^>\s?/, "")).join("\n").trim();
+        const market = text.includes("Polymarket") || text.startsWith("📊");
+        blocks.push({ type: market ? "market" : "quote", text });
+        return;
+      }
+      if (chunk.startsWith("KEY PATTERNS")) {
+        const lines = chunk.split("\n");
+        blocks.push({
+          type: "patterns",
+          title: lines[0].trim(),
+          items: lines.slice(1).map((line) => line.replace(/^\d+\.\s*/, "").trim()).filter(Boolean),
+        });
+        return;
+      }
+      const section = chunk.match(/^\*\*([^*]+)\*\*\s*(?:-\s+)?([\s\S]*)$/);
+      if (section) {
+        blocks.push({ type: "section", title: section[1].trim(), text: section[2].trim() });
+        return;
+      }
+      blocks.push({ type: "prose", text: chunk });
+    };
+    chunks.forEach((chunk) => {
+      const groups = [];
+      let current = [];
+      let quoting = null;
+      const flush = () => {
+        if (!current.length) return;
+        groups.push(current.join("\n").trim());
+        current = [];
+      };
+      chunk.split("\n").forEach((line) => {
+        const isQuote = /^>\s?/.test(line);
+        if (quoting === null) quoting = isQuote;
+        if (isQuote !== quoting) {
+          flush();
+          quoting = isQuote;
+        }
+        current.push(line);
+      });
+      flush();
+      groups.forEach((group) => pushChunk(group));
+    });
+    const grouped = [];
+    let current = null;
+    blocks.forEach((block) => {
+      if (block.type === "section") {
+        current = { type: "section", title: block.title, text: block.text, notes: [] };
+        grouped.push(current);
+        return;
+      }
+      if (current && (block.type === "quote" || block.type === "market")) {
+        current.notes.push(block);
+        return;
+      }
+      current = null;
+      grouped.push(block);
+    });
+    return grouped;
+  }
+
+  function noteHTML(note) {
+    if (note.type === "market") return `<aside class="market-line"><p>${renderInlines(note.text)}</p></aside>`;
+    return `<blockquote class="pull"><p>${renderInlines(note.text)}</p></blockquote>`;
+  }
+
+  function reportBodyHTML(body) {
+    let sectionNo = 0;
+    return parseReportBody(body).map((block) => {
+      if (block.type === "kicker") return `<p class="lede-kicker">${esc(block.text)}</p>`;
+      if (block.type === "patterns") {
+        const items = block.items.map((item) => `<li>${renderInlines(item)}</li>`).join("");
+        return `<section class="report-section"><h2>${esc(block.title)}</h2><ol class="pattern-list">${items}</ol></section>`;
+      }
+      if (block.type === "prose") return `<div class="prose"><p>${renderInlines(block.text)}</p></div>`;
+      if (block.type === "quote" || block.type === "market") return noteHTML(block);
+      sectionNo += 1;
+      const notes = (block.notes || []).map((note) => noteHTML(note)).join("");
+      return `<section class="report-section">
+        <header class="section-head">
+          <span class="section-index">${String(sectionNo).padStart(2, "0")}</span>
+          <h2>${esc(block.title)}</h2>
+        </header>
+        ${block.text ? `<div class="prose"><p>${renderInlines(block.text)}</p></div>` : ""}
+        ${notes}
+      </section>`;
+    }).join("");
+  }
+
+  function reportCardHTML(report) {
+    const version = report.skillVersion ? `v${report.skillVersion}` : "";
+    const meta = [report.skill, version].filter(Boolean).join(" ");
+    const when = report.coverageLabel || [report.windowStart, report.windowEnd].filter(Boolean).join("–");
+    return `<article class="card">
+      <a class="card-link" href="#/last30days/${encodeURIComponent(report.slug)}">
+        <div class="card-top"><span class="type">${ICON_DOC}<span>主题综述${report.topic ? ` · ${esc(report.topic)}` : ""}</span></span></div>
+        <h3 class="card-title">${esc(report.title || report.topic || report.slug)}</h3>
+        <p class="card-excerpt">${esc(oneLine(report.lede || ""))}</p>
+        <p class="card-meta">${avatar(report.topic || report.title || "近")}<span>${esc([meta, when].filter(Boolean).join(" · "))}</span></p>
+      </a>
+    </article>`;
+  }
+
+  function viewLast30(route) {
+    if (!state.last30 && !state.last30Error) {
+      return `<div class="page"><p class="loading">正在读取近 30 天…</p></div>`;
+    }
+    if (state.last30Error) {
+      return `<div class="page"><h1>近 30 天没有载入</h1><p class="dek">${esc(state.last30Error)}</p><p><button class="btn" type="button" data-action="retry">重试</button></p>${footerHTML()}</div>`;
+    }
+    const title = state.last30.title || "近 30 天";
+    const dek = state.last30.dek || "按主题回看一个时间窗口里的社区讨论。";
+    const all = sortedReports(state.last30);
+    const reports = all.filter((item) => reportMatches(item, route.q));
+    let body = "";
+    if (!all.length) {
+      body = emptyBlock("还没有综述", "data/last30days/index.json 里还没有报告。加一篇之后刷新即可。", "", "");
+    } else if (!reports.length) {
+      body = emptyBlock(
+        "没有匹配的综述",
+        `没有主题、标题或窗口包含「${route.q.trim()}」的综述。`,
+        "#/last30days",
+        "清除搜索",
+      );
+    } else {
+      body = `<div class="report-list">${reports.map((item) => reportCardHTML(item)).join("")}</div>`;
+    }
+    return `<div class="page">
+      <header class="hero">
+        <p class="eyebrow">主题综述</p>
+        <h1>${esc(title)}</h1>
+        <p class="dek">${esc(dek)}</p>
+      </header>
+      <p class="result-line" aria-live="polite">${reports.length} 篇${route.q ? ` · 含「${esc(route.q.trim())}」` : ""}</p>
+      ${body}
+      ${footerHTML()}
+    </div>`;
+  }
+
+  function sourceFooterHTML(report) {
+    const lines = Array.isArray(report.sourceFooter) ? report.sourceFooter : [];
+    const note = String(report.coverageNote || "").trim();
+    if (!note && !lines.length) return "";
+    const items = lines.map((line) => `<li>${esc(line)}</li>`).join("");
+    return `<section class="sources" aria-labelledby="last30-sources">
+      <h2 id="last30-sources">来源</h2>
+      ${note ? `<aside class="lede"><p>${esc(note)}</p></aside>` : ""}
+      ${items ? `<ul class="source-lines">${items}</ul>` : ""}
+    </section>`;
+  }
+
+  function viewLast30Report(route) {
+    if (!state.last30 && !state.last30Error) {
+      return `<div class="page page-narrow"><p class="loading">正在读取近 30 天…</p></div>`;
+    }
+    const slug = route.slug || "";
+    const entry = last30Entry(slug);
+    if (!isReportSlug(slug) || (state.last30 && !entry)) {
+      return `<div class="page page-narrow"><h1>没有这篇综述</h1><p class="dek">近 30 天的清单里没有这一篇。</p><p><a class="btn" href="#/last30days">回近 30 天</a></p>${footerHTML()}</div>`;
+    }
+    if (!entry && state.last30Error) {
+      return `<div class="page page-narrow"><h1>近 30 天没有载入</h1><p class="dek">${esc(state.last30Error)}</p><p><button class="btn" type="button" data-action="retry">重试</button></p>${footerHTML()}</div>`;
+    }
+    if (!state.reports.has(slug)) {
+      loadReport(slug);
+      return `<div class="page page-narrow"><p class="loading">正在打开这篇综述…</p></div>`;
+    }
+    const report = state.reports.get(slug);
+    if (!report) {
+      const message = state.reportErrors.get(slug) || "这篇综述没有打开。";
+      return `<div class="page page-narrow"><h1>这篇综述没有打开</h1><p class="dek">${esc(message)}</p><p><a class="btn" href="#/last30days">回近 30 天</a></p>${footerHTML()}</div>`;
+    }
+    const topic = report.topic || entry.topic || "";
+    const title = report.title || entry.title || slug;
+    const windowLabel = (report.window && report.window.label) || entry.coverageLabel || "";
+    const zoneName = (report.window && report.window.timezone) || entry.timezone || "";
+    const version = report.skillVersion || entry.skillVersion || "";
+    const skill = report.skill || entry.skill || "last30days";
+    const generated = report.generated || entry.generated || "";
+    const permalink = pagePermalink(route);
+    const byline = [
+      version ? `${skill} v${version}` : skill,
+      windowLabel,
+      zoneName ? `上海（${zoneName}）` : "",
+      generated ? `生成于 ${generated}` : "",
+    ].filter(Boolean).join(" · ");
+    return `<div class="page page-narrow">
+      <p class="back"><a class="back-link" href="#/last30days">← 返回近 30 天</a></p>
+      <article>
+        <header class="article-head">
+          <p class="kicker-row"><span class="eyebrow">${esc(topic || "近 30 天")}</span></p>
+          <h1>${esc(title)}</h1>
+          <p class="byline">${avatar(topic || title, true)}<span>${esc(byline)}</span></p>
+          ${report.masthead ? `<p class="masthead-line">${esc(report.masthead)}</p>` : ""}
+          <div class="share-row">
+            <button class="copy-link" type="button" data-action="copy-link" data-url="${esc(permalink)}" aria-live="polite">复制链接</button>
+            <span class="copy-status" role="status" aria-live="polite"></span>
+            <p class="copy-manual" hidden>
+              <label>
+                <span class="visually-hidden">综述链接</span>
+                <input class="copy-field" type="text" readonly value="${esc(permalink)}">
+              </label>
+            </p>
+          </div>
+          <p class="fine">这是一次近 30 天主题综述，不是每日早报。引语和数字以所链原文为准。</p>
+        </header>
+        <div class="report-stack">${reportBodyHTML(report.body)}</div>
+        ${sourceFooterHTML(report)}
+      </article>
+      ${footerHTML()}
+    </div>`;
+  }
+
+  async function loadReport(slug) {
+    if (!isReportSlug(slug) || state.reports.has(slug) || state.reportPending.has(slug)) return;
+    const entry = last30Entry(slug);
+    const file = reportFileName(entry || { slug });
+    if (!file) {
+      state.reports.set(slug, null);
+      state.reportErrors.set(slug, "报告文件名不可用。");
+      render({ fromHash: false });
+      return;
+    }
+    state.reportPending.add(slug);
+    try {
+      const response = await fetch(`data/last30days/${file}`, { cache: "no-cache" });
+      if (!response.ok) throw new Error(`读取 data/last30days/${file} 失败（${response.status}）`);
+      const data = await response.json();
+      if (!data || typeof data !== "object" || Array.isArray(data)) throw new Error("综述文件不是对象");
+      state.reports.set(slug, data);
+    } catch (err) {
+      state.reports.set(slug, null);
+      state.reportErrors.set(slug, err.message || "无法读取综述");
+    } finally {
+      state.reportPending.delete(slug);
+    }
+    const route = current();
+    if (route.name === "last30report" && route.slug === slug) render({ fromHash: false, arriving: true });
+  }
+
   function viewAbout() {
     const stories = state.data ? allStories(state.data) : [];
     const digests = sortedDigests(state.data);
@@ -771,6 +1108,7 @@
         <div class="about-copy">
           <p>每日资讯把一天里想读的公开报道收成三栏：科技与 AI、财经与市场、综合热点。每则留标题、短摘要和原文链接；有的故事另附一段中文详述，卡片上仍然只显示摘要。同一栏里，标了国内的故事排在国外前面，卡片和详情会显示「国内」或「国外」。</p>
           <p>摘要和详述都是编者自己的话，用来判断要不要点开，不是通讯社稿，也不是原文全文。站点不转载原文，也不设账号或登录墙。搜索和筛选都在这台浏览器里完成。早报和内容广场可以只看国内或国外。</p>
+          <p>侧栏的「近 30 天」是另一组主题综述，按一个时间窗口汇总社区讨论。报告放在 <code>data/last30days/</code>，不写进每日早报。<a class="text-link" href="#/last30days">打开近 30 天</a>可以看清单。</p>
           <h2>三栏各自看什么</h2>
           <ul class="about-list">
             <li>科技与 AI：芯片、模型、算力和科技公司。</li>
@@ -791,7 +1129,7 @@
   }
 
   function viewMissing() {
-    return `<div class="page"><h1>没有这一页</h1><p class="dek">地址对不上现有的早报、广场或文章。</p><p><a class="btn" href="#/">回每日早报</a></p>${footerHTML()}</div>`;
+    return `<div class="page"><h1>没有这一页</h1><p class="dek">地址对不上现有的早报、广场、近 30 天或文章。</p><p><a class="btn" href="#/">回每日早报</a></p>${footerHTML()}</div>`;
   }
 
   function pageTitle(route) {
@@ -799,6 +1137,14 @@
     if (!state.data) return state.error ? `未能载入 · ${name}` : name;
     if (route.name === "explore") return `内容广场 · ${name}`;
     if (route.name === "about") return `关于 · ${name}`;
+    if (route.name === "last30") return `${state.last30?.title || "近 30 天"} · ${name}`;
+    if (route.name === "last30report") {
+      const entry = last30Entry(route.slug);
+      const loaded = state.reports.get(route.slug);
+      const title = (loaded && loaded.title) || (entry && entry.title);
+      if (!isReportSlug(route.slug) || (state.last30 && !entry)) return `没有这篇综述 · ${name}`;
+      return title ? `${title} · 近 30 天 · ${name}` : `近 30 天 · ${name}`;
+    }
     if (route.name === "story") {
       const story = allStories(state.data).find((item) => item.id === route.id);
       return story ? `${story.title} · ${name}` : `没有这则故事 · ${name}`;
@@ -824,6 +1170,7 @@
     if (route.name === "brief" || route.name === "explore") state.listName = route.name;
     let active = route.name;
     if (route.name === "story") active = state.listName || "brief";
+    if (route.name === "last30" || route.name === "last30report") active = "last30days";
     if (route.name === "missing") active = "";
     document.querySelectorAll("[data-nav]").forEach((link) => {
       if (link.dataset.nav === active) link.setAttribute("aria-current", "page");
@@ -831,12 +1178,18 @@
     });
   }
 
-  function syncSearchBox(q) {
+  function syncSearchBox(route) {
     const input = document.getElementById("q");
     const clear = document.getElementById("clear-q");
     if (!input) return;
+    const q = route && typeof route === "object" ? (route.q || "") : String(route || "");
     if (document.activeElement !== input && input.value !== q) input.value = q;
     if (clear) clear.hidden = input.value.length === 0;
+    const onLast = route && (route.name === "last30" || route.name === "last30report");
+    const placeholder = onLast ? "搜索主题、标题或窗口" : "搜索标题、摘要、详述或来源";
+    input.placeholder = placeholder;
+    const label = document.querySelector('label[for="q"]');
+    if (label) label.textContent = placeholder;
   }
 
   function render(options) {
@@ -852,7 +1205,7 @@
         route = current();
       }
     }
-    const key = `${route.name}:${route.digestId || ""}:${route.id || ""}`;
+    const key = `${route.name}:${route.digestId || ""}:${route.id || ""}:${route.slug || ""}`;
     const routeChanged = key !== state.routeKey;
     state.routeKey = key;
     if (route.name === "brief" || route.name === "explore") {
@@ -875,9 +1228,11 @@
     } else if (route.name === "explore") main.innerHTML = viewExplore(route);
     else if (route.name === "about") main.innerHTML = viewAbout();
     else if (route.name === "story") main.innerHTML = viewStory(route);
+    else if (route.name === "last30") main.innerHTML = viewLast30(route);
+    else if (route.name === "last30report") main.innerHTML = viewLast30Report(route);
     else if (route.name === "missing") main.innerHTML = viewMissing();
     else main.innerHTML = viewBrief(route);
-    syncSearchBox(route.q);
+    syncSearchBox(route);
     const arriving = Boolean(options && options.arriving);
     const shouldFocus = ((fromHash && routeChanged) || arriving) && document.activeElement !== document.getElementById("q");
     if (shouldFocus) {
@@ -904,6 +1259,12 @@
         region: route.region,
         q: input.value,
       });
+    } else if (route.name === "last30" || route.name === "last30report") {
+      hash = last30ListHash(input.value);
+      if (route.name === "last30report") {
+        if ((location.hash || "#/") !== hash) location.hash = hash;
+        return;
+      }
     } else {
       hash = exploreHash({ view: "all", cat: "all", time: "all", q: input.value });
       if ((location.hash || "#/") !== hash) {
@@ -1133,17 +1494,43 @@
   async function load() {
     state.error = null;
     state.data = null;
+    state.last30 = null;
+    state.last30Error = null;
+    state.reports = new Map();
+    state.reportErrors = new Map();
+    state.reportPending = new Set();
     render({ fromHash: false });
-    try {
+    const digestTask = (async () => {
       const response = await fetch("data/digests.json", { cache: "no-cache" });
       if (!response.ok) throw new Error(`读取 data/digests.json 失败（${response.status}）`);
       const data = await response.json();
       if (!data || !Array.isArray(data.digests)) throw new Error("digests.json 缺少 digests 数组");
-      state.data = data;
-      applySite(data);
-    } catch (err) {
+      return data;
+    })();
+    const lastTask = (async () => {
+      const response = await fetch("data/last30days/index.json", { cache: "no-cache" });
+      if (!response.ok) throw new Error(`读取 data/last30days/index.json 失败（${response.status}）`);
+      const data = await response.json();
+      if (!data || !Array.isArray(data.reports)) throw new Error("last30days/index.json 缺少 reports 数组");
+      return data;
+    })();
+    const [digestOutcome, lastOutcome] = await Promise.all([
+      digestTask.then((data) => ({ data })).catch((err) => ({ error: err })),
+      lastTask.then((data) => ({ data })).catch((err) => ({ error: err })),
+    ]);
+    if (digestOutcome.data) {
+      state.data = digestOutcome.data;
+      applySite(digestOutcome.data);
+    } else {
       state.data = null;
-      state.error = err.message || "无法读取内容";
+      state.error = digestOutcome.error?.message || "无法读取内容";
+    }
+    if (lastOutcome.data) {
+      state.last30 = lastOutcome.data;
+      state.last30Error = null;
+    } else {
+      state.last30 = null;
+      state.last30Error = lastOutcome.error?.message || "无法读取近 30 天";
     }
     render({ fromHash: true, arriving: true });
   }
