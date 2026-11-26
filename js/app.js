@@ -1,5 +1,5 @@
 /* 每日资讯 — static hash router.
-   Content: data/digests.json and data/last30days/. */
+   Content: data/digests.json, data/markets.json, and data/last30days/. */
 (function () {
   "use strict";
 
@@ -12,6 +12,11 @@
     reports: new Map(),
     reportErrors: new Map(),
     reportPending: new Set(),
+    markets: null,
+    marketsError: null,
+    chartSpan: 30,
+    chartSeries: {},
+    restoreFocus: "",
     backHash: "#/",
     listName: "brief",
     routeKey: "",
@@ -19,6 +24,13 @@
   };
 
   const PALETTE = ["#7c2d12", "#9f1239", "#1e3a8a", "#115e59", "#3f6212", "#92400e", "#1f2937"];
+  const MARKET_GROUPS = [
+    { id: "gold", heading: "黄金", slots: [["au9999", "沪金 Au99.99"], ["xau", "纽约黄金"]] },
+    { id: "silver", heading: "白银", slots: [["agtd", "沪银 Ag(T+D)"], ["xag", "纽约白银"]] },
+    { id: "oil", heading: "原油", slots: [["brent", "布伦特原油"], ["wti", "WTI 原油"]] },
+  ];
+  const TEASER_QUOTES = [["au9999", "沪金"], ["brent", "布伦特"]];
+  const FUEL_KEY = "dn-fuel-province";
   const PREFERRED = ["tech", "markets", "general"];
   const SITE_BASE = "https://wengqian66.github.io/daily-news/";
   const SHARE_DESCRIPTION = "科技 · 财经 · 热点，每天一读。个人维护的每日新闻早报。";
@@ -49,7 +61,7 @@
   function safeHash(hash) {
     const value = String(hash || "");
     if (value === "#/" || value.startsWith("#/?")) return value;
-    if (value.startsWith("#/brief") || value.startsWith("#/explore") || value.startsWith("#/about")) return value;
+    if (value.startsWith("#/brief") || value.startsWith("#/explore") || value.startsWith("#/about") || value.startsWith("#/markets")) return value;
     return "#/";
   }
 
@@ -117,6 +129,10 @@
     if (head === "brief") return { name: "brief", digestId: parts[1] || "", params };
     if (head === "explore") return { name: "explore", params };
     if (head === "about") return { name: "about", params };
+    if (head === "markets") {
+      if (parts.length > 1) return { name: "missing", params };
+      return { name: "markets", params };
+    }
     if (head === "story") return { name: "story", id: parts[1] || "", params };
     if (head === "last30days") {
       if (parts.length > 2) return { name: "missing", params };
@@ -351,6 +367,9 @@
     } else {
       fallback = description || tagline || SHARE_DESCRIPTION;
     }
+    if (route && route.name === "markets") {
+      return "黄金、白银、原油与国内成品油的每日快照。按上海时间，不是实时行情。";
+    }
     if (route && route.name === "last30") return state.last30?.dek || fallback;
     if (route && route.name === "last30report") {
       const entry = last30Entry(route.slug);
@@ -474,6 +493,392 @@
     </div>`;
   }
 
+  function isNum(value) {
+    return typeof value === "number" && Number.isFinite(value);
+  }
+
+  function formatFixed(value, digits) {
+    const n = Number(value);
+    const places = Number.isInteger(digits) && digits >= 0 ? digits : 2;
+    if (!Number.isFinite(n)) return "";
+    return new Intl.NumberFormat("zh-CN", {
+      minimumFractionDigits: places,
+      maximumFractionDigits: places,
+    }).format(n);
+  }
+
+  function signedNumber(value, digits) {
+    const n = Number(value);
+    if (!Number.isFinite(n)) return "";
+    const body = formatFixed(Math.abs(n), digits);
+    if (n > 0) return `+${body}`;
+    if (n < 0) return `-${body}`;
+    return body;
+  }
+
+  function changeClass(value) {
+    if (!isNum(value) || value === 0) return "chg-flat";
+    return value > 0 ? "chg-up" : "chg-down";
+  }
+
+  function formatCutoff(iso) {
+    const match = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(String(iso || ""));
+    if (!match) return "";
+    return `${Number(match[2])}月${Number(match[3])}日 ${match[4]}:${match[5]}（上海）`;
+  }
+
+  function marketsZone() {
+    return (state.markets && state.markets.timezone) || zone();
+  }
+
+  function quoteDigits(quote) {
+    const digits = quote && quote.decimals;
+    return Number.isInteger(digits) && digits >= 0 && digits <= 4 ? digits : 2;
+  }
+
+  function sliceHistory(history) {
+    const rows = (Array.isArray(history) ? history : []).filter((point) => (
+      point && isISODate(point.date) && isNum(point.close)
+    )).map((point) => ({ date: point.date, close: Number(point.close) }));
+    if (!rows.length) return [];
+    if (state.chartSpan === 0) return rows;
+    const span = Number.isInteger(state.chartSpan) && state.chartSpan > 1 ? state.chartSpan : 30;
+    return rows.slice(-span);
+  }
+
+  function quoteWhen(quote) {
+    const day = `${fmtMd(quote.sessionDate)} · ${weekdayZh(quote.sessionDate)}`;
+    const today = calendarToday(marketsZone());
+    const rel = quote.sessionDate === today ? "今日" : "最近交易日";
+    const clock = typeof quote.clock === "string" ? quote.clock : "";
+    const hasClock = /^\d{2}:\d{2}$/.test(clock);
+    if (quote.clockKind === "tick" && hasClock) return `${rel} ${day} ${clock}（上海）`;
+    if (quote.clockKind === "close" && hasClock) return `${rel} ${day} ${clock} 收盘（上海）`;
+    return `${rel} ${day}（上海）`;
+  }
+
+  function findQuote(id) {
+    const quotes = state.markets && Array.isArray(state.markets.quotes) ? state.markets.quotes : [];
+    return quotes.find((item) => item && item.id === id) || null;
+  }
+
+  function marketTeaserHTML() {
+    const items = TEASER_QUOTES.map(([id, label]) => {
+      const quote = findQuote(id);
+      return quote ? { quote, label } : null;
+    }).filter(Boolean);
+    if (!items.length) return "";
+    const today = calendarToday(marketsZone());
+    const bits = items.map(({ quote, label }) => {
+      const digits = quoteDigits(quote);
+      const change = isNum(quote.changePct)
+        ? `<span class="chg ${changeClass(quote.change)}">${esc(signedNumber(quote.changePct, 2))}%</span>`
+        : "";
+      const date = quote.sessionDate && quote.sessionDate !== today
+        ? `<span class="teaser-date">${esc(fmtMd(quote.sessionDate))}</span>`
+        : "";
+      return `<span class="teaser-item"><span>${esc(label)}</span><b>${esc(formatFixed(quote.price, digits))}</b>${change}${date}</span>`;
+    }).join("");
+    return `<a class="market-teaser" href="#/markets"><span class="teaser-kicker">行情</span>${bits}<span class="teaser-go">查看</span></a>`;
+  }
+
+  function chartScale(points) {
+    const closes = points.map((point) => point.close);
+    let min = Math.min(...closes);
+    let max = Math.max(...closes);
+    if (!Number.isFinite(min) || !Number.isFinite(max)) return null;
+    if (min === max) {
+      min -= 1;
+      max += 1;
+    }
+    const pad = (max - min) * 0.08;
+    return { lo: min - pad, hi: max + pad, min, max };
+  }
+
+  function chartY(value, scale) {
+    return ((scale.hi - value) / (scale.hi - scale.lo)) * 100;
+  }
+
+  function chartFigureHTML(quote, points) {
+    if (!points || points.length < 2) return `<p class="fine">暂无足够的走势。</p>`;
+    const scale = chartScale(points);
+    if (!scale) return `<p class="fine">暂无足够的走势。</p>`;
+    const digits = quoteDigits(quote);
+    state.chartSeries[quote.id] = {
+      points,
+      decimals: digits,
+      unit: quote.unit || "",
+      lo: scale.lo,
+      hi: scale.hi,
+    };
+    const coords = points.map((point, index) => {
+      const x = (index / (points.length - 1)) * 100;
+      return `${x.toFixed(2)},${chartY(point.close, scale).toFixed(2)}`;
+    }).join(" ");
+    const ticks = [scale.max, (scale.max + scale.min) / 2, scale.min];
+    const grid = ticks.map((value) => {
+      const y = chartY(value, scale).toFixed(2);
+      return `<line class="chart-grid" x1="0" y1="${y}" x2="100" y2="${y}" vector-effect="non-scaling-stroke"></line>`;
+    }).join("");
+    const yLabels = ticks.map((value) => (
+      `<span style="top:${chartY(value, scale).toFixed(2)}%">${esc(formatFixed(value, digits))}</span>`
+    )).join("");
+    const marks = [points[0], points[Math.floor((points.length - 1) / 2)], points[points.length - 1]];
+    const xLabels = marks.map((point) => `<span>${esc(fmtMd(point.date))}</span>`).join("");
+    const caption = `${quote.name}，${fmtMd(points[0].date)}至${fmtMd(points[points.length - 1].date)}，${points.length} 个交易日`;
+    const rows = points.map((point) => (
+      `<tr><td>${esc(point.date)}</td><td>${esc(formatFixed(point.close, digits))}</td></tr>`
+    )).join("");
+    return `<figure class="quote-chart" data-chart="${esc(quote.id)}" tabindex="0" aria-label="${esc(caption)}。左右方向键可以查看某一天。">
+      <div class="chart-layout">
+        <div class="chart-y" aria-hidden="true">${yLabels}</div>
+        <div class="chart-main">
+          <div class="chart-plot">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              ${grid}
+              <polygon class="chart-area" points="0,100 ${coords} 100,100"></polygon>
+              <polyline class="chart-line" points="${coords}" vector-effect="non-scaling-stroke"></polyline>
+            </svg>
+            <p class="chart-tip" data-tip hidden></p>
+            <span class="chart-rule" data-rule hidden></span>
+            <span class="chart-dot" data-dot hidden></span>
+          </div>
+          <div class="chart-x" aria-hidden="true">${xLabels}</div>
+        </div>
+      </div>
+      <table class="visually-hidden"><caption>${esc(caption)}</caption><thead><tr><th>日期</th><th>收盘</th></tr></thead><tbody>${rows}</tbody></table>
+    </figure>`;
+  }
+
+  function quoteCardHTML(quote) {
+    const digits = quoteDigits(quote);
+    const points = sliceHistory(quote.history);
+    const change = isNum(quote.change)
+      ? `<span class="chg ${changeClass(quote.change)}">${esc(signedNumber(quote.change, digits))} · ${esc(signedNumber(quote.changePct, 2))}%</span>`
+      : `<span class="fine">暂无涨跌</span>`;
+    const href = safeUrl(quote.sourceUrl);
+    const source = href
+      ? `<a class="text-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(quote.source || "来源")}</a>`
+      : esc(quote.source || "");
+    const stale = quote.stale ? `<p class="fine">这次没有刷新，仍是上次写入的价格。</p>` : "";
+    return `<article class="quote-card">
+      <p class="type">${esc(quote.detail || quote.unit || "")}</p>
+      <h3>${esc(quote.name || "")}</h3>
+      <p class="quote-price"><b>${esc(formatFixed(quote.price, digits))}</b><span class="quote-unit">${esc(quote.unit || "")}</span></p>
+      <p class="quote-change">${change}</p>
+      <p class="quote-when">${esc(quoteWhen(quote))}</p>
+      <p class="fine">${source}</p>
+      ${stale}
+      ${chartFigureHTML(quote, points)}
+    </article>`;
+  }
+
+  function emptyQuoteHTML(label) {
+    return `<article class="quote-card quote-empty"><h3>${esc(label)}</h3><p>暂无数据</p><p class="fine">这一项没有写入。</p></article>`;
+  }
+
+  function spanControlHTML() {
+    const quotes = state.markets && Array.isArray(state.markets.quotes) ? state.markets.quotes : [];
+    const lengths = quotes.map((quote) => (Array.isArray(quote.history) ? quote.history.length : 0));
+    const maxLen = lengths.reduce((max, len) => Math.max(max, len), 0);
+    if (maxLen <= 30) return "";
+    const same = lengths.every((len) => len === maxLen);
+    const allLabel = same ? `全部 ${maxLen} 个交易日` : "全部已存";
+    const current = state.chartSpan === 0 ? 0 : 30;
+    const button = (span, label, id) => {
+      const on = current === span;
+      return `<button type="button" class="chip" id="${id}" data-action="chart-span" data-span="${span}" aria-pressed="${on ? "true" : "false"}">${esc(label)}</button>`;
+    };
+    return `<div class="chart-span" role="group" aria-label="走势区间">${button(30, "近 30 个交易日", "chart-span-30")}${button(0, allLabel, "chart-span-all")}</div>`;
+  }
+
+  function savedProvince(fuel) {
+    const names = (fuel.provinces || []).map((row) => row && row.name).filter(Boolean);
+    let saved = "";
+    try { saved = localStorage.getItem(FUEL_KEY) || ""; } catch (err) { saved = ""; }
+    if (names.includes(saved)) return saved;
+    if (names.includes("广东")) return "广东";
+    return names[0] || "";
+  }
+
+  function fuelTileHTML(label, price, delta) {
+    if (!isNum(price)) {
+      return `<div class="fuel-tile"><span>${esc(label)}</span><b>暂无数据</b></div>`;
+    }
+    const change = isNum(delta)
+      ? `<span class="chg ${changeClass(delta)}">${esc(signedNumber(delta, 2))}</span><span class="fine">元/升 · 较上一轮调价</span>`
+      : `<span class="fine">元/升</span>`;
+    return `<div class="fuel-tile"><span>${esc(label)}</span><b>${esc(formatFixed(price, 2))}</b>${change}</div>`;
+  }
+
+  function fuelReadoutHTML(fuel, name) {
+    const row = (fuel.provinces || []).find((item) => item && item.name === name);
+    if (!row) return `<p>暂无数据</p>`;
+    const tiles = [
+      fuelTileHTML("92号汽油", row.p92, row.d92),
+      fuelTileHTML("95号汽油", row.p95, row.d95),
+      fuelTileHTML("0号柴油", row.p0, row.d0),
+    ].join("");
+    const href = safeUrl(row.url);
+    const link = href
+      ? `<p class="fine"><a class="text-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(name)}油价说明</a></p>`
+      : "";
+    return `<div class="fuel-grid">${tiles}</div>${link}`;
+  }
+
+  function fuelSectionHTML(fuel) {
+    if (!fuel || !Array.isArray(fuel.provinces) || !fuel.provinces.length) {
+      return `<section class="cat-block" aria-labelledby="mk-fuel">
+        <header class="section-head"><span class="section-index">04</span><div><h2 id="mk-fuel">国内成品油</h2></div></header>
+        <p>暂无数据</p>
+      </section>`;
+    }
+    const selected = savedProvince(fuel);
+    const options = fuel.provinces.map((row) => {
+      const name = row && row.name ? row.name : "";
+      const mark = name === selected ? " selected" : "";
+      return `<option value="${esc(name)}"${mark}>${esc(name)}</option>`;
+    }).join("");
+    const meta = [formatCutoff(fuel.updatedAt), fuel.unit || "元/升"].filter(Boolean).join(" · ");
+    const windowLine = typeof fuel.nextWindow === "string" && fuel.nextWindow.trim()
+      ? `<p class="fuel-window">下次调价窗口 <strong>${esc(fuel.nextWindow.trim())}</strong></p>`
+      : "";
+    const stale = fuel.stale ? `<p class="fine">这次没有刷新，仍是上次写入的价格。</p>` : "";
+    const credit = safeUrl(fuel.sourceUrl) || "https://www.riyoujia.com/";
+    return `<section class="cat-block" aria-labelledby="mk-fuel">
+      <header class="fuel-head">
+        <div class="section-head">
+          <span class="section-index">04</span>
+          <div>
+            <h2 id="mk-fuel">国内成品油</h2>
+            <p class="section-count">${esc(meta)}</p>
+          </div>
+        </div>
+        <label class="day-picker fuel-picker">
+          <span class="visually-hidden">选择省份</span>
+          <select class="day-select" id="fuel-province">${options}</select>
+        </label>
+      </header>
+      ${stale}
+      <div id="fuel-readout" aria-live="polite">${fuelReadoutHTML(fuel, selected)}</div>
+      ${windowLine}
+      <p class="fine">92 号、95 号汽油和 0 号柴油，覆盖 31 个省级行政区。零售价一般随国家发改委每 10 个工作日的窗口调整，以公告为准。数据来源：<a class="text-link" href="${esc(credit)}" target="_blank" rel="noopener noreferrer">日油价 riyoujia.com</a>。实际价格以当地加油站为准。</p>
+    </section>`;
+  }
+
+  function viewMarkets() {
+    if (!state.markets && !state.marketsError) {
+      return `<div class="page"><p class="loading">正在读取行情…</p></div>`;
+    }
+    if (!state.markets) {
+      return `<div class="page"><h1>行情没有载入</h1><p class="dek">${esc(state.marketsError || "无法读取行情")}</p><p><button class="btn" type="button" data-action="retry">重试</button></p>${footerHTML()}</div>`;
+    }
+    state.chartSeries = {};
+    const groups = MARKET_GROUPS.map((group, index) => {
+      const cards = group.slots.map(([id, label]) => {
+        const quote = findQuote(id);
+        return quote ? quoteCardHTML(quote) : emptyQuoteHTML(label);
+      }).join("");
+      return `<section class="cat-block" aria-labelledby="mk-${esc(group.id)}">
+        <header class="section-head">
+          <span class="section-index">${String(index + 1).padStart(2, "0")}</span>
+          <div><h2 id="mk-${esc(group.id)}">${esc(group.heading)}</h2></div>
+        </header>
+        <div class="quote-grid">${cards}</div>
+      </section>`;
+    }).join("");
+    const generated = formatCutoff(state.markets.generatedAt);
+    return `<div class="page">
+      <header class="hero">
+        <p class="eyebrow">行情</p>
+        <h1>黄金、白银与原油</h1>
+        <p class="dek">每日快照，按上海时间。不是实时跳动的行情。周末和节假日显示最近一个交易日。</p>
+        ${generated ? `<p class="subdek">快照写入 ${esc(generated)}</p>` : ""}
+      </header>
+      ${spanControlHTML()}
+      ${groups}
+      ${fuelSectionHTML(state.markets.fuel)}
+      <p class="fine">这些数字用来每天看一眼，不是买卖建议。</p>
+      ${footerHTML()}
+    </div>`;
+  }
+
+  function hideChartPointer(figure) {
+    figure.querySelectorAll("[data-tip], [data-rule], [data-dot]").forEach((node) => {
+      node.hidden = true;
+    });
+  }
+
+  function showChartIndex(figure, index) {
+    const meta = state.chartSeries && state.chartSeries[figure.getAttribute("data-chart")];
+    if (!meta || meta.points.length < 2 || meta.hi === meta.lo) return;
+    const next = Math.max(0, Math.min(meta.points.length - 1, index));
+    figure.dataset.index = String(next);
+    const point = meta.points[next];
+    const x = (next / (meta.points.length - 1)) * 100;
+    const y = ((meta.hi - point.close) / (meta.hi - meta.lo)) * 100;
+    const rule = figure.querySelector("[data-rule]");
+    const dot = figure.querySelector("[data-dot]");
+    const tip = figure.querySelector("[data-tip]");
+    if (rule) {
+      rule.hidden = false;
+      rule.style.left = `${x}%`;
+    }
+    if (dot) {
+      dot.hidden = false;
+      dot.style.left = `${x}%`;
+      dot.style.top = `${y}%`;
+    }
+    if (tip) {
+      tip.hidden = false;
+      tip.textContent = `${fmtMd(point.date)} · ${weekdayZh(point.date)}  ${formatFixed(point.close, meta.decimals)} ${meta.unit}`;
+    }
+  }
+
+  function updateChartPointer(figure, clientX) {
+    const meta = state.chartSeries && state.chartSeries[figure.getAttribute("data-chart")];
+    const plot = figure.querySelector(".chart-plot");
+    if (!meta || !plot || meta.points.length < 2) return;
+    const rect = plot.getBoundingClientRect();
+    if (!rect.width) return;
+    const ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+    showChartIndex(figure, Math.round(ratio * (meta.points.length - 1)));
+  }
+
+  function onChartKey(event) {
+    const figure = event.currentTarget;
+    const meta = state.chartSeries && state.chartSeries[figure.getAttribute("data-chart")];
+    if (!meta) return;
+    const current = Number(figure.dataset.index);
+    const start = Number.isInteger(current) ? current : meta.points.length - 1;
+    let next = null;
+    if (event.key === "ArrowRight") next = start + 1;
+    else if (event.key === "ArrowLeft") next = start - 1;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = meta.points.length - 1;
+    if (next === null) return;
+    event.preventDefault();
+    showChartIndex(figure, next);
+  }
+
+  function bindCharts() {
+    document.querySelectorAll("[data-chart]").forEach((figure) => {
+      const plot = figure.querySelector(".chart-plot");
+      if (!plot) return;
+      plot.addEventListener("pointermove", (event) => updateChartPointer(figure, event.clientX));
+      plot.addEventListener("pointerdown", (event) => updateChartPointer(figure, event.clientX));
+      plot.addEventListener("pointerleave", () => hideChartPointer(figure));
+      figure.addEventListener("keydown", onChartKey);
+      figure.addEventListener("focus", () => {
+        const meta = state.chartSeries[figure.getAttribute("data-chart")];
+        if (!meta) return;
+        const current = Number(figure.dataset.index);
+        showChartIndex(figure, Number.isInteger(current) ? current : meta.points.length - 1);
+      });
+      figure.addEventListener("blur", () => hideChartPointer(figure));
+    });
+  }
+
   function viewBrief(route) {
     const digests = sortedDigests(state.data);
     const today = calendarToday(zone());
@@ -551,6 +956,7 @@
         <p class="dek">${esc(digest.coverage || "")}</p>
         <p class="subdek">${esc([tagline, countLine].filter(Boolean).join(" · "))}</p>
       </header>
+      ${marketTeaserHTML()}
       ${regionRow}
       ${lede}
       ${jumps ? `<nav class="jump" aria-label="分类">${jumps}</nav>` : ""}
@@ -1109,6 +1515,7 @@
           <p>每日资讯把一天里想读的公开报道收成三栏：科技与 AI、财经与市场、综合热点。每则留标题、短摘要和原文链接；有的故事另附一段中文详述，卡片上仍然只显示摘要。同一栏里，标了国内的故事排在国外前面，卡片和详情会显示「国内」或「国外」。</p>
           <p>摘要和详述都是编者自己的话，用来判断要不要点开，不是通讯社稿，也不是原文全文。站点不转载原文，也不设账号或登录墙。搜索和筛选都在这台浏览器里完成。早报和内容广场可以只看国内或国外。</p>
           <p>侧栏的「近 30 天」是另一组主题综述，按一个时间窗口汇总社区讨论。报告放在 <code>data/last30days/</code>，不写进每日早报。<a class="text-link" href="#/last30days">打开近 30 天</a>可以看清单。</p>
+          <p>侧栏的「行情」是黄金、白银、原油和国内成品油的每日快照，写在 <code>data/markets.json</code>。它不是早报里的新闻，也不是实时报价。周末和节假日显示最近一个交易日。<a class="text-link" href="#/markets">打开行情</a>可以换省份看 92 号、95 号和 0 号油价，选择记在这台浏览器里。</p>
           <h2>三栏各自看什么</h2>
           <ul class="about-list">
             <li>科技与 AI：芯片、模型、算力和科技公司。</li>
@@ -1129,7 +1536,7 @@
   }
 
   function viewMissing() {
-    return `<div class="page"><h1>没有这一页</h1><p class="dek">地址对不上现有的早报、广场、近 30 天或文章。</p><p><a class="btn" href="#/">回每日早报</a></p>${footerHTML()}</div>`;
+    return `<div class="page"><h1>没有这一页</h1><p class="dek">地址对不上现有的早报、行情、广场、近 30 天或文章。</p><p><a class="btn" href="#/">回每日早报</a></p>${footerHTML()}</div>`;
   }
 
   function pageTitle(route) {
@@ -1137,6 +1544,7 @@
     if (!state.data) return state.error ? `未能载入 · ${name}` : name;
     if (route.name === "explore") return `内容广场 · ${name}`;
     if (route.name === "about") return `关于 · ${name}`;
+    if (route.name === "markets") return `行情 · ${name}`;
     if (route.name === "last30") return `${state.last30?.title || "近 30 天"} · ${name}`;
     if (route.name === "last30report") {
       const entry = last30Entry(route.slug);
@@ -1227,6 +1635,7 @@
         : '<div class="page"><p class="loading">正在整理今天的早报…</p></div>';
     } else if (route.name === "explore") main.innerHTML = viewExplore(route);
     else if (route.name === "about") main.innerHTML = viewAbout();
+    else if (route.name === "markets") main.innerHTML = viewMarkets();
     else if (route.name === "story") main.innerHTML = viewStory(route);
     else if (route.name === "last30") main.innerHTML = viewLast30(route);
     else if (route.name === "last30report") main.innerHTML = viewLast30Report(route);
@@ -1242,6 +1651,12 @@
         heading.setAttribute("tabindex", "-1");
         heading.focus({ preventScroll: true });
       }
+    }
+    bindCharts();
+    if (state.restoreFocus) {
+      const node = document.getElementById(state.restoreFocus);
+      state.restoreFocus = "";
+      if (node) node.focus();
     }
     state.booted = true;
   }
@@ -1354,8 +1769,15 @@
       if (!target) return;
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
-    } else if (action === "retry") load();
+    }     else if (action === "retry") load();
     else if (action === "copy-link") copyStoryLink(el);
+    else if (action === "chart-span") {
+      const span = el.dataset.span === "0" ? 0 : 30;
+      if (state.chartSpan === span) return;
+      state.chartSpan = span;
+      state.restoreFocus = span === 0 ? "chart-span-all" : "chart-span-30";
+      render({ fromHash: false });
+    }
   }
 
   function copyWithInput(text) {
@@ -1499,6 +1921,9 @@
     state.reports = new Map();
     state.reportErrors = new Map();
     state.reportPending = new Set();
+    state.markets = null;
+    state.marketsError = null;
+    state.chartSeries = {};
     render({ fromHash: false });
     const digestTask = (async () => {
       const response = await fetch("data/digests.json", { cache: "no-cache" });
@@ -1514,9 +1939,19 @@
       if (!data || !Array.isArray(data.reports)) throw new Error("last30days/index.json 缺少 reports 数组");
       return data;
     })();
-    const [digestOutcome, lastOutcome] = await Promise.all([
+    const marketsTask = (async () => {
+      const response = await fetch("data/markets.json", { cache: "no-cache" });
+      if (!response.ok) throw new Error(`读取 data/markets.json 失败（${response.status}）`);
+      const data = await response.json();
+      if (!data || typeof data !== "object" || Array.isArray(data) || !Array.isArray(data.quotes)) {
+        throw new Error("markets.json 缺少 quotes 数组");
+      }
+      return data;
+    })();
+    const [digestOutcome, lastOutcome, marketsOutcome] = await Promise.all([
       digestTask.then((data) => ({ data })).catch((err) => ({ error: err })),
       lastTask.then((data) => ({ data })).catch((err) => ({ error: err })),
+      marketsTask.then((data) => ({ data })).catch((err) => ({ error: err })),
     ]);
     if (digestOutcome.data) {
       state.data = digestOutcome.data;
@@ -1532,6 +1967,13 @@
       state.last30 = null;
       state.last30Error = lastOutcome.error?.message || "无法读取近 30 天";
     }
+    if (marketsOutcome.data) {
+      state.markets = marketsOutcome.data;
+      state.marketsError = null;
+    } else {
+      state.markets = null;
+      state.marketsError = marketsOutcome.error?.message || "无法读取行情";
+    }
     render({ fromHash: true, arriving: true });
   }
 
@@ -1540,6 +1982,13 @@
     document.getElementById("search-form").addEventListener("submit", (event) => event.preventDefault());
     document.getElementById("q").addEventListener("input", onSearchInput);
     main.addEventListener("change", (event) => {
+      if (event.target.id === "fuel-province") {
+        const name = event.target.value;
+        try { localStorage.setItem(FUEL_KEY, name); } catch (err) { /* ignore */ }
+        const box = document.getElementById("fuel-readout");
+        if (box && state.markets && state.markets.fuel) box.innerHTML = fuelReadoutHTML(state.markets.fuel, name);
+        return;
+      }
       if (event.target.id !== "day-select") return;
       const route = current();
       location.hash = briefHash(event.target.value, route.q, route.region);

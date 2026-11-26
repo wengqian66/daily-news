@@ -9,8 +9,11 @@
 - **每日早报**（首页）：一次看一天。顶栏可以换日期，下面分三栏：科技与 AI、财经与市场、综合热点。日期下面可以按地区看这一天：全部、国内、国外。选中项写在 hash 查询里，例如 `#/?region=cn` 或 `#/brief/2026-11-09?region=global`。搜索和地区可以一起用。选「全部」时，同一栏里国内故事仍排在国外前面。
 - **内容广场**：所有日期的故事铺成一页。可按视角（精选 / 全部）、分类、地区（全部 / 国内 / 国外）、时间（今天 / 本周 / 全部）和关键词筛选。地区对应 `region=cn` 或 `region=global`，例如 `#/explore?region=cn&q=芯片`。有精选时，第一则用大卡。选「全部」时，同一天、同一栏里国内仍在国外前面。
 - **详情**：标题、分类、日期、来源、摘要，以及原文链接。有 `region` 时，标题旁显示「国内」或「国外」。有 `bodyZh` 时，摘要下多一节「中文详述」。多条来源按列表展示，并标出中文或英文。链接在新标签打开。「复制链接」复制带 hash 的绝对地址，例如 `https://wengqian66.github.io/daily-news/#/story/…`。
+- **行情**（`#/markets`）：黄金、白银、原油和国内成品油的每日快照。每条有最新价、涨跌、单位、来源和截止时间（上海）。走势默认看近 30 个交易日，也可以看已保存的全部。成品油是 31 个省级行政区的 92 号、95 号和 0 号，默认广东，换省之后记在这台浏览器里。周末和节假日显示最近一个交易日。缺某一项时，那一格写「暂无数据」，其他项照常显示。
 - **近 30 天**（`#/last30days`）：主题综述清单，和每日早报分开。点进一篇是 `#/last30days/{slug}`，例如 `#/last30days/2026-11-24-ai`。在这一栏里，顶栏搜索只筛这些综述；回到早报或内容广场后，搜索仍只看每日故事。
 - **关于**：这份站是什么、内容从哪来。
+
+早报标题下面有一行今日沪金和布伦特的价格，点进去就是行情页。这一行只在 `data/markets.json` 里已经有对应报价时出现。
 
 顶栏搜索会按标题、摘要、详述或来源过滤每日故事，逻辑在浏览器里完成。「今天 / 本周」按上海时区。在「近 30 天」里，搜索改为匹配主题、标题、窗口和综述正文。
 
@@ -119,6 +122,54 @@ python3 scripts/check_digests.py
 
 正文只收录这次运行里已经写好的句子、引语、数字和链接，不要为了填页面另编。
 
+## 行情
+
+行情不是早报的一天，也不要写进 `data/digests.json`。页面只读 [`data/markets.json`](data/markets.json)。浏览器不请求交易所或油价接口。
+
+早晨流水线在起草早报之外可以跑：
+
+```bash
+python3 scripts/fetch_markets.py
+```
+
+脚本只用 Python 标准库，工作目录不限。它会请求下面三个来源，合并进现有文件，再跑和 `scripts/check_markets.py` 相同的检查。检查不通过就不覆盖原文件。同一天重跑是安全的：同一个交易日会盖掉那一天的点，不会另起一行。某一项请求失败时，其他项照常写入；这项如果以前有快照，就留下上次的价格并标 `stale: true`，页面会写「这次没有刷新」。没有旧快照时，这项不出现，页面显示「暂无数据」。脚本不编造价格。
+
+来源（2026-11-26 用真实请求核对过）：
+
+| 内容 | 来源 | 地址 |
+| --- | --- | --- |
+| 沪金 Au99.99，元/克 | 上海黄金交易所日行情 | `POST https://www.sge.com.cn/graph/Dailyhq`，`instid=Au99.99`。说明页：https://www.sge.com.cn/sjzx/mrhq |
+| 沪银 Ag(T+D)，元/千克 | 同上 | `instid=Ag(T+D)`。Ag99.99 很多交易日只有一个价，流动性差，所以不用它 |
+| 纽约黄金，美元/盎司 | 新浪财经，COMEX 黄金期货主力连续 | 日线 `https://stock2.finance.sina.com.cn/futures/api/json.php/GlobalFuturesService.getGlobalFuturesDailyKLine?symbol=GC`，最新价和钟点 `https://hq.sinajs.cn/list=hf_GC` |
+| 纽约白银，美元/盎司 | 同上，COMEX 白银 | `symbol=SI`，`hf_SI` |
+| WTI 原油，美元/桶 | 同上，NYMEX WTI | `symbol=CL`，`hf_CL` |
+| 布伦特原油，美元/桶 | 同上，行情名称「布伦特原油」 | `symbol=OIL`，`hf_OIL`。报价页标题里带 CFD。2026-11-26 的前收与东方财富 ICE 布伦特连续合约 `112.B00Y` 的 90.64 一致 |
+| 31 省 92/95/0 号，元/升 | 日油价 | `GET https://www.riyoujia.com/api/oil.json` |
+
+日油价要求公开展示时保留「数据来源：日油价 riyoujia.com」。页面和 `fuel.attribution` 都写了这句，并链到 https://www.riyoujia.com/ 。下次调价窗口用接口里的 `next_window`，没有就不显示。
+
+上金所日行情没有逐笔时间。沪金、沪银的 `clockKind` 是 `close`，`clock` 是 `15:30`，表示该交易日日盘收盘。纽约和原油如果拿到了行情钟点，`clockKind` 是 `tick`，时间按上海时区。文件里每个品种最多保留 120 个交易日，第一次运行就会从源里回填这么多。
+
+`quotes` 里每一项：
+
+- `id`：`au9999`、`xau`、`agtd`、`xag`、`brent`、`wti`
+- `name`、`group`（`gold` / `silver` / `oil`）、`detail`、`unit`、`decimals`
+- `price`、`change`、`changePct`：涨跌相对前一个交易日的收盘
+- `sessionDate`：最近一个有行情的交易日
+- `asOf`：`YYYY-MM-DDTHH:MM:SS+08:00`，并且落在 `sessionDate` 当天
+- `source`、`sourceUrl`
+- `history`：按日期升序的 `{ "date", "close" }`，最后一天的 `close` 等于 `price`
+
+`fuel.provinces` 固定 31 个省级行政区（不含港澳台），名称用短名，例如 `广东`。每省有 `p92`、`p95`、`p0`，有则再写 `d92`、`d95`、`d0`（较上一轮调价，元/升）和 `url`。
+
+提交前：
+
+```bash
+python3 scripts/check_markets.py
+```
+
+检查不过，GitHub Actions 也不会过。价格不是正数、单位对不上、历史对不上最新价、成品油不是 31 省，都会失败。某一品种整段缺失是允许的。
+
 ## 候选来源（RSS）
 
 RSS 是网站发布更新用的订阅格式，常见文件是 RSS 2.0 或 Atom 的 XML。脚本请求这个地址，就能拿到一批标题、链接和发布时间，不用去解析新闻首页。
@@ -159,11 +210,11 @@ gh api --method POST repos/wengqian66/daily-news/pages \
 
 ## 技术说明
 
-- 无构建：`index.html` + `css/styles.css` + `js/app.js`。启动时读取 `data/digests.json`；近 30 天另读 `data/last30days/index.json`，打开一篇再读对应的报告文件。
-- 路由在 hash 里（`#/explore`、`#/story/nvidia-board-inquiry`、`#/last30days`、`#/last30days/2026-11-24-ai`），刷新不会 404。
+- 无构建：`index.html` + `css/styles.css` + `js/app.js`。启动时读取 `data/digests.json` 和 `data/markets.json`；近 30 天另读 `data/last30days/index.json`，打开一篇再读对应的报告文件。走势图是页面里的 SVG，不加载图表库，也不请求第三方统计。
+- 路由在 hash 里（`#/explore`、`#/markets`、`#/story/nvidia-board-inquiry`、`#/last30days`、`#/last30days/2026-11-24-ai`），刷新不会 404。
 - 分享：`index.html` 带 Open Graph 和 Twitter 卡片，图片是 [`assets/og.png`](assets/og.png)。打开某一则故事时，页面会改 `document.title`，并尽量更新 `og:title` 和 `og:description`。只读取首页 HTML、不跑脚本的爬虫，看到的仍是站点级卡片。
 - 仓库根目录有 `.nojekyll`，Pages 按原文件发布，不经过 Jekyll。
-- 深色模式记在这台浏览器的 `localStorage` 里。
+- 深色模式记在这台浏览器的 `localStorage`（`dn-theme`）。行情页选择的省份记在 `dn-fuel-province`。
 - 不收集账号，不做统计。
 
 ## 仓库
