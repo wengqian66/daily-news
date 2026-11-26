@@ -11,3 +11,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate data/digests.json
         run: python3 scripts/check_digests.py
+      - name: Validate data/markets.json
+        run: python3 scripts/check_markets.py
