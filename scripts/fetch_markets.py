@@ -7,6 +7,10 @@ The browser never calls these hosts. A morning routine can run:
 
 The write is idempotent: the same session date replaces that point, and a
 failed series keeps the previous snapshot instead of inventing a price.
+Fuel works the same way. Each successful fetch writes that Shanghai calendar
+day's 92/95/0 prices into every province's history, and a same-day rerun
+overwrites that day. Older adjustment-day points already in the file stay.
+A failed fuel fetch keeps the previous snapshot, including its history.
 Stdlib only. Run from any working directory.
 """
 
@@ -20,7 +24,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from check_markets import CATALOG, PROVINCES, validate  # noqa: E402
+from check_markets import CATALOG, FUEL_HISTORY_MAX, PROVINCES, validate  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 PATH = ROOT / "data" / "markets.json"
@@ -464,16 +468,55 @@ def fuel_url(path):
     return ""
 
 
-def refresh_fuel(previous):
+def merge_fuel_history(old_points, day, prices):
+    """Keep one 92/95/0 point per calendar day. `day` replaces that day."""
+    by_date = {}
+    for point in old_points or []:
+        if not isinstance(point, dict):
+            continue
+        saved = point.get("date")
+        try:
+            datetime.strptime(saved, "%Y-%m-%d")
+            p92 = float(point["p92"])
+            p95 = float(point["p95"])
+            p0 = float(point["p0"])
+        except (TypeError, ValueError):
+            continue
+        if saved > day or min(p92, p95, p0) <= 0:
+            continue
+        by_date[saved] = {
+            "date": saved,
+            "p92": rnd(p92, 2),
+            "p95": rnd(p95, 2),
+            "p0": rnd(p0, 2),
+        }
+    by_date[day] = {
+        "date": day,
+        "p92": rnd(float(prices["p92"]), 2),
+        "p95": rnd(float(prices["p95"]), 2),
+        "p0": rnd(float(prices["p0"]), 2),
+    }
+    days = sorted(by_date)[-FUEL_HISTORY_MAX:]
+    return [by_date[item] for item in days]
+
+
+def refresh_fuel(previous, day):
     old = previous.get("fuel") if isinstance(previous.get("fuel"), dict) else None
     try:
-        return fetch_fuel(), None
+        fuel = fetch_fuel()
     except Exception as exc:  # noqa: BLE001
         if old:
             kept = dict(old)
             kept["stale"] = True
             return kept, f"国内成品油这次没有刷新（{exc}），沿用上次快照"
         return None, f"国内成品油这次没有数据（{exc}）"
+    old_by_name = {}
+    for row in (old or {}).get("provinces") or []:
+        if isinstance(row, dict):
+            old_by_name[row.get("name")] = row.get("history")
+    for item in fuel["provinces"]:
+        item["history"] = merge_fuel_history(old_by_name.get(item["name"]), day, item)
+    return fuel, None
 
 
 def build(previous):
@@ -496,7 +539,7 @@ def build(previous):
         if problem:
             problems.append({"id": spec["id"], "message": problem})
             print(f"WARN  {problem}", file=sys.stderr)
-    fuel, fuel_problem = refresh_fuel(previous)
+    fuel, fuel_problem = refresh_fuel(previous, now_shanghai().strftime("%Y-%m-%d"))
     if fuel_problem:
         problems.append({"id": "fuel", "message": fuel_problem})
         print(f"WARN  {fuel_problem}", file=sys.stderr)
