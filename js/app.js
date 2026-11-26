@@ -582,10 +582,9 @@
     return `<a class="market-teaser" href="#/markets"><span class="teaser-kicker">行情</span>${bits}<span class="teaser-go">查看</span></a>`;
   }
 
-  function chartScale(points) {
-    const closes = points.map((point) => point.close);
-    let min = Math.min(...closes);
-    let max = Math.max(...closes);
+  function chartScaleValues(values) {
+    let min = Math.min(...values);
+    let max = Math.max(...values);
     if (!Number.isFinite(min) || !Number.isFinite(max)) return null;
     if (min === max) {
       min -= 1;
@@ -593,6 +592,10 @@
     }
     const pad = (max - min) * 0.08;
     return { lo: min - pad, hi: max + pad, min, max };
+  }
+
+  function chartScale(points) {
+    return chartScaleValues(points.map((point) => point.close));
   }
 
   function chartY(value, scale) {
@@ -646,7 +649,7 @@
           <div class="chart-x" aria-hidden="true">${xLabels}</div>
         </div>
       </div>
-      <table class="visually-hidden"><caption>${esc(caption)}</caption><thead><tr><th>日期</th><th>收盘</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="visually-hidden"><table><caption>${esc(caption)}</caption><thead><tr><th>日期</th><th>收盘</th></tr></thead><tbody>${rows}</tbody></table></div>
     </figure>`;
   }
 
@@ -711,6 +714,133 @@
     return `<div class="fuel-tile"><span>${esc(label)}</span><b>${esc(formatFixed(price, 2))}</b>${change}</div>`;
   }
 
+  function dayNumber(iso) {
+    const [year, month, day] = iso.split("-").map(Number);
+    return Date.UTC(year, month - 1, day) / 86400000;
+  }
+
+  function fuelSeries(history) {
+    const rows = (Array.isArray(history) ? history : []).filter((point) => (
+      point && isISODate(point.date)
+      && isNum(point.p92) && isNum(point.p95) && isNum(point.p0)
+    )).map((point) => ({
+      date: point.date,
+      p92: Number(point.p92),
+      p95: Number(point.p95),
+      p0: Number(point.p0),
+    }));
+    rows.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+    const unique = [];
+    rows.forEach((point) => {
+      if (unique.length && unique[unique.length - 1].date === point.date) unique.pop();
+      unique.push(point);
+    });
+    if (unique.length >= 2) {
+      const start = dayNumber(unique[0].date);
+      const span = Math.max(1, dayNumber(unique[unique.length - 1].date) - start);
+      unique.forEach((point) => {
+        point.x = ((dayNumber(point.date) - start) / span) * 100;
+      });
+    }
+    return unique;
+  }
+
+  function fuelStepPoints(points, key, scale) {
+    const coords = [];
+    points.forEach((point, index) => {
+      const x = point.x.toFixed(2);
+      const y = chartY(point[key], scale).toFixed(2);
+      if (index > 0) coords.push(`${x},${chartY(points[index - 1][key], scale).toFixed(2)}`);
+      coords.push(`${x},${y}`);
+    });
+    return coords.join(" ");
+  }
+
+  function fuelChartHTML(name, row) {
+    const points = fuelSeries(row && row.history);
+    if (points.length < 2) {
+      delete state.chartSeries.fuel;
+      const when = points.length === 1 ? `${fmtMd(points[0].date)}这一天` : "这一天";
+      return `<div class="fuel-sparse">
+        <p>${points.length ? "记下的价格还只有一天。" : "暂无数据"}</p>
+        <p class="fine">目前只记下${esc(when)}。每天保存一次快照后，这里会按阶梯画出 92#、95# 和 0# 柴油。</p>
+      </div>`;
+    }
+    const scale = chartScaleValues(points.flatMap((point) => [point.p92, point.p95, point.p0]));
+    if (!scale) {
+      delete state.chartSeries.fuel;
+      return `<p>暂无数据</p>`;
+    }
+    state.chartSeries.fuel = {
+      kind: "fuel",
+      points,
+      decimals: 2,
+      unit: "元/升",
+      lo: scale.lo,
+      hi: scale.hi,
+    };
+    const ticks = [scale.max, (scale.max + scale.min) / 2, scale.min];
+    const grid = ticks.map((value) => {
+      const y = chartY(value, scale).toFixed(2);
+      return `<line class="chart-grid" x1="0" y1="${y}" x2="100" y2="${y}" vector-effect="non-scaling-stroke"></line>`;
+    }).join("");
+    const yLabels = ticks.map((value) => (
+      `<span style="top:${chartY(value, scale).toFixed(2)}%">${esc(formatFixed(value, 2))}</span>`
+    )).join("");
+    const lines = [
+      ["p0", "fuel-line-0"],
+      ["p95", "fuel-line-95"],
+      ["p92", "fuel-line-92"],
+    ].map(([key, cls]) => (
+      `<polyline class="chart-line ${cls}" points="${fuelStepPoints(points, key, scale)}" vector-effect="non-scaling-stroke"></polyline>`
+    )).join("");
+    const mid = points.reduce((best, point) => (
+      Math.abs(point.x - 50) < Math.abs(best.x - 50) ? point : best
+    ));
+    const marks = mid.date === points[0].date || mid.date === points[points.length - 1].date
+      ? [points[0], points[points.length - 1]]
+      : [points[0], mid, points[points.length - 1]];
+    const years = new Set(points.map((point) => point.date.slice(0, 4)));
+    const xLabels = marks.map((point) => {
+      const label = years.size > 1 ? `${point.date.slice(0, 4)}年${fmtMd(point.date)}` : fmtMd(point.date);
+      return `<span>${esc(label)}</span>`;
+    }).join("");
+    const caption = `${name} 92号汽油、95号汽油和 0号柴油，${fmtMd(points[0].date)}至${fmtMd(points[points.length - 1].date)}，${points.length} 个记录日。阶梯线表示两次记录之间价格不变。`;
+    const body = points.map((point) => (
+      `<tr><td>${esc(point.date)}</td><td>${esc(formatFixed(point.p92, 2))}</td><td>${esc(formatFixed(point.p95, 2))}</td><td>${esc(formatFixed(point.p0, 2))}</td></tr>`
+    )).join("");
+    const growing = points.length <= 3
+      ? `<p class="fine fuel-note">记下的点还少。每天保存快照之后，阶梯会继续变长。</p>`
+      : "";
+    return `<figure class="quote-chart fuel-chart" data-chart="fuel" tabindex="0" aria-label="${esc(caption)}。左右方向键可以查看某一天。">
+      <ul class="fuel-legend" aria-hidden="true">
+        <li><span class="fuel-swatch fuel-swatch-92"></span>92号汽油</li>
+        <li><span class="fuel-swatch fuel-swatch-95"></span>95号汽油</li>
+        <li><span class="fuel-swatch fuel-swatch-0"></span>0号柴油</li>
+      </ul>
+      <div class="chart-layout">
+        <div class="chart-y" aria-hidden="true">${yLabels}</div>
+        <div class="chart-main">
+          <div class="chart-plot">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              ${grid}
+              ${lines}
+            </svg>
+            <p class="chart-tip" data-tip hidden></p>
+            <span class="chart-rule" data-rule hidden></span>
+            <span class="chart-dot fuel-dot-92" data-dot="p92" hidden></span>
+            <span class="chart-dot fuel-dot-95" data-dot="p95" hidden></span>
+            <span class="chart-dot fuel-dot-0" data-dot="p0" hidden></span>
+          </div>
+          <div class="chart-x" aria-hidden="true">${xLabels}</div>
+        </div>
+      </div>
+      <p class="fine fuel-note">阶梯线：两次记录之间价格不变。成品油多在调价窗口才动。</p>
+      ${growing}
+      <div class="visually-hidden"><table><caption>${esc(caption)}</caption><thead><tr><th>日期</th><th>92号汽油</th><th>95号汽油</th><th>0号柴油</th></tr></thead><tbody>${body}</tbody></table></div>
+    </figure>`;
+  }
+
   function fuelReadoutHTML(fuel, name) {
     const row = (fuel.provinces || []).find((item) => item && item.name === name);
     if (!row) return `<p>暂无数据</p>`;
@@ -723,7 +853,7 @@
     const link = href
       ? `<p class="fine"><a class="text-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(name)}油价说明</a></p>`
       : "";
-    return `<div class="fuel-grid">${tiles}</div>${link}`;
+    return `<div class="fuel-grid">${tiles}</div>${link}${fuelChartHTML(name, row)}`;
   }
 
   function fuelSectionHTML(fuel) {
@@ -762,7 +892,7 @@
       ${stale}
       <div id="fuel-readout" aria-live="polite">${fuelReadoutHTML(fuel, selected)}</div>
       ${windowLine}
-      <p class="fine">92 号、95 号汽油和 0 号柴油，覆盖 31 个省级行政区。零售价一般随国家发改委每 10 个工作日的窗口调整，以公告为准。数据来源：<a class="text-link" href="${esc(credit)}" target="_blank" rel="noopener noreferrer">日油价 riyoujia.com</a>。实际价格以当地加油站为准。</p>
+      <p class="fine">92 号、95 号汽油和 0 号柴油，覆盖 31 个省级行政区。零售价一般随国家发改委每 10 个工作日的窗口调整，以公告为准。图中 2026 年各调价日的价格来自<a class="text-link" href="https://www.soyoujia.cn/" target="_blank" rel="noopener noreferrer">搜油价</a>公开的各省历史表（该站写明依据成品油调价公告），31 省的最新价和上一轮涨跌已与日油价核对。从每天保存的日油价快照继续往后记。数据来源：<a class="text-link" href="${esc(credit)}" target="_blank" rel="noopener noreferrer">日油价 riyoujia.com</a>。实际价格以当地加油站为准。</p>
     </section>`;
   }
 
@@ -809,21 +939,45 @@
     });
   }
 
+  function chartPointX(meta, index) {
+    const point = meta.points[index];
+    if (point && isNum(point.x)) return point.x;
+    return (index / (meta.points.length - 1)) * 100;
+  }
+
   function showChartIndex(figure, index) {
     const meta = state.chartSeries && state.chartSeries[figure.getAttribute("data-chart")];
     if (!meta || meta.points.length < 2 || meta.hi === meta.lo) return;
     const next = Math.max(0, Math.min(meta.points.length - 1, index));
     figure.dataset.index = String(next);
     const point = meta.points[next];
-    const x = (next / (meta.points.length - 1)) * 100;
-    const y = ((meta.hi - point.close) / (meta.hi - meta.lo)) * 100;
+    const x = chartPointX(meta, next);
     const rule = figure.querySelector("[data-rule]");
-    const dot = figure.querySelector("[data-dot]");
     const tip = figure.querySelector("[data-tip]");
     if (rule) {
       rule.hidden = false;
       rule.style.left = `${x}%`;
     }
+    if (meta.kind === "fuel") {
+      figure.querySelectorAll("[data-dot]").forEach((dot) => {
+        const key = dot.getAttribute("data-dot");
+        const value = point[key];
+        if (!isNum(value)) {
+          dot.hidden = true;
+          return;
+        }
+        dot.hidden = false;
+        dot.style.left = `${x}%`;
+        dot.style.top = `${((meta.hi - value) / (meta.hi - meta.lo)) * 100}%`;
+      });
+      if (tip) {
+        tip.hidden = false;
+        tip.textContent = `${fmtMd(point.date)} · ${weekdayZh(point.date)}  92# ${formatFixed(point.p92, 2)}  95# ${formatFixed(point.p95, 2)}  0# ${formatFixed(point.p0, 2)}`;
+      }
+      return;
+    }
+    const y = ((meta.hi - point.close) / (meta.hi - meta.lo)) * 100;
+    const dot = figure.querySelector("[data-dot]");
     if (dot) {
       dot.hidden = false;
       dot.style.left = `${x}%`;
@@ -842,6 +996,20 @@
     const rect = plot.getBoundingClientRect();
     if (!rect.width) return;
     const ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+    if (meta.kind === "fuel") {
+      const percent = ratio * 100;
+      let best = 0;
+      let bestDist = Infinity;
+      meta.points.forEach((point, index) => {
+        const dist = Math.abs(point.x - percent);
+        if (dist < bestDist) {
+          bestDist = dist;
+          best = index;
+        }
+      });
+      showChartIndex(figure, best);
+      return;
+    }
     showChartIndex(figure, Math.round(ratio * (meta.points.length - 1)));
   }
 
@@ -863,6 +1031,8 @@
 
   function bindCharts() {
     document.querySelectorAll("[data-chart]").forEach((figure) => {
+      if (figure.dataset.chartBound === "1") return;
+      figure.dataset.chartBound = "1";
       const plot = figure.querySelector(".chart-plot");
       if (!plot) return;
       plot.addEventListener("pointermove", (event) => updateChartPointer(figure, event.clientX));
@@ -1986,7 +2156,10 @@
         const name = event.target.value;
         try { localStorage.setItem(FUEL_KEY, name); } catch (err) { /* ignore */ }
         const box = document.getElementById("fuel-readout");
-        if (box && state.markets && state.markets.fuel) box.innerHTML = fuelReadoutHTML(state.markets.fuel, name);
+        if (box && state.markets && state.markets.fuel) {
+          box.innerHTML = fuelReadoutHTML(state.markets.fuel, name);
+          bindCharts();
+        }
         return;
       }
       if (event.target.id !== "day-select") return;

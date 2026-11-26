@@ -3,7 +3,9 @@
 
 The page can omit a series. A present series must be a real daily snapshot:
 positive price, matching history, Shanghai cutoff, and sane units.
-Fuel, when present, must be the 31 mainland provincial-level regions.
+Fuel, when present, must be the 31 mainland provincial-level regions, and
+each province needs a history whose latest 92/95/0 prices match the snapshot.
+A missing fuel history is allowed only when there is no fuel snapshot at all.
 """
 
 import json
@@ -38,6 +40,8 @@ PROVINCES = [
 ]
 
 HISTORY_MAX = 200
+# A year of daily fuel snapshots, with room for the older adjustment-day seed.
+FUEL_HISTORY_MAX = 400
 
 
 def is_number(value):
@@ -250,6 +254,7 @@ def validate_fuel(fuel):
             delta = row.get(field)
             if not is_number(delta) or abs(delta) > 5:
                 errors.append(f"{where}.{field} must be a change within ±5 when present")
+        errors.extend(validate_fuel_history(row, where))
     if names and set(names) != set(PROVINCES):
         missing = [name for name in PROVINCES if name not in names]
         errors.append("fuel.provinces must include all 31 regions, missing " + "、".join(missing))
@@ -257,6 +262,49 @@ def validate_fuel(fuel):
         errors.append("fuel.provinces has a duplicate name")
     if isinstance(provinces, list) and len(provinces) != 31:
         errors.append(f"fuel.provinces has {len(provinces)} rows; expected 31")
+    return errors
+
+
+def validate_fuel_history(row, where):
+    errors = []
+    history = row.get("history")
+    if not isinstance(history, list) or not history:
+        errors.append(f"{where}.history must be a non-empty array")
+        return errors
+    if len(history) > FUEL_HISTORY_MAX:
+        errors.append(f"{where}.history has {len(history)} points; limit is {FUEL_HISTORY_MAX}")
+    prev_day = ""
+    tail = None
+    for n, point in enumerate(history):
+        pwhere = f"{where}.history[{n}]"
+        if not isinstance(point, dict):
+            errors.append(f"{pwhere} must be an object")
+            tail = None
+            continue
+        day = point.get("date")
+        if not isinstance(day, str) or not ISO_DAY.match(day):
+            errors.append(f"{pwhere}.date must be YYYY-MM-DD")
+        else:
+            try:
+                datetime.strptime(day, "%Y-%m-%d")
+            except ValueError:
+                errors.append(f"{pwhere}.date is not a real date")
+            if prev_day and day <= prev_day:
+                errors.append(f"{pwhere}.date must be later than {prev_day}")
+            prev_day = day
+        prices = {}
+        for field in ("p92", "p95", "p0"):
+            price = point.get(field)
+            if not is_number(price) or not 2 <= price <= 30:
+                errors.append(f"{pwhere}.{field} must be a price from 2 to 30")
+            else:
+                prices[field] = price
+        tail = prices if len(prices) == 3 else None
+    if tail:
+        for field in ("p92", "p95", "p0"):
+            current = row.get(field)
+            if is_number(current) and not close_enough(current, tail[field], 2):
+                errors.append(f"{where}.{field} must match the last history price")
     return errors
 
 
@@ -280,7 +328,11 @@ def main() -> int:
     quotes = data.get("quotes") or []
     fuel = data.get("fuel") or {}
     provinces = fuel.get("provinces") or []
-    print(f"OK  {PATH}  {len(quotes)} quote(s), {len(provinces)} province fuel price(s)")
+    lengths = [len(row.get("history") or []) for row in provinces if isinstance(row, dict)]
+    span = ""
+    if lengths:
+        span = f", fuel history {min(lengths)}–{max(lengths)} point(s)"
+    print(f"OK  {PATH}  {len(quotes)} quote(s), {len(provinces)} province fuel price(s){span}")
     return 0
 
 
