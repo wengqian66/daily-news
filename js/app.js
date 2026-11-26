@@ -945,6 +945,27 @@
     return (index / (meta.points.length - 1)) * 100;
   }
 
+  function chartTipDate(iso) {
+    return `${fmtMd(iso)} · ${weekdayZh(iso)}`;
+  }
+
+  function fuelTipHTML(point, unit) {
+    const rows = [
+      ["92", "92#", point.p92],
+      ["95", "95#", point.p95],
+      ["0", "0#", point.p0],
+    ].map(([id, label, value]) => (
+      `<span class="chart-tip-row is-${id}"><span class="chart-tip-k"><i class="chart-tip-dot" aria-hidden="true"></i>${esc(label)}</span><b>${esc(formatFixed(value, 2))}</b></span>`
+    )).join("");
+    const unitHTML = unit ? `<span class="chart-tip-unit">${esc(unit)}</span>` : "";
+    return `<span class="chart-tip-head"><span class="chart-tip-date">${esc(chartTipDate(point.date))}</span>${unitHTML}</span><span class="chart-tip-rows">${rows}</span>`;
+  }
+
+  function quoteTipHTML(point, meta) {
+    const unit = meta.unit ? `<span class="chart-tip-unit">${esc(meta.unit)}</span>` : "";
+    return `<span class="chart-tip-date">${esc(chartTipDate(point.date))}</span><span class="chart-tip-value"><b>${esc(formatFixed(point.close, meta.decimals))}</b>${unit}</span>`;
+  }
+
   function showChartIndex(figure, index) {
     const meta = state.chartSeries && state.chartSeries[figure.getAttribute("data-chart")];
     if (!meta || meta.points.length < 2 || meta.hi === meta.lo) return;
@@ -972,7 +993,7 @@
       });
       if (tip) {
         tip.hidden = false;
-        tip.textContent = `${fmtMd(point.date)} · ${weekdayZh(point.date)}  92# ${formatFixed(point.p92, 2)}  95# ${formatFixed(point.p95, 2)}  0# ${formatFixed(point.p0, 2)}`;
+        tip.innerHTML = fuelTipHTML(point, meta.unit);
       }
       return;
     }
@@ -985,7 +1006,7 @@
     }
     if (tip) {
       tip.hidden = false;
-      tip.textContent = `${fmtMd(point.date)} · ${weekdayZh(point.date)}  ${formatFixed(point.close, meta.decimals)} ${meta.unit}`;
+      tip.innerHTML = quoteTipHTML(point, meta);
     }
   }
 

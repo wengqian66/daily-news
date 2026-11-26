@@ -19,6 +19,7 @@
   --fuel-95: #115e59;
   --fuel-0: #1d4e89;
   --shadow: 0 16px 40px rgba(60, 40, 20, 0.06);
+  --tip-shadow: 0 4px 14px rgba(60, 40, 20, 0.14);
   --header-h: 68px;
   --sidebar-w: 228px;
   --radius: 16px;
@@ -48,6 +49,7 @@
   --fuel-0: #93c5fd;
   --tint: #2a231c;
   --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  --tip-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
   color-scheme: dark;
 }
 
@@ -1178,18 +1180,90 @@ code {
 .chart-x span:last-child { text-align: right; }
 .chart-tip {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 8px;
   left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: max-content;
   max-width: calc(100% - 16px);
-  padding: 3px 8px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  padding: 8px 10px 9px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--surface);
   color: var(--ink);
+  box-shadow: var(--tip-shadow);
   font-size: 12px;
+  line-height: 1.35;
   font-variant-numeric: tabular-nums;
   pointer-events: none;
+}
+.quote-card .chart-tip { background: var(--bg); }
+.chart-tip-head,
+.chart-tip-date {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--ink);
+  font-weight: 700;
+}
+.chart-tip-head { flex-wrap: wrap; }
+.chart-tip-unit {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+}
+.chart-tip-rows,
+.chart-tip-value {
+  padding-top: 6px;
+  border-top: 1px solid var(--line);
+}
+.chart-tip-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.chart-tip-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  white-space: nowrap;
+}
+.chart-tip-k {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+.chart-tip-dot {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  font-style: normal;
+  flex: none;
+}
+.chart-tip-row.is-92 .chart-tip-k { color: var(--fuel-92); }
+.chart-tip-row.is-95 .chart-tip-k { color: var(--fuel-95); }
+.chart-tip-row.is-0 .chart-tip-k { color: var(--fuel-0); }
+.chart-tip-row b,
+.chart-tip-value b {
+  color: var(--ink);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.chart-tip-value {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.chart-tip-value b {
+  font-size: 15px;
+  letter-spacing: -0.02em;
 }
 .fuel-head {
   display: flex;
